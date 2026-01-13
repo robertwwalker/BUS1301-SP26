@@ -42,4 +42,5 @@ Source: [x.com](https://x.com/pablohernandezb/status/2010762183752536193?s=46)
 
 ## For Next Class:
 
-Chapter 1: Open Introduction to Statistics: On Canvas > Files > OpenIntroStatistics
+1. Reading: Chapter 1: Open Introduction to Statistics: *(On Canvas > Files > OpenIntroStatistics)*.  
+2. Deliverable: 
