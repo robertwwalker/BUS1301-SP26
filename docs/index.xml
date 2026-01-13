@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Managing with AI</title>
+<link>https://robertwwalker.github.io/BUS1301-SP26/</link>
+<atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
+<description>Managing with Data: Analytics and Artificial Intelligence</description>
+<generator>quarto-1.8.24</generator>
+<lastBuildDate>Thu, 15 Jan 2026 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>On Models</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>What is a model?</p>
+<p>Our reading for today defines models in science. This is a hard read but it is the only reading for the week.</p>
+<p><a href="https://plato.stanford.edu/archives/fall2013/entries/models-science/">Models in Science from the Stanford Encyclopedia of Philosophy</a></p>
+<p>We will pay extra attention to sections 1, 3, and 5.2.</p>
+<p>The class plan:</p>
+<ol type="1">
+<li>What is a model?</li>
+<li>Sharing insights from unfamiliar models supplied by Gemini.</li>
+<li>Models in business?</li>
+</ol>
+<p>Your assignment for this time:</p>
+<ol type="1">
+<li>Do the reading.</li>
+<li>Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course.</li>
+</ol>
+<section id="my-homework" class="level3">
+<h3 class="anchored" data-anchor-id="my-homework">My Homework</h3>
+<ol type="1">
+<li><p><a href="https://docs.google.com/document/d/107KPF3BsF2NiAPnoKgC0gisqlqZKsaSJuenrjHQYOpg/edit?usp=sharing">The Lorenz Model</a></p></li>
+<li><p><a href="https://docs.google.com/document/d/138wuCj5-0PanIFdNf2MVjas4ZI3fT_j8aymWNiuLFa8/edit?usp=sharing">The double helix model of DNA</a></p></li>
+<li><p><a href="https://docs.google.com/document/d/1RB5tjcRtYaalPQL_pQU_m1WgmZ9EIKGksar5GlkZ7Dk/edit?usp=sharing">What is ontology?</a></p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./ontology.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Imagine that"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ontology.png" class="img-fluid figure-img" alt="Imagine that"></a></p>
+<figcaption>Imagine that</figcaption>
+</figure>
+</div>
+</section>
+<section id="an-example" class="level2">
+<h2 class="anchored" data-anchor-id="an-example">An Example</h2>
+<p>Source: <a href="https://x.com/pablohernandezb/status/2010762183752536193?s=46">x.com</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./ven-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Map of Venezuela"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ven-map.png" class="img-fluid figure-img" alt="Map of Venezuela"></a></p>
+<figcaption>Map of Venezuela</figcaption>
+</figure>
+</div>
+</section>
+<section id="for-next-class" class="level2">
+<h2 class="anchored" data-anchor-id="for-next-class">For Next Class:</h2>
+<ol type="1">
+<li>Reading: Chapter 1: Open Introduction to Statistics: <em>(On Canvas &gt; Files &gt; OpenIntroStatistics)</em>.<br>
+</li>
+<li>Deliverable:</li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/</guid>
+  <pubDate>Thu, 15 Jan 2026 08:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
+<item>
+  <title>A Syllabus and Models</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>What is a model?</p>
+<p>Our reading for next time defines models in science. This is a hard read but it is the only reading for the week.</p>
+<p><a href="https://plato.stanford.edu/archives/fall2013/entries/models-science/">Models in Science from the Stanford Encyclopedia of Philosophy</a></p>
+<p>We will pay extra attention to sections 1, 3, and 5.2.</p>
+<p>The class plan:</p>
+<ol type="1">
+<li>Discuss the syllabus, deliverables, and requirements</li>
+<li>An overview of the course and mutual introductions.</li>
+<li>A brief discussion of models to set the foundations for Thursday.</li>
+</ol>
+<p>Your assignment for next time:</p>
+<ol type="1">
+<li>Do the reading.</li>
+<li>Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course.</li>
+</ol>
+
+
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/</guid>
+  <pubDate>Tue, 13 Jan 2026 08:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Welcome To BUS 1301: Managing with AI</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+<marquee scrollamount="10">
+<h1>
+<p style="color:purple;">
+<i class="fa-brands fa-r-project" aria-label="r-project"></i>obertwwalker.github.io <br>
+</p>
+</h1>
+<p></p></marquee><p></p>
+<p>Welcome to Managing with Data, Analytics, and Artificial Intelligence!</p>
+<section id="our-goal-in-four-parts" class="level1">
+<h1>Our Goal in Four Parts</h1>
+<p>Together, we will investigate how managers collect, process, and interpret observations about the world around them to facilitate informed decisions.</p>
+<section id="models" class="level2">
+<h2 class="anchored" data-anchor-id="models">Models</h2>
+<ul>
+<li>Our organizing framework is the <em>model</em>. What is a model? Why models?</li>
+</ul>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<ul>
+<li><p>What is data and how do we get some? We start by defining data and our relationship with data. We will explore practical methods of data gathering – from surveys and archives to experiments and crowd sourcing.</p></li>
+<li><p>Have data, how is it typically organized? We will explore basic methods of organizing data for robust, sustainable use.</p></li>
+</ul>
+</section>
+<section id="deploying-data" class="level2">
+<h2 class="anchored" data-anchor-id="deploying-data">Deploying Data</h2>
+<ul>
+<li>How can managers use data? We will deploy basic tools of cross tabulation, frequency distributions, and simple plots before some statistical inference and model building.</li>
+</ul>
+</section>
+<section id="artificial-intelligence" class="level2">
+<h2 class="anchored" data-anchor-id="artificial-intelligence">Artificial Intelligence</h2>
+<ul>
+<li>What is artificial intelligence (AI)? We will highlight general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business.</li>
+</ul>
+</section>
+</section>
+<section id="learning-objectives" class="level1">
+<h1>Learning Objectives</h1>
+<p>Our key learning objectives, for the course, are:</p>
+<ol type="1">
+<li>What is a model? What role do models play in the origination of data [for empiricists]?</li>
+<li>Distinguish among means of data collection and discuss their tradeoffs.<br>
+</li>
+<li>Describe common models of data management and their tradeoffs.<br>
+</li>
+<li>Articulate the applicability of popular analytic techniques to their uses and their function.<br>
+</li>
+<li>Discuss the historical development and current functionality of <em>AI</em>.<br>
+</li>
+<li>Ethical issues are ubiquitous in data, analytics, and AI in the workplace; we should confront them.</li>
+</ol>
+<p>Our week 1 learning objective is to define a model, give examples of models and their use in management activities, and the interrelainship between models and measures, a lead-in to specifics on data.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/</guid>
+  <pubDate>Mon, 12 Jan 2026 08:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/image.jpg" medium="image" type="image/jpeg"/>
+</item>
+</channel>
+</rss>

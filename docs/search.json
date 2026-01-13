@@ -1,0 +1,679 @@
+[
+  {
+    "objectID": "slides/01-13-2026/index.html#summary-statistics-are-insufficient",
+    "href": "slides/01-13-2026/index.html#summary-statistics-are-insufficient",
+    "title": "All About Squares",
+    "section": "Summary Statistics are Insufficient",
+    "text": "Summary Statistics are Insufficient\n\n\n\n\n\n\n\n\n\ndataset\nMean.x\nStd.Dev.x\nMean.y\nStd.Dev.y\n\n\n\n\naway\n54.26610\n16.76983\n47.83472\n26.93974\n\n\nbullseye\n54.26873\n16.76924\n47.83082\n26.93573\n\n\ncircle\n54.26732\n16.76001\n47.83772\n26.93004\n\n\ndino\n54.26327\n16.76514\n47.83225\n26.93540\n\n\ndots\n54.26030\n16.76774\n47.83983\n26.93019\n\n\nh_lines\n54.26144\n16.76590\n47.83025\n26.93988\n\n\nhigh_lines\n54.26881\n16.76670\n47.83545\n26.94000\n\n\nslant_down\n54.26785\n16.76676\n47.83590\n26.93610\n\n\nslant_up\n54.26588\n16.76885\n47.83150\n26.93861\n\n\nstar\n54.26734\n16.76896\n47.83955\n26.93027\n\n\nv_lines\n54.26993\n16.76996\n47.83699\n26.93768\n\n\nwide_lines\n54.26692\n16.77000\n47.83160\n26.93790\n\n\nx_shape\n54.26015\n16.76996\n47.83972\n26.93000",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#models-use-inference-to",
+    "href": "slides/01-13-2026/index.html#models-use-inference-to",
+    "title": "All About Squares",
+    "section": "Models Use Inference to …",
+    "text": "Models Use Inference to …\n\nUnpack Black Boxes\nWe will literally do it with boxes/squares",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#pivots-gatherspread-and-tidy-data",
+    "href": "slides/01-13-2026/index.html#pivots-gatherspread-and-tidy-data",
+    "title": "All About Squares",
+    "section": "Pivots Gather/Spread and tidy data",
+    "text": "Pivots Gather/Spread and tidy data\nRadiant can be picky about data structures. ggplot is built around the idea of tidy data from Week 2. How do we make data tidy?\nAt the command line, it is pivot_wider and pivot_longer while radiant uses the [at some point to be obsolete spread/gather]",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#a-bit-on-covariance-and-correlation",
+    "href": "slides/01-13-2026/index.html#a-bit-on-covariance-and-correlation",
+    "title": "All About Squares",
+    "section": "A Bit on Covariance and Correlation",
+    "text": "A Bit on Covariance and Correlation\nCovariance is defined as: \\sum_{i} (x_{i} - \\overline{x})(y_{i} - \\overline{y})\nWhere \\overline{x} and \\overline{y} are the sample means of x and y. The items in parentheses are deviations from the mean; covariance is the product of those deviations from the mean. The metric of covariance is the product of the metric of x and y; often something for which no baseline exists. For this reason, we use a normalized form of covariance known as correlation, often just \\rho.\n\\rho_{xy} = \\sum_{i} \\frac{(x_{i} - \\overline{x})(y_{i} - \\overline{y})}{s_{x}s_{y}}\nCorrelation is a normed measure; it varies between -1 and 1.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#an-oregon-gender-gap",
+    "href": "slides/01-13-2026/index.html#an-oregon-gender-gap",
+    "title": "All About Squares",
+    "section": "An Oregon Gender Gap",
+    "text": "An Oregon Gender Gap\n\n\nA random sample of salaries in the 1990s for new hires from Oregon DAS. I know nothing about them. It is worth noting that these data represent a protected class by Oregon statute. We have a state file or we can load the data from github.\n\n\n\n# A tibble: 16 × 2\n   Female   Male\n    &lt;dbl&gt;  &lt;dbl&gt;\n 1 41514. 47343.\n 2 40964. 46382.\n 3 39170. 45813.\n 4 37937. 46410.\n 5 33982. 43796.\n 6 36077. 43124.\n 7 39174. 49444.\n 8 39037. 44806.\n 9 29132. 44440.\n10 36200. 46680.\n11 38561. 47337.\n12 33248. 47299.\n13 33609. 41461.\n14 33669. 43598.\n15 37806. 43431.\n16 35846. 49266.\n\n\n\n\n\n   Obs   Salary Gender\n1    1 41514.39 Female\n2    2 40964.07 Female\n3    3 39170.19 Female\n4    4 37936.57 Female\n5    5 33981.78 Female\n6    6 36077.27 Female\n7    7 39174.06 Female\n8    8 39037.37 Female\n9    9 29131.75 Female\n10  10 36200.45 Female\n11  11 38561.40 Female\n12  12 33247.92 Female\n13  13 33609.49 Female\n14  14 33669.22 Female\n15  15 37805.83 Female\n16  16 35846.13 Female\n17  17 47342.66   Male\n18  18 46382.39   Male\n19  19 45812.91   Male\n20  20 46409.66   Male\n21  21 43796.05   Male\n22  22 43124.02   Male\n23  23 49443.82   Male\n24  24 44805.79   Male\n25  25 44440.32   Male\n26  26 46679.59   Male\n27  27 47337.10   Male\n28  28 47298.73   Male\n29  29 41461.05   Male\n30  30 43598.29   Male\n31  31 43431.18   Male\n32  32 49266.41   Male",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#visualising-independent-samples",
+    "href": "slides/01-13-2026/index.html#visualising-independent-samples",
+    "title": "All About Squares",
+    "section": "Visualising Independent Samples",
+    "text": "Visualising Independent Samples",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#visualising-independent-samples-1",
+    "href": "slides/01-13-2026/index.html#visualising-independent-samples-1",
+    "title": "All About Squares",
+    "section": "Visualising Independent Samples",
+    "text": "Visualising Independent Samples",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#about-those-squares-deviations",
+    "href": "slides/01-13-2026/index.html#about-those-squares-deviations",
+    "title": "All About Squares",
+    "section": "About Those Squares: Deviations",
+    "text": "About Those Squares: Deviations\nThe mean of all salaries is 41142.433. Represented in equation form, we have:\nSalary_{i} = \\alpha + \\epsilon_{i}\nThe i^{th} person’s salary is some average salary \\alpha [or perhaps \\mu to maintain conceptual continuity] (shown as a solid blue line) plus some idiosyncratic remainder or residual salary for individual i denoted by \\epsilon_{i} (shown as a blue arrow). Everything here is measured in dollars.\nSalary_{i}  = 41142.433 + \\epsilon_{i}",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#the-black-box-of-salaries",
+    "href": "slides/01-13-2026/index.html#the-black-box-of-salaries",
+    "title": "All About Squares",
+    "section": "The Black Box of Salaries",
+    "text": "The Black Box of Salaries\nThe total area of the black box in the original metric (squared dollars) is: 892955385. The length of each side is the square root of that area, e.g. 29882.36 in dollars.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#some-language-and-f",
+    "href": "slides/01-13-2026/index.html#some-language-and-f",
+    "title": "All About Squares",
+    "section": "Some language and F",
+    "text": "Some language and F\nSum of squares: \\sum_{i=1}^{N} e_{i}^{2} Mean square: divide the sum of squares by k degrees of freedom. NB: Take the square root and you get the standard deviation. \\frac{1}{k}\\sum_{i=1}^{N} e_{i}^{2}\nFisher’s F ratio or the F describes the ratio of two \\chi^2 variables (mean square) with numerator and denominator degrees of freedom. It is the ratio of [degrees of freedom] averaged squared errors. As the ratio becomes large, we obtain greater evidence that the two are not the same. Let’s try that here.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#the-core-conditional",
+    "href": "slides/01-13-2026/index.html#the-core-conditional",
+    "title": "All About Squares",
+    "section": "The Core Conditional",
+    "text": "The Core Conditional\nBut all of this stems from the presumption that e_{i} is normal; that is a claim that cannot really be proven or disproven. It is a core assumption that we should try to verify/falsify.\nBecause the e_{i} being normal means implies that their squares are \\chi^2a and further that the ratio of their mean-squares are F.\nAs an aside, the technical definition of tb is a normal divided by the square root of a \\chi^2 so t and F must be equivalent with one degree of freedom in the numerator.\na This is why the various results in prop.test are reported as X-squared.\nb I mentioned this fact previously when introducing t (defined by degrees of freedom and with metric standard error.)",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#verification-of-the-normal",
+    "href": "slides/01-13-2026/index.html#verification-of-the-normal",
+    "title": "All About Squares",
+    "section": "Verification of the Normal",
+    "text": "Verification of the Normal\n\nPlots [shape]\nthe quantile-quantile plot\nStatistical tests",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#the-quantile-quantile-plot-of-a-normal",
+    "href": "slides/01-13-2026/index.html#the-quantile-quantile-plot-of-a-normal",
+    "title": "All About Squares",
+    "section": "the quantile-quantile plot of a normal",
+    "text": "the quantile-quantile plot of a normal\n\n\nThe mean of residual salary is zero. The standard deviation is the root-mean-square. Compare observed residual salary [as z] to the hypothetical normal.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#tests",
+    "href": "slides/01-13-2026/index.html#tests",
+    "title": "All About Squares",
+    "section": "tests",
+    "text": "tests\nWe can examine the claim that residual salary is plausibly normal by examining the slope of the sample and theoretical quantiles: the slope of the q-q plot. This is exactly what the following does under the null hypothesis of a normal.\n\n\n\n    Shapiro-Wilk normality test\n\ndata:  lm(Salary ~ 1, data = OregonSalaries)$residuals\nW = 0.9591, p-value = 0.2595\n\n\nThere are a few others. I personally prefer gvlma.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#linear-models",
+    "href": "slides/01-13-2026/index.html#linear-models",
+    "title": "All About Squares",
+    "section": "Linear Models",
+    "text": "Linear Models\nWill expand on the previous by unpacking the box, reducing residual squares via the inclusion of features, explanatory variables, explanatory factors, exogenous inputs, predictor variables. In this case, let us posit that salary is a function of gender. As an equation, that yields:\nSalary_{i} = \\alpha + \\beta_{1}*Gender_{i} + \\epsilon_{i} We want to measure that \\beta; in this case, the difference between Male and Female. By default, R will include Female as the constant.\nWhat does the regression imply? That salary for each individual i is a function of a constant and gender. Given the way that R works, \\alpha will represent the average for females and \\beta will represent the difference between male and female average salaries. The \\epsilon will capture the difference between the individual’s salary and the average of their group (the mean of males or females).",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#a-new-residual-sum-of-squares",
+    "href": "slides/01-13-2026/index.html#a-new-residual-sum-of-squares",
+    "title": "All About Squares",
+    "section": "A New Residual Sum of Squares",
+    "text": "A New Residual Sum of Squares\n\n\nThe picture will now have a red line and a black line and the residual/leftover/unexplained salary is now the difference between the point and the respective vertical line (red arrows or black arrows). What is the relationship between the datum and the group mean? The answer is shown in black/red.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#the-squares",
+    "href": "slides/01-13-2026/index.html#the-squares",
+    "title": "All About Squares",
+    "section": "The Squares",
+    "text": "The Squares\nThe sum of the remaining squared vertical distances is 238621277 and is obtained by squaring each black/red number and summing them. The amount explained by gender [measured in squared dollars] is the difference between the sums of blue and black/red numbers, squared. It is important to notice that the highest paid females and the lowest paid males may have more residual salary given two averages but the different averages, overall, lead to far less residual salary than a single average for all salaries. Indeed, gender alone accounts for:\n\n\n[1] 654334108\n\n\nIntuitively, Gender should account for 16 times the squared difference between Female and Overall Average (4522) and 16 times the squared difference between Male and Overall Average (4522).\n\n\n[1] 654334108",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#a-visual-what-proportion-is-accounted-for",
+    "href": "slides/01-13-2026/index.html#a-visual-what-proportion-is-accounted-for",
+    "title": "All About Squares",
+    "section": "A Visual: What Proportion is Accounted For?",
+    "text": "A Visual: What Proportion is Accounted For?",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#regression-tables",
+    "href": "slides/01-13-2026/index.html#regression-tables",
+    "title": "All About Squares",
+    "section": "Regression Tables",
+    "text": "Regression Tables\n\n\n\nCall:\nlm(formula = Salary ~ Gender, data = OregonSalaries)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-7488.7 -2107.9   433.3  1743.9  4893.9 \n\nCoefficients:\n            Estimate Std. Error t value       Pr(&gt;|t|)    \n(Intercept)  36620.5      705.1   51.94        &lt; 2e-16 ***\nGenderMale    9043.9      997.1    9.07 0.000000000422 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2820 on 30 degrees of freedom\nMultiple R-squared:  0.7328,    Adjusted R-squared:  0.7239 \nF-statistic: 82.26 on 1 and 30 DF,  p-value: 0.0000000004223",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#analysis-of-variance-the-squares",
+    "href": "slides/01-13-2026/index.html#analysis-of-variance-the-squares",
+    "title": "All About Squares",
+    "section": "Analysis of Variance: The Squares",
+    "text": "Analysis of Variance: The Squares\nF is the ratio of the two mean squares. It is also t^2.\n.small[\n\n\nAnalysis of Variance Table\n\nResponse: Salary\n          Df    Sum Sq   Mean Sq F value          Pr(&gt;F)    \nGender     1 654334108 654334108  82.264 0.0000000004223 ***\nResiduals 30 238621277   7954043                            \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n]",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#a-multi-category-example",
+    "href": "slides/01-13-2026/index.html#a-multi-category-example",
+    "title": "All About Squares",
+    "section": "A Multi-Category Example",
+    "text": "A Multi-Category Example\n\n\nLinear regression (OLS)\nData     : WH \nResponse variable    : Expenditures \nExplanatory variables: Age.Cohort \nNull hyp.: the effect of Age.Cohort on Expenditures is zero\nAlt. hyp.: the effect of Age.Cohort on Expenditures is not zero\n\n                  coefficient std.error t.value p.value    \n (Intercept)         2224.912   330.017   6.742  &lt; .001 ***\n Age.Cohort|0 - 5    -839.928   584.850  -1.436   0.151    \n Age.Cohort|13-17    1710.299   443.488   3.856  &lt; .001 ***\n Age.Cohort|18-21    7816.237   458.709  17.040  &lt; .001 ***\n Age.Cohort|22-50   38142.650   440.101  86.668  &lt; .001 ***\n Age.Cohort|51 +    51042.473   537.290  95.000  &lt; .001 ***\n\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nR-squared: 0.961,  Adjusted R-squared: 0.961 \nF-statistic: 3833.317 df(5,771), p.value &lt; .001\nNr obs: 777 \n\nPrediction error (RMSE):  3847.81 \nResidual st.dev   (RSD):  3862.753 \n\nSum of squares:\n            df                  SS\nRegression   5 285,981,965,641.547\nError      771  11,503,984,347.992\nTotal      776 297,485,949,989.540\n\n                 coefficient      2.5%     97.5%      +/-\n(Intercept)         2224.912  1577.073  2872.751  647.839\nAge.Cohort|0 - 5    -839.928 -1988.016   308.160 1148.088\nAge.Cohort|13-17    1710.299   839.713  2580.886  870.586\nAge.Cohort|18-21    7816.237  6915.771  8716.704  900.467\nAge.Cohort|22-50   38142.650 37278.711 39006.589  863.939\nAge.Cohort|51 +    51042.473 49987.748 52097.198 1054.725",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#messy",
+    "href": "slides/01-13-2026/index.html#messy",
+    "title": "All About Squares",
+    "section": "Messy",
+    "text": "Messy",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#what-about-ethnicity",
+    "href": "slides/01-13-2026/index.html#what-about-ethnicity",
+    "title": "All About Squares",
+    "section": "What about Ethnicity?",
+    "text": "What about Ethnicity?\n\n\n\nCall:\nlm(formula = Expenditures ~ Ethnicity + Age.Cohort, data = WH)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-20075.0  -1206.7      0.1   1202.1  16446.7 \n\nCoefficients:\n                            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)                   2359.9      344.7   6.846 1.55e-11 ***\nEthnicityWhite not Hispanic   -402.1      298.3  -1.348 0.178045    \nAge.Cohort0 - 5               -849.3      584.6  -1.453 0.146685    \nAge.Cohort13-17               1733.8      443.6   3.908 0.000101 ***\nAge.Cohort18-21               7870.0      460.2  17.101  &lt; 2e-16 ***\nAge.Cohort22-50              38311.5      457.4  83.768  &lt; 2e-16 ***\nAge.Cohort51 +               51227.2      554.2  92.432  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3861 on 770 degrees of freedom\nMultiple R-squared:  0.9614,    Adjusted R-squared:  0.9611 \nF-statistic:  3198 on 6 and 770 DF,  p-value: &lt; 2.2e-16",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#confidence-intervals",
+    "href": "slides/01-13-2026/index.html#confidence-intervals",
+    "title": "All About Squares",
+    "section": "Confidence Intervals",
+    "text": "Confidence Intervals\n\n\n                                 2.5 %     97.5 %\n(Intercept)                  1683.2345  3036.6106\nEthnicityWhite not Hispanic  -987.6405   183.4497\nAge.Cohort0 - 5             -1996.8464   298.2797\nAge.Cohort13-17               862.9646  2604.5597\nAge.Cohort18-21              6966.5797  8773.3519\nAge.Cohort22-50             37413.6880 39209.3043\nAge.Cohort51 +              50139.2506 52315.1525",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#comparison",
+    "href": "slides/01-13-2026/index.html#comparison",
+    "title": "All About Squares",
+    "section": "Comparison",
+    "text": "Comparison\n\n\nAnalysis of Variance Table\n\nModel 1: Expenditures ~ Age.Cohort\nModel 2: Expenditures ~ Ethnicity + Age.Cohort\n  Res.Df         RSS Df Sum of Sq      F Pr(&gt;F)\n1    771 11503984348                           \n2    770 11476899027  1  27085321 1.8172  0.178\n\n\nAt the margin, Ethnicity accounts for little variance.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#some-basic-cost-accounting",
+    "href": "slides/01-13-2026/index.html#some-basic-cost-accounting",
+    "title": "All About Squares",
+    "section": "Some Basic Cost Accounting",
+    "text": "Some Basic Cost Accounting\nTotal.Cost_{t} = \\alpha + \\beta*units_t + \\epsilon_{t}\nWith data on per period (t) costs and units produced, we can partition fixed \\alpha and variable costs \\beta (or cost per unit). Consider the data on Handmade Bags. We want to accomplish two things. First, to measure the two key quantities. Second, be able to predict costs for hypothetical number of units.\nA comment on correlation",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#the-data",
+    "href": "slides/01-13-2026/index.html#the-data",
+    "title": "All About Squares",
+    "section": "The Data",
+    "text": "The Data\n\n\n\n\n\nskim_type\nskim_variable\nn_missing\ncomplete_rate\nnumeric.mean\nnumeric.sd\nnumeric.p0\nnumeric.p25\nnumeric.p50\nnumeric.p75\nnumeric.p100\nnumeric.hist\n\n\n\n\nnumeric\nunits\n0\n1\n351.967\n131.665\n141.00\n241.5\n356.00\n457.0\n580.00\n▇▇▆▇▆\n\n\nnumeric\nTotCost\n0\n1\n19946.865\n2985.202\n14357.98\n17593.8\n20073.93\n22415.2\n24887.83\n▆▇▇▇▇",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#a-look-at-the-data",
+    "href": "slides/01-13-2026/index.html#a-look-at-the-data",
+    "title": "All About Squares",
+    "section": "A Look at the Data",
+    "text": "A Look at the Data",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#the-thing-to-measure",
+    "href": "slides/01-13-2026/index.html#the-thing-to-measure",
+    "title": "All About Squares",
+    "section": "The Thing to Measure",
+    "text": "The Thing to Measure",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#a-linear-model",
+    "href": "slides/01-13-2026/index.html#a-linear-model",
+    "title": "All About Squares",
+    "section": "A Linear Model",
+    "text": "A Linear Model\n\n\n\nCall:\nlm(formula = TotCost ~ units, data = HMB)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-1606.7  -610.9  -124.8   509.8  2522.3 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 12308.642    323.601   38.04   &lt;2e-16 ***\nunits          21.702      0.862   25.18   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 871.8 on 58 degrees of freedom\nMultiple R-squared:  0.9162,    Adjusted R-squared:  0.9147 \nF-statistic: 633.8 on 1 and 58 DF,  p-value: &lt; 2.2e-16\n\n\nTotal.Cost_{t} = 12308.64 + 21.70 * units_t + \\epsilon_{t} where \\epsilon_{t} has a standard deviation of 872 dollars.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#fitted.values-or-predictions",
+    "href": "slides/01-13-2026/index.html#fitted.values-or-predictions",
+    "title": "All About Squares",
+    "section": "fitted.values() or predictions",
+    "text": "fitted.values() or predictions\nThe line is the fitted values.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#residual-costs",
+    "href": "slides/01-13-2026/index.html#residual-costs",
+    "title": "All About Squares",
+    "section": "Residual Costs?",
+    "text": "Residual Costs?",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#not-the-prettiest-but-the-best.",
+    "href": "slides/01-13-2026/index.html#not-the-prettiest-but-the-best.",
+    "title": "All About Squares",
+    "section": "Not the Prettiest but the best….",
+    "text": "Not the Prettiest but the best….",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#because-normal-is-sustainable-i-can-.",
+    "href": "slides/01-13-2026/index.html#because-normal-is-sustainable-i-can-.",
+    "title": "All About Squares",
+    "section": "Because normal is sustainable, I can ….",
+    "text": "Because normal is sustainable, I can ….\n\nInterpret the table including t and F.\n\nUtilize confidence intervals for the estimates.\n\nPredict from the regression of two forms.\n\nSubject to examinations of other characteristics of the regression.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#anova-sums-of-squares",
+    "href": "slides/01-13-2026/index.html#anova-sums-of-squares",
+    "title": "All About Squares",
+    "section": "anova [Sums of squares]",
+    "text": "anova [Sums of squares]\n\n\nAnalysis of Variance Table\n\nResponse: TotCost\n          Df    Sum Sq   Mean Sq F value    Pr(&gt;F)    \nunits      1 481694173 481694173  633.81 &lt; 2.2e-16 ***\nResiduals 58  44080089    760002                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nTwo types of squares: those a function of units and those residual. Why?",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#confint-confidence-intervals",
+    "href": "slides/01-13-2026/index.html#confint-confidence-intervals",
+    "title": "All About Squares",
+    "section": "confint confidence intervals",
+    "text": "confint confidence intervals\nFrom normal, the slope and intercept have t confidence intervals.\n\n\n                  2.5 %      97.5 %\n(Intercept) 11660.88464 12956.39966\nunits          19.97605    23.42705\n\n\nWith 95% confidence, fixed costs range from 11660.88 to 12956.40 dollars per period and the variable costs range from 19.976 to 23.427 dollars per unit. If the goal is to attain 20 dollars per unit, we cannot rule that out [though a 95 percent lower bound would].\n\n\n                    5 %        95 %\n(Intercept) 11767.72623 12849.55807\nunits          20.26066    23.14245",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#plots-1",
+    "href": "slides/01-13-2026/index.html#plots-1",
+    "title": "All About Squares",
+    "section": "Plots",
+    "text": "Plots",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#predicting-costs",
+    "href": "slides/01-13-2026/index.html#predicting-costs",
+    "title": "All About Squares",
+    "section": "Predicting Costs",
+    "text": "Predicting Costs",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#average-costs-intervalconfidence",
+    "href": "slides/01-13-2026/index.html#average-costs-intervalconfidence",
+    "title": "All About Squares",
+    "section": "Average Costs interval=\"confidence\"",
+    "text": "Average Costs interval=\"confidence\"\n\n\n       fit      lwr      upr\n1 16648.95 16303.25 16994.66\n2 17734.03 17448.18 18019.88\n3 18819.11 18576.63 19061.58",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#all-costs-intervalprediction",
+    "href": "slides/01-13-2026/index.html#all-costs-intervalprediction",
+    "title": "All About Squares",
+    "section": "All Costs interval=\"prediction\"",
+    "text": "All Costs interval=\"prediction\"\n\n\n       fit      lwr      upr\n1 16648.95 14869.98 18427.92\n2 17734.03 15965.71 19502.35\n3 18819.11 17057.28 20580.93",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#diminshing-marginal-cost",
+    "href": "slides/01-13-2026/index.html#diminshing-marginal-cost",
+    "title": "All About Squares",
+    "section": "Diminshing Marginal Cost?",
+    "text": "Diminshing Marginal Cost?",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#residuals",
+    "href": "slides/01-13-2026/index.html#residuals",
+    "title": "All About Squares",
+    "section": "Residuals",
+    "text": "Residuals",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#residuals-1",
+    "href": "slides/01-13-2026/index.html#residuals-1",
+    "title": "All About Squares",
+    "section": "Residuals",
+    "text": "Residuals",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#comparing-squares",
+    "href": "slides/01-13-2026/index.html#comparing-squares",
+    "title": "All About Squares",
+    "section": "Comparing Squares",
+    "text": "Comparing Squares\n\n\nAnalysis of Variance Table\n\nModel 1: TotCost4 ~ units\nModel 2: TotCost4 ~ poly(units, 2, raw = TRUE)\n  Res.Df       RSS Df Sum of Sq     F      Pr(&gt;F)    \n1     58 304149603                                   \n2     57 203027172  1 101122431 28.39 0.000001757 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#lines",
+    "href": "slides/01-13-2026/index.html#lines",
+    "title": "All About Squares",
+    "section": "Lines?",
+    "text": "Lines?",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#comparison-1",
+    "href": "slides/01-13-2026/index.html#comparison-1",
+    "title": "All About Squares",
+    "section": "Comparison",
+    "text": "Comparison\ntest or anova\n\n\nAnalysis of Variance Table\n\nModel 1: TotCost3 ~ units\nModel 2: TotCost3 ~ units:PlantFac\n  Res.Df       RSS Df Sum of Sq      F       Pr(&gt;F)    \n1     58 585943761                                     \n2     56 348638405  2 237305356 19.059 0.0000004859 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\nAnalysis of Variance Table\n\nModel 1: TotCost3 ~ units:PlantFac\nModel 2: TotCost3 ~ PlantFac * units\n  Res.Df       RSS Df Sum of Sq      F Pr(&gt;F)\n1     56 348638405                           \n2     54 345221354  2   3417052 0.2672 0.7665",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#the-premier-league",
+    "href": "slides/01-13-2026/index.html#the-premier-league",
+    "title": "All About Squares",
+    "section": "The Premier League",
+    "text": "The Premier League\n\n\n\nCall:\nlm(formula = Points ~ Wage.Bill.milGBP, data = EPL)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-12.569  -3.201   0.353   3.712  11.129 \n\nCoefficients:\n                 Estimate Std. Error t value       Pr(&gt;|t|)    \n(Intercept)      32.11589    2.74905  11.683 0.000000000776 ***\nWage.Bill.milGBP  0.24023    0.02987   8.042 0.000000227415 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.438 on 18 degrees of freedom\nMultiple R-squared:  0.7823,    Adjusted R-squared:  0.7702 \nF-statistic: 64.67 on 1 and 18 DF,  p-value: 0.0000002274\n\n\nPoints = 32.12 + 0.24*Wage.Bill + \\epsilon",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#residuals-2",
+    "href": "slides/01-13-2026/index.html#residuals-2",
+    "title": "All About Squares",
+    "section": "Residuals",
+    "text": "Residuals",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#predicting-points",
+    "href": "slides/01-13-2026/index.html#predicting-points",
+    "title": "All About Squares",
+    "section": "Predicting Points",
+    "text": "Predicting Points\n\n\n        fit      lwr      upr\n1  32.11589 26.34036 37.89143\n2  34.51820 29.26702 39.76939\n3  36.92051 32.16859 41.67244\n4  39.32282 35.03629 43.60936\n5  41.72513 37.85788 45.59239\n6  44.12744 40.61679 47.63809\n7  46.52975 43.29225 49.76725\n8  48.93206 45.86190 52.00222\n9  51.33437 48.30814 54.36060\n10 53.73668 50.62574 56.84762",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "slides/01-13-2026/index.html#some-concluding-remarks",
+    "href": "slides/01-13-2026/index.html#some-concluding-remarks",
+    "title": "All About Squares",
+    "section": "Some Concluding Remarks",
+    "text": "Some Concluding Remarks\n\nIt’s all about squares. But really, it’s all about normals.\n\nAssessing normality is crucial to inference in linear models. But we cannot really know whether or not it holds. But if it does:\n\nSlopes and intercepts are t, as are their confidence intervals.\n\nSums of squares have ratios defined by F.\n\nPredictions have t averages and normal intervals.\n\nAll founded upon the sum of squared errors being \\chi^2.\n\n\nThis core idea of explaining variance or unpacking a black box is the core question to virtually all machine learning and modelling.\n\nThe capital asset pricing model.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "All About Squares"
+    ]
+  },
+  {
+    "objectID": "posts/01-15-2026/index.html",
+    "href": "posts/01-15-2026/index.html",
+    "title": "On Models",
+    "section": "",
+    "text": "What is a model?\nOur reading for today defines models in science. This is a hard read but it is the only reading for the week.\nModels in Science from the Stanford Encyclopedia of Philosophy\nWe will pay extra attention to sections 1, 3, and 5.2.\nThe class plan:\nYour assignment for this time:"
+  },
+  {
+    "objectID": "posts/01-15-2026/index.html#an-example",
+    "href": "posts/01-15-2026/index.html#an-example",
+    "title": "On Models",
+    "section": "An Example",
+    "text": "An Example\nSource: x.com\n\n\n\nMap of Venezuela"
+  },
+  {
+    "objectID": "posts/01-15-2026/index.html#for-next-class",
+    "href": "posts/01-15-2026/index.html#for-next-class",
+    "title": "On Models",
+    "section": "For Next Class:",
+    "text": "For Next Class:\n\nReading: Chapter 1: Open Introduction to Statistics: (On Canvas &gt; Files &gt; OpenIntroStatistics).\n\nDeliverable:"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BUS1302-SP26",
+    "section": "",
+    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "obertwwalker.github.io \n\n\n\n\nRobert W. Walker, Ph. D.\n\n\n\n\n\nRobert W. Walker is an Associate Professor of Quantitative Methods in the Atkinson Graduate School of Management at Willamette University\nHe earned a Ph. D. in political science from the University of Rochester in 2005 and has previously held teaching positions at Dartmouth College, Rice University, Texas A&M University, and Washington University in Saint Louis. His current research develops and applies semi-Markov processes to time-series, cross-section data in international relations and international/comparative political economy. He teaches courses in quantitative methods/applied statistics and microeconomic strategy and previously taught four iterations in the U. S. National Science Foundation funded Empirical Implications of Theoretical Models sequence at Washington University in Saint Louis. His work with Curt Signorino and Muhammet Bas was awarded the Miller Prize for the best article in Political Analysis in 2009.\nHis web presence is rww.science and his github is https://github.com/robertwwalker.\n\n\nRobert’s Erdos-Bacon Number is 8.\n\n\n\n\n\nErdos Table\n\n\n\n\n\n\n\nBacon Table"
+  },
+  {
+    "objectID": "posts/01-13-2026/index.html",
+    "href": "posts/01-13-2026/index.html",
+    "title": "A Syllabus and Models",
+    "section": "",
+    "text": "What is a model?\nOur reading for next time defines models in science. This is a hard read but it is the only reading for the week.\nModels in Science from the Stanford Encyclopedia of Philosophy\nWe will pay extra attention to sections 1, 3, and 5.2.\nThe class plan:\n\nDiscuss the syllabus, deliverables, and requirements\nAn overview of the course and mutual introductions.\nA brief discussion of models to set the foundations for Thursday.\n\nYour assignment for next time:\n\nDo the reading.\nCollect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "",
+    "text": "Welcome to Managing with Data, Analytics, and Artificial Intelligence!"
+  },
+  {
+    "objectID": "posts/welcome/index.html#models",
+    "href": "posts/welcome/index.html#models",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "Models",
+    "text": "Models\n\nOur organizing framework is the model. What is a model? Why models?"
+  },
+  {
+    "objectID": "posts/welcome/index.html#data",
+    "href": "posts/welcome/index.html#data",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "Data",
+    "text": "Data\n\nWhat is data and how do we get some? We start by defining data and our relationship with data. We will explore practical methods of data gathering – from surveys and archives to experiments and crowd sourcing.\nHave data, how is it typically organized? We will explore basic methods of organizing data for robust, sustainable use."
+  },
+  {
+    "objectID": "posts/welcome/index.html#deploying-data",
+    "href": "posts/welcome/index.html#deploying-data",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "Deploying Data",
+    "text": "Deploying Data\n\nHow can managers use data? We will deploy basic tools of cross tabulation, frequency distributions, and simple plots before some statistical inference and model building."
+  },
+  {
+    "objectID": "posts/welcome/index.html#artificial-intelligence",
+    "href": "posts/welcome/index.html#artificial-intelligence",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "Artificial Intelligence",
+    "text": "Artificial Intelligence\n\nWhat is artificial intelligence (AI)? We will highlight general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business."
+  }
+]
