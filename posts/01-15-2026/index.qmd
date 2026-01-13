@@ -1,0 +1,45 @@
+---
+title: "On Models"
+author: "Robert W. Walker"
+date: "2026-01-15"
+image: "image.png"
+---
+
+What is a model?
+
+Our reading for today defines models in science.  This is a hard read but it is the only reading for the week.
+
+[Models in Science from the Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/archives/fall2013/entries/models-science/)
+
+We will pay extra attention to sections 1, 3, and 5.2.
+
+The class plan:
+
+1. What is a model?
+2. Sharing insights from unfamiliar models supplied by Gemini.
+3. Models in business?
+
+Your assignment for this time:
+
+1. Do the reading.
+2. Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar.  If you did not run across at least three unfamiliar references, you need a more advanced course.
+
+### My Homework
+
+1. [The Lorenz Model](https://docs.google.com/document/d/107KPF3BsF2NiAPnoKgC0gisqlqZKsaSJuenrjHQYOpg/edit?usp=sharing)
+
+2. [The double helix model of DNA](https://docs.google.com/document/d/138wuCj5-0PanIFdNf2MVjas4ZI3fT_j8aymWNiuLFa8/edit?usp=sharing)
+
+3. [What is ontology?](https://docs.google.com/document/d/1RB5tjcRtYaalPQL_pQU_m1WgmZ9EIKGksar5GlkZ7Dk/edit?usp=sharing)
+
+![Imagine that](./ontology.png)
+
+## An Example
+
+Source: [x.com](https://x.com/pablohernandezb/status/2010762183752536193?s=46)
+
+![Map of Venezuela](./ven-map.png)
+
+## For Next Class:
+
+Chapter 1: Open Introduction to Statistics: On Canvas > Files > OpenIntroStatistics

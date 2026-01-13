@@ -1,0 +1,46 @@
+---
+title: "Welcome To BUS 1301: Managing with AI"
+author: "Robert W. Walker"
+date: "2026-01-12"
+title-block-banner: false
+image: "image.jpg"
+---
+
+<marquee scrollamount="10"><h1><p style="color:purple;">{{< fa brands r-project >}}obertwwalker.github.io <br></p></h1></marquee>
+
+Welcome to Managing with Data, Analytics, and Artificial Intelligence!
+
+# Our Goal in Four Parts
+
+Together, we will investigate how managers collect, process, and interpret observations about the world around them to facilitate informed decisions.    
+
+## Models
+
+- Our organizing framework is the *model*.  What is a model?  Why models?
+
+## Data
+
+- What is data and how do we get some?  We start by defining data and our relationship with data. We will explore practical methods of data gathering -- from surveys and archives to experiments and crowd sourcing.   
+
+- Have data, how is it typically organized?  We will explore basic methods of organizing data for robust, sustainable use.    
+
+## Deploying Data
+
+- How can managers use data? We will deploy basic tools of cross tabulation, frequency distributions, and simple plots before some statistical inference and model building.
+
+## Artificial Intelligence
+
+- What is artificial intelligence (AI)?   We will highlight general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business.
+
+# Learning Objectives
+
+Our key learning objectives, for the course, are:   
+
+1. What is a model?  What role do models play in the origination of data [for empiricists]?
+2. Distinguish among means of data collection and discuss their tradeoffs.   
+3. Describe common models of data management and their tradeoffs.   
+4. Articulate the applicability of popular analytic techniques to their uses and their function.   
+5. Discuss the historical development and current functionality of *AI*.   
+6. Ethical issues are ubiquitous in data, analytics, and AI in the workplace; we should confront them.   
+
+Our week 1 learning objective is to define a model, give examples of models and their use in management activities, and the interrelainship between models and measures, a lead-in to specifics on data.

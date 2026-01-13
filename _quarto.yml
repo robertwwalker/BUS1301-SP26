@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+        - "*.qmd"
+  title: "BUS 1301: Managing with AI - Spring 2026"
+
+
+website:
+  description: "Managing with Data: Analytics and Artificial Intelligence"
+  site-url: https://robertwwalker.github.io/BUS1301-SP26 # you must change this appropriately for RSS feeds to work properly
+  title: "Managing with AI"
+  page-navigation: true
+  navbar:
+    title: "BUS 1301"
+    search: true
+    logo: "AGSMlogo.jpeg"
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/robertwwalker/
+      - icon: twitter
+        href: https://twitter.com/PieRatio
+
+
+  sidebar:
+      contents: slides
+
+format:
+  html:
+    theme:
+      - morph
+      - brand
+    lightbox: true
+    code-fold: true
+    code-summary: "How's that done?"
+    css: styles.css
+
+
+

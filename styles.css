@@ -1,0 +1,89 @@
+/* css styles */
+
+body, html {
+  /* The image used */
+  background-image: url("banner.jpeg");
+/*  background-color: #d5e0ed; */
+  background-color: #e5dd97;
+
+
+  /* Full height */
+  height: 30%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Borrowed and adapted from Andrew Heiss */
+
+$blue:    #2780e3 !default;
+$indigo:  #6610f2 !default;
+
+// Footer
+// $footer-bg: $indigo !default;
+// $footer-fg: $blue !default;
+
+.nav-footer-center {
+        text-align: left;
+        position: inherit;
+        margin-top: 0;
+
+        @media (max-width: map-get($grid-breakpoints, md)) {
+            margin-top: 0.5em;
+            margin-bottom: 1.5em;
+        }
+    }
+.nav-footer-left,
+.nav-footer-right,
+.nav-footer-center {
+        text-align: left;
+        width: 100%;
+        min-height: 2em;
+        font-size: 4px;
+}
+
+
+$font-family-sans-serif: "Inconsolata" !default;
+$footer-font-family: "Inconsolata" !default;
+
+
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@0,100..900;1,100..900&display=swap" !default;
+
+@if $web-font-path {
+    @import url($web-font-path);
+}
+
+.faux-block {
+        display: block;
+        padding-bottom: 0.4em;
+}
+
+
+.fixed-bg {
+  /* The background image */
+  background-image: url("banner.jpg");
+
+  /* Set a specified height, or the minimum height for the background image */
+  min-height: 300px;
+
+  /* Set background image to fixed (don't scroll along with the page) */
+  background-attachment: scroll;
+
+  /* Center the background image */
+  background-position: center;
+
+  /* Set the background image to no repeat */
+  background-repeat: no-repeat;
+
+  /* Scale the background image to be as large as possible */
+  background-size: cover;
+}
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+}
