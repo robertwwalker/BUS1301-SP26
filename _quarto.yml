@@ -30,11 +30,10 @@ format:
   html:
     theme:
       - morph
-      - brand
     lightbox: true
     code-fold: true
     code-summary: "How's that done?"
-#    css: styles.css
+    css: styles.css
 
 
 
