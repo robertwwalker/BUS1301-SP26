@@ -14,21 +14,21 @@ Welcome to Managing with Data, Analytics, and Artificial Intelligence!
 
 Together, we will investigate how managers collect, process, and interpret observations about the world around them to facilitate informed decisions.    
 
-## Models
+## 1. Models
 
 - Our organizing framework is the *model*.  What is a model?  Why models?
 
-## Data
+## 2. Data
 
 - What is data and how do we get some?  We start by defining data and our relationship with data. We will explore practical methods of data gathering -- from surveys and archives to experiments and crowd sourcing.   
 
 - Have data, how is it typically organized?  We will explore basic methods of organizing data for robust, sustainable use.    
 
-## Deploying Data
+## 3. Deploying Data
 
 - How can managers use data? We will deploy basic tools of cross tabulation, frequency distributions, and simple plots before some statistical inference and model building.
 
-## Artificial Intelligence
+## 4. Artificial Intelligence
 
 - What is artificial intelligence (AI)?   We will highlight general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business.
 
@@ -43,4 +43,19 @@ Our key learning objectives, for the course, are:
 5. Discuss the historical development and current functionality of *AI*.   
 6. Ethical issues are ubiquitous in data, analytics, and AI in the workplace; we should confront them.   
 
-Our week 1 learning objective is to define a model, give examples of models and their use in management activities, and the interrelainship between models and measures, a lead-in to specifics on data.
+Our week 1 learning objective is to define a model, give examples of models and their use in management activities, and the interrelationship between models and measures, a lead-in to specifics on data.
+
+# Core Tools
+
+We will make extensive use of a few software and computing tools.
+
+- Microsoft Word and Microsoft Excel [licenses provided via Willamette if needed]
+- Google Docs and Sheets
+- [Google Gemini](https://gemini.google.com/), in lieu of a subscription to OpenAI, Anthropic, or similar
+- [NotebookLM](https://notebooklm.google.com/)
+
+# Readings
+
+A free and open-source textbook will provide background and exercises in the generic field of statistics.
+
+- [Open Intro Statistics](https://www.openintro.org/book/os/). The .pdf file is available on canvas and a screen reader version can be obtained from the link.

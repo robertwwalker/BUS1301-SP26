@@ -130,26 +130,26 @@
 <h1>Our Goal in Four Parts</h1>
 <p>Together, we will investigate how managers collect, process, and interpret observations about the world around them to facilitate informed decisions.</p>
 <section id="models" class="level2">
-<h2 class="anchored" data-anchor-id="models">Models</h2>
+<h2 class="anchored" data-anchor-id="models">1. Models</h2>
 <ul>
 <li>Our organizing framework is the <em>model</em>. What is a model? Why models?</li>
 </ul>
 </section>
 <section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
+<h2 class="anchored" data-anchor-id="data">2. Data</h2>
 <ul>
 <li><p>What is data and how do we get some? We start by defining data and our relationship with data. We will explore practical methods of data gathering – from surveys and archives to experiments and crowd sourcing.</p></li>
 <li><p>Have data, how is it typically organized? We will explore basic methods of organizing data for robust, sustainable use.</p></li>
 </ul>
 </section>
 <section id="deploying-data" class="level2">
-<h2 class="anchored" data-anchor-id="deploying-data">Deploying Data</h2>
+<h2 class="anchored" data-anchor-id="deploying-data">3. Deploying Data</h2>
 <ul>
 <li>How can managers use data? We will deploy basic tools of cross tabulation, frequency distributions, and simple plots before some statistical inference and model building.</li>
 </ul>
 </section>
 <section id="artificial-intelligence" class="level2">
-<h2 class="anchored" data-anchor-id="artificial-intelligence">Artificial Intelligence</h2>
+<h2 class="anchored" data-anchor-id="artificial-intelligence">4. Artificial Intelligence</h2>
 <ul>
 <li>What is artificial intelligence (AI)? We will highlight general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business.</li>
 </ul>
@@ -170,7 +170,24 @@
 </li>
 <li>Ethical issues are ubiquitous in data, analytics, and AI in the workplace; we should confront them.</li>
 </ol>
-<p>Our week 1 learning objective is to define a model, give examples of models and their use in management activities, and the interrelainship between models and measures, a lead-in to specifics on data.</p>
+<p>Our week 1 learning objective is to define a model, give examples of models and their use in management activities, and the interrelationship between models and measures, a lead-in to specifics on data.</p>
+</section>
+<section id="core-tools" class="level1">
+<h1>Core Tools</h1>
+<p>We will make extensive use of a few software and computing tools.</p>
+<ul>
+<li>Microsoft Word and Microsoft Excel [licenses provided via Willamette if needed]</li>
+<li>Google Docs and Sheets</li>
+<li><a href="https://gemini.google.com/">Google Gemini</a>, in lieu of a subscription to OpenAI, Anthropic, or similar</li>
+<li><a href="https://notebooklm.google.com/">NotebookLM</a></li>
+</ul>
+</section>
+<section id="readings" class="level1">
+<h1>Readings</h1>
+<p>A free and open-source textbook will provide background and exercises in the generic field of statistics.</p>
+<ul>
+<li><a href="https://www.openintro.org/book/os/">Open Intro Statistics</a>. The .pdf file is available on canvas and a screen reader version can be obtained from the link.</li>
+</ul>
 
 
 </section>
