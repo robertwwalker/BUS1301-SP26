@@ -133,7 +133,7 @@
     "href": "index.html",
     "title": "BUS1301-SP26",
     "section": "",
-    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
+    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nFormatting a Gemini Response\n\n\n\n\n\n\n\n\nJan 14, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nLesson Learned on Gemini\n\n\n\n\n\n\n\n\nJan 14, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -204,5 +204,61 @@
     "title": "On Models",
     "section": "Prompt: What is ontology?",
     "text": "Prompt: What is ontology?\nOntology is, at its core, the study of what exists and how things are related.1\nDepending on whether you are talking to a philosopher or a computer scientist, the definition shifts from abstract reality to practical data structures.2\nHere is the breakdown of the two main perspectives: 1. In Philosophy (The Origin)3 In philosophy, ontology is the “study of being.”4 It is a branch of metaphysics that asks deep questions about the nature of reality.5\nThe Goal: To discover the fundamental categories of existence.6\nKey Questions: What does it mean “to exist”? Do abstract ideas (like the number 7 or “justice”) exist in the same way a rock exists? Example: A philosopher might analyze if “holes” are real things, or if they are just the absence of something else. 2. In Computer Science (The Application) In computer science (specifically AI and Information Science), an ontology is a formal blueprint used to model knowledge.7 It is a specific way of organizing data so that computers can “understand” it.8\nInstead of asking “what is reality,” a computational ontology declares: “For this specific system, these are the only things that exist, and here is how they connect.” The Goal: To help software share data, reason about information, and avoid confusion.9\nThe “Triples” Structure: Most computational ontologies are built on three main components: Classes (The Nouns): The categories of things (e.g., Patient, Doctor, Drug).10\nAttributes (The Adjectives): The properties of those things (e.g., Name, Dosage, Blood Type).11\nRelationships (The Verbs): How they interact (e.g., Doctor prescribes Drug). Summary Comparison Feature Philosophical Ontology Computational Ontology Focus The nature of reality. The structure of a specific domain’s data. Goal Truth and wisdom. Interoperability (systems talking to each other). Output Theories and essays. Knowledge Graphs, code (OWL/RDF), databases. Example “Is the mind separate from the body?” “A Smartphone is-a Device.”\nWhy is this important right now? You likely interact with ontologies every day without realizing it: Google Search: When you search for “Jaguar,” Google uses an ontology to figure out if you mean the animal, the car, or the football team based on the other words in your query. Healthcare: Ontologies allow different hospitals to share records. One system might say “Heart Attack” and another “Myocardial Infarction,” but the ontology links them as the exact same concept. Next Step Would you like me to show you a text-based example of what a simple ontology looks like for a common domain, like a Library or a Smart Home?"
+  },
+  {
+    "objectID": "posts/Gemini-Formatting/index.html",
+    "href": "posts/Gemini-Formatting/index.html",
+    "title": "Formatting a Gemini Response",
+    "section": "",
+    "text": "Gemini is powerful, and a few tidbits help a great deal. I use markdown formatting for text inputs and Gemini is well versed in this. My prompts now use please format responses in markdown and include links to the noted sources."
+  },
+  {
+    "objectID": "posts/Gemini-Formatting/index.html#commentary",
+    "href": "posts/Gemini-Formatting/index.html#commentary",
+    "title": "Formatting a Gemini Response",
+    "section": "Commentary",
+    "text": "Commentary\nThe content is excellent. The formatting is not. And the Docs version is no better.\n\n\n\nGemini output\n\n\nThe notes have no content. It looks fine but it is not complete. Let me prompt again and see if I can get something to work with."
+  },
+  {
+    "objectID": "posts/Lesson-Learned/index.html",
+    "href": "posts/Lesson-Learned/index.html",
+    "title": "Lesson Learned on Gemini",
+    "section": "",
+    "text": "Of Note"
+  },
+  {
+    "objectID": "posts/Lesson-Learned/index.html#how-models-represent-the-world",
+    "href": "posts/Lesson-Learned/index.html#how-models-represent-the-world",
+    "title": "Lesson Learned on Gemini",
+    "section": "1. How Models Represent the World",
+    "text": "1. How Models Represent the World\nModels are like maps or pictures—they represent something else. Philosophers usually divide them into two main types based on what they represent.\n\nModels of Phenomena\nThese are models of things or events in the real world. * Examples: The Bohr model of the atom, a scale model of a bridge, or a computer model of the weather. * The Big Question: How does a model (which is just an object or an idea) represent a real phenomenon? It’s similar to asking how a painting represents a landscape.\n\n\nModels of Data\nScientific data often comes from observations that are “messy.” There might be errors or irrelevant details. * What they do: A “model of data” is a cleaned-up version of that information. * Example: If you plot points on a graph and they are scattered, you might draw a smooth curve through them. That smooth curve is the model of the data. It helps scientists see the pattern rather than just the noise.\n\n\nDifferent Styles of Models\nScientists use different styles to represent things, just like artists use different styles (like realism or abstract art).\n\nScale Models: These are just smaller (or larger) physical copies of the target.\n\nExample: A wooden model of a car or a plastic model of a DNA molecule. They look like the real thing but might be made of different materials.\n\nIdealized Models: These models simplify reality to make it easier to understand.\n\n“Stripping Away” (Aristotelian): You ignore details that don’t matter for your problem. For example, when studying planetary orbits, you might treat a planet as a simple dot with mass, ignoring its mountains and oceans.\n“Distorting” (Galilean): You imagine a world that physically cannot exist to test a theory. For example, imagining a surface with zero friction or a market where everyone knows everything.\n\nAnalogical Models: These use a familiar object to explain something new.\n\nExample: Describing the nucleus of an atom as a “liquid drop.” It isn’t actually a drop of liquid, but it behaves like one in some ways."
+  },
+  {
+    "objectID": "posts/Lesson-Learned/index.html#what-are-models-made-of-ontology",
+    "href": "posts/Lesson-Learned/index.html#what-are-models-made-of-ontology",
+    "title": "Lesson Learned on Gemini",
+    "section": "2. What Are Models Made Of? (Ontology)",
+    "text": "2. What Are Models Made Of? (Ontology)\nIf you hold a model car, it’s made of wood or plastic. But what is a scientific model made of?\n\nPhysical Objects: Some are real material things, like the model of a bridge used in a wind tunnel.\nFictional Objects: Some philosophers argue that models are like characters in a book (like Sherlock Holmes). They don’t exist in the real world, but we can still study them and learn true things about them.\nMath and Sets: Many scientists view models as mathematical structures (sets of equations and rules).\nDescriptions: Some simply say a model is just a detailed description of a system."
+  },
+  {
+    "objectID": "posts/Lesson-Learned/index.html#learning-with-models-epistemology",
+    "href": "posts/Lesson-Learned/index.html#learning-with-models-epistemology",
+    "title": "Lesson Learned on Gemini",
+    "section": "3. Learning with Models (Epistemology)",
+    "text": "3. Learning with Models (Epistemology)\nWe use models because we can’t always test the real world. We can’t easily crash real trains to test safety, so we use models. Learning happens in two steps:\n\nLearning about the Model: We run experiments or simulations on the model itself. For example, we might run a computer program to see how a digital disease spreads.\nTranslating to Reality: We take what we learned from the model and apply it to the real world. If the model bridge collapses in the wind tunnel, we assume the real bridge might collapse in a real storm."
+  },
+  {
+    "objectID": "posts/Lesson-Learned/index.html#models-vs.-theories",
+    "href": "posts/Lesson-Learned/index.html#models-vs.-theories",
+    "title": "Lesson Learned on Gemini",
+    "section": "4. Models vs. Theories",
+    "text": "4. Models vs. Theories\nIs a model the same thing as a theory? It’s a bit fuzzy, but here are two main views:\n\nThe Syntactic View: This is an older view that focuses on logic. It says a “theory” is a set of sentences or math equations, and a “model” is just a way to interpret those equations.\nThe Semantic View: This is the more modern view. It says that the theory is actually a collection of models. For example, “Classical Mechanics” isn’t just a list of rules; it’s the family of all the different models (pendulums, planetary orbits, billiard balls) that follow those rules."
+  },
+  {
+    "objectID": "posts/Lesson-Learned/index.html#conclusion",
+    "href": "posts/Lesson-Learned/index.html#conclusion",
+    "title": "Lesson Learned on Gemini",
+    "section": "5. Conclusion",
+    "text": "5. Conclusion\nModels are central to how modern science works. They are not just side-projects; they are the main instruments scientists use to represent the world, manipulate data, and formulate theories. Whether they are physical objects, complex equations, or imagined fictions, models help us grasp the complexity of the universe.\n\n\nReferences & Further Reading\n\nOriginal Article: Frigg, Roman and Hartmann, Stephan, “Models in Science”, The Stanford Encyclopedia of Philosophy (Fall 2013 Edition), Edward N. Zalta (ed.).\nReference on Representation: Van Fraassen, B. C. (1980). The Scientific Image. Oxford: Clarendon.\nReference on Data Models: Suppes, P. (1962). “Models of Data”."
   }
 ]

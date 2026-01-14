@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Robert W. Walker">
+<meta name="dcterms.date" content="2026-01-14">
 
-<title>BUS1301-SP26 – Managing with AI</title>
+<title>Lesson Learned on Gemini – Managing with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +25,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2890eba573baac25c3e9f0f9d94fc55f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2890eba573baac25c3e9f0f9d94fc55f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,81 +73,23 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Managing with AI" href="index.xml" data-external="1"></head>
-
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./AGSMlogo.jpeg" alt="" class="navbar-logo light-content">
-    <img src="./AGSMlogo.jpeg" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo light-content">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">BUS 1301</span>
     </a>
   </div>
@@ -157,7 +100,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -181,7 +124,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">BUS1301-SP26</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lesson Learned on Gemini</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -191,24 +134,36 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">BUS1301-SP26</h1>
+      <h1 class="title">Lesson Learned on Gemini</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-body">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Robert W. Walker </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 14, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -224,7 +179,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/01-13-2026/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/01-13-2026/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Managing with Data, Analytics and AI</span></a>
   </div>
 </li>
@@ -235,159 +190,120 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-<marquee scrollamount="10">
-<h1>
-<p style="color:purple;">
-<i class="fa-brands fa-r-project" aria-label="r-project"></i>obertwwalker.github.io <br>
-</p>
-</h1>
-<p></p></marquee><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./ModelsData.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Of Note"><img src="./ModelsData.png" class="img-fluid figure-img" alt="Of Note"></a></p>
+<figcaption>Of Note</figcaption>
+</figure>
+</div>
+<section id="tldr" class="level1">
+<h1>TL;DR</h1>
+<p>Gemini is powerful, and a few tidbits help a great deal. I use <code>markdown</code> formatting for text inputs and Gemini is well versed in this. My prompts now use <code>please format responses in markdown and include links to the noted sources</code>.</p>
+</section>
+<section id="getting-formatted-responses-from-gemini-the-first-time" class="level1">
+<h1>Getting Formatted Responses from Gemini the First Time</h1>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Prompt:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please take the following link: <code>https://plato.stanford.edu/archives/fall2013/entries/models-science/</code> and rewrite the document for me at an early high school level. The response should formatted with references in markdown code.</p>
+</div>
+</div>
+</section>
+<section id="models-in-science" class="level1">
+<h1>Models in Science</h1>
+<p><strong>Source:</strong> <a href="https://plato.stanford.edu/archives/fall2013/entries/models-science/">Stanford Encyclopedia of Philosophy: Models in Science</a></p>
+<p>In science, models are some of the most important tools researchers use. You might have seen the “billiard ball model” of a gas in chemistry or the “double helix” model of DNA in biology. Scientists spend a lot of time building, testing, and fixing these models.</p>
+<p>But what exactly is a model? Philosophers of science have thought a lot about this. This article explores what models are, how they represent the world, and how we learn from them.</p>
+<section id="how-models-represent-the-world" class="level2">
+<h2 class="anchored" data-anchor-id="how-models-represent-the-world">1. How Models Represent the World</h2>
+<p>Models are like maps or pictures—they represent something else. Philosophers usually divide them into two main types based on what they represent.</p>
+<section id="models-of-phenomena" class="level3">
+<h3 class="anchored" data-anchor-id="models-of-phenomena">Models of Phenomena</h3>
+<p>These are models of things or events in the real world. * <strong>Examples:</strong> The Bohr model of the atom, a scale model of a bridge, or a computer model of the weather. * <strong>The Big Question:</strong> How does a model (which is just an object or an idea) represent a real phenomenon? It’s similar to asking how a painting represents a landscape.</p>
+</section>
+<section id="models-of-data" class="level3">
+<h3 class="anchored" data-anchor-id="models-of-data">Models of Data</h3>
+<p>Scientific data often comes from observations that are “messy.” There might be errors or irrelevant details. * <strong>What they do:</strong> A “model of data” is a cleaned-up version of that information. * <strong>Example:</strong> If you plot points on a graph and they are scattered, you might draw a smooth curve through them. That smooth curve is the <em>model</em> of the data. It helps scientists see the pattern rather than just the noise.</p>
+</section>
+<section id="different-styles-of-models" class="level3">
+<h3 class="anchored" data-anchor-id="different-styles-of-models">Different Styles of Models</h3>
+<p>Scientists use different styles to represent things, just like artists use different styles (like realism or abstract art).</p>
+<ul>
+<li><strong>Scale Models:</strong> These are just smaller (or larger) physical copies of the target.
+<ul>
+<li><em>Example:</em> A wooden model of a car or a plastic model of a DNA molecule. They look like the real thing but might be made of different materials.</li>
+</ul></li>
+<li><strong>Idealized Models:</strong> These models simplify reality to make it easier to understand.
+<ul>
+<li><strong>“Stripping Away” (Aristotelian):</strong> You ignore details that don’t matter for your problem. For example, when studying planetary orbits, you might treat a planet as a simple dot with mass, ignoring its mountains and oceans.</li>
+<li><strong>“Distorting” (Galilean):</strong> You imagine a world that physically cannot exist to test a theory. For example, imagining a surface with <em>zero friction</em> or a market where everyone knows <em>everything</em>.</li>
+</ul></li>
+<li><strong>Analogical Models:</strong> These use a familiar object to explain something new.
+<ul>
+<li><em>Example:</em> Describing the nucleus of an atom as a “liquid drop.” It isn’t actually a drop of liquid, but it behaves like one in some ways.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="what-are-models-made-of-ontology" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-models-made-of-ontology">2. What Are Models Made Of? (Ontology)</h2>
+<p>If you hold a model car, it’s made of wood or plastic. But what is a <em>scientific</em> model made of?</p>
+<ul>
+<li><strong>Physical Objects:</strong> Some are real material things, like the model of a bridge used in a wind tunnel.</li>
+<li><strong>Fictional Objects:</strong> Some philosophers argue that models are like characters in a book (like Sherlock Holmes). They don’t exist in the real world, but we can still study them and learn true things about them.</li>
+<li><strong>Math and Sets:</strong> Many scientists view models as mathematical structures (sets of equations and rules).</li>
+<li><strong>Descriptions:</strong> Some simply say a model is just a detailed description of a system.</li>
+</ul>
+</section>
+<section id="learning-with-models-epistemology" class="level2">
+<h2 class="anchored" data-anchor-id="learning-with-models-epistemology">3. Learning with Models (Epistemology)</h2>
+<p>We use models because we can’t always test the real world. We can’t easily crash real trains to test safety, so we use models. Learning happens in two steps:</p>
+<ol type="1">
+<li><strong>Learning <em>about</em> the Model:</strong> We run experiments or simulations on the model itself. For example, we might run a computer program to see how a digital disease spreads.</li>
+<li><strong>Translating to Reality:</strong> We take what we learned from the model and apply it to the real world. If the model bridge collapses in the wind tunnel, we assume the real bridge might collapse in a real storm.</li>
+</ol>
+</section>
+<section id="models-vs.-theories" class="level2">
+<h2 class="anchored" data-anchor-id="models-vs.-theories">4. Models vs.&nbsp;Theories</h2>
+<p>Is a model the same thing as a theory? It’s a bit fuzzy, but here are two main views:</p>
+<ul>
+<li><strong>The Syntactic View:</strong> This is an older view that focuses on logic. It says a “theory” is a set of sentences or math equations, and a “model” is just a way to interpret those equations.</li>
+<li><strong>The Semantic View:</strong> This is the more modern view. It says that the <em>theory</em> is actually a collection of models. For example, “Classical Mechanics” isn’t just a list of rules; it’s the family of all the different models (pendulums, planetary orbits, billiard balls) that follow those rules.</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">5. Conclusion</h2>
+<p>Models are central to how modern science works. They are not just side-projects; they are the main instruments scientists use to represent the world, manipulate data, and formulate theories. Whether they are physical objects, complex equations, or imagined fictions, models help us grasp the complexity of the universe.</p>
+<hr>
+<section id="references-further-reading" class="level3">
+<h3 class="anchored" data-anchor-id="references-further-reading">References &amp; Further Reading</h3>
+<ul>
+<li><strong>Original Article:</strong> Frigg, Roman and Hartmann, Stephan, <a href="https://plato.stanford.edu/archives/fall2013/entries/models-science/">“Models in Science”</a>, <em>The Stanford Encyclopedia of Philosophy</em> (Fall 2013 Edition), Edward N. Zalta (ed.).</li>
+<li><strong>Reference on Representation:</strong> <a href="https://plato.stanford.edu/archives/fall2013/entries/models-science/#Bib">Van Fraassen, B. C. (1980). <em>The Scientific Image</em>. Oxford: Clarendon.</a></li>
+<li><strong>Reference on Data Models:</strong> <a href="https://plato.stanford.edu/archives/fall2013/entries/models-science/#Bib">Suppes, P. (1962). “Models of Data”.</a></li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1768464000000" data-listing-file-modified-sort="1768353699780" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1676">
-<div class="thumbnail"><a href="./posts/01-15-2026/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/01-15-2026/image.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/01-15-2026/index.html" class="no-external">On Models</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/01-15-2026/index.html" class="no-external">
-What is a model?
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/01-15-2026/index.html" class="no-external">
-<div class="listing-date">
-Jan 15, 2026
-</div>
-<div class="listing-author">
-Robert W. Walker
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1768377600000" data-listing-file-modified-sort="1768412564752" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1536">
-<div class="thumbnail"><a href="./posts/Gemini-Formatting/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/Gemini-Formatting/image.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Gemini-Formatting/index.html" class="no-external">Formatting a Gemini Response</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/Gemini-Formatting/index.html" class="no-external">
-Gemini is powerful, and a few tidbits help a great deal. I use <code>markdown</code> formatting for text inputs and Gemini is well versed in this. My prompts now use <code>please format…</code>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Gemini-Formatting/index.html" class="no-external">
-<div class="listing-date">
-Jan 14, 2026
-</div>
-<div class="listing-author">
-Robert W. Walker
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1768377600000" data-listing-file-modified-sort="1768413312244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="931">
-<div class="thumbnail"><a href="./posts/Lesson-Learned/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/Lesson-Learned/image.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Lesson-Learned/index.html" class="no-external">Lesson Learned on Gemini</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/Lesson-Learned/index.html" class="no-external">
-Gemini is powerful, and a few tidbits help a great deal. I use <code>markdown</code> formatting for text inputs and Gemini is well versed in this. My prompts now use <code>please format…</code>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Lesson-Learned/index.html" class="no-external">
-<div class="listing-date">
-Jan 14, 2026
-</div>
-<div class="listing-author">
-Robert W. Walker
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1768291200000" data-listing-file-modified-sort="1768264515368" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="117">
-<div class="thumbnail"><a href="./posts/01-13-2026/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/01-13-2026/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/01-13-2026/index.html" class="no-external">A Syllabus and Models</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/01-13-2026/index.html" class="no-external">
-What is a model?
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/01-13-2026/index.html" class="no-external">
-<div class="listing-date">
-Jan 13, 2026
-</div>
-<div class="listing-author">
-Robert W. Walker
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1768204800000" data-listing-file-modified-sort="1768276137678" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="394">
-<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/welcome/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To BUS 1301: Managing with AI</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
-
-<i class="fa-brands fa-r-project" aria-label="r-project"></i>obertwwalker.github.io <br>
-
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Jan 12, 2026
-</div>
-<div class="listing-author">
-Robert W. Walker
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -789,6 +705,38 @@ Robert W. Walker
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
