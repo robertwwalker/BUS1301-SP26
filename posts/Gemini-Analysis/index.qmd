@@ -1,0 +1,249 @@
+---
+title: "Gemini Data Analysis"
+author: "Robert W. Walker"
+date: "2026-01-14"
+image: "image.png"
+---
+
+# TL;DR
+
+Gemini is powerful, soup to nuts, in analysing data.  Let's look at an example that literally deploys a model to generate a common quantity used in portfolio management in finance.
+
+
+::: {.callout-note appearance="simple"}
+
+## Prompt: 
+
+Please use publicly available sources to acquire the price of Apple common stock over the last five years and plot it as a time series.  Then proceed to calculate the monthly returns for the stock and the monthly returns for the S&P 500 and provide a CAPM regression of beta.  Finally, please allow me access to the data you used by exporting it to sheets
+
+:::
+
+# Apple (AAPL) vs S&P 500: 5-Year CAPM Analysis
+**Date Range:** January 2021 – January 2026
+
+## 1. Regression Statistics (Monthly Returns)
+Based on the monthly returns of Apple stock compared to the S&P 500:
+
+* **Beta ($\beta$):** 1.09
+* **Alpha ($\alpha$):** 0.17% (Monthly)
+* **R-Squared ($R^2$):** 0.44
+
+## 2. Interpretation
+* **Beta (1.09):** AAPL has historically been about **9% more volatile** than the S&P 500. A 1% rise in the market typically correlates with a 1.09% rise in AAPL.
+* **Alpha (0.17%):** On average, AAPL outperformed the risk-adjusted return predicted by the CAPM model by 0.17% per month.
+* **R-Squared (0.44):** Approximately 44% of Apple's price movement can be explained by the movement of the S&P 500.
+
+## 3. Plots Generated
+* **Time Series:** A line chart showing AAPL price rising from ~$128 (Jan 2021) to ~$259 (Jan 2026).
+* **Regression:** A scatter plot of `SP500_Return` (x-axis) vs `AAPL_Return` (y-axis) with a regression line of slope 1.09.
+
+```{python}
+import pandas as pd
+import numpy as np
+from scipy import stats
+import matplotlib.pyplot as plt
+
+# Data from Source 1.3 (AAPL)
+aapl_text = """
+Jan 2026 | 259.89
+Dec 2025 | 272.21
+Nov 2025 | 278.85
+Oct 2025 | 270.11
+Sep 2025 | 254.38
+Aug 2025 | 231.92
+Jul 2025 | 207.13
+Jun 2025 | 204.74
+May 2025 | 200.43
+Apr 2025 | 211.78
+Mar 2025 | 221.37
+Feb 2025 | 241.02
+Jan 2025 | 234.94
+Dec 2024 | 249.29
+Nov 2024 | 236.26
+Oct 2024 | 224.65
+Sep 2024 | 231.70
+Aug 2024 | 227.72
+Jul 2024 | 220.58
+Jun 2024 | 209.20
+May 2024 | 190.95
+Apr 2024 | 168.95
+Mar 2024 | 170.09
+Feb 2024 | 179.29
+Jan 2024 | 182.68
+Dec 2023 | 190.73
+Nov 2023 | 188.17
+Oct 2023 | 168.95
+Sep 2023 | 169.38
+Aug 2023 | 185.87
+Jul 2023 | 194.09
+Jun 2023 | 191.64
+May 2023 | 175.12
+Apr 2023 | 167.41
+Mar 2023 | 162.70
+Feb 2023 | 145.44
+Jan 2023 | 142.15
+Dec 2022 | 128
+Nov 2022 | 145.83
+Oct 2022 | 150.81
+Sep 2022 | 135.92
+Aug 2022 | 154.63
+Jul 2022 | 159.61
+Jun 2022 | 134.28
+May 2022 | 146.18
+Apr 2022 | 154.61
+Mar 2022: 171.24
+Feb 2022: 161.93
+Jan 2022: 171.19
+Dec 2021: 173.92
+Nov 2021: 161.90
+Oct 2021: 146.51
+Sep 2021: 138.39
+Aug 2021: 148.49
+Jul 2021: 142.44
+Jun 2021: 133.75
+May 2021: 121.69
+Apr 2021: 128.16
+Mar 2021: 119.08
+Feb 2021: 118.22
+Jan 2021: 128.46
+"""
+
+# Data from Source 2.3 (S&P 500)
+sp500_text = """
+2026-01-09 | 6966.28
+2025-12-31 | 6845.50
+2025-11-28 | 6849.09
+2025-10-31 | 6840.20
+2025-09-30 | 6688.46
+2025-08-29 | 6460.26
+2025-07-31 | 6339.39
+2025-06-30 | 6204.95
+2025-05-30 | 5911.69
+2025-04-30 | 5569.06
+2025-03-31 | 5611.85
+2025-02-28 | 5954.50
+2025-01-31 | 6040.53
+2024-12-31 | 5881.63
+2024-11-29 | 6032.38
+2024-10-31 | 5705.45
+2024-09-30 | 5762.48
+2024-08-30 | 5648.40
+2024-07-31 | 5522.30
+2024-06-28 | 5460.48
+2024-05-31 | 5277.51
+2024-04-30 | 5035.69
+2024-03-28 | 5254.35
+2024-02-29 | 5096.27
+2024-01-31 | 4845.65
+2023-12-29 | 4769.83
+2023-11-30 | 4567.80
+2023-10-31 | 4193.80
+2023-09-29 | 4288.05
+2023-08-31 | 4507.66
+2023-07-31 | 4588.96
+2023-06-30 | 4450.38
+2023-05-31 | 4179.83
+2023-04-28 | 4169.48
+2023-03-31 | 4109.31
+2023-02-28 | 3970.15
+2023-01-31 | 4076.60
+2022-12-31 | 3839.50
+2022-11-30 | 4080.11
+2022-10-31 | 3871.98
+2022-09-30 | 3585.62
+2022-08-31 | 3955.00
+2022-07-29 | 4130.29
+2022-06-30 | 3785.38
+2022-05-31 | 4132.15
+2022-04-29 | 4131.93
+2022-03-31 | 4530.41
+2022-02-28 | 4373.94
+2022-01-31 | 4515.55
+2021-12-31 | 4766.18
+2021-11-30 | 4567.00
+2021-10-29 | 4605.38
+2021-09-30 | 4307.54
+2021-08-31 | 4522.68
+2021-07-30 | 4395.26
+2021-06-30 | 4297.50
+2021-05-28 | 4204.11
+2021-04-30 | 4181.17
+2021-03-31 | 3972.89
+2021-02-26 | 3811.15
+2021-01-29 | 3714.24
+"""
+
+# Processing AAPL
+aapl_data = []
+for line in aapl_text.strip().split('\n'):
+    parts = line.replace(':', '|').split('|')
+    if len(parts) >= 2:
+        date_str = parts[0].strip()
+        price_str = parts[1].strip()
+        aapl_data.append({'Date': date_str, 'AAPL': float(price_str)})
+
+df_aapl = pd.DataFrame(aapl_data)
+# Convert Date to datetime. "Jan 2026" needs format.
+df_aapl['Date'] = pd.to_datetime(df_aapl['Date'], format='%b %Y') + pd.offsets.MonthEnd(0) # Align to month end
+
+# Processing S&P 500
+sp500_data = []
+for line in sp500_text.strip().split('\n'):
+    parts = line.split('|')
+    if len(parts) >= 2:
+        date_str = parts[0].strip()
+        price_str = parts[1].strip().replace(',', '')
+        sp500_data.append({'Date': date_str, 'SP500': float(price_str)})
+
+df_sp500 = pd.DataFrame(sp500_data)
+df_sp500['Date'] = pd.to_datetime(df_sp500['Date']) + pd.offsets.MonthEnd(0)
+
+# Merge
+df_merged = pd.merge(df_aapl, df_sp500, on='Date', how='inner')
+df_merged = df_merged.sort_values('Date')
+
+# Calculate Monthly Returns
+df_merged['AAPL_Return'] = df_merged['AAPL'].pct_change()
+df_merged['SP500_Return'] = df_merged['SP500'].pct_change()
+
+# Drop NaN (first row)
+df_returns = df_merged.dropna()
+
+# CAPM Regression
+# y = AAPL_Return, x = SP500_Return
+slope, intercept, r_value, p_value, std_err = stats.linregress(df_returns['SP500_Return'], df_returns['AAPL_Return'])
+
+print(f"Beta: {slope}")
+print(f"Alpha: {intercept}")
+print(f"R-squared: {r_value**2}")
+
+# Plotting AAPL Price
+plt.figure(figsize=(10, 6))
+plt.plot(df_merged['Date'], df_merged['AAPL'], label='AAPL Price')
+plt.title('Apple (AAPL) Stock Price - Last 5 Years')
+plt.xlabel('Date')
+plt.ylabel('Price ($)')
+plt.legend()
+plt.grid(True)
+plt.savefig('aapl_price_history.png')
+
+# Plotting Returns Relationship
+plt.figure(figsize=(8, 6))
+plt.scatter(df_returns['SP500_Return'], df_returns['AAPL_Return'], alpha=0.5)
+plt.plot(df_returns['SP500_Return'], intercept + slope * df_returns['SP500_Return'], 'r', label=f'Fit: y={slope:.2f}x + {intercept:.4f}')
+plt.title('Monthly Returns: AAPL vs S&P 500')
+plt.xlabel('S&P 500 Monthly Return')
+plt.ylabel('AAPL Monthly Return')
+plt.legend()
+plt.grid(True)
+plt.savefig('capm_regression.png')
+
+# Export to CSV
+df_merged.to_csv('aapl_sp500_data.csv', index=False)
+```
+
+Cute.
+
+And it matches.
+
+![Yahoo! Finance](./YFin.png)
