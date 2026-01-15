@@ -375,7 +375,7 @@
     "href": "writeups/Claude-Models/index.html",
     "title": "Claude on Models",
     "section": "",
-    "text": "Claude, from Anthropic, is an extremely powerful AI tool. I will use it here to help me think about the use of models. A [link to the interaction].\n\n\n\nClaude Interactions\n\n\n\n\n\n\n\n\nNotePrompt:\n\n\n\n\nhow are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a markdown formatted list\ncould you provide this response as a bulleted list in markdown code with a linked reference for each such model that provides more detail?",
+    "text": "Claude, from Anthropic, is an extremely powerful AI tool. I will use it here to help me think about the use of models. A [link to the interaction](https://claude.ai/share/d19e1823-d501-41f0-86a8-40300b56cc45.\n\n\n\nClaude Interactions\n\n\n\n\n\n\n\n\nNotePrompt:\n\n\n\n\nhow are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a markdown formatted list\ncould you provide this response as a bulleted list in markdown code with a linked reference for each such model that provides more detail?",
     "crumbs": [
       "About",
       "Write-ups",
