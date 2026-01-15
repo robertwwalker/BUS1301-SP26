@@ -40,11 +40,17 @@
 <h2 class="anchored" data-anchor-id="in-class-assignment">In-Class Assignment</h2>
 <p>Take one of your questions and turn the Gemini response into a slide deck using notebookLM.</p>
 <p>Here is an example.</p>
-<p><a href="./Blueprints_of_Knowledge.pdf">Slide Deck</a></p>
+<p>![Blueprints_of_Knowledge.pdf){width=80% height=800}</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./Architectural_Blueprints.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A Video"><video src="./Architectural_Blueprints.mp4" class="img-fluid" controls=""></video></a><a href="./Architectural_Blueprints.mp4">A Video</a></p>
 <figcaption>A Video</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./unnamed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="An Infographic"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/unnamed.png" class="img-fluid figure-img" alt="An Infographic"></a></p>
+<figcaption>An Infographic</figcaption>
 </figure>
 </div>
 <p>There is also a video overview.</p>
@@ -57,7 +63,7 @@
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./ontology.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Imagine that"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ontology.png" class="img-fluid figure-img" alt="Imagine that"></a></p>
+<p><a href="./ontology.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Imagine that"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ontology.png" class="img-fluid figure-img" alt="Imagine that"></a></p>
 <figcaption>Imagine that</figcaption>
 </figure>
 </div>
@@ -68,7 +74,7 @@
 <p>Source: <a href="https://x.com/pablohernandezb/status/2010762183752536193?s=46">x.com</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./ven-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Map of Venezuela"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ven-map.png" class="img-fluid figure-img" alt="Map of Venezuela"></a></p>
+<p><a href="./ven-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Map of Venezuela"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ven-map.png" class="img-fluid figure-img" alt="Map of Venezuela"></a></p>
 <figcaption>Map of Venezuela</figcaption>
 </figure>
 </div>
