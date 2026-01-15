@@ -78,154 +78,95 @@
     ]
   },
   {
-    "objectID": "writeups/Gemini-Analysis/index.html",
-    "href": "writeups/Gemini-Analysis/index.html",
-    "title": "Gemini Data Analysis",
+    "objectID": "writeups/Gemini-Formatting/index.html",
+    "href": "writeups/Gemini-Formatting/index.html",
+    "title": "Formatting a Gemini Response",
     "section": "",
-    "text": "Gemini is powerful, soup to nuts, in analysing data. Let’s look at an example that literally deploys a model to generate a common quantity used in portfolio management in finance.\n\n\n\n\n\n\nNotePrompt:\n\n\n\nPlease use publicly available sources to acquire the price of Apple common stock over the last five years and plot it as a time series. Then proceed to calculate the monthly returns for the stock and the monthly returns for the S&P 500 and provide a CAPM regression of beta. Finally, please allow me access to the data you used by exporting it to sheets",
+    "text": "Gemini is powerful, and a few tidbits help a great deal. I use markdown formatting for text inputs and Gemini is well versed in this. My prompts now use please format responses in markdown and include links to the noted sources.",
     "crumbs": [
       "About",
       "Write-ups",
       "Writeups",
-      "Gemini Data Analysis"
+      "Formatting a Gemini Response"
     ]
   },
   {
-    "objectID": "writeups/Gemini-Analysis/index.html#regression-statistics-monthly-returns",
-    "href": "writeups/Gemini-Analysis/index.html#regression-statistics-monthly-returns",
-    "title": "Gemini Data Analysis",
-    "section": "1. Regression Statistics (Monthly Returns)",
-    "text": "1. Regression Statistics (Monthly Returns)\nBased on the monthly returns of Apple stock compared to the S&P 500:\n\nBeta (\\(\\beta\\)): 1.09\nAlpha (\\(\\alpha\\)): 0.17% (Monthly)\nR-Squared (\\(R^2\\)): 0.44",
+    "objectID": "writeups/Gemini-Formatting/index.html#commentary",
+    "href": "writeups/Gemini-Formatting/index.html#commentary",
+    "title": "Formatting a Gemini Response",
+    "section": "Commentary",
+    "text": "Commentary\nThe content is excellent. The formatting is not. And the Docs version is no better.\n\n\n\nGemini output\n\n\nThe notes have no content. It looks fine but it is not complete. Let me prompt again and see if I can get something to work with.",
     "crumbs": [
       "About",
       "Write-ups",
       "Writeups",
-      "Gemini Data Analysis"
+      "Formatting a Gemini Response"
     ]
   },
   {
-    "objectID": "writeups/Gemini-Analysis/index.html#interpretation",
-    "href": "writeups/Gemini-Analysis/index.html#interpretation",
-    "title": "Gemini Data Analysis",
-    "section": "2. Interpretation",
-    "text": "2. Interpretation\n\nBeta (1.09): AAPL has historically been about 9% more volatile than the S&P 500. A 1% rise in the market typically correlates with a 1.09% rise in AAPL.\nAlpha (0.17%): On average, AAPL outperformed the risk-adjusted return predicted by the CAPM model by 0.17% per month.\nR-Squared (0.44): Approximately 44% of Apple’s price movement can be explained by the movement of the S&P 500.",
+    "objectID": "writeups/Claude-Models/index.html",
+    "href": "writeups/Claude-Models/index.html",
+    "title": "Claude on Models",
+    "section": "",
+    "text": "Claude, from Anthropic, is an extremely powerful AI tool. I will use it here to help me think about the use of models. A link to the interaction.\n\n\n\nClaude Interactions\n\n\n\n\n\n\n\n\nNotePrompt:\n\n\n\n\nhow are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a markdown formatted list\ncould you provide this response as a bulleted list in markdown code with a linked reference for each such model that provides more detail?",
     "crumbs": [
       "About",
       "Write-ups",
       "Writeups",
-      "Gemini Data Analysis"
+      "Claude on Models"
     ]
   },
   {
-    "objectID": "writeups/Gemini-Analysis/index.html#plots-generated",
-    "href": "writeups/Gemini-Analysis/index.html#plots-generated",
-    "title": "Gemini Data Analysis",
-    "section": "3. Plots Generated",
-    "text": "3. Plots Generated\n\nTime Series: A line chart showing AAPL price rising from ~$128 (Jan 2021) to ~$259 (Jan 2026).\nRegression: A scatter plot of SP500_Return (x-axis) vs AAPL_Return (y-axis) with a regression line of slope 1.09.\n\n\n\nHow’s that done?\nimport pandas as pd\nimport numpy as np\nfrom scipy import stats\nimport matplotlib.pyplot as plt\n\n# Data from Source 1.3 (AAPL)\naapl_text = \"\"\"\nJan 2026 | 259.89\nDec 2025 | 272.21\nNov 2025 | 278.85\nOct 2025 | 270.11\nSep 2025 | 254.38\nAug 2025 | 231.92\nJul 2025 | 207.13\nJun 2025 | 204.74\nMay 2025 | 200.43\nApr 2025 | 211.78\nMar 2025 | 221.37\nFeb 2025 | 241.02\nJan 2025 | 234.94\nDec 2024 | 249.29\nNov 2024 | 236.26\nOct 2024 | 224.65\nSep 2024 | 231.70\nAug 2024 | 227.72\nJul 2024 | 220.58\nJun 2024 | 209.20\nMay 2024 | 190.95\nApr 2024 | 168.95\nMar 2024 | 170.09\nFeb 2024 | 179.29\nJan 2024 | 182.68\nDec 2023 | 190.73\nNov 2023 | 188.17\nOct 2023 | 168.95\nSep 2023 | 169.38\nAug 2023 | 185.87\nJul 2023 | 194.09\nJun 2023 | 191.64\nMay 2023 | 175.12\nApr 2023 | 167.41\nMar 2023 | 162.70\nFeb 2023 | 145.44\nJan 2023 | 142.15\nDec 2022 | 128\nNov 2022 | 145.83\nOct 2022 | 150.81\nSep 2022 | 135.92\nAug 2022 | 154.63\nJul 2022 | 159.61\nJun 2022 | 134.28\nMay 2022 | 146.18\nApr 2022 | 154.61\nMar 2022: 171.24\nFeb 2022: 161.93\nJan 2022: 171.19\nDec 2021: 173.92\nNov 2021: 161.90\nOct 2021: 146.51\nSep 2021: 138.39\nAug 2021: 148.49\nJul 2021: 142.44\nJun 2021: 133.75\nMay 2021: 121.69\nApr 2021: 128.16\nMar 2021: 119.08\nFeb 2021: 118.22\nJan 2021: 128.46\n\"\"\"\n\n# Data from Source 2.3 (S&P 500)\nsp500_text = \"\"\"\n2026-01-09 | 6966.28\n2025-12-31 | 6845.50\n2025-11-28 | 6849.09\n2025-10-31 | 6840.20\n2025-09-30 | 6688.46\n2025-08-29 | 6460.26\n2025-07-31 | 6339.39\n2025-06-30 | 6204.95\n2025-05-30 | 5911.69\n2025-04-30 | 5569.06\n2025-03-31 | 5611.85\n2025-02-28 | 5954.50\n2025-01-31 | 6040.53\n2024-12-31 | 5881.63\n2024-11-29 | 6032.38\n2024-10-31 | 5705.45\n2024-09-30 | 5762.48\n2024-08-30 | 5648.40\n2024-07-31 | 5522.30\n2024-06-28 | 5460.48\n2024-05-31 | 5277.51\n2024-04-30 | 5035.69\n2024-03-28 | 5254.35\n2024-02-29 | 5096.27\n2024-01-31 | 4845.65\n2023-12-29 | 4769.83\n2023-11-30 | 4567.80\n2023-10-31 | 4193.80\n2023-09-29 | 4288.05\n2023-08-31 | 4507.66\n2023-07-31 | 4588.96\n2023-06-30 | 4450.38\n2023-05-31 | 4179.83\n2023-04-28 | 4169.48\n2023-03-31 | 4109.31\n2023-02-28 | 3970.15\n2023-01-31 | 4076.60\n2022-12-31 | 3839.50\n2022-11-30 | 4080.11\n2022-10-31 | 3871.98\n2022-09-30 | 3585.62\n2022-08-31 | 3955.00\n2022-07-29 | 4130.29\n2022-06-30 | 3785.38\n2022-05-31 | 4132.15\n2022-04-29 | 4131.93\n2022-03-31 | 4530.41\n2022-02-28 | 4373.94\n2022-01-31 | 4515.55\n2021-12-31 | 4766.18\n2021-11-30 | 4567.00\n2021-10-29 | 4605.38\n2021-09-30 | 4307.54\n2021-08-31 | 4522.68\n2021-07-30 | 4395.26\n2021-06-30 | 4297.50\n2021-05-28 | 4204.11\n2021-04-30 | 4181.17\n2021-03-31 | 3972.89\n2021-02-26 | 3811.15\n2021-01-29 | 3714.24\n\"\"\"\n\n# Processing AAPL\naapl_data = []\nfor line in aapl_text.strip().split('\\n'):\n    parts = line.replace(':', '|').split('|')\n    if len(parts) &gt;= 2:\n        date_str = parts[0].strip()\n        price_str = parts[1].strip()\n        aapl_data.append({'Date': date_str, 'AAPL': float(price_str)})\n\ndf_aapl = pd.DataFrame(aapl_data)\n# Convert Date to datetime. \"Jan 2026\" needs format.\ndf_aapl['Date'] = pd.to_datetime(df_aapl['Date'], format='%b %Y') + pd.offsets.MonthEnd(0) # Align to month end\n\n# Processing S&P 500\nsp500_data = []\nfor line in sp500_text.strip().split('\\n'):\n    parts = line.split('|')\n    if len(parts) &gt;= 2:\n        date_str = parts[0].strip()\n        price_str = parts[1].strip().replace(',', '')\n        sp500_data.append({'Date': date_str, 'SP500': float(price_str)})\n\ndf_sp500 = pd.DataFrame(sp500_data)\ndf_sp500['Date'] = pd.to_datetime(df_sp500['Date']) + pd.offsets.MonthEnd(0)\n\n# Merge\ndf_merged = pd.merge(df_aapl, df_sp500, on='Date', how='inner')\ndf_merged = df_merged.sort_values('Date')\n\n# Calculate Monthly Returns\ndf_merged['AAPL_Return'] = df_merged['AAPL'].pct_change()\ndf_merged['SP500_Return'] = df_merged['SP500'].pct_change()\n\n# Drop NaN (first row)\ndf_returns = df_merged.dropna()\n\n# CAPM Regression\n# y = AAPL_Return, x = SP500_Return\nslope, intercept, r_value, p_value, std_err = stats.linregress(df_returns['SP500_Return'], df_returns['AAPL_Return'])\n\nprint(f\"Beta: {slope}\")\nprint(f\"Alpha: {intercept}\")\nprint(f\"R-squared: {r_value**2}\")\n\n# Plotting AAPL Price\nplt.figure(figsize=(10, 6))\nplt.plot(df_merged['Date'], df_merged['AAPL'], label='AAPL Price')\nplt.title('Apple (AAPL) Stock Price - Last 5 Years')\nplt.xlabel('Date')\nplt.ylabel('Price ($)')\nplt.legend()\nplt.grid(True)\nplt.savefig('aapl_price_history.png')\n\n# Plotting Returns Relationship\nplt.figure(figsize=(8, 6))\nplt.scatter(df_returns['SP500_Return'], df_returns['AAPL_Return'], alpha=0.5)\nplt.plot(df_returns['SP500_Return'], intercept + slope * df_returns['SP500_Return'], 'r', label=f'Fit: y={slope:.2f}x + {intercept:.4f}')\nplt.title('Monthly Returns: AAPL vs S&P 500')\nplt.xlabel('S&P 500 Monthly Return')\nplt.ylabel('AAPL Monthly Return')\nplt.legend()\nplt.grid(True)\nplt.savefig('capm_regression.png')\n\n# Export to CSV\ndf_merged.to_csv('aapl_sp500_data.csv', index=False)\n\n\nBeta: 1.091504481063609\nAlpha: 0.001743016912168079\nR-squared: 0.4448837540235066\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCute.\nAnd it matches.\n\n\n\nYahoo! Finance",
+    "objectID": "writeups/Claude-Models/index.html#natural-sciences",
+    "href": "writeups/Claude-Models/index.html#natural-sciences",
+    "title": "Claude on Models",
+    "section": "Natural Sciences",
+    "text": "Natural Sciences\n\nPhysics: The Standard Model describes fundamental particles and forces; Newton’s laws of motion model mechanical systems and predict object behavior under forces. Standard Model | Newton’s Laws\nChemistry: The Bohr model represents atomic structure with electrons in defined orbits; molecular orbital theory models chemical bonding and molecular properties. Bohr Model | Molecular Orbital Theory\nBiology: The Hardy-Weinberg model predicts allele frequencies in populations; the logistic growth model describes population dynamics with carrying capacity constraints. Hardy-Weinberg | Logistic Growth\nAstronomy: The Big Bang model explains cosmic origin and evolution; stellar evolution models predict how stars change over their lifetimes based on mass and composition. Big Bang | Stellar Evolution\nGeology: Plate tectonics models explain continental drift and geological activity; the rock cycle model describes the formation and transformation of igneous, sedimentary, and metamorphic rocks. Plate Tectonics | Rock Cycle",
     "crumbs": [
       "About",
       "Write-ups",
       "Writeups",
-      "Gemini Data Analysis"
+      "Claude on Models"
     ]
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To BUS 1301: Managing with AI",
-    "section": "",
-    "text": "Welcome to Managing with Data, Analytics, and Artificial Intelligence!"
+    "objectID": "writeups/Claude-Models/index.html#social-sciences",
+    "href": "writeups/Claude-Models/index.html#social-sciences",
+    "title": "Claude on Models",
+    "section": "Social Sciences",
+    "text": "Social Sciences\n\nEconomics: Supply and demand models predict market equilibrium prices; the Solow growth model explains long-term economic growth through capital accumulation and technological progress. Supply and Demand | Solow Model\nPsychology: The cognitive-behavioral model links thoughts, emotions, and behaviors; Piaget’s stages of development model children’s cognitive growth through distinct phases. Cognitive-Behavioral | Piaget’s Theory\nSociology: The structural-functional model views society as interconnected parts working toward stability; social network models map relationships and information flow between individuals. Structural Functionalism | Social Network Analysis\nPolitical Science: The median voter theorem models electoral outcomes in democratic systems; game theory models strategic interactions between political actors. Median Voter Theorem | Game Theory\nAnthropology: Cultural evolution models explain how cultural traits spread and change; kinship models represent family relationships and social organization across cultures. Cultural Evolution | Kinship",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "Claude on Models"
+    ]
   },
   {
-    "objectID": "posts/welcome/index.html#models",
-    "href": "posts/welcome/index.html#models",
-    "title": "Welcome To BUS 1301: Managing with AI",
-    "section": "1. Models",
-    "text": "1. Models\n\nOur organizing framework is the model. What is a model? Why models?"
+    "objectID": "writeups/Claude-Models/index.html#applied-sciences",
+    "href": "writeups/Claude-Models/index.html#applied-sciences",
+    "title": "Claude on Models",
+    "section": "Applied Sciences",
+    "text": "Applied Sciences\n\nMedicine: The biopsychosocial model integrates biological, psychological, and social factors in health; epidemiological models (like SIR) predict disease spread through populations. Biopsychosocial Model | SIR Model\nEngineering: Finite element models simulate stress and strain in structures; circuit models represent electrical systems using idealized components like resistors and capacitors. Finite Element Method | Circuit Theory\nComputer Science: The OSI model describes network communication in seven layers; computational complexity models classify algorithms by their time and space requirements. OSI Model | Computational Complexity\nEnvironmental Science: Climate models simulate Earth’s atmospheric and oceanic systems; ecosystem models track energy flow and nutrient cycling through trophic levels. Climate Models | Ecosystem Model",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "Claude on Models"
+    ]
   },
   {
-    "objectID": "posts/welcome/index.html#data",
-    "href": "posts/welcome/index.html#data",
-    "title": "Welcome To BUS 1301: Managing with AI",
-    "section": "2. Data",
-    "text": "2. Data\n\nWhat is data and how do we get some? We start by defining data and our relationship with data. We will explore practical methods of data gathering – from surveys and archives to experiments and crowd sourcing.\nHave data, how is it typically organized? We will explore basic methods of organizing data for robust, sustainable use."
-  },
-  {
-    "objectID": "posts/welcome/index.html#deploying-data",
-    "href": "posts/welcome/index.html#deploying-data",
-    "title": "Welcome To BUS 1301: Managing with AI",
-    "section": "3. Deploying Data",
-    "text": "3. Deploying Data\n\nHow can managers use data? We will deploy basic tools of cross tabulation, frequency distributions, and simple plots before some statistical inference and model building."
-  },
-  {
-    "objectID": "posts/welcome/index.html#artificial-intelligence",
-    "href": "posts/welcome/index.html#artificial-intelligence",
-    "title": "Welcome To BUS 1301: Managing with AI",
-    "section": "4. Artificial Intelligence",
-    "text": "4. Artificial Intelligence\n\nWhat is artificial intelligence (AI)? We will highlight general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business."
-  },
-  {
-    "objectID": "posts/01-13-2026/index.html",
-    "href": "posts/01-13-2026/index.html",
-    "title": "A Syllabus and Models",
-    "section": "",
-    "text": "What is a model?\nOur reading for next time defines models in science. This is a hard read but it is the only reading for the week.\nModels in Science from the Stanford Encyclopedia of Philosophy\nWe will pay extra attention to sections 1, 3, and 5.2.\nThe class plan:\n\nDiscuss the syllabus, deliverables, and requirements\nAn overview of the course and mutual introductions.\nA brief discussion of models to set the foundations for Thursday.\n\nYour assignment for next time:\n\nDo the reading.\nCollect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "obertwwalker.github.io \n\n\n\n\nRobert W. Walker, Ph. D.\n\n\n\n\n\nRobert W. Walker is an Associate Professor of Quantitative Methods in the Atkinson Graduate School of Management at Willamette University\nHe earned a Ph. D. in political science from the University of Rochester in 2005 and has previously held teaching positions at Dartmouth College, Rice University, Texas A&M University, and Washington University in Saint Louis. His current research develops and applies semi-Markov processes to time-series, cross-section data in international relations and international/comparative political economy. He teaches courses in quantitative methods/applied statistics and microeconomic strategy and previously taught four iterations in the U. S. National Science Foundation funded Empirical Implications of Theoretical Models sequence at Washington University in Saint Louis. His work with Curt Signorino and Muhammet Bas was awarded the Miller Prize for the best article in Political Analysis in 2009.\nHis web presence is rww.science and his github is https://github.com/robertwwalker.\n\n\nRobert’s Erdos-Bacon Number is 8.\n\n\n\n\n\nErdos Table\n\n\n\n\n\n\n\nBacon Table"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BUS1301-SP26",
-    "section": "",
-    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/01-15-2026/index.html",
-    "href": "posts/01-15-2026/index.html",
-    "title": "On Models",
-    "section": "",
-    "text": "What is a model?\nOur reading for today defines models in science. This is a hard read but it is the only reading for the week.\nModels in Science from the Stanford Encyclopedia of Philosophy\nWe will pay extra attention to sections 1, 3, and 5.2.\nThe class plan:\nYour assignment for this time:"
-  },
-  {
-    "objectID": "posts/01-15-2026/index.html#an-example",
-    "href": "posts/01-15-2026/index.html#an-example",
-    "title": "On Models",
-    "section": "An Example",
-    "text": "An Example\nSource: x.com\n\n\n\nMap of Venezuela"
-  },
-  {
-    "objectID": "posts/01-15-2026/index.html#for-next-class",
-    "href": "posts/01-15-2026/index.html#for-next-class",
-    "title": "On Models",
-    "section": "For Next Class:",
-    "text": "For Next Class:\n\nReading: Chapter 1: Open Introduction to Statistics: (On Canvas &gt; Files &gt; OpenIntroStatistics).\n\nDeliverable: An In-class exercise [Assignment 2] and pending Assignment 1"
-  },
-  {
-    "objectID": "posts/01-15-2026/index.html#prompt-what-is-the-lorenz-model-of-climate-extremes",
-    "href": "posts/01-15-2026/index.html#prompt-what-is-the-lorenz-model-of-climate-extremes",
-    "title": "On Models",
-    "section": "Prompt: What is the Lorenz model of climate extremes?",
-    "text": "Prompt: What is the Lorenz model of climate extremes?\nThe Lorenz model is a simplified mathematical model used to describe atmospheric convection.1 It is one of the most famous systems in physics because it was the first to demonstrate chaotic behavior—the phenomenon where deterministic systems behave unpredictably due to extreme sensitivity to initial conditions.2\nThis model is responsible for the modern understanding that long-term weather forecasting is fundamentally impossible, a concept popularized as the “Butterfly Effect.”3\n\nThe Origin: A Happy Accident In 1963, MIT meteorologist Edward Lorenz was using a computer to simulate weather patterns.4 He was running a code based on twelve equations that modeled the way air moves when it is heated from below and cooled from above.5\n\nOne day, he wanted to repeat a simulation he had run previously.6 To save time, he started the run from the middle, typing in numbers from a previous printout. The printout displayed numbers to 3 decimal places (e.g., 0.506), but the computer calculated internally to 6 decimal places (e.g., 0.506127).7\nLorenz assumed this tiny difference (one part in a thousand) would have no meaningful effect. Instead, he found that the new simulation quickly diverged completely from the original, looking like a totally different weather system.8 This led him to publish his landmark paper, “Deterministic Nonperiodic Flow,” which founded the field of Chaos Theory.9\n\nThe Equations Lorenz simplified his original twelve equations down to just three coupled, non-linear ordinary differential equations.10\n\nWhile they were derived from the complex Navier-Stokes equations (which describe fluid motion), Lorenz reduced them to a “toy model” representing a single 2D slice of atmosphere behaving like a convection roll (gas rising and falling in a loop). The equations are:\n\\[\\begin{aligned} \\frac{dx}{dt} &= \\sigma (y - x) \\\\ \\frac{dy}{dt} &= x (\\rho - z) - y \\\\ \\frac{dz}{dt} &= x y - \\beta z \\end{aligned}\\]\nThe Variables (\\(x, y, z\\)) These do not represent coordinates in real space (like latitude/longitude). They represent the state of the fluid at any given moment: \\(x\\): The intensity of convection.11 (How fast is the convective roll spinning?)\n\\(y\\): The horizontal temperature difference between the ascending (warm) and descending (cool) currents.12\n\\(z\\): The vertical temperature distortion.13 (How much the temperature profile deviates from a linear decrease with height).14\nThe Parameters (\\(\\sigma, \\rho, \\beta\\)) These are constants that determine the physical properties of the “atmosphere”:15\n\\(\\sigma\\) (Sigma): The Prandtl number (viscosity relative to thermal conductivity).16\n\\(\\rho\\) (Rho): The Rayleigh number (the temperature difference between the hot ground and the cool sky).17 This is the “control knob”—if you turn it up high enough, the system becomes chaotic.\n\\(\\beta\\) (Beta): A geometric factor related to the size of the convection roll. Lorenz found the famous chaotic behavior using the specific values: 18\\(\\sigma = 10\\), 19\\(\\beta = 8/3\\), and 20\\(\\rho = 28\\).21\n\nThe Butterfly Effect & The Attractor\n\nIf you plot the values of \\(x\\), \\(y\\), and \\(z\\) over time in 3D space, the line traces out a shape that looks remarkably like a butterfly. This shape is known as the Lorenz Attractor.22 It has two “wings” (lobes):23\nLeft Wing: The fluid is rotating in one direction. Right Wing: The fluid reverses and rotates in the opposite direction. The Chaos: The system orbits one wing for a while, then suddenly switches to the other.24 There is no pattern to when it switches. You cannot predict when the flip will happen.\nThis visualization illustrates the Butterfly Effect: two points on the attractor that are infinitesimally close together (representing two weather systems that are almost identical) will eventually end up on opposite wings of the attractor (completely different weather).25\nSummary of Significance Weather Prediction: The model proved that because we cannot measure the current state of the atmosphere with infinite precision (infinite decimal places), we cannot predict the weather beyond a certain timeframe (roughly two weeks). Deterministic Chaos: It proved that a system can be completely deterministic (follows rigid equations) but still behave randomly.26\nFractals: The “Strange Attractor” is a fractal; it has infinite detail and a fractional dimension (roughly 2.06 dimensions).27\nWould you like me to generate a Python script to solve these equations so you can see the butterfly attractor evolve yourself?"
-  },
-  {
-    "objectID": "posts/01-15-2026/index.html#prompt-what-is-the-double-helix-model-of-dna",
-    "href": "posts/01-15-2026/index.html#prompt-what-is-the-double-helix-model-of-dna",
-    "title": "On Models",
-    "section": "Prompt: What is the double helix model of DNA?",
-    "text": "Prompt: What is the double helix model of DNA?\nThe double helix model is the description of the three-dimensional structure of DNA (deoxyribonucleic acid).1 It depicts DNA not as a flat ladder, but as two long strands twisted around each other like a spiral staircase.2\nThis model was first published in 1953 and is considered one of the most significant discoveries in the history of biology because it revealed how genetic information is stored and copied.3\n\nThe Structure: A Twisted Ladder4 If you imagine a ladder twisted into a spiral, the double helix has two main parts: The Backbone (The Rails): The outside of the helix is formed by alternating sugar (deoxyribose) and phosphate molecules.5 This “sugar-phosphate backbone” provides the structural framework.\n\nThe Base Pairs (The Rungs): Inside the helix, connecting the two backbones, are pairs of nitrogenous bases.6 These bases hold the two strands together using hydrogen bonds.7\n\nKey Rules of the Model The double helix is highly specific in how it is built. Three chemical rules are essential to its function: Complementary Base Pairing: The “rungs” are not random.8 A base on one strand always pairs with a specific partner on the other strand:9\n\nAdenine (A) always pairs with Thymine (T).10\nCytosine (C) always pairs with Guanine (G).11\nWhy this matters: This means if you know the sequence of one strand (e.g., A-C-T-G), you automatically know the sequence of the other (T-G-A-C).12 This is the secret to how DNA copies itself.\nAntiparallel Strands: The two strands run in opposite directions.13 Chemical direction is measured from the 14\\(5'\\) (five-prime) end to the 15\\(3'\\) (three-prime) end.16 In the double helix, one strand runs 17\\(5' \\to 3'\\) while the other runs 18\\(3' \\to 5'\\).19\nRight-Handed Twist: In nature (specifically B-DNA, the most common form), the helix twists to the right, completing a full turn roughly every 10.5 base pairs.20\n\nThe Discovery The discovery of the double helix is a famous (and controversial) story of scientific competition: Watson & Crick: James Watson and Francis Crick are credited with proposing the model in 1953.21 They built physical models (using cardboard and metal plates) to fit the chemical pieces together.22 +1\n\nRosalind Franklin: Her work was crucial but often overlooked at the time.23 She was an expert in X-ray crystallography and captured Photo 51, a famous X-ray image that clearly showed the “X” pattern characteristic of a helix.24 Watson used this data (shown to him without her permission by Maurice Wilkins) to confirm the helical structure.25 +2\nThe Nobel Prize: In 1962, Watson, Crick, and Wilkins were awarded the Nobel Prize.26 Franklin had passed away four years earlier and was not eligible for the posthumous award, though modern science recognizes her as a co-discoverer.\nSummary of Components Component Description Nucleotide\nThe basic building block, consisting of one sugar, one phosphate, and one base. Hydrogen Bonds Weak bonds that hold the A-T and C-G base pairs together (like a zipper). Sugar-Phosphate The structural “rails” that protect the genetic code inside.\nWould you like me to explain how the Double Helix “unzips” to replicate itself?"
-  },
-  {
-    "objectID": "posts/01-15-2026/index.html#prompt-what-is-ontology",
-    "href": "posts/01-15-2026/index.html#prompt-what-is-ontology",
-    "title": "On Models",
-    "section": "Prompt: What is ontology?",
-    "text": "Prompt: What is ontology?\nOntology is, at its core, the study of what exists and how things are related.1\nDepending on whether you are talking to a philosopher or a computer scientist, the definition shifts from abstract reality to practical data structures.2\nHere is the breakdown of the two main perspectives: 1. In Philosophy (The Origin)3 In philosophy, ontology is the “study of being.”4 It is a branch of metaphysics that asks deep questions about the nature of reality.5\nThe Goal: To discover the fundamental categories of existence.6\nKey Questions: What does it mean “to exist”? Do abstract ideas (like the number 7 or “justice”) exist in the same way a rock exists? Example: A philosopher might analyze if “holes” are real things, or if they are just the absence of something else. 2. In Computer Science (The Application) In computer science (specifically AI and Information Science), an ontology is a formal blueprint used to model knowledge.7 It is a specific way of organizing data so that computers can “understand” it.8\nInstead of asking “what is reality,” a computational ontology declares: “For this specific system, these are the only things that exist, and here is how they connect.” The Goal: To help software share data, reason about information, and avoid confusion.9\nThe “Triples” Structure: Most computational ontologies are built on three main components: Classes (The Nouns): The categories of things (e.g., Patient, Doctor, Drug).10\nAttributes (The Adjectives): The properties of those things (e.g., Name, Dosage, Blood Type).11\nRelationships (The Verbs): How they interact (e.g., Doctor prescribes Drug). Summary Comparison Feature Philosophical Ontology Computational Ontology Focus The nature of reality. The structure of a specific domain’s data. Goal Truth and wisdom. Interoperability (systems talking to each other). Output Theories and essays. Knowledge Graphs, code (OWL/RDF), databases. Example “Is the mind separate from the body?” “A Smartphone is-a Device.”\nWhy is this important right now? You likely interact with ontologies every day without realizing it: Google Search: When you search for “Jaguar,” Google uses an ontology to figure out if you mean the animal, the car, or the football team based on the other words in your query. Healthcare: Ontologies allow different hospitals to share records. One system might say “Heart Attack” and another “Myocardial Infarction,” but the ontology links them as the exact same concept. Next Step Would you like me to show you a text-based example of what a simple ontology looks like for a common domain, like a Library or a Smart Home?"
+    "objectID": "writeups/Claude-Models/index.html#humanities-and-formal-sciences",
+    "href": "writeups/Claude-Models/index.html#humanities-and-formal-sciences",
+    "title": "Claude on Models",
+    "section": "Humanities and Formal Sciences",
+    "text": "Humanities and Formal Sciences\n\nLinguistics: Chomsky’s transformational-generative grammar models sentence structure and syntax; phonological models represent sound systems and pronunciation rules. Transformational Grammar | Phonology\nMathematics: Euclidean geometry models flat space using axioms and theorems; probability models describe random events and their likelihood. Euclidean Geometry | Probability Theory\nPhilosophy: The theory of forms models reality as imperfect reflections of perfect ideals; utilitarian models evaluate moral actions based on consequences and overall happiness. Theory of Forms | Utilitarianism\nHistory: Cyclical models view history as repeating patterns; the Annales school model examines long-term social and economic structures rather than just political events. Cyclical Theory | Annales School\nEducation: Bloom’s taxonomy models learning objectives in hierarchical cognitive levels; constructivist models view learning as active knowledge construction by students. Bloom’s Taxonomy | Constructivism\nGeography: The von Thünen model predicts agricultural land use patterns around markets; gravity models estimate interaction between places based on size and distance. Von Thünen Model | Gravity Model",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "Claude on Models"
+    ]
   },
   {
     "objectID": "slides/01-13-2026/index.html#outline",
@@ -345,94 +286,465 @@
     ]
   },
   {
-    "objectID": "writeups/Gemini-Formatting/index.html",
-    "href": "writeups/Gemini-Formatting/index.html",
-    "title": "Formatting a Gemini Response",
+    "objectID": "posts/01-15-2026/index.html",
+    "href": "posts/01-15-2026/index.html",
+    "title": "On Models",
     "section": "",
-    "text": "Gemini is powerful, and a few tidbits help a great deal. I use markdown formatting for text inputs and Gemini is well versed in this. My prompts now use please format responses in markdown and include links to the noted sources.",
-    "crumbs": [
-      "About",
-      "Write-ups",
-      "Writeups",
-      "Formatting a Gemini Response"
-    ]
+    "text": "What is a model?\nOur reading for today defines models in science. This is a hard read but it is the only reading for the week.\nModels in Science from the Stanford Encyclopedia of Philosophy\nWe will pay extra attention to sections 1, 3, and 5.2.\nThe class plan:\nYour assignment for this time:"
   },
   {
-    "objectID": "writeups/Gemini-Formatting/index.html#commentary",
-    "href": "writeups/Gemini-Formatting/index.html#commentary",
-    "title": "Formatting a Gemini Response",
-    "section": "Commentary",
-    "text": "Commentary\nThe content is excellent. The formatting is not. And the Docs version is no better.\n\n\n\nGemini output\n\n\nThe notes have no content. It looks fine but it is not complete. Let me prompt again and see if I can get something to work with.",
-    "crumbs": [
-      "About",
-      "Write-ups",
-      "Writeups",
-      "Formatting a Gemini Response"
-    ]
+    "objectID": "posts/01-15-2026/index.html#an-example",
+    "href": "posts/01-15-2026/index.html#an-example",
+    "title": "On Models",
+    "section": "An Example",
+    "text": "An Example\nSource: x.com\n\n\n\nMap of Venezuela"
   },
   {
-    "objectID": "writeups/Claude-Models/index.html",
-    "href": "writeups/Claude-Models/index.html",
-    "title": "Claude on Models",
+    "objectID": "posts/01-15-2026/index.html#for-next-class",
+    "href": "posts/01-15-2026/index.html#for-next-class",
+    "title": "On Models",
+    "section": "For Next Class:",
+    "text": "For Next Class:\n\nReading: Chapter 1: Open Introduction to Statistics: (On Canvas &gt; Files &gt; OpenIntroStatistics).\n\nDeliverable: An In-class exercise [Assignment 2] and pending Assignment 1"
+  },
+  {
+    "objectID": "posts/01-15-2026/index.html#prompt-what-is-the-lorenz-model-of-climate-extremes",
+    "href": "posts/01-15-2026/index.html#prompt-what-is-the-lorenz-model-of-climate-extremes",
+    "title": "On Models",
+    "section": "Prompt: What is the Lorenz model of climate extremes?",
+    "text": "Prompt: What is the Lorenz model of climate extremes?\nThe Lorenz model is a simplified mathematical model used to describe atmospheric convection.1 It is one of the most famous systems in physics because it was the first to demonstrate chaotic behavior—the phenomenon where deterministic systems behave unpredictably due to extreme sensitivity to initial conditions.2\nThis model is responsible for the modern understanding that long-term weather forecasting is fundamentally impossible, a concept popularized as the “Butterfly Effect.”3\n\nThe Origin: A Happy Accident In 1963, MIT meteorologist Edward Lorenz was using a computer to simulate weather patterns.4 He was running a code based on twelve equations that modeled the way air moves when it is heated from below and cooled from above.5\n\nOne day, he wanted to repeat a simulation he had run previously.6 To save time, he started the run from the middle, typing in numbers from a previous printout. The printout displayed numbers to 3 decimal places (e.g., 0.506), but the computer calculated internally to 6 decimal places (e.g., 0.506127).7\nLorenz assumed this tiny difference (one part in a thousand) would have no meaningful effect. Instead, he found that the new simulation quickly diverged completely from the original, looking like a totally different weather system.8 This led him to publish his landmark paper, “Deterministic Nonperiodic Flow,” which founded the field of Chaos Theory.9\n\nThe Equations Lorenz simplified his original twelve equations down to just three coupled, non-linear ordinary differential equations.10\n\nWhile they were derived from the complex Navier-Stokes equations (which describe fluid motion), Lorenz reduced them to a “toy model” representing a single 2D slice of atmosphere behaving like a convection roll (gas rising and falling in a loop). The equations are:\n\\[\\begin{aligned} \\frac{dx}{dt} &= \\sigma (y - x) \\\\ \\frac{dy}{dt} &= x (\\rho - z) - y \\\\ \\frac{dz}{dt} &= x y - \\beta z \\end{aligned}\\]\nThe Variables (\\(x, y, z\\)) These do not represent coordinates in real space (like latitude/longitude). They represent the state of the fluid at any given moment: \\(x\\): The intensity of convection.11 (How fast is the convective roll spinning?)\n\\(y\\): The horizontal temperature difference between the ascending (warm) and descending (cool) currents.12\n\\(z\\): The vertical temperature distortion.13 (How much the temperature profile deviates from a linear decrease with height).14\nThe Parameters (\\(\\sigma, \\rho, \\beta\\)) These are constants that determine the physical properties of the “atmosphere”:15\n\\(\\sigma\\) (Sigma): The Prandtl number (viscosity relative to thermal conductivity).16\n\\(\\rho\\) (Rho): The Rayleigh number (the temperature difference between the hot ground and the cool sky).17 This is the “control knob”—if you turn it up high enough, the system becomes chaotic.\n\\(\\beta\\) (Beta): A geometric factor related to the size of the convection roll. Lorenz found the famous chaotic behavior using the specific values: 18\\(\\sigma = 10\\), 19\\(\\beta = 8/3\\), and 20\\(\\rho = 28\\).21\n\nThe Butterfly Effect & The Attractor\n\nIf you plot the values of \\(x\\), \\(y\\), and \\(z\\) over time in 3D space, the line traces out a shape that looks remarkably like a butterfly. This shape is known as the Lorenz Attractor.22 It has two “wings” (lobes):23\nLeft Wing: The fluid is rotating in one direction. Right Wing: The fluid reverses and rotates in the opposite direction. The Chaos: The system orbits one wing for a while, then suddenly switches to the other.24 There is no pattern to when it switches. You cannot predict when the flip will happen.\nThis visualization illustrates the Butterfly Effect: two points on the attractor that are infinitesimally close together (representing two weather systems that are almost identical) will eventually end up on opposite wings of the attractor (completely different weather).25\nSummary of Significance Weather Prediction: The model proved that because we cannot measure the current state of the atmosphere with infinite precision (infinite decimal places), we cannot predict the weather beyond a certain timeframe (roughly two weeks). Deterministic Chaos: It proved that a system can be completely deterministic (follows rigid equations) but still behave randomly.26\nFractals: The “Strange Attractor” is a fractal; it has infinite detail and a fractional dimension (roughly 2.06 dimensions).27\nWould you like me to generate a Python script to solve these equations so you can see the butterfly attractor evolve yourself?"
+  },
+  {
+    "objectID": "posts/01-15-2026/index.html#prompt-what-is-the-double-helix-model-of-dna",
+    "href": "posts/01-15-2026/index.html#prompt-what-is-the-double-helix-model-of-dna",
+    "title": "On Models",
+    "section": "Prompt: What is the double helix model of DNA?",
+    "text": "Prompt: What is the double helix model of DNA?\nThe double helix model is the description of the three-dimensional structure of DNA (deoxyribonucleic acid).1 It depicts DNA not as a flat ladder, but as two long strands twisted around each other like a spiral staircase.2\nThis model was first published in 1953 and is considered one of the most significant discoveries in the history of biology because it revealed how genetic information is stored and copied.3\n\nThe Structure: A Twisted Ladder4 If you imagine a ladder twisted into a spiral, the double helix has two main parts: The Backbone (The Rails): The outside of the helix is formed by alternating sugar (deoxyribose) and phosphate molecules.5 This “sugar-phosphate backbone” provides the structural framework.\n\nThe Base Pairs (The Rungs): Inside the helix, connecting the two backbones, are pairs of nitrogenous bases.6 These bases hold the two strands together using hydrogen bonds.7\n\nKey Rules of the Model The double helix is highly specific in how it is built. Three chemical rules are essential to its function: Complementary Base Pairing: The “rungs” are not random.8 A base on one strand always pairs with a specific partner on the other strand:9\n\nAdenine (A) always pairs with Thymine (T).10\nCytosine (C) always pairs with Guanine (G).11\nWhy this matters: This means if you know the sequence of one strand (e.g., A-C-T-G), you automatically know the sequence of the other (T-G-A-C).12 This is the secret to how DNA copies itself.\nAntiparallel Strands: The two strands run in opposite directions.13 Chemical direction is measured from the 14\\(5'\\) (five-prime) end to the 15\\(3'\\) (three-prime) end.16 In the double helix, one strand runs 17\\(5' \\to 3'\\) while the other runs 18\\(3' \\to 5'\\).19\nRight-Handed Twist: In nature (specifically B-DNA, the most common form), the helix twists to the right, completing a full turn roughly every 10.5 base pairs.20\n\nThe Discovery The discovery of the double helix is a famous (and controversial) story of scientific competition: Watson & Crick: James Watson and Francis Crick are credited with proposing the model in 1953.21 They built physical models (using cardboard and metal plates) to fit the chemical pieces together.22 +1\n\nRosalind Franklin: Her work was crucial but often overlooked at the time.23 She was an expert in X-ray crystallography and captured Photo 51, a famous X-ray image that clearly showed the “X” pattern characteristic of a helix.24 Watson used this data (shown to him without her permission by Maurice Wilkins) to confirm the helical structure.25 +2\nThe Nobel Prize: In 1962, Watson, Crick, and Wilkins were awarded the Nobel Prize.26 Franklin had passed away four years earlier and was not eligible for the posthumous award, though modern science recognizes her as a co-discoverer.\nSummary of Components Component Description Nucleotide\nThe basic building block, consisting of one sugar, one phosphate, and one base. Hydrogen Bonds Weak bonds that hold the A-T and C-G base pairs together (like a zipper). Sugar-Phosphate The structural “rails” that protect the genetic code inside.\nWould you like me to explain how the Double Helix “unzips” to replicate itself?"
+  },
+  {
+    "objectID": "posts/01-15-2026/index.html#prompt-what-is-ontology",
+    "href": "posts/01-15-2026/index.html#prompt-what-is-ontology",
+    "title": "On Models",
+    "section": "Prompt: What is ontology?",
+    "text": "Prompt: What is ontology?\nOntology is, at its core, the study of what exists and how things are related.1\nDepending on whether you are talking to a philosopher or a computer scientist, the definition shifts from abstract reality to practical data structures.2\nHere is the breakdown of the two main perspectives: 1. In Philosophy (The Origin)3 In philosophy, ontology is the “study of being.”4 It is a branch of metaphysics that asks deep questions about the nature of reality.5\nThe Goal: To discover the fundamental categories of existence.6\nKey Questions: What does it mean “to exist”? Do abstract ideas (like the number 7 or “justice”) exist in the same way a rock exists? Example: A philosopher might analyze if “holes” are real things, or if they are just the absence of something else. 2. In Computer Science (The Application) In computer science (specifically AI and Information Science), an ontology is a formal blueprint used to model knowledge.7 It is a specific way of organizing data so that computers can “understand” it.8\nInstead of asking “what is reality,” a computational ontology declares: “For this specific system, these are the only things that exist, and here is how they connect.” The Goal: To help software share data, reason about information, and avoid confusion.9\nThe “Triples” Structure: Most computational ontologies are built on three main components: Classes (The Nouns): The categories of things (e.g., Patient, Doctor, Drug).10\nAttributes (The Adjectives): The properties of those things (e.g., Name, Dosage, Blood Type).11\nRelationships (The Verbs): How they interact (e.g., Doctor prescribes Drug). Summary Comparison Feature Philosophical Ontology Computational Ontology Focus The nature of reality. The structure of a specific domain’s data. Goal Truth and wisdom. Interoperability (systems talking to each other). Output Theories and essays. Knowledge Graphs, code (OWL/RDF), databases. Example “Is the mind separate from the body?” “A Smartphone is-a Device.”\nWhy is this important right now? You likely interact with ontologies every day without realizing it: Google Search: When you search for “Jaguar,” Google uses an ontology to figure out if you mean the animal, the car, or the football team based on the other words in your query. Healthcare: Ontologies allow different hospitals to share records. One system might say “Heart Attack” and another “Myocardial Infarction,” but the ontology links them as the exact same concept. Next Step Would you like me to show you a text-based example of what a simple ontology looks like for a common domain, like a Library or a Smart Home?"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BUS1301-SP26",
     "section": "",
-    "text": "Claude, from Anthropic, is an extremely powerful AI tool. I will use it here to help me think about the use of models. A link to the interaction.\n\n\n\nClaude Interactions\n\n\n\n\n\n\n\n\nNotePrompt:\n\n\n\n\nhow are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a markdown formatted list\ncould you provide this response as a bulleted list in markdown code with a linked reference for each such model that provides more detail?",
+    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "obertwwalker.github.io \n\n\n\n\nRobert W. Walker, Ph. D.\n\n\n\n\n\nRobert W. Walker is an Associate Professor of Quantitative Methods in the Atkinson Graduate School of Management at Willamette University\nHe earned a Ph. D. in political science from the University of Rochester in 2005 and has previously held teaching positions at Dartmouth College, Rice University, Texas A&M University, and Washington University in Saint Louis. His current research develops and applies semi-Markov processes to time-series, cross-section data in international relations and international/comparative political economy. He teaches courses in quantitative methods/applied statistics and microeconomic strategy and previously taught four iterations in the U. S. National Science Foundation funded Empirical Implications of Theoretical Models sequence at Washington University in Saint Louis. His work with Curt Signorino and Muhammet Bas was awarded the Miller Prize for the best article in Political Analysis in 2009.\nHis web presence is rww.science and his github is https://github.com/robertwwalker.\n\n\nRobert’s Erdos-Bacon Number is 8.\n\n\n\n\n\nErdos Table\n\n\n\n\n\n\n\nBacon Table"
+  },
+  {
+    "objectID": "posts/01-13-2026/index.html",
+    "href": "posts/01-13-2026/index.html",
+    "title": "A Syllabus and Models",
+    "section": "",
+    "text": "What is a model?\nOur reading for next time defines models in science. This is a hard read but it is the only reading for the week.\nModels in Science from the Stanford Encyclopedia of Philosophy\nWe will pay extra attention to sections 1, 3, and 5.2.\nThe class plan:\n\nDiscuss the syllabus, deliverables, and requirements\nAn overview of the course and mutual introductions.\nA brief discussion of models to set the foundations for Thursday.\n\nYour assignment for next time:\n\nDo the reading.\nCollect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "",
+    "text": "Welcome to Managing with Data, Analytics, and Artificial Intelligence!"
+  },
+  {
+    "objectID": "posts/welcome/index.html#models",
+    "href": "posts/welcome/index.html#models",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "1. Models",
+    "text": "1. Models\n\nOur organizing framework is the model. What is a model? Why models?"
+  },
+  {
+    "objectID": "posts/welcome/index.html#data",
+    "href": "posts/welcome/index.html#data",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "2. Data",
+    "text": "2. Data\n\nWhat is data and how do we get some? We start by defining data and our relationship with data. We will explore practical methods of data gathering – from surveys and archives to experiments and crowd sourcing.\nHave data, how is it typically organized? We will explore basic methods of organizing data for robust, sustainable use."
+  },
+  {
+    "objectID": "posts/welcome/index.html#deploying-data",
+    "href": "posts/welcome/index.html#deploying-data",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "3. Deploying Data",
+    "text": "3. Deploying Data\n\nHow can managers use data? We will deploy basic tools of cross tabulation, frequency distributions, and simple plots before some statistical inference and model building."
+  },
+  {
+    "objectID": "posts/welcome/index.html#artificial-intelligence",
+    "href": "posts/welcome/index.html#artificial-intelligence",
+    "title": "Welcome To BUS 1301: Managing with AI",
+    "section": "4. Artificial Intelligence",
+    "text": "4. Artificial Intelligence\n\nWhat is artificial intelligence (AI)? We will highlight general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html",
+    "href": "writeups/ChatGPT-Models/index.html",
+    "title": "ChatGPT on Models",
+    "section": "",
+    "text": "ChatGPT, from OpenAI, is an extremely powerful AI tool. I will use it here to help me think about the use of models. A link to the interaction.\n\n\n\nClaude Interactions\n\n\n\n\n\n\n\n\nNotePrompt:\n\n\n\nhow are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a formatted list of markdown code with a linked reference for each model that provides more extensive detail",
     "crumbs": [
       "About",
       "Write-ups",
       "Writeups",
-      "Claude on Models"
+      "ChatGPT on Models"
     ]
   },
   {
-    "objectID": "writeups/Claude-Models/index.html#natural-sciences",
-    "href": "writeups/Claude-Models/index.html#natural-sciences",
-    "title": "Claude on Models",
-    "section": "Natural Sciences",
-    "text": "Natural Sciences\n\nPhysics: The Standard Model describes fundamental particles and forces; Newton’s laws of motion model mechanical systems and predict object behavior under forces. Standard Model | Newton’s Laws\nChemistry: The Bohr model represents atomic structure with electrons in defined orbits; molecular orbital theory models chemical bonding and molecular properties. Bohr Model | Molecular Orbital Theory\nBiology: The Hardy-Weinberg model predicts allele frequencies in populations; the logistic growth model describes population dynamics with carrying capacity constraints. Hardy-Weinberg | Logistic Growth\nAstronomy: The Big Bang model explains cosmic origin and evolution; stellar evolution models predict how stars change over their lifetimes based on mass and composition. Big Bang | Stellar Evolution\nGeology: Plate tectonics models explain continental drift and geological activity; the rock cycle model describes the formation and transformation of igneous, sedimentary, and metamorphic rocks. Plate Tectonics | Rock Cycle",
+    "objectID": "writeups/ChatGPT-Models/index.html#physics",
+    "href": "writeups/ChatGPT-Models/index.html#physics",
+    "title": "ChatGPT on Models",
+    "section": "1. Physics",
+    "text": "1. Physics\n\nStandard Model of Particle Physics – describes fundamental particles and forces\nhttps://home.cern/science/physics/standard-model\nNewtonian Mechanics – classical model of motion\nhttps://plato.stanford.edu/entries/newton/",
     "crumbs": [
       "About",
       "Write-ups",
       "Writeups",
-      "Claude on Models"
+      "ChatGPT on Models"
     ]
   },
   {
-    "objectID": "writeups/Claude-Models/index.html#social-sciences",
-    "href": "writeups/Claude-Models/index.html#social-sciences",
-    "title": "Claude on Models",
-    "section": "Social Sciences",
-    "text": "Social Sciences\n\nEconomics: Supply and demand models predict market equilibrium prices; the Solow growth model explains long-term economic growth through capital accumulation and technological progress. Supply and Demand | Solow Model\nPsychology: The cognitive-behavioral model links thoughts, emotions, and behaviors; Piaget’s stages of development model children’s cognitive growth through distinct phases. Cognitive-Behavioral | Piaget’s Theory\nSociology: The structural-functional model views society as interconnected parts working toward stability; social network models map relationships and information flow between individuals. Structural Functionalism | Social Network Analysis\nPolitical Science: The median voter theorem models electoral outcomes in democratic systems; game theory models strategic interactions between political actors. Median Voter Theorem | Game Theory\nAnthropology: Cultural evolution models explain how cultural traits spread and change; kinship models represent family relationships and social organization across cultures. Cultural Evolution | Kinship",
+    "objectID": "writeups/ChatGPT-Models/index.html#chemistry",
+    "href": "writeups/ChatGPT-Models/index.html#chemistry",
+    "title": "ChatGPT on Models",
+    "section": "2. Chemistry",
+    "text": "2. Chemistry\n\nMolecular Orbital Theory – models electron behavior in molecules\nhttps://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Molecular_Orbital_Theory\nArrhenius Equation – models reaction rates\nhttps://www.britannica.com/science/Arrhenius-equation",
     "crumbs": [
       "About",
       "Write-ups",
       "Writeups",
-      "Claude on Models"
+      "ChatGPT on Models"
     ]
   },
   {
-    "objectID": "writeups/Claude-Models/index.html#applied-sciences",
-    "href": "writeups/Claude-Models/index.html#applied-sciences",
-    "title": "Claude on Models",
-    "section": "Applied Sciences",
-    "text": "Applied Sciences\n\nMedicine: The biopsychosocial model integrates biological, psychological, and social factors in health; epidemiological models (like SIR) predict disease spread through populations. Biopsychosocial Model | SIR Model\nEngineering: Finite element models simulate stress and strain in structures; circuit models represent electrical systems using idealized components like resistors and capacitors. Finite Element Method | Circuit Theory\nComputer Science: The OSI model describes network communication in seven layers; computational complexity models classify algorithms by their time and space requirements. OSI Model | Computational Complexity\nEnvironmental Science: Climate models simulate Earth’s atmospheric and oceanic systems; ecosystem models track energy flow and nutrient cycling through trophic levels. Climate Models | Ecosystem Model",
+    "objectID": "writeups/ChatGPT-Models/index.html#biology",
+    "href": "writeups/ChatGPT-Models/index.html#biology",
+    "title": "ChatGPT on Models",
+    "section": "3. Biology",
+    "text": "3. Biology\n\nCentral Dogma of Molecular Biology – information flow in cells\nhttps://www.nature.com/scitable/topicpage/central-dogma-of-molecular-biology-373/\nLotka–Volterra Model – predator–prey population dynamics\nhttps://mathworld.wolfram.com/Lotka-VolterraEquations.html",
     "crumbs": [
       "About",
       "Write-ups",
       "Writeups",
-      "Claude on Models"
+      "ChatGPT on Models"
     ]
   },
   {
-    "objectID": "writeups/Claude-Models/index.html#humanities-and-formal-sciences",
-    "href": "writeups/Claude-Models/index.html#humanities-and-formal-sciences",
-    "title": "Claude on Models",
-    "section": "Humanities and Formal Sciences",
-    "text": "Humanities and Formal Sciences\n\nLinguistics: Chomsky’s transformational-generative grammar models sentence structure and syntax; phonological models represent sound systems and pronunciation rules. Transformational Grammar | Phonology\nMathematics: Euclidean geometry models flat space using axioms and theorems; probability models describe random events and their likelihood. Euclidean Geometry | Probability Theory\nPhilosophy: The theory of forms models reality as imperfect reflections of perfect ideals; utilitarian models evaluate moral actions based on consequences and overall happiness. Theory of Forms | Utilitarianism\nHistory: Cyclical models view history as repeating patterns; the Annales school model examines long-term social and economic structures rather than just political events. Cyclical Theory | Annales School\nEducation: Bloom’s taxonomy models learning objectives in hierarchical cognitive levels; constructivist models view learning as active knowledge construction by students. Bloom’s Taxonomy | Constructivism\nGeography: The von Thünen model predicts agricultural land use patterns around markets; gravity models estimate interaction between places based on size and distance. Von Thünen Model | Gravity Model",
+    "objectID": "writeups/ChatGPT-Models/index.html#economics",
+    "href": "writeups/ChatGPT-Models/index.html#economics",
+    "title": "ChatGPT on Models",
+    "section": "4. Economics",
+    "text": "4. Economics\n\nSupply and Demand Model – market equilibrium\nhttps://www.investopedia.com/terms/l/law-of-supply-demand.asp\nIS–LM Model – macroeconomic equilibrium\nhttps://www.econlib.org/library/Enc/ISLMModel.html",
     "crumbs": [
       "About",
       "Write-ups",
       "Writeups",
-      "Claude on Models"
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#psychology",
+    "href": "writeups/ChatGPT-Models/index.html#psychology",
+    "title": "ChatGPT on Models",
+    "section": "5. Psychology",
+    "text": "5. Psychology\n\nCognitive Behavioral Model – thoughts, emotions, behavior interaction\nhttps://beckinstitute.org/about-beck/what-is-cognitive-behavioral-therapy/\nBig Five Personality Model – personality trait structure\nhttps://www.apa.org/monitor/julaug04/personality",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#sociology",
+    "href": "writeups/ChatGPT-Models/index.html#sociology",
+    "title": "ChatGPT on Models",
+    "section": "6. Sociology",
+    "text": "6. Sociology\n\nStructural Functionalism – society as interrelated systems\nhttps://www.britannica.com/topic/structural-functionalism\nConflict Theory – power and inequality model\nhttps://www.britannica.com/topic/conflict-theory",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#political-science",
+    "href": "writeups/ChatGPT-Models/index.html#political-science",
+    "title": "ChatGPT on Models",
+    "section": "7. Political Science",
+    "text": "7. Political Science\n\nMedian Voter Theorem – voting behavior model\nhttps://www.britannica.com/topic/median-voter-theorem\nRational Choice Model – political decision-making\nhttps://plato.stanford.edu/entries/rational-choice/",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#anthropology",
+    "href": "writeups/ChatGPT-Models/index.html#anthropology",
+    "title": "ChatGPT on Models",
+    "section": "8. Anthropology",
+    "text": "8. Anthropology\n\nCultural Evolution Models – transmission of cultural traits\nhttps://royalsocietypublishing.org/doi/10.1098/rstb.2010.0232\nKinship Models – social relationship structures\nhttps://www.anthroencyclopedia.com/entry/kinship",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#linguistics",
+    "href": "writeups/ChatGPT-Models/index.html#linguistics",
+    "title": "ChatGPT on Models",
+    "section": "9. Linguistics",
+    "text": "9. Linguistics\n\nGenerative Grammar – language structure modeling\nhttps://www.britannica.com/topic/generative-grammar\nPhonological Feature Models – sound pattern representation\nhttps://linguapress.com/esl/grammar/phonology.htm",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#computer-science",
+    "href": "writeups/ChatGPT-Models/index.html#computer-science",
+    "title": "ChatGPT on Models",
+    "section": "10. Computer Science",
+    "text": "10. Computer Science\n\nTuring Machine – computation model\nhttps://plato.stanford.edu/entries/turing-machine/\nNeural Networks – machine learning model\nhttps://www.ibm.com/think/topics/neural-networks",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#mathematics",
+    "href": "writeups/ChatGPT-Models/index.html#mathematics",
+    "title": "ChatGPT on Models",
+    "section": "11. Mathematics",
+    "text": "11. Mathematics\n\nGraph Theory Models – relational structures\nhttps://mathworld.wolfram.com/GraphTheory.html\nStochastic Models – probabilistic systems\nhttps://www.britannica.com/science/stochastic-process",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#statistics",
+    "href": "writeups/ChatGPT-Models/index.html#statistics",
+    "title": "ChatGPT on Models",
+    "section": "12. Statistics",
+    "text": "12. Statistics\n\nLinear Regression Model – relationship estimation\nhttps://www.itl.nist.gov/div898/handbook/pmd/section1/pmd141.htm\nBayesian Models – probabilistic inference\nhttps://plato.stanford.edu/entries/bayesian-epistemology/",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#medicine",
+    "href": "writeups/ChatGPT-Models/index.html#medicine",
+    "title": "ChatGPT on Models",
+    "section": "13. Medicine",
+    "text": "13. Medicine\n\nBiopsychosocial Model – health determinants\nhttps://www.ncbi.nlm.nih.gov/books/NBK396/\nDisease Progression Models – clinical forecasting\nhttps://www.sciencedirect.com/topics/medicine-and-dentistry/disease-progression-model",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#public-health",
+    "href": "writeups/ChatGPT-Models/index.html#public-health",
+    "title": "ChatGPT on Models",
+    "section": "14. Public Health",
+    "text": "14. Public Health\n\nEpidemiological SIR Model – disease spread\nhttps://www.ncbi.nlm.nih.gov/pmc/articles/PMC5348083/\nSocial Determinants of Health Model\nhttps://www.cdc.gov/socialdeterminants/index.htm",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#education",
+    "href": "writeups/ChatGPT-Models/index.html#education",
+    "title": "ChatGPT on Models",
+    "section": "15. Education",
+    "text": "15. Education\n\nBloom’s Taxonomy – learning objectives\nhttps://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/\nConstructivist Learning Model\nhttps://www.simplypsychology.org/constructivism.html",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#philosophy",
+    "href": "writeups/ChatGPT-Models/index.html#philosophy",
+    "title": "ChatGPT on Models",
+    "section": "16. Philosophy",
+    "text": "16. Philosophy\n\nArgumentation Models (Toulmin Model)\nhttps://www.britannica.com/topic/Toulmin-model\nPossible Worlds Semantics\nhttps://plato.stanford.edu/entries/possible-worlds/",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#geography",
+    "href": "writeups/ChatGPT-Models/index.html#geography",
+    "title": "ChatGPT on Models",
+    "section": "17. Geography",
+    "text": "17. Geography\n\nCentral Place Theory – urban settlement patterns\nhttps://www.britannica.com/topic/central-place-theory\nGravity Model – spatial interaction\nhttps://www.sciencedirect.com/topics/social-sciences/gravity-model",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#environmental-science",
+    "href": "writeups/ChatGPT-Models/index.html#environmental-science",
+    "title": "ChatGPT on Models",
+    "section": "18. Environmental Science",
+    "text": "18. Environmental Science\n\nClimate Models (GCMs) – climate system simulation\nhttps://www.metoffice.gov.uk/weather/climate/climate-models\nEcosystem Models – energy and nutrient flows\nhttps://www.britannica.com/science/ecosystem-model",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#engineering",
+    "href": "writeups/ChatGPT-Models/index.html#engineering",
+    "title": "ChatGPT on Models",
+    "section": "19. Engineering",
+    "text": "19. Engineering\n\nFinite Element Models – structural analysis\nhttps://www.ansys.com/solutions/what-is-finite-element-analysis\nControl System Models – system regulation\nhttps://www.britannica.com/technology/control-system",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#law",
+    "href": "writeups/ChatGPT-Models/index.html#law",
+    "title": "ChatGPT on Models",
+    "section": "20. Law",
+    "text": "20. Law\n\nLegal Reasoning Models – precedent-based inference\nhttps://plato.stanford.edu/entries/legal-reasoning/\nEconomic Analysis of Law\nhttps://www.britannica.com/topic/law-and-economics",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#history",
+    "href": "writeups/ChatGPT-Models/index.html#history",
+    "title": "ChatGPT on Models",
+    "section": "21. History",
+    "text": "21. History\n\nCliometric Models – quantitative historical analysis\nhttps://www.britannica.com/topic/cliometrics\nPeriodization Models – historical structuring\nhttps://www.historyskills.com/historical-knowledge/periodisation/",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/ChatGPT-Models/index.html#theology-religious-studies",
+    "href": "writeups/ChatGPT-Models/index.html#theology-religious-studies",
+    "title": "ChatGPT on Models",
+    "section": "22. Theology / Religious Studies",
+    "text": "22. Theology / Religious Studies\n\nHermeneutical Models – interpretation frameworks\nhttps://plato.stanford.edu/entries/hermeneutics/\nComparative Religion Models\nhttps://www.britannica.com/topic/comparative-religion\n\nIt also contained some editorial commentary.\nIf you’d like, I can also:\n + Condense this into a one-page teaching handout\n + Add a column comparing predictive vs. explanatory models\n + Tailor it for a specific field or course level\n\n\n\n\n\n\nNotePrompt:\n\n\n\nYes, please repeat the task with a column that compares them as predictive or explanatory models; the response is probably best formatted as a table with the links in markdown code\n\n\n\n\n\nDiscipline\nModel\nPrimary Use of the Model\nPredictive / Explanatory\n\n\n\n\nPhysics\nStandard Model of Particle Physics\nDescribes fundamental particles and forces\nExplanatory (limited predictive)\n\n\nChemistry\nArrhenius Equation\nRelates temperature to reaction rates\nPredictive\n\n\nBiology\nLotka–Volterra Model\nModels predator–prey population dynamics\nBoth\n\n\nEconomics\nSupply and Demand Model\nExplains market equilibrium\nBoth\n\n\nPsychology\nCognitive Behavioral Model\nExplains interaction of thoughts, emotions, behavior\nExplanatory\n\n\nSociology\nStructural Functionalism\nExplains social order and institutions\nExplanatory\n\n\nPolitical Science\nMedian Voter Theorem\nPredicts policy outcomes in majority voting\nPredictive\n\n\nAnthropology\nCultural Evolution Models\nExplain cultural trait transmission\nBoth\n\n\nLinguistics\nGenerative Grammar\nExplains underlying structure of language\nExplanatory\n\n\nComputer Science\nTuring Machine\nFormal model of computation\nExplanatory\n\n\nMathematics\nGraph Theory\nModels relational structures abstractly\nExplanatory\n\n\nStatistics\nLinear Regression\nEstimates and predicts relationships between variables\nPredictive\n\n\nMedicine\nBiopsychosocial Model\nExplains health via biological, psychological, social factors\nExplanatory\n\n\nPublic Health\nSIR Epidemiological Model\nForecasts disease spread\nPredictive\n\n\nEducation\nBloom’s Taxonomy\nClassifies learning objectives\nExplanatory\n\n\nPhilosophy\nToulmin Model of Argumentation\nAnalyzes structure of arguments\nExplanatory\n\n\nGeography\nCentral Place Theory\nExplains spatial distribution of cities\nExplanatory\n\n\nEnvironmental Science\nGeneral Circulation Models (GCMs)\nSimulate and forecast climate systems\nPredictive\n\n\nEngineering\nFinite Element Analysis\nPredicts stress, strain, and failure in systems\nPredictive\n\n\nLaw\nLegal Reasoning Models\nExplains reasoning from precedent and statutes\nExplanatory\n\n\nHistory\nCliometrics\nApplies quantitative models to historical trends\nBoth\n\n\nTheology / Religious Studies\nHermeneutical Models\nExplains interpretation of sacred texts\nExplanatory",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "ChatGPT on Models"
+    ]
+  },
+  {
+    "objectID": "writeups/Gemini-Analysis/index.html",
+    "href": "writeups/Gemini-Analysis/index.html",
+    "title": "Gemini Data Analysis",
+    "section": "",
+    "text": "Gemini is powerful, soup to nuts, in analysing data. Let’s look at an example that literally deploys a model to generate a common quantity used in portfolio management in finance.\n\n\n\n\n\n\nNotePrompt:\n\n\n\nPlease use publicly available sources to acquire the price of Apple common stock over the last five years and plot it as a time series. Then proceed to calculate the monthly returns for the stock and the monthly returns for the S&P 500 and provide a CAPM regression of beta. Finally, please allow me access to the data you used by exporting it to sheets",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "Gemini Data Analysis"
+    ]
+  },
+  {
+    "objectID": "writeups/Gemini-Analysis/index.html#regression-statistics-monthly-returns",
+    "href": "writeups/Gemini-Analysis/index.html#regression-statistics-monthly-returns",
+    "title": "Gemini Data Analysis",
+    "section": "1. Regression Statistics (Monthly Returns)",
+    "text": "1. Regression Statistics (Monthly Returns)\nBased on the monthly returns of Apple stock compared to the S&P 500:\n\nBeta (\\(\\beta\\)): 1.09\nAlpha (\\(\\alpha\\)): 0.17% (Monthly)\nR-Squared (\\(R^2\\)): 0.44",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "Gemini Data Analysis"
+    ]
+  },
+  {
+    "objectID": "writeups/Gemini-Analysis/index.html#interpretation",
+    "href": "writeups/Gemini-Analysis/index.html#interpretation",
+    "title": "Gemini Data Analysis",
+    "section": "2. Interpretation",
+    "text": "2. Interpretation\n\nBeta (1.09): AAPL has historically been about 9% more volatile than the S&P 500. A 1% rise in the market typically correlates with a 1.09% rise in AAPL.\nAlpha (0.17%): On average, AAPL outperformed the risk-adjusted return predicted by the CAPM model by 0.17% per month.\nR-Squared (0.44): Approximately 44% of Apple’s price movement can be explained by the movement of the S&P 500.",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "Gemini Data Analysis"
+    ]
+  },
+  {
+    "objectID": "writeups/Gemini-Analysis/index.html#plots-generated",
+    "href": "writeups/Gemini-Analysis/index.html#plots-generated",
+    "title": "Gemini Data Analysis",
+    "section": "3. Plots Generated",
+    "text": "3. Plots Generated\n\nTime Series: A line chart showing AAPL price rising from ~$128 (Jan 2021) to ~$259 (Jan 2026).\nRegression: A scatter plot of SP500_Return (x-axis) vs AAPL_Return (y-axis) with a regression line of slope 1.09.\n\n\n\nHow’s that done?\nimport pandas as pd\nimport numpy as np\nfrom scipy import stats\nimport matplotlib.pyplot as plt\n\n# Data from Source 1.3 (AAPL)\naapl_text = \"\"\"\nJan 2026 | 259.89\nDec 2025 | 272.21\nNov 2025 | 278.85\nOct 2025 | 270.11\nSep 2025 | 254.38\nAug 2025 | 231.92\nJul 2025 | 207.13\nJun 2025 | 204.74\nMay 2025 | 200.43\nApr 2025 | 211.78\nMar 2025 | 221.37\nFeb 2025 | 241.02\nJan 2025 | 234.94\nDec 2024 | 249.29\nNov 2024 | 236.26\nOct 2024 | 224.65\nSep 2024 | 231.70\nAug 2024 | 227.72\nJul 2024 | 220.58\nJun 2024 | 209.20\nMay 2024 | 190.95\nApr 2024 | 168.95\nMar 2024 | 170.09\nFeb 2024 | 179.29\nJan 2024 | 182.68\nDec 2023 | 190.73\nNov 2023 | 188.17\nOct 2023 | 168.95\nSep 2023 | 169.38\nAug 2023 | 185.87\nJul 2023 | 194.09\nJun 2023 | 191.64\nMay 2023 | 175.12\nApr 2023 | 167.41\nMar 2023 | 162.70\nFeb 2023 | 145.44\nJan 2023 | 142.15\nDec 2022 | 128\nNov 2022 | 145.83\nOct 2022 | 150.81\nSep 2022 | 135.92\nAug 2022 | 154.63\nJul 2022 | 159.61\nJun 2022 | 134.28\nMay 2022 | 146.18\nApr 2022 | 154.61\nMar 2022: 171.24\nFeb 2022: 161.93\nJan 2022: 171.19\nDec 2021: 173.92\nNov 2021: 161.90\nOct 2021: 146.51\nSep 2021: 138.39\nAug 2021: 148.49\nJul 2021: 142.44\nJun 2021: 133.75\nMay 2021: 121.69\nApr 2021: 128.16\nMar 2021: 119.08\nFeb 2021: 118.22\nJan 2021: 128.46\n\"\"\"\n\n# Data from Source 2.3 (S&P 500)\nsp500_text = \"\"\"\n2026-01-09 | 6966.28\n2025-12-31 | 6845.50\n2025-11-28 | 6849.09\n2025-10-31 | 6840.20\n2025-09-30 | 6688.46\n2025-08-29 | 6460.26\n2025-07-31 | 6339.39\n2025-06-30 | 6204.95\n2025-05-30 | 5911.69\n2025-04-30 | 5569.06\n2025-03-31 | 5611.85\n2025-02-28 | 5954.50\n2025-01-31 | 6040.53\n2024-12-31 | 5881.63\n2024-11-29 | 6032.38\n2024-10-31 | 5705.45\n2024-09-30 | 5762.48\n2024-08-30 | 5648.40\n2024-07-31 | 5522.30\n2024-06-28 | 5460.48\n2024-05-31 | 5277.51\n2024-04-30 | 5035.69\n2024-03-28 | 5254.35\n2024-02-29 | 5096.27\n2024-01-31 | 4845.65\n2023-12-29 | 4769.83\n2023-11-30 | 4567.80\n2023-10-31 | 4193.80\n2023-09-29 | 4288.05\n2023-08-31 | 4507.66\n2023-07-31 | 4588.96\n2023-06-30 | 4450.38\n2023-05-31 | 4179.83\n2023-04-28 | 4169.48\n2023-03-31 | 4109.31\n2023-02-28 | 3970.15\n2023-01-31 | 4076.60\n2022-12-31 | 3839.50\n2022-11-30 | 4080.11\n2022-10-31 | 3871.98\n2022-09-30 | 3585.62\n2022-08-31 | 3955.00\n2022-07-29 | 4130.29\n2022-06-30 | 3785.38\n2022-05-31 | 4132.15\n2022-04-29 | 4131.93\n2022-03-31 | 4530.41\n2022-02-28 | 4373.94\n2022-01-31 | 4515.55\n2021-12-31 | 4766.18\n2021-11-30 | 4567.00\n2021-10-29 | 4605.38\n2021-09-30 | 4307.54\n2021-08-31 | 4522.68\n2021-07-30 | 4395.26\n2021-06-30 | 4297.50\n2021-05-28 | 4204.11\n2021-04-30 | 4181.17\n2021-03-31 | 3972.89\n2021-02-26 | 3811.15\n2021-01-29 | 3714.24\n\"\"\"\n\n# Processing AAPL\naapl_data = []\nfor line in aapl_text.strip().split('\\n'):\n    parts = line.replace(':', '|').split('|')\n    if len(parts) &gt;= 2:\n        date_str = parts[0].strip()\n        price_str = parts[1].strip()\n        aapl_data.append({'Date': date_str, 'AAPL': float(price_str)})\n\ndf_aapl = pd.DataFrame(aapl_data)\n# Convert Date to datetime. \"Jan 2026\" needs format.\ndf_aapl['Date'] = pd.to_datetime(df_aapl['Date'], format='%b %Y') + pd.offsets.MonthEnd(0) # Align to month end\n\n# Processing S&P 500\nsp500_data = []\nfor line in sp500_text.strip().split('\\n'):\n    parts = line.split('|')\n    if len(parts) &gt;= 2:\n        date_str = parts[0].strip()\n        price_str = parts[1].strip().replace(',', '')\n        sp500_data.append({'Date': date_str, 'SP500': float(price_str)})\n\ndf_sp500 = pd.DataFrame(sp500_data)\ndf_sp500['Date'] = pd.to_datetime(df_sp500['Date']) + pd.offsets.MonthEnd(0)\n\n# Merge\ndf_merged = pd.merge(df_aapl, df_sp500, on='Date', how='inner')\ndf_merged = df_merged.sort_values('Date')\n\n# Calculate Monthly Returns\ndf_merged['AAPL_Return'] = df_merged['AAPL'].pct_change()\ndf_merged['SP500_Return'] = df_merged['SP500'].pct_change()\n\n# Drop NaN (first row)\ndf_returns = df_merged.dropna()\n\n# CAPM Regression\n# y = AAPL_Return, x = SP500_Return\nslope, intercept, r_value, p_value, std_err = stats.linregress(df_returns['SP500_Return'], df_returns['AAPL_Return'])\n\nprint(f\"Beta: {slope}\")\nprint(f\"Alpha: {intercept}\")\nprint(f\"R-squared: {r_value**2}\")\n\n# Plotting AAPL Price\nplt.figure(figsize=(10, 6))\nplt.plot(df_merged['Date'], df_merged['AAPL'], label='AAPL Price')\nplt.title('Apple (AAPL) Stock Price - Last 5 Years')\nplt.xlabel('Date')\nplt.ylabel('Price ($)')\nplt.legend()\nplt.grid(True)\nplt.savefig('aapl_price_history.png')\n\n# Plotting Returns Relationship\nplt.figure(figsize=(8, 6))\nplt.scatter(df_returns['SP500_Return'], df_returns['AAPL_Return'], alpha=0.5)\nplt.plot(df_returns['SP500_Return'], intercept + slope * df_returns['SP500_Return'], 'r', label=f'Fit: y={slope:.2f}x + {intercept:.4f}')\nplt.title('Monthly Returns: AAPL vs S&P 500')\nplt.xlabel('S&P 500 Monthly Return')\nplt.ylabel('AAPL Monthly Return')\nplt.legend()\nplt.grid(True)\nplt.savefig('capm_regression.png')\n\n# Export to CSV\ndf_merged.to_csv('aapl_sp500_data.csv', index=False)\n\n\nBeta: 1.091504481063609\nAlpha: 0.001743016912168079\nR-squared: 0.4448837540235066\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCute.\nAnd it matches.\n\n\n\nYahoo! Finance",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "Gemini Data Analysis"
+    ]
+  },
+  {
+    "objectID": "writeups/Gemini-Models/index.html",
+    "href": "writeups/Gemini-Models/index.html",
+    "title": "Gemini on Models",
+    "section": "",
+    "text": "TL;DR\nGemini, from Google, is an extremely powerful AI tool. I will use it here to help me think about the use of models.\n\n\n\nClaude Interactions\n\n\n\n\n\n\n\n\nNotePrompt:\n\n\n\n\nhow are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a formatted table of markdown code with a linked reference for each model that provides more extensive detail and a column that includes whether the model is predictive or explanatory\nThis response is great except that I want you to provide the response in its entirety as markdown code, not rendered.\n\n\n\nModels are the primary tools scholars use to bridge the gap between abstract theory and the complex reality of the world. In academic disciplines, a model is a simplified representation of a system, concept, or process.\nScholars use them for three primary purposes: 1. Explanation: To isolate specific variables and understand how or why a phenomenon occurs (e.g., how neurons fire). 2. Prediction: To forecast future states or unseen data based on current parameters (e.g., predicting the spread of a virus). 3. Simulation: To create “sandbox” environments where theoretical scenarios can be tested without real-world risk (e.g., economic crash simulations).\nThe following table outlines common models across 20 distinct academic disciplines.\n\nCommon Academic Models\n\n\n\nDiscipline\nModel Name\nUse/Description\nType\nReference\n\n\n\n\n1. Physics\nStandard Model\nExplains the fundamental particles (quarks, leptons) and forces (strong, weak, electromagnetic) that constitute matter.\nExplanatory & Predictive\nCERN Source\n\n\n2. Epidemiology\nSIR Model\nMathematical model that tracks Susceptible, Infectious, and Recovered individuals to simulate disease spread.\nPredictive\nNIH Reference\n\n\n3. Economics\nIS-LM Model\nMacroeconomic tool demonstrating the relationship between interest rates and the asset/goods market (Investment-Saving/Liquidity-Money).\nExplanatory & Predictive\nInvestopedia Detail\n\n\n4. Psychology\nBig Five (OCEAN)\nA taxonomy for personality traits: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.\nExplanatory\nNIH Reference\n\n\n5. Biology\nLotka-Volterra\nA pair of differential equations used to describe the dynamics of biological systems in which two species interact (Predator-Prey).\nPredictive\nNature Scitable\n\n\n6. Sociology\nGravity Model\nPredicts the volume of interaction (migration, trade, communication) between two places based on their size and distance.\nPredictive\nThoughtCo Overview\n\n\n7. Neuroscience\nHodgkin-Huxley\nA mathematical model describing how action potentials (electrical signals) in neurons are initiated and propagated.\nExplanatory & Predictive\nScholarpedia\n\n\n8. Pol. Science\nMedian Voter Theorem\nArgues that in a majority-rule election system, candidates will converge to the position of the median voter to win.\nPredictive\nNBER Paper\n\n\n9. Geography\nCentral Place Theory\nExplains the number, size, and location of human settlements in a residential system.\nExplanatory\nWVU Research\n\n\n10. Chemistry\nVSEPR Theory\nA model used to predict the geometry of individual molecules from the number of electron pairs surrounding their central atoms.\nPredictive\nPurdue Chemistry\n\n\n11. Linguistics\nTree Model\nA comparative model depicting the genealogical relationship between languages as they evolve from a common ancestor.\nExplanatory\nLanguage Files\n\n\n12. Computer Sci\nOSI Model\nA conceptual framework that describes the functions of a networking system (7 layers) to ensure interoperability.\nExplanatory (Conceptual)\nCloudflare Guide\n\n\n13. Geology\nPlate Tectonics\nDescribes the large-scale motion of seven large plates and the movements of a larger number of smaller plates of Earth’s lithosphere.\nExplanatory\nUSGS Pubs\n\n\n14. Anthropology\nRecent African Origin\nThe dominant model of the geographic origin and early migration of anatomically modern humans (Out of Africa).\nExplanatory\nSmithsonian Human Origins\n\n\n15. Philosophy\nTrolley Problem\nA “thought experiment” (conceptual model) used to explore ethical intuitions regarding utilitarianism and deontology.\nExplanatory (Explorative)\nStanford Encyclopedia\n\n\n16. Marketing\nAIDA Model\nTraces the customer journey through Awareness, Interest, Desire, and Action.\nExplanatory (Process)\nOxford Reference\n\n\n17. Management\nSWOT Analysis\nA strategic planning technique used to identify Strengths, Weaknesses, Opportunities, and Threats.\nExplanatory (Analytical)\nHarvard Business School\n\n\n18. Astronomy\nBig Bang Model\nThe prevailing cosmological model for the observable universe from the earliest known periods through its subsequent large-scale evolution.\nExplanatory & Predictive\nNASA Science\n\n\n19. Education\nBloom’s Taxonomy\nA hierarchical model used to classify educational learning objectives into levels of complexity and specificity.\nExplanatory (Structural)\nVanderbilt Teaching\n\n\n20. Env. Science\nGCM (Climate)\nGlobal Circulation Models use math/physics to simulate the atmosphere and oceans to predict future climate change.\nPredictive\nNOAA Explanation\n\n\n\n\n\nWould you like me to…\nGenerate a Python script or R code to simulate one of the simpler predictive models, such as the SIR Model or Lotka-Volterra, so you can see how the variables interact in real-time?",
+    "crumbs": [
+      "About",
+      "Write-ups",
+      "Writeups",
+      "Gemini on Models"
     ]
   }
 ]

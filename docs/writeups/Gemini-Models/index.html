@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Robert W. Walker">
+<meta name="dcterms.date" content="2026-01-14">
 
-<title>About – Managing with AI</title>
+<title>Gemini on Models – Managing with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +25,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2890eba573baac25c3e9f0f9d94fc55f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../writeups/Lesson-Learned/index.html" rel="next">
+<link href="../../writeups/Gemini-Formatting/index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2890eba573baac25c3e9f0f9d94fc55f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
@@ -84,11 +87,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./AGSMlogo.jpeg" alt="" class="navbar-logo light-content">
-    <img src="./AGSMlogo.jpeg" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo light-content">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">BUS 1301</span>
     </a>
   </div>
@@ -99,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -123,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">About</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Write-ups</li><li class="breadcrumb-item"><a href="../../writeups/ChatGPT-Models/index.html">Writeups</a></li><li class="breadcrumb-item"><a href="../../writeups/Gemini-Models/index.html">Gemini on Models</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -134,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -159,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/01-13-2026/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/01-13-2026/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Managing with Data, Analytics and AI</span></a>
   </div>
 </li>
@@ -178,46 +181,46 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Writeups</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/ChatGPT-Models/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/ChatGPT-Models/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ChatGPT on Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Claude-Models/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Claude-Models/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Claude on Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Gemini-Analysis/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Gemini-Analysis/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gemini Data Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Gemini-Formatting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Gemini-Formatting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Formatting a Gemini Response</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Gemini-Models/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Gemini-Models/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Gemini on Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Lesson-Learned/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Lesson-Learned/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lesson Learned on Gemini</span></a>
   </div>
 </li>
@@ -232,79 +235,241 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Write-ups</li><li class="breadcrumb-item"><a href="../../writeups/ChatGPT-Models/index.html">Writeups</a></li><li class="breadcrumb-item"><a href="../../writeups/Gemini-Models/index.html">Gemini on Models</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Gemini on Models</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Robert W. Walker </p>
+          </div>
   </div>
-</header> <main class="content" id="quarto-document-content">
-<marquee scrollamount="10">
-<h1>
-<p style="color:purple;">
-<i class="fa-brands fa-r-project" aria-label="r-project"></i>obertwwalker.github.io <br>
-</p>
-</h1>
-<p></p></marquee><p></p>
-<section id="robert-w.-walker-ph.-d." class="level1">
-<h1>Robert W. Walker, Ph. D.</h1>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><a href="RWW.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="RWW.jpeg" class="img-fluid"></a></p>
-</div><div class="column" style="width:10%;">
-</div><div class="column" style="width:50%;">
-<p>Robert W. Walker is an Associate Professor of Quantitative Methods in the <a href="https://willamette.edu/mba/admission/index.html">Atkinson Graduate School of Management</a> at <a href="https://willamette.edu/">Willamette University</a></p>
-<p>He earned a Ph. D. in political science from the University of Rochester in 2005 and has previously held teaching positions at Dartmouth College, Rice University, Texas A&amp;M University, and Washington University in Saint Louis. His current research develops and applies semi-Markov processes to time-series, cross-section data in international relations and international/comparative political economy. He teaches courses in quantitative methods/applied statistics and microeconomic strategy and previously taught four iterations in the U. S. National Science Foundation funded Empirical Implications of Theoretical Models sequence at Washington University in Saint Louis. His work with Curt Signorino and Muhammet Bas was awarded the Miller Prize for the best article in Political Analysis in 2009.</p>
-<p>His web presence is <a href="https://robertwwalker.github.io">rww.science</a> and his github is <a href="https://github.com/robertwwalker">https://github.com/robertwwalker</a>.</p>
-</div>
-</div>
-<p>Robert’s Erdos-Bacon Number is 8.</p>
-<div class="columns">
-<div class="column" style="width:30%;">
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 14, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="tldr" class="level1">
+<h1>TL;DR</h1>
+<p>Gemini, from Google, is an extremely powerful AI tool. I will use it here to help me think about the use of models.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/Erdos.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Erdos Table"><img src="img/Erdos.png" class="img-fluid figure-img" alt="Erdos Table"></a></p>
-<figcaption>Erdos Table</figcaption>
+<p><a href="./image.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Claude Interactions"><img src="./image.png" class="img-fluid figure-img" alt="Claude Interactions"></a></p>
+<figcaption>Claude Interactions</figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:10%;">
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/Bacon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Bacon Table"><img src="img/Bacon.png" class="img-fluid figure-img" alt="Bacon Table"></a></p>
-<figcaption>Bacon Table</figcaption>
-</figure>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Prompt:
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>how are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a formatted table of markdown code with a linked reference for each model that provides more extensive detail and a column that includes whether the model is predictive or explanatory</p></li>
+<li><p>This response is great except that I want you to provide the response in its entirety as markdown code, not rendered.</p></li>
+</ol>
 </div>
+</div>
+<p>Models are the primary tools scholars use to bridge the gap between abstract theory and the complex reality of the world. In academic disciplines, a <strong>model</strong> is a simplified representation of a system, concept, or process.</p>
+<p>Scholars use them for three primary purposes: 1. <strong>Explanation:</strong> To isolate specific variables and understand <em>how</em> or <em>why</em> a phenomenon occurs (e.g., how neurons fire). 2. <strong>Prediction:</strong> To forecast future states or unseen data based on current parameters (e.g., predicting the spread of a virus). 3. <strong>Simulation:</strong> To create “sandbox” environments where theoretical scenarios can be tested without real-world risk (e.g., economic crash simulations).</p>
+<p>The following table outlines common models across 20 distinct academic disciplines.</p>
+<section id="common-academic-models" class="level3">
+<h3 class="anchored" data-anchor-id="common-academic-models">Common Academic Models</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Discipline</th>
+<th style="text-align: left;">Model Name</th>
+<th style="text-align: left;">Use/Description</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>1. Physics</strong></td>
+<td style="text-align: left;">Standard Model</td>
+<td style="text-align: left;">Explains the fundamental particles (quarks, leptons) and forces (strong, weak, electromagnetic) that constitute matter.</td>
+<td style="text-align: left;">Explanatory &amp; Predictive</td>
+<td style="text-align: left;"><a href="https://home.cern/science/physics/standard-model">CERN Source</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2. Epidemiology</strong></td>
+<td style="text-align: left;">SIR Model</td>
+<td style="text-align: left;">Mathematical model that tracks Susceptible, Infectious, and Recovered individuals to simulate disease spread.</td>
+<td style="text-align: left;">Predictive</td>
+<td style="text-align: left;"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7273264/">NIH Reference</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>3. Economics</strong></td>
+<td style="text-align: left;">IS-LM Model</td>
+<td style="text-align: left;">Macroeconomic tool demonstrating the relationship between interest rates and the asset/goods market (Investment-Saving/Liquidity-Money).</td>
+<td style="text-align: left;">Explanatory &amp; Predictive</td>
+<td style="text-align: left;"><a href="https://www.investopedia.com/terms/i/islmmodel.asp">Investopedia Detail</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>4. Psychology</strong></td>
+<td style="text-align: left;">Big Five (OCEAN)</td>
+<td style="text-align: left;">A taxonomy for personality traits: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.</td>
+<td style="text-align: left;">Explanatory</td>
+<td style="text-align: left;"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8552632/">NIH Reference</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>5. Biology</strong></td>
+<td style="text-align: left;">Lotka-Volterra</td>
+<td style="text-align: left;">A pair of differential equations used to describe the dynamics of biological systems in which two species interact (Predator-Prey).</td>
+<td style="text-align: left;">Predictive</td>
+<td style="text-align: left;"><a href="https://www.nature.com/scitable/knowledge/library/predation-herbivory-and-parasitism-13261134/">Nature Scitable</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>6. Sociology</strong></td>
+<td style="text-align: left;">Gravity Model</td>
+<td style="text-align: left;">Predicts the volume of interaction (migration, trade, communication) between two places based on their size and distance.</td>
+<td style="text-align: left;">Predictive</td>
+<td style="text-align: left;"><a href="https://www.thoughtco.com/gravity-model-population-migration-1435426">ThoughtCo Overview</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>7. Neuroscience</strong></td>
+<td style="text-align: left;">Hodgkin-Huxley</td>
+<td style="text-align: left;">A mathematical model describing how action potentials (electrical signals) in neurons are initiated and propagated.</td>
+<td style="text-align: left;">Explanatory &amp; Predictive</td>
+<td style="text-align: left;"><a href="http://www.scholarpedia.org/article/Hodgkin-Huxley_model">Scholarpedia</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>8. Pol. Science</strong></td>
+<td style="text-align: left;">Median Voter Theorem</td>
+<td style="text-align: left;">Argues that in a majority-rule election system, candidates will converge to the position of the median voter to win.</td>
+<td style="text-align: left;">Predictive</td>
+<td style="text-align: left;"><a href="https://www.nber.org/papers/w31503">NBER Paper</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>9. Geography</strong></td>
+<td style="text-align: left;">Central Place Theory</td>
+<td style="text-align: left;">Explains the number, size, and location of human settlements in a residential system.</td>
+<td style="text-align: left;">Explanatory</td>
+<td style="text-align: left;"><a href="https://researchrepository.wvu.edu/rri-web-book/14/">WVU Research</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>10. Chemistry</strong></td>
+<td style="text-align: left;">VSEPR Theory</td>
+<td style="text-align: left;">A model used to predict the geometry of individual molecules from the number of electron pairs surrounding their central atoms.</td>
+<td style="text-align: left;">Predictive</td>
+<td style="text-align: left;"><a href="https://www.chem.purdue.edu/gchelp/vsepr/">Purdue Chemistry</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>11. Linguistics</strong></td>
+<td style="text-align: left;">Tree Model</td>
+<td style="text-align: left;">A comparative model depicting the genealogical relationship between languages as they evolve from a common ancestor.</td>
+<td style="text-align: left;">Explanatory</td>
+<td style="text-align: left;"><a href="https://ohiostatepress.org/books/titles/9780814250392.html">Language Files</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>12. Computer Sci</strong></td>
+<td style="text-align: left;">OSI Model</td>
+<td style="text-align: left;">A conceptual framework that describes the functions of a networking system (7 layers) to ensure interoperability.</td>
+<td style="text-align: left;">Explanatory (Conceptual)</td>
+<td style="text-align: left;"><a href="https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/">Cloudflare Guide</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>13. Geology</strong></td>
+<td style="text-align: left;">Plate Tectonics</td>
+<td style="text-align: left;">Describes the large-scale motion of seven large plates and the movements of a larger number of smaller plates of Earth’s lithosphere.</td>
+<td style="text-align: left;">Explanatory</td>
+<td style="text-align: left;"><a href="https://pubs.usgs.gov/gip/dynamic/dynamic.html">USGS Pubs</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>14. Anthropology</strong></td>
+<td style="text-align: left;">Recent African Origin</td>
+<td style="text-align: left;">The dominant model of the geographic origin and early migration of anatomically modern humans (Out of Africa).</td>
+<td style="text-align: left;">Explanatory</td>
+<td style="text-align: left;"><a href="https://humanorigins.si.edu/education/introduction-human-evolution">Smithsonian Human Origins</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>15. Philosophy</strong></td>
+<td style="text-align: left;">Trolley Problem</td>
+<td style="text-align: left;">A “thought experiment” (conceptual model) used to explore ethical intuitions regarding utilitarianism and deontology.</td>
+<td style="text-align: left;">Explanatory (Explorative)</td>
+<td style="text-align: left;"><a href="https://plato.stanford.edu/entries/doing-allowing/">Stanford Encyclopedia</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>16. Marketing</strong></td>
+<td style="text-align: left;">AIDA Model</td>
+<td style="text-align: left;">Traces the customer journey through Awareness, Interest, Desire, and Action.</td>
+<td style="text-align: left;">Explanatory (Process)</td>
+<td style="text-align: left;"><a href="https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095400263">Oxford Reference</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>17. Management</strong></td>
+<td style="text-align: left;">SWOT Analysis</td>
+<td style="text-align: left;">A strategic planning technique used to identify Strengths, Weaknesses, Opportunities, and Threats.</td>
+<td style="text-align: left;">Explanatory (Analytical)</td>
+<td style="text-align: left;"><a href="https://online.hbs.edu/blog/post/strategic-planning-models">Harvard Business School</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>18. Astronomy</strong></td>
+<td style="text-align: left;">Big Bang Model</td>
+<td style="text-align: left;">The prevailing cosmological model for the observable universe from the earliest known periods through its subsequent large-scale evolution.</td>
+<td style="text-align: left;">Explanatory &amp; Predictive</td>
+<td style="text-align: left;"><a href="https://science.nasa.gov/astrophysics/focus-areas/what-is-the-universe-made-of">NASA Science</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>19. Education</strong></td>
+<td style="text-align: left;">Bloom’s Taxonomy</td>
+<td style="text-align: left;">A hierarchical model used to classify educational learning objectives into levels of complexity and specificity.</td>
+<td style="text-align: left;">Explanatory (Structural)</td>
+<td style="text-align: left;"><a href="https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/">Vanderbilt Teaching</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>20. Env. Science</strong></td>
+<td style="text-align: left;">GCM (Climate)</td>
+<td style="text-align: left;">Global Circulation Models use math/physics to simulate the atmosphere and oceans to predict future climate change.</td>
+<td style="text-align: left;">Predictive</td>
+<td style="text-align: left;"><a href="https://www.gfdl.noaa.gov/climate-modeling/">NOAA Explanation</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="would-you-like-me-to" class="level3">
+<h3 class="anchored" data-anchor-id="would-you-like-me-to">Would you like me to…</h3>
+<p>Generate a Python script or R code to simulate one of the simpler predictive models, such as the <strong>SIR Model</strong> or <strong>Lotka-Volterra</strong>, so you can see how the variables interact in real-time?</p>
 
 
 </section>
-</main> 
-    <div class="about-footer"><div class="about-links">
-  <a href="https://twitter.com/PieRatio" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://www.linkedin.com/in/robert-w-walker" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com/robertwwalker" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-</div>
-  </div>
-</div>
- <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -696,6 +861,18 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../writeups/Gemini-Formatting/index.html" class="pagination-link" aria-label="Formatting a Gemini Response">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Formatting a Gemini Response</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../writeups/Lesson-Learned/index.html" class="pagination-link" aria-label="Lesson Learned on Gemini">
+        <span class="nav-page-text">Lesson Learned on Gemini</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {

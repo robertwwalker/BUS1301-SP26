@@ -1,0 +1,196 @@
+---
+title: "ChatGPT on Models"
+author: "Robert W. Walker"
+date: "2026-01-14"
+image: "image.png"
+---
+
+# TL;DR
+
+ChatGPT, from OpenAI, is an extremely powerful AI tool.  I will use it here to help me think about the use of models.  A [link to the interaction](https://chatgpt.com/share/69685363-8ef0-8000-abeb-57e316b74374).
+
+![Claude Interactions](./image.png)
+
+::: {.callout-note appearance="simple"}
+
+## Prompt: 
+
+how are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a formatted list of markdown code with a linked reference for each model that provides more extensive detail
+
+:::
+
+# Use of Models Across Academic Disciplines
+
+## 1. Physics
+- **Standard Model of Particle Physics** – describes fundamental particles and forces  
+  https://home.cern/science/physics/standard-model
+- **Newtonian Mechanics** – classical model of motion  
+  https://plato.stanford.edu/entries/newton/
+
+## 2. Chemistry
+- **Molecular Orbital Theory** – models electron behavior in molecules  
+  https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Molecular_Orbital_Theory
+- **Arrhenius Equation** – models reaction rates  
+  https://www.britannica.com/science/Arrhenius-equation
+
+## 3. Biology
+- **Central Dogma of Molecular Biology** – information flow in cells  
+  https://www.nature.com/scitable/topicpage/central-dogma-of-molecular-biology-373/
+- **Lotka–Volterra Model** – predator–prey population dynamics  
+  https://mathworld.wolfram.com/Lotka-VolterraEquations.html
+
+## 4. Economics
+- **Supply and Demand Model** – market equilibrium  
+  https://www.investopedia.com/terms/l/law-of-supply-demand.asp
+- **IS–LM Model** – macroeconomic equilibrium  
+  https://www.econlib.org/library/Enc/ISLMModel.html
+
+## 5. Psychology
+- **Cognitive Behavioral Model** – thoughts, emotions, behavior interaction  
+  https://beckinstitute.org/about-beck/what-is-cognitive-behavioral-therapy/
+- **Big Five Personality Model** – personality trait structure  
+  https://www.apa.org/monitor/julaug04/personality
+
+## 6. Sociology
+- **Structural Functionalism** – society as interrelated systems  
+  https://www.britannica.com/topic/structural-functionalism
+- **Conflict Theory** – power and inequality model  
+  https://www.britannica.com/topic/conflict-theory
+
+## 7. Political Science
+- **Median Voter Theorem** – voting behavior model  
+  https://www.britannica.com/topic/median-voter-theorem
+- **Rational Choice Model** – political decision-making  
+  https://plato.stanford.edu/entries/rational-choice/
+
+## 8. Anthropology
+- **Cultural Evolution Models** – transmission of cultural traits  
+  https://royalsocietypublishing.org/doi/10.1098/rstb.2010.0232
+- **Kinship Models** – social relationship structures  
+  https://www.anthroencyclopedia.com/entry/kinship
+
+## 9. Linguistics
+- **Generative Grammar** – language structure modeling  
+  https://www.britannica.com/topic/generative-grammar
+- **Phonological Feature Models** – sound pattern representation  
+  https://linguapress.com/esl/grammar/phonology.htm
+
+## 10. Computer Science
+- **Turing Machine** – computation model  
+  https://plato.stanford.edu/entries/turing-machine/
+- **Neural Networks** – machine learning model  
+  https://www.ibm.com/think/topics/neural-networks
+
+## 11. Mathematics
+- **Graph Theory Models** – relational structures  
+  https://mathworld.wolfram.com/GraphTheory.html
+- **Stochastic Models** – probabilistic systems  
+  https://www.britannica.com/science/stochastic-process
+
+## 12. Statistics
+- **Linear Regression Model** – relationship estimation  
+  https://www.itl.nist.gov/div898/handbook/pmd/section1/pmd141.htm
+- **Bayesian Models** – probabilistic inference  
+  https://plato.stanford.edu/entries/bayesian-epistemology/
+
+## 13. Medicine
+- **Biopsychosocial Model** – health determinants  
+  https://www.ncbi.nlm.nih.gov/books/NBK396/
+- **Disease Progression Models** – clinical forecasting  
+  https://www.sciencedirect.com/topics/medicine-and-dentistry/disease-progression-model
+
+## 14. Public Health
+- **Epidemiological SIR Model** – disease spread  
+  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5348083/
+- **Social Determinants of Health Model**  
+  https://www.cdc.gov/socialdeterminants/index.htm
+
+## 15. Education
+- **Bloom’s Taxonomy** – learning objectives  
+  https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/
+- **Constructivist Learning Model**  
+  https://www.simplypsychology.org/constructivism.html
+
+## 16. Philosophy
+- **Argumentation Models (Toulmin Model)**  
+  https://www.britannica.com/topic/Toulmin-model
+- **Possible Worlds Semantics**  
+  https://plato.stanford.edu/entries/possible-worlds/
+
+## 17. Geography
+- **Central Place Theory** – urban settlement patterns  
+  https://www.britannica.com/topic/central-place-theory
+- **Gravity Model** – spatial interaction  
+  https://www.sciencedirect.com/topics/social-sciences/gravity-model
+
+## 18. Environmental Science
+- **Climate Models (GCMs)** – climate system simulation  
+  https://www.metoffice.gov.uk/weather/climate/climate-models
+- **Ecosystem Models** – energy and nutrient flows  
+  https://www.britannica.com/science/ecosystem-model
+
+## 19. Engineering
+- **Finite Element Models** – structural analysis  
+  https://www.ansys.com/solutions/what-is-finite-element-analysis
+- **Control System Models** – system regulation  
+  https://www.britannica.com/technology/control-system
+
+## 20. Law
+- **Legal Reasoning Models** – precedent-based inference  
+  https://plato.stanford.edu/entries/legal-reasoning/
+- **Economic Analysis of Law**  
+  https://www.britannica.com/topic/law-and-economics
+
+## 21. History
+- **Cliometric Models** – quantitative historical analysis  
+  https://www.britannica.com/topic/cliometrics
+- **Periodization Models** – historical structuring  
+  https://www.historyskills.com/historical-knowledge/periodisation/
+
+## 22. Theology / Religious Studies
+- **Hermeneutical Models** – interpretation frameworks  
+  https://plato.stanford.edu/entries/hermeneutics/
+- **Comparative Religion Models**  
+  https://www.britannica.com/topic/comparative-religion
+
+**It also contained some editorial commentary.**
+
+```
+If you’d like, I can also:
+ + Condense this into a one-page teaching handout
+ + Add a column comparing predictive vs. explanatory models
+ + Tailor it for a specific field or course level
+```
+
+::: {.callout-note appearance="simple"}
+
+## Prompt: 
+
+Yes, please repeat the task with a column that compares them as predictive or explanatory models; the response is probably best formatted as a table with the links in markdown code
+
+:::
+
+| Discipline | Model | Primary Use of the Model | Predictive / Explanatory |
+|-----------|-------|--------------------------|--------------------------|
+| Physics | [Standard Model of Particle Physics](https://home.cern/science/physics/standard-model) | Describes fundamental particles and forces | Explanatory (limited predictive) |
+| Chemistry | [Arrhenius Equation](https://www.britannica.com/science/Arrhenius-equation) | Relates temperature to reaction rates | Predictive |
+| Biology | [Lotka–Volterra Model](https://mathworld.wolfram.com/Lotka-VolterraEquations.html) | Models predator–prey population dynamics | Both |
+| Economics | [Supply and Demand Model](https://www.investopedia.com/terms/l/law-of-supply-demand.asp) | Explains market equilibrium | Both |
+| Psychology | [Cognitive Behavioral Model](https://beckinstitute.org/about-beck/what-is-cognitive-behavioral-therapy/) | Explains interaction of thoughts, emotions, behavior | Explanatory |
+| Sociology | [Structural Functionalism](https://www.britannica.com/topic/structural-functionalism) | Explains social order and institutions | Explanatory |
+| Political Science | [Median Voter Theorem](https://www.britannica.com/topic/median-voter-theorem) | Predicts policy outcomes in majority voting | Predictive |
+| Anthropology | [Cultural Evolution Models](https://royalsocietypublishing.org/doi/10.1098/rstb.2010.0232) | Explain cultural trait transmission | Both |
+| Linguistics | [Generative Grammar](https://www.britannica.com/topic/generative-grammar) | Explains underlying structure of language | Explanatory |
+| Computer Science | [Turing Machine](https://plato.stanford.edu/entries/turing-machine/) | Formal model of computation | Explanatory |
+| Mathematics | [Graph Theory](https://mathworld.wolfram.com/GraphTheory.html) | Models relational structures abstractly | Explanatory |
+| Statistics | [Linear Regression](https://www.itl.nist.gov/div898/handbook/pmd/section1/pmd141.htm) | Estimates and predicts relationships between variables | Predictive |
+| Medicine | [Biopsychosocial Model](https://www.ncbi.nlm.nih.gov/books/NBK396/) | Explains health via biological, psychological, social factors | Explanatory |
+| Public Health | [SIR Epidemiological Model](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5348083/) | Forecasts disease spread | Predictive |
+| Education | [Bloom’s Taxonomy](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/) | Classifies learning objectives | Explanatory |
+| Philosophy | [Toulmin Model of Argumentation](https://www.britannica.com/topic/Toulmin-model) | Analyzes structure of arguments | Explanatory |
+| Geography | [Central Place Theory](https://www.britannica.com/topic/central-place-theory) | Explains spatial distribution of cities | Explanatory |
+| Environmental Science | [General Circulation Models (GCMs)](https://www.metoffice.gov.uk/weather/climate/climate-models) | Simulate and forecast climate systems | Predictive |
+| Engineering | [Finite Element Analysis](https://www.ansys.com/solutions/what-is-finite-element-analysis) | Predicts stress, strain, and failure in systems | Predictive |
+| Law | [Legal Reasoning Models](https://plato.stanford.edu/entries/legal-reasoning/) | Explains reasoning from precedent and statutes | Explanatory |
+| History | [Cliometrics](https://www.britannica.com/topic/cliometrics) | Applies quantitative models to historical trends | Both |
+| Theology / Religious Studies | [Hermeneutical Models](https://plato.stanford.edu/entries/hermeneutics/) | Explains interpretation of sacred texts | Explanatory |
