@@ -123,14 +123,18 @@ Operations models focus on efficiency, quality control, and logistics optimizati
 
 ### Example A: EOQ (Economic Order Quantity)
 **Overview:** A formula that calculates the ideal order quantity a company should purchase to minimize inventory costs.
+
 **Formula:** $$EOQ = \sqrt{\frac{2DS}{H}}$$
-* $D$: Demand in units.
-* $S$: Order cost (per order).
-* $H$: Holding costs (per unit, per year).
+
+* $D$: Demand in units.   
+* $S$: Order cost (per order).   
+* $H$: Holding costs (per unit, per year).   
+
 **Application:** Used in inventory management to balance the cost of ordering stock against the cost of holding it.
 
 ### Example B: Six Sigma DMAIC
 **Overview:** A data-driven quality strategy for improving processes.
+
 **Phases:**.  
 1.  **Define:** The problem and project goals.   
 2.  **Measure:** Current process performance.   
@@ -150,7 +154,8 @@ HR models attempt to quantify or structure the "soft skills" of motivation, lead
 
 ### Example A: Maslow’s Hierarchy of Needs (Applied to Business)
 **Overview:** A psychological theory arguing that humans have tiers of needs that must be met in order.
-**Tiers:**.  
+
+**Tiers:**.   
 1.  **Physiological:** Salary, basic working conditions.   
 2.  **Safety:** Job security, health insurance.   
 3.  **Social:** Team culture, belonging.   
@@ -159,7 +164,7 @@ HR models attempt to quantify or structure the "soft skills" of motivation, lead
 **Application:** Used to design compensation packages and employee engagement programs.
 
 ### Example B: The HR Business Partner Model (Ulrich Model)
-**Overview:** Defines how HR should be organized to deliver value.
+**Overview:** Defines how HR should be organized to deliver value.   
 **Four Roles:**.  
 1.  **Strategic Partner:** Aligning HR with business strategy.   
 2.  **Change Agent:** Managing transformation and culture.   
