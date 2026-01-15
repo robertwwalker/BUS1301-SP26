@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Robert W. Walker">
+<meta name="dcterms.date" content="2026-01-15">
 
-<title>About – Managing with AI</title>
+<title>Gemini on Business Models – Managing with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +25,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2890eba573baac25c3e9f0f9d94fc55f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../writeups/Gemini-Formatting/index.html" rel="next">
+<link href="../../writeups/Gemini-Analysis/index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2890eba573baac25c3e9f0f9d94fc55f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,8 +73,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
@@ -84,11 +113,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./AGSMlogo.jpeg" alt="" class="navbar-logo light-content">
-    <img src="./AGSMlogo.jpeg" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo light-content">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">BUS 1301</span>
     </a>
   </div>
@@ -99,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -123,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">About</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Write-ups</li><li class="breadcrumb-item"><a href="../../writeups/ChatGPT-Models/index.html">Writeups</a></li><li class="breadcrumb-item"><a href="../../writeups/Gemini-Business-Models/index.html">Gemini on Business Models</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -134,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -159,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/01-13-2026/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/01-13-2026/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Managing with Data, Analytics and AI</span></a>
   </div>
 </li>
@@ -178,58 +207,58 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Writeups</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/ChatGPT-Models/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/ChatGPT-Models/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ChatGPT on Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Claude-Models/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Claude-Models/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Claude on Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Gemini-Analysis/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Gemini-Analysis/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gemini Data Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Gemini-Business-Models/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Gemini-Business-Models/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Gemini on Business Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Gemini-Formatting/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Gemini-Formatting/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Formatting a Gemini Response</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Gemini-Models/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Gemini-Models/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gemini on Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/GrokAI-Models/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/GrokAI-Models/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GrokAI on Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/Lesson-Learned/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/Lesson-Learned/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lesson Learned on Gemini</span></a>
   </div>
 </li>
@@ -244,79 +273,221 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Write-ups</li><li class="breadcrumb-item"><a href="../../writeups/ChatGPT-Models/index.html">Writeups</a></li><li class="breadcrumb-item"><a href="../../writeups/Gemini-Business-Models/index.html">Gemini on Business Models</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Gemini on Business Models</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Robert W. Walker </p>
+          </div>
   </div>
-</header> <main class="content" id="quarto-document-content">
-<marquee scrollamount="10">
-<h1>
-<p style="color:purple;">
-<i class="fa-brands fa-r-project" aria-label="r-project"></i>obertwwalker.github.io <br>
-</p>
-</h1>
-<p></p></marquee><p></p>
-<section id="robert-w.-walker-ph.-d." class="level1">
-<h1>Robert W. Walker, Ph. D.</h1>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><a href="RWW.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="RWW.jpeg" class="img-fluid"></a></p>
-</div><div class="column" style="width:10%;">
-</div><div class="column" style="width:50%;">
-<p>Robert W. Walker is an Associate Professor of Quantitative Methods in the <a href="https://willamette.edu/mba/admission/index.html">Atkinson Graduate School of Management</a> at <a href="https://willamette.edu/">Willamette University</a></p>
-<p>He earned a Ph. D. in political science from the University of Rochester in 2005 and has previously held teaching positions at Dartmouth College, Rice University, Texas A&amp;M University, and Washington University in Saint Louis. His current research develops and applies semi-Markov processes to time-series, cross-section data in international relations and international/comparative political economy. He teaches courses in quantitative methods/applied statistics and microeconomic strategy and previously taught four iterations in the U. S. National Science Foundation funded Empirical Implications of Theoretical Models sequence at Washington University in Saint Louis. His work with Curt Signorino and Muhammet Bas was awarded the Miller Prize for the best article in Political Analysis in 2009.</p>
-<p>His web presence is <a href="https://robertwwalker.github.io">rww.science</a> and his github is <a href="https://github.com/robertwwalker">https://github.com/robertwwalker</a>.</p>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 15, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="tldr" class="level1">
+<h1>TL;DR</h1>
+<p>Gemini is powerful, and a few tidbits help a great deal; NotebookLM makes it even more powerful.</p>
+</section>
+<section id="detailed-post" class="level1">
+<h1>Detailed Post</h1>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Prompt: Gemini Pro
 </div>
 </div>
-<p>Robert’s Erdos-Bacon Number is 8.</p>
-<div class="columns">
-<div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/Erdos.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Erdos Table"><img src="img/Erdos.png" class="img-fluid figure-img" alt="Erdos Table"></a></p>
-<figcaption>Erdos Table</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:10%;">
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/Bacon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Bacon Table"><img src="img/Bacon.png" class="img-fluid figure-img" alt="Bacon Table"></a></p>
-<figcaption>Bacon Table</figcaption>
-</figure>
+<div class="callout-body-container callout-body">
+<p>provide a detailed discussion of the use of models in business disciplines and provide at least two examples of common models in use in each common business discipline, double check your work and provide references for each that could be followed. format the response as markdown code</p>
 </div>
 </div>
-</div>
+</section>
+<section id="the-role-and-application-of-models-in-business-disciplines" class="level1">
+<h1>The Role and Application of Models in Business Disciplines</h1>
+<p>In business, a <strong>model</strong> is a theoretical construct or framework that represents real-world processes, systems, or relationships. Models simplify complex realities to help managers, analysts, and stakeholders understand, predict, and control business environments.</p>
+<section id="the-utility-of-business-models" class="level2">
+<h2 class="anchored" data-anchor-id="the-utility-of-business-models">The Utility of Business Models</h2>
+<p>Models serve three primary functions across all disciplines: 1. <strong>Simplification:</strong> They strip away noise to focus on key variables (e.g., price vs.&nbsp;demand).<br>
+2. <strong>Communication:</strong> They provide a shared language and visual structure for teams (e.g., a supply chain diagram).<br>
+3. <strong>Prediction and Decision Support:</strong> They allow for scenario planning and “what-if” analyses (e.g., financial forecasting).</p>
+<hr>
+</section>
+<section id="strategic-management" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-management">1. Strategic Management</h2>
+<p>Strategy models assist leaders in analyzing competitive environments and internal capabilities to define long-term goals.</p>
+<section id="example-a-porters-five-forces" class="level3">
+<h3 class="anchored" data-anchor-id="example-a-porters-five-forces">Example A: Porter’s Five Forces</h3>
+<p><strong>Overview:</strong> Developed by Michael Porter, this model analyzes the competitive intensity and attractiveness of an industry.</p>
+<p><strong>Components:</strong> 1. <strong>Threat of New Entrants:</strong> Barriers to entry (capital, regulation).<br>
+2. <strong>Bargaining Power of Suppliers:</strong> Concentration of suppliers, switching costs.<br>
+3. <strong>Bargaining Power of Buyers:</strong> Price sensitivity, volume of purchase.<br>
+4. <strong>Threat of Substitute Products:</strong> Alternative solutions meeting the same need.<br>
+5. <strong>Rivalry Among Existing Competitors:</strong> Number of competitors, industry growth.<br>
+<strong>Application:</strong> Used to determine whether to enter a new market or how to position a firm to defend against competitive forces.</p>
+</section>
+<section id="example-b-swot-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="example-b-swot-analysis">Example B: SWOT Analysis</h3>
+<p><strong>Overview:</strong> A foundational framework used to evaluate a company’s competitive position. <strong>Components:</strong>.<br>
+* <strong>Strengths (Internal):</strong> Unique assets, strong brand, proprietary tech.<br>
+* <strong>Weaknesses (Internal):</strong> Resource gaps, poor reputation, lack of capital.<br>
+* <strong>Opportunities (External):</strong> Emerging markets, changing regulations, tech advancements.<br>
+* <strong>Threats (External):</strong> New competitors, economic downturns, changing consumer behavior.<br>
+<strong>Application:</strong> Used during strategic planning retreats to align internal capabilities with external possibilities.</p>
+<blockquote class="blockquote">
+<p><strong>References:</strong> * Porter, M. E. (1979). “How Competitive Forces Shape Strategy”. <em>Harvard Business Review</em>. * Humphrey, A. (2005). “SWOT Analysis for Management Consulting”. <em>SRI International</em>.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="marketing" class="level2">
+<h2 class="anchored" data-anchor-id="marketing">2. Marketing</h2>
+<p>Marketing models help firms understand customer behavior, segment populations, and optimize the value proposition.</p>
+<section id="example-a-the-marketing-mix-the-4-ps" class="level3">
+<h3 class="anchored" data-anchor-id="example-a-the-marketing-mix-the-4-ps">Example A: The Marketing Mix (The 4 Ps)</h3>
+<p><strong>Overview:</strong> A model to outline the key factors that determine a product’s offer.</p>
+<p><strong>Components:</strong>.<br>
+1. <strong>Product:</strong> Features, quality, branding, packaging.<br>
+2. <strong>Price:</strong> List price, discounts, payment terms.<br>
+3. <strong>Place:</strong> Distribution channels, logistics, market coverage.<br>
+4. <strong>Promotion:</strong> Advertising, sales force, public relations.<br>
+<strong>Application:</strong> Used to draft go-to-market strategies and ensure all aspects of the offering are aligned with the target audience.</p>
+</section>
+<section id="example-b-stp-model-segmentation-targeting-positioning" class="level3">
+<h3 class="anchored" data-anchor-id="example-b-stp-model-segmentation-targeting-positioning">Example B: STP Model (Segmentation, Targeting, Positioning)</h3>
+<p><strong>Overview:</strong> A strategic approach that prioritizes the customer over the product.</p>
+<p><strong>Components:</strong>.<br>
+1. <strong>Segmentation:</strong> Dividing the market into distinct groups (demographic, psychographic).<br>
+2. <strong>Targeting:</strong> Selecting the most attractive segments to focus on.<br>
+3. <strong>Positioning:</strong> Creating a distinct image in the mind of the target audience compared to competitors.<br>
+<strong>Application:</strong> Essential for digital marketing campaigns to ensure ad spend is directed toward high-conversion audiences.</p>
+<blockquote class="blockquote">
+<p><strong>References:</strong> * McCarthy, E. J. (1960). <em>Basic Marketing: A Managerial Approach</em>. Irwin. * Kotler, P., &amp; Keller, K. L. (2015). <em>Marketing Management</em>. Pearson.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="finance-and-accounting" class="level2">
+<h2 class="anchored" data-anchor-id="finance-and-accounting">3. Finance and Accounting</h2>
+<p>Financial models are often mathematical, used to value assets, assess risk, and analyze performance.</p>
+<section id="example-a-capm-capital-asset-pricing-model" class="level3">
+<h3 class="anchored" data-anchor-id="example-a-capm-capital-asset-pricing-model">Example A: CAPM (Capital Asset Pricing Model)</h3>
+<p><strong>Overview:</strong> Describes the relationship between systematic risk and expected return for assets, particularly stocks.</p>
+<p><strong>Formula:</strong> <span class="math display">\[E(R_i) = R_f + \beta_i (E(R_m) - R_f)\]</span></p>
+<ul>
+<li><span class="math inline">\(E(R_i)\)</span>: Expected return of investment.<br>
+</li>
+<li><span class="math inline">\(R_f\)</span>: Risk-free rate.<br>
+</li>
+<li><span class="math inline">\(\beta_i\)</span>: Beta (sensitivity of the asset to market movements).<br>
+</li>
+<li><span class="math inline">\((E(R_m) - R_f)\)</span>: Market risk premium.<br>
+<strong>Application:</strong> Used in corporate finance to determine the cost of equity capital and to evaluate the performance of managed portfolios.</li>
+</ul>
+</section>
+<section id="example-b-dupont-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="example-b-dupont-analysis">Example B: DuPont Analysis</h3>
+<p><strong>Overview:</strong> A technique to decompose Return on Equity (ROE) to understand the drivers of financial performance.</p>
+<p><strong>Formula:</strong> <span class="math display">\[ROE = \text{Profit Margin} \times \text{Asset Turnover} \times \text{Financial Leverage}\]</span></p>
+<ol type="1">
+<li><strong>Profit Margin:</strong> Operational efficiency.<br>
+</li>
+<li><strong>Asset Turnover:</strong> Asset use efficiency.<br>
+</li>
+<li><strong>Financial Leverage:</strong> Use of debt.<br>
+<strong>Application:</strong> Used by financial analysts to pinpoint whether a company’s growth is driven by high margins, efficient asset use, or high debt loading.</li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>References:</strong> * Sharpe, W. F. (1964). “Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk”. <em>Journal of Finance</em>. * Soliman, M. T. (2008). “The Use of DuPont Analysis by Market Participants”. <em>The Accounting Review</em>.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="operations-and-supply-chain" class="level2">
+<h2 class="anchored" data-anchor-id="operations-and-supply-chain">4. Operations and Supply Chain</h2>
+<p>Operations models focus on efficiency, quality control, and logistics optimization.</p>
+<section id="example-a-eoq-economic-order-quantity" class="level3">
+<h3 class="anchored" data-anchor-id="example-a-eoq-economic-order-quantity">Example A: EOQ (Economic Order Quantity)</h3>
+<p><strong>Overview:</strong> A formula that calculates the ideal order quantity a company should purchase to minimize inventory costs. <strong>Formula:</strong> <span class="math display">\[EOQ = \sqrt{\frac{2DS}{H}}\]</span> * <span class="math inline">\(D\)</span>: Demand in units. * <span class="math inline">\(S\)</span>: Order cost (per order). * <span class="math inline">\(H\)</span>: Holding costs (per unit, per year). <strong>Application:</strong> Used in inventory management to balance the cost of ordering stock against the cost of holding it.</p>
+</section>
+<section id="example-b-six-sigma-dmaic" class="level3">
+<h3 class="anchored" data-anchor-id="example-b-six-sigma-dmaic">Example B: Six Sigma DMAIC</h3>
+<p><strong>Overview:</strong> A data-driven quality strategy for improving processes. <strong>Phases:</strong>.<br>
+1. <strong>Define:</strong> The problem and project goals.<br>
+2. <strong>Measure:</strong> Current process performance.<br>
+3. <strong>Analyze:</strong> The root causes of defects.<br>
+4. <strong>Improve:</strong> The process by eliminating causes.<br>
+5. <strong>Control:</strong> Future process performance to ensure deviations don’t recur.<br>
+<strong>Application:</strong> Used in manufacturing and service industries to reduce defects and improve consistency.</p>
+<blockquote class="blockquote">
+<p><strong>References:</strong> * Harris, F. W. (1913). “How Many Parts to Make at Once”. <em>Factory, The Magazine of Management</em>. * Pyzdek, T., &amp; Keller, P. A. (2014). <em>The Six Sigma Handbook</em>. McGraw-Hill Education.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="human-resources-organizational-behavior" class="level2">
+<h2 class="anchored" data-anchor-id="human-resources-organizational-behavior">5. Human Resources (Organizational Behavior)</h2>
+<p>HR models attempt to quantify or structure the “soft skills” of motivation, leadership, and organizational structure.</p>
+<section id="example-a-maslows-hierarchy-of-needs-applied-to-business" class="level3">
+<h3 class="anchored" data-anchor-id="example-a-maslows-hierarchy-of-needs-applied-to-business">Example A: Maslow’s Hierarchy of Needs (Applied to Business)</h3>
+<p><strong>Overview:</strong> A psychological theory arguing that humans have tiers of needs that must be met in order. <strong>Tiers:</strong>.<br>
+1. <strong>Physiological:</strong> Salary, basic working conditions.<br>
+2. <strong>Safety:</strong> Job security, health insurance.<br>
+3. <strong>Social:</strong> Team culture, belonging.<br>
+4. <strong>Esteem:</strong> Job titles, recognition, awards.<br>
+5. <strong>Self-Actualization:</strong> Career growth, autonomy, creative work.<br>
+<strong>Application:</strong> Used to design compensation packages and employee engagement programs.</p>
+</section>
+<section id="example-b-the-hr-business-partner-model-ulrich-model" class="level3">
+<h3 class="anchored" data-anchor-id="example-b-the-hr-business-partner-model-ulrich-model">Example B: The HR Business Partner Model (Ulrich Model)</h3>
+<p><strong>Overview:</strong> Defines how HR should be organized to deliver value. <strong>Four Roles:</strong>.<br>
+1. <strong>Strategic Partner:</strong> Aligning HR with business strategy.<br>
+2. <strong>Change Agent:</strong> Managing transformation and culture.<br>
+3. <strong>Administrative Expert:</strong> Efficiently managing processes (payroll, benefits).<br>
+4. <strong>Employee Champion:</strong> Listening to and advocating for employees.<br>
+<strong>Application:</strong> Used to restructure HR departments to move away from purely administrative tasks toward strategic contribution.</p>
+<blockquote class="blockquote">
+<p><strong>References:</strong> * Maslow, A. H. (1943). “A Theory of Human Motivation”. <em>Psychological Review</em>. * Ulrich, D. (1996). <em>Human Resource Champions</em>. Harvard Business School Press.</p>
+</blockquote>
 
 
 </section>
-</main> 
-    <div class="about-footer"><div class="about-links">
-  <a href="https://twitter.com/PieRatio" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://www.linkedin.com/in/robert-w-walker" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com/robertwwalker" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-</div>
-  </div>
-</div>
- <!-- /main -->
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -708,39 +879,19 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../writeups/Gemini-Analysis/index.html" class="pagination-link" aria-label="Gemini Data Analysis">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gemini Data Analysis</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../writeups/Gemini-Formatting/index.html" class="pagination-link" aria-label="Formatting a Gemini Response">
+        <span class="nav-page-text">Formatting a Gemini Response</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
