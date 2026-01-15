@@ -175,3 +175,13 @@ HR models attempt to quantify or structure the "soft skills" of motivation, lead
 > **References:**
 > * Maslow, A. H. (1943). "A Theory of Human Motivation". *Psychological Review*.
 > * Ulrich, D. (1996). *Human Resource Champions*. Harvard Business School Press.
+
+It produces a variety of content.
+
+![the pdf presentation](./Business_Mastery_A_Toolkit_of_Essential_Models.pdf)
+
+![The Video](./Business_Models_101.mp4)
+
+and an 
+
+![infographic](./unnamed.png)
