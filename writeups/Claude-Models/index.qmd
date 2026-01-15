@@ -7,7 +7,7 @@ image: "image.png"
 
 # TL;DR
 
-Claude, from Anthropic, is an extremely powerful AI tool.  I will use it here to help me think about the use of models.
+Claude, from Anthropic, is an extremely powerful AI tool.  I will use it here to help me think about the use of models.  A [link to the interaction].
 
 ![Claude Interactions](./Claude.png)
 
