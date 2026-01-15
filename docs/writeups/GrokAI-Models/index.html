@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Robert W. Walker">
-<meta name="dcterms.date" content="2026-01-12">
+<meta name="dcterms.date" content="2026-01-14">
 
-<title>Welcome To BUS 1301: Managing with AI – Managing with AI</title>
+<title>GrokAI on Models – Managing with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../writeups/Lesson-Learned/index.html" rel="next">
+<link href="../../writeups/Gemini-Models/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -43,8 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-2890eba573baac25c3e9f0f9d94fc55f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -123,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Welcome To BUS 1301: Managing with AI</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Write-ups</li><li class="breadcrumb-item"><a href="../../writeups/ChatGPT-Models/index.html">Writeups</a></li><li class="breadcrumb-item"><a href="../../writeups/GrokAI-Models/index.html">GrokAI on Models</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -178,13 +181,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Writeups</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../writeups/ChatGPT-Models/index.html" class="sidebar-item-text sidebar-link">
@@ -217,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../writeups/GrokAI-Models/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/GrokAI-Models/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">GrokAI on Models</span></a>
   </div>
 </li>
@@ -240,9 +243,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Write-ups</li><li class="breadcrumb-item"><a href="../../writeups/ChatGPT-Models/index.html">Writeups</a></li><li class="breadcrumb-item"><a href="../../writeups/GrokAI-Models/index.html">GrokAI on Models</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Welcome To BUS 1301: Managing with AI</h1>
+<h1 class="title">GrokAI on Models</h1>
 </div>
 
 
@@ -259,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 12, 2026</p>
+      <p class="date">January 14, 2026</p>
     </div>
   </div>
   
@@ -271,76 +274,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<marquee scrollamount="10">
-<h1>
-<p style="color:purple;">
-<i class="fa-brands fa-r-project" aria-label="r-project"></i>obertwwalker.github.io <br>
-</p>
-</h1>
-<p></p></marquee><p></p>
-<p>Welcome to Managing with Data, Analytics, and Artificial Intelligence!</p>
-<section id="our-goal-in-four-parts" class="level1">
-<h1>Our Goal in Four Parts</h1>
-<p>Together, we will investigate how managers collect, process, and interpret observations about the world around them to facilitate informed decisions.</p>
-<section id="models" class="level2">
-<h2 class="anchored" data-anchor-id="models">1. Models</h2>
-<ul>
-<li>Our organizing framework is the <em>model</em>. What is a model? Why models?</li>
-</ul>
-</section>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">2. Data</h2>
-<ul>
-<li><p>What is data and how do we get some? We start by defining data and our relationship with data. We will explore practical methods of data gathering – from surveys and archives to experiments and crowd sourcing.</p></li>
-<li><p>Have data, how is it typically organized? We will explore basic methods of organizing data for robust, sustainable use.</p></li>
-</ul>
-</section>
-<section id="deploying-data" class="level2">
-<h2 class="anchored" data-anchor-id="deploying-data">3. Deploying Data</h2>
-<ul>
-<li>How can managers use data? We will deploy basic tools of cross tabulation, frequency distributions, and simple plots before some statistical inference and model building.</li>
-</ul>
-</section>
-<section id="artificial-intelligence" class="level2">
-<h2 class="anchored" data-anchor-id="artificial-intelligence">4. Artificial Intelligence</h2>
-<ul>
-<li>What is artificial intelligence (AI)? We will highlight general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business.</li>
-</ul>
-</section>
-</section>
-<section id="learning-objectives" class="level1">
-<h1>Learning Objectives</h1>
-<p>Our key learning objectives, for the course, are:</p>
-<ol type="1">
-<li>What is a model? What role do models play in the origination of data [for empiricists]?</li>
-<li>Distinguish among means of data collection and discuss their tradeoffs.<br>
-</li>
-<li>Describe common models of data management and their tradeoffs.<br>
-</li>
-<li>Articulate the applicability of popular analytic techniques to their uses and their function.<br>
-</li>
-<li>Discuss the historical development and current functionality of <em>AI</em>.<br>
-</li>
-<li>Ethical issues are ubiquitous in data, analytics, and AI in the workplace; we should confront them.</li>
-</ol>
-<p>Our week 1 learning objective is to define a model, give examples of models and their use in management activities, and the interrelationship between models and measures, a lead-in to specifics on data.</p>
-</section>
-<section id="core-tools" class="level1">
-<h1>Core Tools</h1>
-<p>We will make extensive use of a few software and computing tools.</p>
-<ul>
-<li>Microsoft Word and Microsoft Excel [licenses provided via Willamette if needed]</li>
-<li>Google Docs and Sheets</li>
-<li><a href="https://gemini.google.com/">Google Gemini</a>, in lieu of a subscription to OpenAI, Anthropic, or similar</li>
-<li><a href="https://notebooklm.google.com/">NotebookLM</a></li>
-</ul>
-</section>
-<section id="readings" class="level1">
-<h1>Readings</h1>
-<p>A free and open-source textbook will provide background and exercises in the generic field of statistics.</p>
-<ul>
-<li><a href="https://www.openintro.org/book/os/">Open Intro Statistics</a>. The .pdf file is available on canvas and a screen reader version can be obtained from the link.</li>
-</ul>
+<section id="tldr" class="level1">
+<h1>TL;DR</h1>
+<p>Grok AI, from Elon Musk’s xAI, is a powerful AI tool. I will use it here to help me think about the use of models. A <a href="https://grok.com/share/bGVnYWN5_24078414-1bd4-41fd-a05a-0ef81389778c">link to the interaction</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./image.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Grok Interactions"><img src="./image.png" class="img-fluid figure-img" alt="Grok Interactions"></a></p>
+<figcaption>Grok Interactions</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Prompt:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>how are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a formatted table with a linked reference for each model that provides more extensive detail and a column that includes whether the model is predictive or explanatory. the response should be functional markdown code</p>
+</div>
+</div>
+<p>Grok did not really comply. Ever.</p>
 
 
 </section>
@@ -746,7 +702,51 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../writeups/Gemini-Models/index.html" class="pagination-link" aria-label="Gemini on Models">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Gemini on Models</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../writeups/Lesson-Learned/index.html" class="pagination-link" aria-label="Lesson Learned on Gemini">
+        <span class="nav-page-text">Lesson Learned on Gemini</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
