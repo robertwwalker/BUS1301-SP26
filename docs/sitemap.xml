@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-13-2026/index.html</loc>
-    <lastmod>2026-01-13T20:57:06.830Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Lesson-Learned/index.html</loc>
+    <lastmod>2026-01-14T17:55:12.244Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/index.html</loc>
-    <lastmod>2026-01-14T01:21:39.780Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/index.html</loc>
-    <lastmod>2026-01-13T03:25:22.278Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/about.html</loc>
-    <lastmod>2026-01-12T22:38:28.609Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/index.html</loc>
-    <lastmod>2026-01-13T00:35:15.368Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Analysis/index.html</loc>
+    <lastmod>2026-01-14T21:13:56.492Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/index.html</loc>
     <lastmod>2026-01-13T03:48:57.678Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/Gemini-Formatting/index.html</loc>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/index.html</loc>
+    <lastmod>2026-01-13T00:35:15.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/about.html</loc>
+    <lastmod>2026-01-12T22:38:28.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/index.html</loc>
+    <lastmod>2026-01-13T03:25:22.278Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/index.html</loc>
+    <lastmod>2026-01-14T01:21:39.780Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-13-2026/index.html</loc>
+    <lastmod>2026-01-13T20:57:06.830Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Formatting/index.html</loc>
     <lastmod>2026-01-14T17:42:44.752Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/Lesson-Learned/index.html</loc>
-    <lastmod>2026-01-14T17:55:12.244Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/Gemini-Analysis/index.html</loc>
-    <lastmod>2026-01-14T21:13:56.492Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Claude-Models/index.html</loc>
+    <lastmod>2026-01-15T02:16:10.016Z</lastmod>
   </url>
 </urlset>
