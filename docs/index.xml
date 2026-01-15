@@ -36,6 +36,18 @@
 <li>Do the reading.</li>
 <li>Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course.</li>
 </ol>
+<section id="in-class-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-assignment">In-Class Assignment</h2>
+<p>Take one of your questions and turn the Gemini response into a slide deck using notebookLM.</p>
+<p>Here is an example.</p>
+<p><a href="./Blueprints_of_Knowledge.pdf">Slide Deck</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./Architectural_Blueprints.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A Video"><video src="./Architectural_Blueprints.mp4" class="img-fluid" controls=""></video></a><a href="./Architectural_Blueprints.mp4">A Video</a></p>
+<figcaption>A Video</figcaption>
+</figure>
+</div>
+<p>There is also a video overview.</p>
 <section id="my-homework" class="level3">
 <h3 class="anchored" data-anchor-id="my-homework">My Homework</h3>
 <ol type="1">
@@ -45,17 +57,18 @@
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./ontology.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Imagine that"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ontology.png" class="img-fluid figure-img" alt="Imagine that"></a></p>
+<p><a href="./ontology.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Imagine that"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ontology.png" class="img-fluid figure-img" alt="Imagine that"></a></p>
 <figcaption>Imagine that</figcaption>
 </figure>
 </div>
+</section>
 </section>
 <section id="an-example" class="level2">
 <h2 class="anchored" data-anchor-id="an-example">An Example</h2>
 <p>Source: <a href="https://x.com/pablohernandezb/status/2010762183752536193?s=46">x.com</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./ven-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Map of Venezuela"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ven-map.png" class="img-fluid figure-img" alt="Map of Venezuela"></a></p>
+<p><a href="./ven-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Map of Venezuela"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/ven-map.png" class="img-fluid figure-img" alt="Map of Venezuela"></a></p>
 <figcaption>Map of Venezuela</figcaption>
 </figure>
 </div>

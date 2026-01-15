@@ -24,6 +24,18 @@ Your assignment for this time:
 1. Do the reading.
 2. Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar.  If you did not run across at least three unfamiliar references, you need a more advanced course.
 
+## In-Class Assignment
+
+Take one of your questions and turn the Gemini response into a slide deck using notebookLM.
+
+Here is an example.
+
+[Slide Deck](./Blueprints_of_Knowledge.pdf)
+
+![A Video](./Architectural_Blueprints.mp4)
+
+There is also a video overview.
+
 ### My Homework
 
 1. [The Lorenz Model](https://docs.google.com/document/d/107KPF3BsF2NiAPnoKgC0gisqlqZKsaSJuenrjHQYOpg/edit?usp=sharing)
