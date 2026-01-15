@@ -857,5 +857,135 @@
       "Writeups",
       "GrokAI on Models"
     ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#outline",
+    "href": "slides/01-15-2026/index.html#outline",
+    "title": "What is a Model? On Models",
+    "section": "Outline",
+    "text": "Outline\n\nDefining models\nThe span of models\nModels in business\nFor next time: Data Types and Chapter 1",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#syllabus",
+    "href": "slides/01-15-2026/index.html#syllabus",
+    "title": "What is a Model? On Models",
+    "section": "Syllabus",
+    "text": "Syllabus\nUpdates: Readings for next week, primers, posted.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#website",
+    "href": "slides/01-15-2026/index.html#website",
+    "title": "What is a Model? On Models",
+    "section": "Website",
+    "text": "Website\nBUS 1301",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#course-tools",
+    "href": "slides/01-15-2026/index.html#course-tools",
+    "title": "What is a Model? On Models",
+    "section": "Course Tools",
+    "text": "Course Tools\n\nDocs or Word.\n\nSheets or Excel.\n\nNotebookLM.\n\nGemini.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#what-is-a-model",
+    "href": "slides/01-15-2026/index.html#what-is-a-model",
+    "title": "What is a Model? On Models",
+    "section": "What is a Model?",
+    "text": "What is a Model?\nFrom OED: A representation of structure, and related senses.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#the-span-of-models",
+    "href": "slides/01-15-2026/index.html#the-span-of-models",
+    "title": "What is a Model? On Models",
+    "section": "The span of models",
+    "text": "The span of models\nModels are everywhere and in use in virtually all academic disciplines.\nWriteups.\n- Formatting a Gemini Response.\n- Gemini, Claude, ChatGPT, GrokAI.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#ai-models-are-models",
+    "href": "slides/01-15-2026/index.html#ai-models-are-models",
+    "title": "What is a Model? On Models",
+    "section": "AI Models are Models",
+    "text": "AI Models are Models\nThey are models of text – the way we communicate.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#website-references",
+    "href": "slides/01-15-2026/index.html#website-references",
+    "title": "What is a Model? On Models",
+    "section": "Website References",
+    "text": "Website References\n\nA Takeaway to Work From.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#one-model-gemini-for-data-analysis",
+    "href": "slides/01-15-2026/index.html#one-model-gemini-for-data-analysis",
+    "title": "What is a Model? On Models",
+    "section": "One Model: Gemini for Data Analysis",
+    "text": "One Model: Gemini for Data Analysis\nThe world is changing fast. This was a homework assignment just a few years ago.\nCAPM",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
+  },
+  {
+    "objectID": "slides/01-15-2026/index.html#an-exercise-with-notebooklm",
+    "href": "slides/01-15-2026/index.html#an-exercise-with-notebooklm",
+    "title": "What is a Model? On Models",
+    "section": "An Exercise with NotebookLM",
+    "text": "An Exercise with NotebookLM",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "What is a Model?  On Models"
+    ]
   }
 ]
