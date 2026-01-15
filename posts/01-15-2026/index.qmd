@@ -30,7 +30,7 @@ Take one of your questions and turn the Gemini response into a slide deck using 
 
 Here is an example.
 
-![Blueprints_of_Knowledge.pdf){width=80% height=800}
+![pdf](./Blueprints_of_Knowledge.pdf){width=80% height=800}
 
 ![A Video](./Architectural_Blueprints.mp4)
 
