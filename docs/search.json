@@ -1238,5 +1238,18 @@
     "title": "Types of Data",
     "section": "The class plan:",
     "text": "The class plan:\n\nWhat is data?\n\nExamples.\n\nData types: quantitative vs. qualitative.\n\nData types: measurement of quantitative variables.\n\nUnits of analysis\nIn class classification\n\nYour assignment for this time:\n\nDo the reading.\nCollect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course."
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#finding-data",
+    "href": "slides/01-20-2026/index.html#finding-data",
+    "title": "Data Types",
+    "section": "Finding Data",
+    "text": "Finding Data\n\nGemini.\n\ntidytuesday [in .csv]\nKaggle\nUCI Machine Learning",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
   }
 ]

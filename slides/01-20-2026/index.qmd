@@ -58,6 +58,14 @@ options(
 
 ![Sheet](./Screenshot 2026-01-20 at 11.05.24 AM.png)
 
+## Finding Data
+
+- Gemini.  
+- [tidytuesday](https://rfordatascience.github.io/tidytuesday/) [in .csv]
+- Kaggle
+- UCI Machine Learning
+
+
 ## Examples
 
 [Datasaurus](https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-10-13/datasaurus.csv)
@@ -69,6 +77,7 @@ options(
 + [on Google Sheets](https://docs.google.com/spreadsheets/d/1s9iPm7c7wzyCKQNaMziM3iXwePpNKqsT0pmd6gZt_gg/edit?usp=sharing).  
 
 [Bob Ross Paintings](https://github.com/rfordatascience/tidytuesday/blob/main/data/2023/2023-02-21/bob_ross.csv)
+
 
 ## What is a variable?
 
