@@ -430,7 +430,7 @@
     "href": "index.html",
     "title": "BUS1301-SP26",
     "section": "",
-    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
+    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTypes of Data\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/01-15-2026/index.html",
@@ -987,5 +987,242 @@
       "Writeups",
       "GrokAI on Models"
     ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#outline",
+    "href": "slides/01-20-2026/index.html#outline",
+    "title": "Data Types",
+    "section": "Outline",
+    "text": "Outline\n\nReadings: Data Types and Chapter 1",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#what-is-data",
+    "href": "slides/01-20-2026/index.html#what-is-data",
+    "title": "Data Types",
+    "section": "What is Data?",
+    "text": "What is Data?\nCambridge defines data as:\n\ndata\nfacts or numbers.\n\nin electronic form.\n\nstored and used by a computer.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#fbs-what-is-a-spreadsheet",
+    "href": "slides/01-20-2026/index.html#fbs-what-is-a-spreadsheet",
+    "title": "Data Types",
+    "section": "FBS: What is a spreadsheet?",
+    "text": "FBS: What is a spreadsheet?\n\nGoogle Sheets: rows, columns, sheets\n\n\nSheet",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#examples",
+    "href": "slides/01-20-2026/index.html#examples",
+    "title": "Data Types",
+    "section": "Examples",
+    "text": "Examples\nDatasaurus\n\non Google Sheets.\n\nBond Funds\n\non Google Sheets.\n\nBob Ross Paintings",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#what-is-a-variable",
+    "href": "slides/01-20-2026/index.html#what-is-a-variable",
+    "title": "Data Types",
+    "section": "What is a variable?",
+    "text": "What is a variable?\nSomething that varies. Distinguished from constants.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#classifying-data",
+    "href": "slides/01-20-2026/index.html#classifying-data",
+    "title": "Data Types",
+    "section": "Classifying Data",
+    "text": "Classifying Data\nFrom the above definition, anything we can put in a spreadsheet [and that may be too limiting] is data. To classify it, we will need some categories.\n\nThe spreadsheet may impose character limits or the like, that is a programming choice and not tied to definition..",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#classifying-data-i-quantative-vs.-qualitative",
+    "href": "slides/01-20-2026/index.html#classifying-data-i-quantative-vs.-qualitative",
+    "title": "Data Types",
+    "section": "Classifying Data I: Quantative vs. Qualitative",
+    "text": "Classifying Data I: Quantative vs. Qualitative\nLiterally numbers vs. non-numbers. But it is not quite that simple.\n\nThere are numbers that are not numerical, e.g. Social security numbers. There is some, but not much, encoded information and there is little we can do with them.\nYour Willamette Student ID",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#quantitative-data-levels-of-measurement",
+    "href": "slides/01-20-2026/index.html#quantitative-data-levels-of-measurement",
+    "title": "Data Types",
+    "section": "Quantitative Data: Levels of Measurement",
+    "text": "Quantitative Data: Levels of Measurement\nFour categories:\n\nNominal. (No order and no arithmetic)\nOrdinal. (Order, no arithmetic)\nInterval scale. (Addition and subtraction, no multiplication and division)\nRatio scale. (All arithmetic)",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#distinction-unit-of-analysis",
+    "href": "slides/01-20-2026/index.html#distinction-unit-of-analysis",
+    "title": "Data Types",
+    "section": "Distinction: Unit of Analysis",
+    "text": "Distinction: Unit of Analysis\nWhat are the units?\nSometimes, this is singular\nSometimes, it is a combination\nPopular units:\n\ncross-sectional units [people, countries, products]\ntime periods – time series\npanel data is a combination of units and time. [Multiple time series or multiple cross-sections over time]\n\nConsider this example",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#a-data-taxonomy",
+    "href": "slides/01-20-2026/index.html#a-data-taxonomy",
+    "title": "Data Types",
+    "section": "A Data Taxonomy",
+    "text": "A Data Taxonomy\n\nGenerally column-centric.\n\nVariables in columns.\n\nUnits in rows.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#a-class-assignment-to-conclude",
+    "href": "slides/01-20-2026/index.html#a-class-assignment-to-conclude",
+    "title": "Data Types",
+    "section": "A Class Assignment to Conclude",
+    "text": "A Class Assignment to Conclude\nSome customer satisfaction data:",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#nominal-data",
+    "href": "slides/01-20-2026/index.html#nominal-data",
+    "title": "Data Types",
+    "section": "Nominal Data",
+    "text": "Nominal Data\nNames ID numbers",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#ordered-data",
+    "href": "slides/01-20-2026/index.html#ordered-data",
+    "title": "Data Types",
+    "section": "Ordered Data",
+    "text": "Ordered Data\nRanks Medals Satisfaction Likert scales",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#interval-data",
+    "href": "slides/01-20-2026/index.html#interval-data",
+    "title": "Data Types",
+    "section": "Interval data",
+    "text": "Interval data\nThe year example in the Primer.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "slides/01-20-2026/index.html#ratio-scale",
+    "href": "slides/01-20-2026/index.html#ratio-scale",
+    "title": "Data Types",
+    "section": "Ratio scale",
+    "text": "Ratio scale\nThe duration example in the primer.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Types"
+    ]
+  },
+  {
+    "objectID": "posts/01-20-2026/index.html",
+    "href": "posts/01-20-2026/index.html",
+    "title": "Types of Data",
+    "section": "",
+    "text": "Today, we introduce and classify data as commonly stored in file based systems [spreadsheets]\nOur reading for today includes a section of Open Intro Stats and a primer on data types.\nIn the text book, we will pay extra attention to sections 1, 3, and 5.2.\nThe class plan:\nYour assignment for this time:"
+  },
+  {
+    "objectID": "posts/01-20-2026/index.html#in-class-assignment",
+    "href": "posts/01-20-2026/index.html#in-class-assignment",
+    "title": "Types of Data",
+    "section": "In-Class Assignment",
+    "text": "In-Class Assignment\nAn example dataset linked in the assignment."
+  },
+  {
+    "objectID": "posts/01-20-2026/index.html#for-next-class",
+    "href": "posts/01-20-2026/index.html#for-next-class",
+    "title": "Types of Data",
+    "section": "For Next Class:",
+    "text": "For Next Class:\n\nReading: Chapter 1: Open Introduction to Statistics: (On Canvas &gt; Files &gt; OpenIntroStatistics), primer on Data Storage, Data Organization in Spreadsheets.\n\nDeliverable: An In-class exercise [Assignment 3] if not completed before departing"
+  },
+  {
+    "objectID": "posts/01-20-2026/index.html#prompt-what-is-the-lorenz-model-of-climate-extremes",
+    "href": "posts/01-20-2026/index.html#prompt-what-is-the-lorenz-model-of-climate-extremes",
+    "title": "Types of Data",
+    "section": "Prompt: What is the Lorenz model of climate extremes?",
+    "text": "Prompt: What is the Lorenz model of climate extremes?\nThe Lorenz model is a simplified mathematical model used to describe atmospheric convection.1 It is one of the most famous systems in physics because it was the first to demonstrate chaotic behavior—the phenomenon where deterministic systems behave unpredictably due to extreme sensitivity to initial conditions.2\nThis model is responsible for the modern understanding that long-term weather forecasting is fundamentally impossible, a concept popularized as the “Butterfly Effect.”3\n\nThe Origin: A Happy Accident In 1963, MIT meteorologist Edward Lorenz was using a computer to simulate weather patterns.4 He was running a code based on twelve equations that modeled the way air moves when it is heated from below and cooled from above.5\n\nOne day, he wanted to repeat a simulation he had run previously.6 To save time, he started the run from the middle, typing in numbers from a previous printout. The printout displayed numbers to 3 decimal places (e.g., 0.506), but the computer calculated internally to 6 decimal places (e.g., 0.506127).7\nLorenz assumed this tiny difference (one part in a thousand) would have no meaningful effect. Instead, he found that the new simulation quickly diverged completely from the original, looking like a totally different weather system.8 This led him to publish his landmark paper, “Deterministic Nonperiodic Flow,” which founded the field of Chaos Theory.9\n\nThe Equations Lorenz simplified his original twelve equations down to just three coupled, non-linear ordinary differential equations.10\n\nWhile they were derived from the complex Navier-Stokes equations (which describe fluid motion), Lorenz reduced them to a “toy model” representing a single 2D slice of atmosphere behaving like a convection roll (gas rising and falling in a loop). The equations are:\n\\[\\begin{aligned} \\frac{dx}{dt} &= \\sigma (y - x) \\\\ \\frac{dy}{dt} &= x (\\rho - z) - y \\\\ \\frac{dz}{dt} &= x y - \\beta z \\end{aligned}\\]\nThe Variables (\\(x, y, z\\)) These do not represent coordinates in real space (like latitude/longitude). They represent the state of the fluid at any given moment: \\(x\\): The intensity of convection.11 (How fast is the convective roll spinning?)\n\\(y\\): The horizontal temperature difference between the ascending (warm) and descending (cool) currents.12\n\\(z\\): The vertical temperature distortion.13 (How much the temperature profile deviates from a linear decrease with height).14\nThe Parameters (\\(\\sigma, \\rho, \\beta\\)) These are constants that determine the physical properties of the “atmosphere”:15\n\\(\\sigma\\) (Sigma): The Prandtl number (viscosity relative to thermal conductivity).16\n\\(\\rho\\) (Rho): The Rayleigh number (the temperature difference between the hot ground and the cool sky).17 This is the “control knob”—if you turn it up high enough, the system becomes chaotic.\n\\(\\beta\\) (Beta): A geometric factor related to the size of the convection roll. Lorenz found the famous chaotic behavior using the specific values: 18\\(\\sigma = 10\\), 19\\(\\beta = 8/3\\), and 20\\(\\rho = 28\\).21\n\nThe Butterfly Effect & The Attractor\n\nIf you plot the values of \\(x\\), \\(y\\), and \\(z\\) over time in 3D space, the line traces out a shape that looks remarkably like a butterfly. This shape is known as the Lorenz Attractor.22 It has two “wings” (lobes):23\nLeft Wing: The fluid is rotating in one direction. Right Wing: The fluid reverses and rotates in the opposite direction. The Chaos: The system orbits one wing for a while, then suddenly switches to the other.24 There is no pattern to when it switches. You cannot predict when the flip will happen.\nThis visualization illustrates the Butterfly Effect: two points on the attractor that are infinitesimally close together (representing two weather systems that are almost identical) will eventually end up on opposite wings of the attractor (completely different weather).25\nSummary of Significance Weather Prediction: The model proved that because we cannot measure the current state of the atmosphere with infinite precision (infinite decimal places), we cannot predict the weather beyond a certain timeframe (roughly two weeks). Deterministic Chaos: It proved that a system can be completely deterministic (follows rigid equations) but still behave randomly.26\nFractals: The “Strange Attractor” is a fractal; it has infinite detail and a fractional dimension (roughly 2.06 dimensions).27\nWould you like me to generate a Python script to solve these equations so you can see the butterfly attractor evolve yourself?"
+  },
+  {
+    "objectID": "posts/01-20-2026/index.html#prompt-what-is-the-double-helix-model-of-dna",
+    "href": "posts/01-20-2026/index.html#prompt-what-is-the-double-helix-model-of-dna",
+    "title": "Types of Data",
+    "section": "Prompt: What is the double helix model of DNA?",
+    "text": "Prompt: What is the double helix model of DNA?\nThe double helix model is the description of the three-dimensional structure of DNA (deoxyribonucleic acid).1 It depicts DNA not as a flat ladder, but as two long strands twisted around each other like a spiral staircase.2\nThis model was first published in 1953 and is considered one of the most significant discoveries in the history of biology because it revealed how genetic information is stored and copied.3\n\nThe Structure: A Twisted Ladder4 If you imagine a ladder twisted into a spiral, the double helix has two main parts: The Backbone (The Rails): The outside of the helix is formed by alternating sugar (deoxyribose) and phosphate molecules.5 This “sugar-phosphate backbone” provides the structural framework.\n\nThe Base Pairs (The Rungs): Inside the helix, connecting the two backbones, are pairs of nitrogenous bases.6 These bases hold the two strands together using hydrogen bonds.7\n\nKey Rules of the Model The double helix is highly specific in how it is built. Three chemical rules are essential to its function: Complementary Base Pairing: The “rungs” are not random.8 A base on one strand always pairs with a specific partner on the other strand:9\n\nAdenine (A) always pairs with Thymine (T).10\nCytosine (C) always pairs with Guanine (G).11\nWhy this matters: This means if you know the sequence of one strand (e.g., A-C-T-G), you automatically know the sequence of the other (T-G-A-C).12 This is the secret to how DNA copies itself.\nAntiparallel Strands: The two strands run in opposite directions.13 Chemical direction is measured from the 14\\(5'\\) (five-prime) end to the 15\\(3'\\) (three-prime) end.16 In the double helix, one strand runs 17\\(5' \\to 3'\\) while the other runs 18\\(3' \\to 5'\\).19\nRight-Handed Twist: In nature (specifically B-DNA, the most common form), the helix twists to the right, completing a full turn roughly every 10.5 base pairs.20\n\nThe Discovery The discovery of the double helix is a famous (and controversial) story of scientific competition: Watson & Crick: James Watson and Francis Crick are credited with proposing the model in 1953.21 They built physical models (using cardboard and metal plates) to fit the chemical pieces together.22 +1\n\nRosalind Franklin: Her work was crucial but often overlooked at the time.23 She was an expert in X-ray crystallography and captured Photo 51, a famous X-ray image that clearly showed the “X” pattern characteristic of a helix.24 Watson used this data (shown to him without her permission by Maurice Wilkins) to confirm the helical structure.25 +2\nThe Nobel Prize: In 1962, Watson, Crick, and Wilkins were awarded the Nobel Prize.26 Franklin had passed away four years earlier and was not eligible for the posthumous award, though modern science recognizes her as a co-discoverer.\nSummary of Components Component Description Nucleotide\nThe basic building block, consisting of one sugar, one phosphate, and one base. Hydrogen Bonds Weak bonds that hold the A-T and C-G base pairs together (like a zipper). Sugar-Phosphate The structural “rails” that protect the genetic code inside.\nWould you like me to explain how the Double Helix “unzips” to replicate itself?"
+  },
+  {
+    "objectID": "posts/01-20-2026/index.html#prompt-what-is-ontology",
+    "href": "posts/01-20-2026/index.html#prompt-what-is-ontology",
+    "title": "Types of Data",
+    "section": "Prompt: What is ontology?",
+    "text": "Prompt: What is ontology?\nOntology is, at its core, the study of what exists and how things are related.1\nDepending on whether you are talking to a philosopher or a computer scientist, the definition shifts from abstract reality to practical data structures.2\nHere is the breakdown of the two main perspectives: 1. In Philosophy (The Origin)3 In philosophy, ontology is the “study of being.”4 It is a branch of metaphysics that asks deep questions about the nature of reality.5\nThe Goal: To discover the fundamental categories of existence.6\nKey Questions: What does it mean “to exist”? Do abstract ideas (like the number 7 or “justice”) exist in the same way a rock exists? Example: A philosopher might analyze if “holes” are real things, or if they are just the absence of something else. 2. In Computer Science (The Application) In computer science (specifically AI and Information Science), an ontology is a formal blueprint used to model knowledge.7 It is a specific way of organizing data so that computers can “understand” it.8\nInstead of asking “what is reality,” a computational ontology declares: “For this specific system, these are the only things that exist, and here is how they connect.” The Goal: To help software share data, reason about information, and avoid confusion.9\nThe “Triples” Structure: Most computational ontologies are built on three main components: Classes (The Nouns): The categories of things (e.g., Patient, Doctor, Drug).10\nAttributes (The Adjectives): The properties of those things (e.g., Name, Dosage, Blood Type).11\nRelationships (The Verbs): How they interact (e.g., Doctor prescribes Drug). Summary Comparison Feature Philosophical Ontology Computational Ontology Focus The nature of reality. The structure of a specific domain’s data. Goal Truth and wisdom. Interoperability (systems talking to each other). Output Theories and essays. Knowledge Graphs, code (OWL/RDF), databases. Example “Is the mind separate from the body?” “A Smartphone is-a Device.”\nWhy is this important right now? You likely interact with ontologies every day without realizing it: Google Search: When you search for “Jaguar,” Google uses an ontology to figure out if you mean the animal, the car, or the football team based on the other words in your query. Healthcare: Ontologies allow different hospitals to share records. One system might say “Heart Attack” and another “Myocardial Infarction,” but the ontology links them as the exact same concept. Next Step Would you like me to show you a text-based example of what a simple ontology looks like for a common domain, like a Library or a Smart Home?"
   }
 ]

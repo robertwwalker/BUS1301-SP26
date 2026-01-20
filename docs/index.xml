@@ -10,7 +10,131 @@
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Thu, 15 Jan 2026 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 20 Jan 2026 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Types of Data</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/01-20-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Today, we introduce and classify data as commonly stored in file based systems [spreadsheets]</p>
+<p>Our reading for today includes a section of Open Intro Stats and a primer on data types.</p>
+<p>In the text book, we will pay extra attention to sections 1, 3, and 5.2.</p>
+<p>The class plan:</p>
+<ol type="1">
+<li><p>What is data?<br>
+</p></li>
+<li><p>Examples.<br>
+</p></li>
+<li><p>Data types: quantitative vs.&nbsp;qualitative.<br>
+</p></li>
+<li><p>Data types: measurement of quantitative variables.<br>
+</p></li>
+<li><p>Units of analysis</p></li>
+<li><p>In class classification</p></li>
+<li><p>Models in business?</p></li>
+</ol>
+<p>Your assignment for this time:</p>
+<ol type="1">
+<li>Do the reading.</li>
+<li>Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course.</li>
+</ol>
+<section id="in-class-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-assignment">In-Class Assignment</h2>
+<p>An example dataset linked in the assignment.</p>
+</section>
+<section id="for-next-class" class="level2">
+<h2 class="anchored" data-anchor-id="for-next-class">For Next Class:</h2>
+<ol type="1">
+<li>Reading: Chapter 1: Open Introduction to Statistics: <em>(On Canvas &gt; Files &gt; OpenIntroStatistics)</em>, primer on Data Storage, Data Organization in Spreadsheets.<br>
+</li>
+<li>Deliverable: An In-class exercise [Assignment 3] if not completed before departing</li>
+</ol>
+</section>
+<section id="my-assignment-1" class="level1">
+<h1>My Assignment 1</h1>
+<section id="prompt-what-is-the-lorenz-model-of-climate-extremes" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-what-is-the-lorenz-model-of-climate-extremes">Prompt: What is the Lorenz model of climate extremes?</h2>
+<p>The Lorenz model is a simplified mathematical model used to describe atmospheric convection.1 It is one of the most famous systems in physics because it was the first to demonstrate chaotic behavior—the phenomenon where deterministic systems behave unpredictably due to extreme sensitivity to initial conditions.2</p>
+<p>This model is responsible for the modern understanding that long-term weather forecasting is fundamentally impossible, a concept popularized as the “Butterfly Effect.”3</p>
+<ol type="1">
+<li>The Origin: A Happy Accident In 1963, MIT meteorologist Edward Lorenz was using a computer to simulate weather patterns.4 He was running a code based on twelve equations that modeled the way air moves when it is heated from below and cooled from above.5</li>
+</ol>
+<p>One day, he wanted to repeat a simulation he had run previously.6 To save time, he started the run from the middle, typing in numbers from a previous printout. The printout displayed numbers to 3 decimal places (e.g., 0.506), but the computer calculated internally to 6 decimal places (e.g., 0.506127).7</p>
+<p>Lorenz assumed this tiny difference (one part in a thousand) would have no meaningful effect. Instead, he found that the new simulation quickly diverged completely from the original, looking like a totally different weather system.8 This led him to publish his landmark paper, “Deterministic Nonperiodic Flow,” which founded the field of Chaos Theory.9</p>
+<ol start="2" type="1">
+<li>The Equations Lorenz simplified his original twelve equations down to just three coupled, non-linear ordinary differential equations.10</li>
+</ol>
+<p>While they were derived from the complex Navier-Stokes equations (which describe fluid motion), Lorenz reduced them to a “toy model” representing a single 2D slice of atmosphere behaving like a convection roll (gas rising and falling in a loop). The equations are:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Baligned%7D%20%5Cfrac%7Bdx%7D%7Bdt%7D%20&amp;=%20%5Csigma%20(y%20-%20x)%20%5C%5C%20%5Cfrac%7Bdy%7D%7Bdt%7D%20&amp;=%20x%20(%5Crho%20-%20z)%20-%20y%20%5C%5C%20%5Cfrac%7Bdz%7D%7Bdt%7D%20&amp;=%20x%20y%20-%20%5Cbeta%20z%20%5Cend%7Baligned%7D"></p>
+<p>The Variables (<img src="https://latex.codecogs.com/png.latex?x,%20y,%20z">) These do not represent coordinates in real space (like latitude/longitude). They represent the state of the fluid at any given moment: <img src="https://latex.codecogs.com/png.latex?x">: The intensity of convection.11 (How fast is the convective roll spinning?)</p>
+<p><img src="https://latex.codecogs.com/png.latex?y">: The horizontal temperature difference between the ascending (warm) and descending (cool) currents.12</p>
+<p><img src="https://latex.codecogs.com/png.latex?z">: The vertical temperature distortion.13 (How much the temperature profile deviates from a linear decrease with height).14</p>
+<p>The Parameters (<img src="https://latex.codecogs.com/png.latex?%5Csigma,%20%5Crho,%20%5Cbeta">) These are constants that determine the physical properties of the “atmosphere”:15</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csigma"> (Sigma): The Prandtl number (viscosity relative to thermal conductivity).16</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Crho"> (Rho): The Rayleigh number (the temperature difference between the hot ground and the cool sky).17 This is the “control knob”—if you turn it up high enough, the system becomes chaotic.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbeta"> (Beta): A geometric factor related to the size of the convection roll. Lorenz found the famous chaotic behavior using the specific values: 18<img src="https://latex.codecogs.com/png.latex?%5Csigma%20=%2010">, 19<img src="https://latex.codecogs.com/png.latex?%5Cbeta%20=%208/3">, and 20<img src="https://latex.codecogs.com/png.latex?%5Crho%20=%2028">.21</p>
+<ol start="3" type="1">
+<li>The Butterfly Effect &amp; The Attractor</li>
+</ol>
+<p>If you plot the values of <img src="https://latex.codecogs.com/png.latex?x">, <img src="https://latex.codecogs.com/png.latex?y">, and <img src="https://latex.codecogs.com/png.latex?z"> over time in 3D space, the line traces out a shape that looks remarkably like a butterfly. This shape is known as the Lorenz Attractor.22 It has two “wings” (lobes):23</p>
+<p>Left Wing: The fluid is rotating in one direction. Right Wing: The fluid reverses and rotates in the opposite direction. The Chaos: The system orbits one wing for a while, then suddenly switches to the other.24 There is no pattern to when it switches. You cannot predict when the flip will happen.</p>
+<p>This visualization illustrates the Butterfly Effect: two points on the attractor that are infinitesimally close together (representing two weather systems that are almost identical) will eventually end up on opposite wings of the attractor (completely different weather).25</p>
+<p>Summary of Significance Weather Prediction: The model proved that because we cannot measure the current state of the atmosphere with infinite precision (infinite decimal places), we cannot predict the weather beyond a certain timeframe (roughly two weeks). Deterministic Chaos: It proved that a system can be completely deterministic (follows rigid equations) but still behave randomly.26</p>
+<p>Fractals: The “Strange Attractor” is a fractal; it has infinite detail and a fractional dimension (roughly 2.06 dimensions).27</p>
+<p>Would you like me to generate a Python script to solve these equations so you can see the butterfly attractor evolve yourself?</p>
+</section>
+<section id="prompt-what-is-the-double-helix-model-of-dna" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-what-is-the-double-helix-model-of-dna">Prompt: What is the double helix model of DNA?</h2>
+<p>The double helix model is the description of the three-dimensional structure of DNA (deoxyribonucleic acid).1 It depicts DNA not as a flat ladder, but as two long strands twisted around each other like a spiral staircase.2</p>
+<p>This model was first published in 1953 and is considered one of the most significant discoveries in the history of biology because it revealed how genetic information is stored and copied.3</p>
+<ol type="1">
+<li>The Structure: A Twisted Ladder4 If you imagine a ladder twisted into a spiral, the double helix has two main parts: The Backbone (The Rails): The outside of the helix is formed by alternating sugar (deoxyribose) and phosphate molecules.5 This “sugar-phosphate backbone” provides the structural framework.</li>
+</ol>
+<p>The Base Pairs (The Rungs): Inside the helix, connecting the two backbones, are pairs of nitrogenous bases.6 These bases hold the two strands together using hydrogen bonds.7</p>
+<ol start="2" type="1">
+<li>Key Rules of the Model The double helix is highly specific in how it is built. Three chemical rules are essential to its function: Complementary Base Pairing: The “rungs” are not random.8 A base on one strand always pairs with a specific partner on the other strand:9</li>
+</ol>
+<p>Adenine (A) always pairs with Thymine (T).10</p>
+<p>Cytosine (C) always pairs with Guanine (G).11</p>
+<p>Why this matters: This means if you know the sequence of one strand (e.g., A-C-T-G), you automatically know the sequence of the other (T-G-A-C).12 This is the secret to how DNA copies itself.</p>
+<p>Antiparallel Strands: The two strands run in opposite directions.13 Chemical direction is measured from the 14<img src="https://latex.codecogs.com/png.latex?5'"> (five-prime) end to the 15<img src="https://latex.codecogs.com/png.latex?3'"> (three-prime) end.16 In the double helix, one strand runs 17<img src="https://latex.codecogs.com/png.latex?5'%20%5Cto%203'"> while the other runs 18<img src="https://latex.codecogs.com/png.latex?3'%20%5Cto%205'">.19</p>
+<p>Right-Handed Twist: In nature (specifically B-DNA, the most common form), the helix twists to the right, completing a full turn roughly every 10.5 base pairs.20</p>
+<ol start="3" type="1">
+<li>The Discovery The discovery of the double helix is a famous (and controversial) story of scientific competition: Watson &amp; Crick: James Watson and Francis Crick are credited with proposing the model in 1953.21 They built physical models (using cardboard and metal plates) to fit the chemical pieces together.22 +1</li>
+</ol>
+<p>Rosalind Franklin: Her work was crucial but often overlooked at the time.23 She was an expert in X-ray crystallography and captured Photo 51, a famous X-ray image that clearly showed the “X” pattern characteristic of a helix.24 Watson used this data (shown to him without her permission by Maurice Wilkins) to confirm the helical structure.25 +2</p>
+<p>The Nobel Prize: In 1962, Watson, Crick, and Wilkins were awarded the Nobel Prize.26 Franklin had passed away four years earlier and was not eligible for the posthumous award, though modern science recognizes her as a co-discoverer.</p>
+<p>Summary of Components Component Description Nucleotide</p>
+<p>The basic building block, consisting of one sugar, one phosphate, and one base. Hydrogen Bonds Weak bonds that hold the A-T and C-G base pairs together (like a zipper). Sugar-Phosphate The structural “rails” that protect the genetic code inside.</p>
+<p>Would you like me to explain how the Double Helix “unzips” to replicate itself?</p>
+</section>
+<section id="prompt-what-is-ontology" class="level2">
+<h2 class="anchored" data-anchor-id="prompt-what-is-ontology">Prompt: What is ontology?</h2>
+<p>Ontology is, at its core, the study of what exists and how things are related.1</p>
+<p>Depending on whether you are talking to a philosopher or a computer scientist, the definition shifts from abstract reality to practical data structures.2</p>
+<p>Here is the breakdown of the two main perspectives: 1. In Philosophy (The Origin)3 In philosophy, ontology is the “study of being.”4 It is a branch of metaphysics that asks deep questions about the nature of reality.5</p>
+<p>The Goal: To discover the fundamental categories of existence.6</p>
+<p>Key Questions: What does it mean “to exist”? Do abstract ideas (like the number 7 or “justice”) exist in the same way a rock exists? Example: A philosopher might analyze if “holes” are real things, or if they are just the absence of something else. 2. In Computer Science (The Application) In computer science (specifically AI and Information Science), an ontology is a formal blueprint used to model knowledge.7 It is a specific way of organizing data so that computers can “understand” it.8</p>
+<p>Instead of asking “what is reality,” a computational ontology declares: “For this specific system, these are the only things that exist, and here is how they connect.” The Goal: To help software share data, reason about information, and avoid confusion.9</p>
+<p>The “Triples” Structure: Most computational ontologies are built on three main components: Classes (The Nouns): The categories of things (e.g., Patient, Doctor, Drug).10</p>
+<p>Attributes (The Adjectives): The properties of those things (e.g., Name, Dosage, Blood Type).11</p>
+<p>Relationships (The Verbs): How they interact (e.g., Doctor prescribes Drug). Summary Comparison Feature Philosophical Ontology Computational Ontology Focus The nature of reality. The structure of a specific domain’s data. Goal Truth and wisdom. Interoperability (systems talking to each other). Output Theories and essays. Knowledge Graphs, code (OWL/RDF), databases. Example “Is the mind separate from the body?” “A Smartphone is-a Device.”</p>
+<p>Why is this important right now? You likely interact with ontologies every day without realizing it: Google Search: When you search for “Jaguar,” Google uses an ontology to figure out if you mean the animal, the car, or the football team based on the other words in your query. Healthcare: Ontologies allow different hospitals to share records. One system might say “Heart Attack” and another “Myocardial Infarction,” but the ontology links them as the exact same concept. Next Step Would you like me to show you a text-based example of what a simple ontology looks like for a common domain, like a Library or a Smart Home?</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-20-2026/</guid>
+  <pubDate>Tue, 20 Jan 2026 08:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-20-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
 <item>
   <title>On Models</title>
   <dc:creator>Robert W. Walker</dc:creator>

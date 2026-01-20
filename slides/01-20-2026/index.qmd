@@ -1,0 +1,145 @@
+---
+title: "Data Types"
+subtitle: "Lecture 3: Types of Data"
+author: "Robert W. Walker"
+format: 
+   revealjs:
+     multiplex: true
+     preview-links: true
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301 [20 Jan 26]"
+     chalkboard: true
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: convex
+     code-fold: true
+     code-tools: true
+---
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+```{r setup, include=FALSE}
+library(fontawesome)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, tidy=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', eval=TRUE)
+library(tidyverse)
+library(DT)
+theme_set(hrbrthemes::theme_ipsum_rc())
+options(
+  digits = 3,
+  width = 75,
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis",
+  ggplot2.discrete.colour = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442"),
+  ggplot2.discrete.fill = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442")
+)
+```
+
+## Outline
+
+- Readings: Data Types and Chapter 1
+
+## What is Data?
+
+[Cambridge](https://dictionary.cambridge.org/us/dictionary/english/data) defines data as: 
+
+![data](./data.png)
+
++ facts or numbers.  
++ in electronic form.  
++ stored and used by a computer.   
+
+
+## FBS: What is a spreadsheet?
+
++ Google Sheets: rows, columns, sheets
+
+![Sheet](./Screenshot 2026-01-20 at 11.05.24 AM.png)
+
+## Examples
+
+[Datasaurus](https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-10-13/datasaurus.csv)
+
++ [on Google Sheets](https://docs.google.com/spreadsheets/d/1udx92vssF7I0sY_CiUVQ3Fta_xKL-eeQ8ez7M7f9QP0/edit?usp=sharing).  
+
+[Bond Funds](./BondFunds.csv)
+
++ [on Google Sheets](https://docs.google.com/spreadsheets/d/1s9iPm7c7wzyCKQNaMziM3iXwePpNKqsT0pmd6gZt_gg/edit?usp=sharing).  
+
+[Bob Ross Paintings](https://github.com/rfordatascience/tidytuesday/blob/main/data/2023/2023-02-21/bob_ross.csv)
+
+## What is a variable?
+
+Something that varies.  Distinguished from constants.
+
+## Classifying Data
+
+From the above definition, anything we can put in a spreadsheet [and that may be too limiting] is data.  To classify it, we will need some categories. 
+
+
+- *The spreadsheet may impose character limits or the like, that is a programming choice and not tied to definition.*.  
+
+## Classifying Data I: Quantative vs. Qualitative
+
+Literally numbers vs. non-numbers.  But it is not quite that simple.
+
++ There are numbers that are not numerical, e.g. Social security numbers.  There is some, but not much, encoded information and there is little we can do with them.   
+
++ Your Willamette Student ID
+
+## Quantitative Data: Levels of Measurement
+
+Four categories:   
+
++ Nominal.  (No order and no arithmetic)
++ Ordinal.  (Order, no arithmetic)
++ Interval scale.  (Addition and subtraction, no multiplication and division)
++ Ratio scale.   (All arithmetic)
+
+## Nominal Data
+
+Names
+ID numbers
+
+## Ordered Data
+
+Ranks
+Medals
+Satisfaction
+Likert scales
+
+## Interval data
+
+The `year` example in the Primer.
+
+## Ratio scale
+
+The `duration` example in the primer.
+
+## Distinction: Unit of Analysis
+
+What are the units?
+
+Sometimes, this is singular
+
+Sometimes, it is a combination
+
+Popular units:    
+
+1. `cross-sectional` units [people, countries, products]
+2. time periods -- time series
+3. panel data is a combination of units and time. [Multiple time series or multiple cross-sections over time]
+
+[Consider this example](https://robertwwalker.github.io/posts/HumanRightsTable/)
+
+## A Data Taxonomy
+
++ Generally column-centric.  
++ Variables in columns.  
++ Units in rows.  
+
+## A Class Assignment to Conclude
+
+[Some customer satisfaction data:](https://docs.google.com/spreadsheets/d/1Tqn-bqezFnsBD4QhmKBZ14oYO14tzh4dL_LHZhiRy0A/edit?usp=sharing)

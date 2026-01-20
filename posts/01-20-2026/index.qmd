@@ -1,0 +1,221 @@
+---
+title: "Types of Data"
+author: "Robert W. Walker"
+date: "2026-01-20"
+image: "image.png"
+---
+
+Today, we introduce and classify data as commonly stored in file based systems [spreadsheets]
+
+Our reading for today includes a section of Open Intro Stats and a primer on data types.
+
+In the text book, we will pay extra attention to sections 1, 3, and 5.2.
+
+The class plan:
+
+1. What is data?   
+2. Examples.  
+3. Data types: quantitative vs. qualitative.  
+4. Data types: measurement of quantitative variables.  
+5. Units of analysis
+6. In class classification
+
+3. Models in business?
+
+Your assignment for this time:
+
+1. Do the reading.
+2. Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar.  If you did not run across at least three unfamiliar references, you need a more advanced course.
+
+## In-Class Assignment
+
+An example dataset linked in the assignment.
+
+## For Next Class:
+
+1. Reading: Chapter 1: Open Introduction to Statistics: *(On Canvas > Files > OpenIntroStatistics)*, primer on Data Storage, Data Organization in Spreadsheets.  
+2. Deliverable: An In-class exercise [Assignment 3] if not completed before departing
+
+# My Assignment 1
+
+## Prompt: What is the Lorenz model of climate extremes?
+
+The Lorenz model is a simplified mathematical model used to describe atmospheric convection.1 It is one of the most famous systems in physics because it was the first to demonstrate chaotic behavior—the phenomenon where deterministic systems behave unpredictably due to extreme sensitivity to initial conditions.2
+
+This model is responsible for the modern understanding that long-term weather forecasting is fundamentally impossible, a concept popularized as the "Butterfly Effect."3
+
+1. The Origin: A Happy Accident
+In 1963, MIT meteorologist Edward Lorenz was using a computer to simulate weather patterns.4 He was running a code based on twelve equations that modeled the way air moves when it is heated from below and cooled from above.5
+
+One day, he wanted to repeat a simulation he had run previously.6 To save time, he started the run from the middle, typing in numbers from a previous printout. The printout displayed numbers to 3 decimal places (e.g., 0.506), but the computer calculated internally to 6 decimal places (e.g., 0.506127).7
+
+Lorenz assumed this tiny difference (one part in a thousand) would have no meaningful effect. Instead, he found that the new simulation quickly diverged completely from the original, looking like a totally different weather system.8 This led him to publish his landmark paper, "Deterministic Nonperiodic Flow," which founded the field of Chaos Theory.9
+
+2. The Equations
+Lorenz simplified his original twelve equations down to just three coupled, non-linear ordinary differential equations.10
+
+While they were derived from the complex Navier-Stokes equations (which describe fluid motion), Lorenz reduced them to a "toy model" representing a single 2D slice of atmosphere behaving like a convection roll (gas rising and falling in a loop).
+The equations are:
+
+$$\begin{aligned} \frac{dx}{dt} &= \sigma (y - x) \\ \frac{dy}{dt} &= x (\rho - z) - y \\ \frac{dz}{dt} &= x y - \beta z \end{aligned}$$
+
+The Variables ($x, y, z$)
+These do not represent coordinates in real space (like latitude/longitude). They represent the state of the fluid at any given moment:
+$x$: The intensity of convection.11 (How fast is the convective roll spinning?)
+
+
+$y$: The horizontal temperature difference between the ascending (warm) and descending (cool) currents.12
+
+
+$z$: The vertical temperature distortion.13 (How much the temperature profile deviates from a linear decrease with height).14
+
+
+The Parameters ($\sigma, \rho, \beta$)
+These are constants that determine the physical properties of the "atmosphere":15
+
+$\sigma$ (Sigma): The Prandtl number (viscosity relative to thermal conductivity).16
+
+
+$\rho$ (Rho): The Rayleigh number (the temperature difference between the hot ground and the cool sky).17 This is the "control knob"—if you turn it up high enough, the system becomes chaotic.
+
+
+$\beta$ (Beta): A geometric factor related to the size of the convection roll.
+Lorenz found the famous chaotic behavior using the specific values: 18$\sigma = 10$, 19$\beta = 8/3$, and 20$\rho = 28$.21
+
+3. The Butterfly Effect & The Attractor
+
+If you plot the values of $x$, $y$, and $z$ over time in 3D space, the line traces out a shape that looks remarkably like a butterfly.
+This shape is known as the Lorenz Attractor.22 It has two "wings" (lobes):23
+
+Left Wing: The fluid is rotating in one direction.
+Right Wing: The fluid reverses and rotates in the opposite direction.
+The Chaos: The system orbits one wing for a while, then suddenly switches to the other.24 There is no pattern to when it switches. You cannot predict when the flip will happen.
+
+
+This visualization illustrates the Butterfly Effect: two points on the attractor that are infinitesimally close together (representing two weather systems that are almost identical) will eventually end up on opposite wings of the attractor (completely different weather).25
+
+Summary of Significance
+Weather Prediction: The model proved that because we cannot measure the current state of the atmosphere with infinite precision (infinite decimal places), we cannot predict the weather beyond a certain timeframe (roughly two weeks).
+Deterministic Chaos: It proved that a system can be completely deterministic (follows rigid equations) but still behave randomly.26
+
+
+Fractals: The "Strange Attractor" is a fractal; it has infinite detail and a fractional dimension (roughly 2.06 dimensions).27
+
+
+Would you like me to generate a Python script to solve these equations so you can see the butterfly attractor evolve yourself?
+
+## Prompt: What is the double helix model of DNA?
+
+The double helix model is the description of the three-dimensional structure of DNA (deoxyribonucleic acid).1 It depicts DNA not as a flat ladder, but as two long strands twisted around each other like a spiral staircase.2
+
+This model was first published in 1953 and is considered one of the most significant discoveries in the history of biology because it revealed how genetic information is stored and copied.3
+
+1. The Structure: A Twisted Ladder4
+If you imagine a ladder twisted into a spiral, the double helix has two main parts:
+The Backbone (The Rails): The outside of the helix is formed by alternating sugar (deoxyribose) and phosphate molecules.5 This "sugar-phosphate backbone" provides the structural framework.
+
+
+The Base Pairs (The Rungs): Inside the helix, connecting the two backbones, are pairs of nitrogenous bases.6 These bases hold the two strands together using hydrogen bonds.7
+
+
+2. Key Rules of the Model
+The double helix is highly specific in how it is built. Three chemical rules are essential to its function:
+Complementary Base Pairing: The "rungs" are not random.8 A base on one strand always pairs with a specific partner on the other strand:9
+
+
+Adenine (A) always pairs with Thymine (T).10
+
+
+Cytosine (C) always pairs with Guanine (G).11
+
+
+Why this matters: This means if you know the sequence of one strand (e.g., A-C-T-G), you automatically know the sequence of the other (T-G-A-C).12 This is the secret to how DNA copies itself.
+
+
+Antiparallel Strands: The two strands run in opposite directions.13 Chemical direction is measured from the 14$5'$ (five-prime) end to the 15$3'$ (three-prime) end.16 In the double helix, one strand runs 17$5' \to 3'$ while the other runs 18$3' \to 5'$.19
+
+
+Right-Handed Twist: In nature (specifically B-DNA, the most common form), the helix twists to the right, completing a full turn roughly every 10.5 base pairs.20
+
+
+3. The Discovery
+The discovery of the double helix is a famous (and controversial) story of scientific competition:
+Watson & Crick: James Watson and Francis Crick are credited with proposing the model in 1953.21 They built physical models (using cardboard and metal plates) to fit the chemical pieces together.22
++1
+
+
+Rosalind Franklin: Her work was crucial but often overlooked at the time.23 She was an expert in X-ray crystallography and captured Photo 51, a famous X-ray image that clearly showed the "X" pattern characteristic of a helix.24 Watson used this data (shown to him without her permission by Maurice Wilkins) to confirm the helical structure.25
++2
+
+
+The Nobel Prize: In 1962, Watson, Crick, and Wilkins were awarded the Nobel Prize.26 Franklin had passed away four years earlier and was not eligible for the posthumous award, though modern science recognizes her as a co-discoverer.
+
+
+Summary of Components
+Component
+Description
+Nucleotide
+
+The basic building block, consisting of one sugar, one phosphate, and one base.
+Hydrogen Bonds
+Weak bonds that hold the A-T and C-G base pairs together (like a zipper).
+Sugar-Phosphate
+The structural "rails" that protect the genetic code inside.
+
+Would you like me to explain how the Double Helix "unzips" to replicate itself?
+
+## Prompt: What is ontology?
+
+Ontology is, at its core, the study of what exists and how things are related.1
+
+Depending on whether you are talking to a philosopher or a computer scientist, the definition shifts from abstract reality to practical data structures.2
+
+Here is the breakdown of the two main perspectives:
+1. In Philosophy (The Origin)3
+In philosophy, ontology is the "study of being."4 It is a branch of metaphysics that asks deep questions about the nature of reality.5
+
+
+The Goal: To discover the fundamental categories of existence.6
+
+
+Key Questions: What does it mean "to exist"? Do abstract ideas (like the number 7 or "justice") exist in the same way a rock exists?
+Example: A philosopher might analyze if "holes" are real things, or if they are just the absence of something else.
+2. In Computer Science (The Application)
+In computer science (specifically AI and Information Science), an ontology is a formal blueprint used to model knowledge.7 It is a specific way of organizing data so that computers can "understand" it.8
+
+
+Instead of asking "what is reality," a computational ontology declares: "For this specific system, these are the only things that exist, and here is how they connect."
+The Goal: To help software share data, reason about information, and avoid confusion.9
+
+
+The "Triples" Structure: Most computational ontologies are built on three main components:
+Classes (The Nouns): The categories of things (e.g., Patient, Doctor, Drug).10
+
+
+Attributes (The Adjectives): The properties of those things (e.g., Name, Dosage, Blood Type).11
+
+
+Relationships (The Verbs): How they interact (e.g., Doctor prescribes Drug).
+Summary Comparison
+Feature
+Philosophical Ontology
+Computational Ontology
+Focus
+The nature of reality.
+The structure of a specific domain's data.
+Goal
+Truth and wisdom.
+Interoperability (systems talking to each other).
+Output
+Theories and essays.
+Knowledge Graphs, code (OWL/RDF), databases.
+Example
+"Is the mind separate from the body?"
+"A Smartphone is-a Device."
+
+Why is this important right now?
+You likely interact with ontologies every day without realizing it:
+Google Search: When you search for "Jaguar," Google uses an ontology to figure out if you mean the animal, the car, or the football team based on the other words in your query.
+Healthcare: Ontologies allow different hospitals to share records. One system might say "Heart Attack" and another "Myocardial Infarction," but the ontology links them as the exact same concept.
+Next Step
+Would you like me to show you a text-based example of what a simple ontology looks like for a common domain, like a Library or a Smart Home?
