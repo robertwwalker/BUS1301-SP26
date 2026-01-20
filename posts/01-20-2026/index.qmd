@@ -11,7 +11,12 @@ Our reading for today includes a section of Open Intro Stats and a primer on dat
 
 In the text book, we will pay extra attention to sections 1, 3, and 5.2.
 
-The class plan:
+## Where to find data? [a small sample]
+
+- [Kaggle](https://www.kaggle.com/datasets).  
+- [UCI ML Data](https://archive.ics.uci.edu/datasets/)
+
+## The class plan:
 
 1. What is data?   
 2. Examples.  
@@ -20,7 +25,6 @@ The class plan:
 5. Units of analysis
 6. In class classification
 
-3. Models in business?
 
 Your assignment for this time:
 

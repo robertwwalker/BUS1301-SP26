@@ -24,25 +24,34 @@
 <p>Today, we introduce and classify data as commonly stored in file based systems [spreadsheets]</p>
 <p>Our reading for today includes a section of Open Intro Stats and a primer on data types.</p>
 <p>In the text book, we will pay extra attention to sections 1, 3, and 5.2.</p>
-<p>The class plan:</p>
+<section id="where-to-find-data-a-small-sample" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-find-data-a-small-sample">Where to find data? [a small sample]</h2>
+<ul>
+<li><a href="https://www.kaggle.com/datasets">Kaggle</a>.<br>
+</li>
+<li><a href="https://archive.ics.uci.edu/datasets/">UCI ML Data</a></li>
+</ul>
+</section>
+<section id="the-class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
 <ol type="1">
-<li><p>What is data?<br>
-</p></li>
-<li><p>Examples.<br>
-</p></li>
-<li><p>Data types: quantitative vs.&nbsp;qualitative.<br>
-</p></li>
-<li><p>Data types: measurement of quantitative variables.<br>
-</p></li>
-<li><p>Units of analysis</p></li>
-<li><p>In class classification</p></li>
-<li><p>Models in business?</p></li>
+<li>What is data?<br>
+</li>
+<li>Examples.<br>
+</li>
+<li>Data types: quantitative vs.&nbsp;qualitative.<br>
+</li>
+<li>Data types: measurement of quantitative variables.<br>
+</li>
+<li>Units of analysis</li>
+<li>In class classification</li>
 </ol>
 <p>Your assignment for this time:</p>
 <ol type="1">
 <li>Do the reading.</li>
 <li>Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course.</li>
 </ol>
+</section>
 <section id="in-class-assignment" class="level2">
 <h2 class="anchored" data-anchor-id="in-class-assignment">In-Class Assignment</h2>
 <p>An example dataset linked in the assignment.</p>
