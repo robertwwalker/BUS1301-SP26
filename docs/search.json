@@ -1251,5 +1251,174 @@
       "Slides",
       "Data Types"
     ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#outline",
+    "href": "slides/01-22-2026/index.html#outline",
+    "title": "Data Storage",
+    "section": "Outline",
+    "text": "Outline\n\nReadings: Data Types and Data Organization in Spreadsheets",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#what-is-data",
+    "href": "slides/01-22-2026/index.html#what-is-data",
+    "title": "Data Storage",
+    "section": "What is Data?",
+    "text": "What is Data?\nCambridge defines data as:\n\ndata\nfacts or numbers.\n\nin electronic form.\n\nstored and used by a computer.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#what-is-a-variable",
+    "href": "slides/01-22-2026/index.html#what-is-a-variable",
+    "title": "Data Storage",
+    "section": "What is a variable?",
+    "text": "What is a variable?\nSomething that varies. Distinguished from constants.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#classifying-data",
+    "href": "slides/01-22-2026/index.html#classifying-data",
+    "title": "Data Storage",
+    "section": "Classifying Data",
+    "text": "Classifying Data\n\nQuantative vs. Qualitative.\n\nNominal. (No order and no arithmetic).\n\nOrdinal. (Order, no arithmetic).\n\nInterval scale. (Addition and subtraction, no multiplication and division).\n\nRatio scale. (All arithmetic).",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#data-organization-in-spreadsheets",
+    "href": "slides/01-22-2026/index.html#data-organization-in-spreadsheets",
+    "title": "Data Storage",
+    "section": "Data Organization in Spreadsheets",
+    "text": "Data Organization in Spreadsheets\n\nGoogle Sheets: rows, columns, sheets\n\n\nSheet",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#how-to-organize-spreadsheets",
+    "href": "slides/01-22-2026/index.html#how-to-organize-spreadsheets",
+    "title": "Data Storage",
+    "section": "How to Organize Spreadsheets?",
+    "text": "How to Organize Spreadsheets?\n\nBe consistent.\n\nDates in YYYY-MM-DD.\n\nNo empty cells.\n\nOne thing per cell.\n\nSingle rectangle [rows as units, columns as variables, header row].\n\nCreate a data dictionary.\n\nDo not include calculations in raw data.\n\nFonts and color hides data.\n\nName things well.\n\nMake backups.\n\nUse validation.\n\nSave the data in plain text.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#a-class-assignment-to-conclude",
+    "href": "slides/01-22-2026/index.html#a-class-assignment-to-conclude",
+    "title": "Data Storage",
+    "section": "A Class Assignment to Conclude",
+    "text": "A Class Assignment to Conclude\nHow do you think Willamette stores your data?\nFBS or DBMS What organizes it and why?",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#fbs-vs.-dbms",
+    "href": "slides/01-22-2026/index.html#fbs-vs.-dbms",
+    "title": "Data Storage",
+    "section": "FBS vs. DBMS",
+    "text": "FBS vs. DBMS\n\nFile Based System: spreadsheets.\n\nDatabase Management Systems: an interface between files and users.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#more-on-dbms",
+    "href": "slides/01-22-2026/index.html#more-on-dbms",
+    "title": "Data Storage",
+    "section": "More on DBMS",
+    "text": "More on DBMS\n\nGeeksforGeeks",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#dbms-architectures-and-levels",
+    "href": "slides/01-22-2026/index.html#dbms-architectures-and-levels",
+    "title": "Data Storage",
+    "section": "DBMS Architectures and Levels",
+    "text": "DBMS Architectures and Levels\n\n1 tier: Local database and application.\n\n2 tier: Database on server, client with user and application\n3 tier: Application server and database server, client with user and application.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#dbms-types",
+    "href": "slides/01-22-2026/index.html#dbms-types",
+    "title": "Data Storage",
+    "section": "DBMS Types",
+    "text": "DBMS Types\n\nRelational and non-relational",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#joins",
+    "href": "slides/01-22-2026/index.html#joins",
+    "title": "Data Storage",
+    "section": "Joins",
+    "text": "Joins\n\nSQL JoinsSome Disagree",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
+  },
+  {
+    "objectID": "slides/01-22-2026/index.html#takeaways",
+    "href": "slides/01-22-2026/index.html#takeaways",
+    "title": "Data Storage",
+    "section": "Takeaways",
+    "text": "Takeaways\nFBS is usually how things start; structure is expensive and ex ante required.\nThe challenge: When to transition?\nIn many ways, the distinction comes down to when to no longer trust organic collaboration by imposing structure.",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Storage"
+    ]
   }
 ]

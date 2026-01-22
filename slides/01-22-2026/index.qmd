@@ -1,0 +1,125 @@
+---
+title: "Data Storage"
+subtitle: "Lecture 4: Storing Data"
+author: "Robert W. Walker"
+format: 
+   revealjs:
+     multiplex: true
+     preview-links: true
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301 [22 Jan 26]"
+     chalkboard: true
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: convex
+     code-fold: true
+     code-tools: true
+---
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+```{r setup, include=FALSE}
+library(fontawesome)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, tidy=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', eval=TRUE)
+library(tidyverse)
+library(DT)
+theme_set(hrbrthemes::theme_ipsum_rc())
+options(
+  digits = 3,
+  width = 75,
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis",
+  ggplot2.discrete.colour = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442"),
+  ggplot2.discrete.fill = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442")
+)
+```
+
+## Outline
+
+- Readings: Data Types and [Data Organization in Spreadsheets](https://www.tandfonline.com/doi/epdf/10.1080/00031305.2017.1375989?needAccess=true)
+
+## What is Data?
+
+[Cambridge](https://dictionary.cambridge.org/us/dictionary/english/data) defines data as: 
+
+![data](./data.png)
+
++ facts or numbers.  
++ in electronic form.  
++ stored and used by a computer.   
+
+## What is a variable?
+
+Something that varies.  Distinguished from constants.
+
+## Classifying Data
+
+- Quantative vs. Qualitative.   
+   + Nominal.  (No order and no arithmetic).  
+   + Ordinal.  (Order, no arithmetic).  
+   + Interval scale.  (Addition and subtraction, no multiplication and division).  
+   + Ratio scale.   (All arithmetic).  
+
+## `Data Organization in Spreadsheets`
+
++ Google Sheets: rows, columns, sheets
+
+![Sheet](./Screenshot 2026-01-20 at 11.05.24 AM.png)
+
+## How to Organize Spreadsheets?
+
+- Be consistent.    
+- Dates in YYYY-MM-DD.  
+- No empty cells.  
+- One thing per cell.   
+- Single rectangle [rows as units, columns as variables, header row].  
+- Create a data dictionary.   
+- Do not include calculations in raw data.   
+- Fonts and color hides data.   
+- Name things well.   
+- Make backups.   
+- Use validation.   
+- Save the data in plain text.   
+
+## FBS vs. DBMS
+
+- File Based System: spreadsheets.   
+- Database Management Systems: an interface between files and users.   
+
+## More on DBMS
+
+![[GeeksforGeeks](https://www.geeksforgeeks.org/dbms/dbms/)](./DBMS-GFG.png)
+
+## DBMS Architectures and Levels
+
+- 1 tier: Local database and application.   
+- 2 tier: Database on server, client with user and application
+- 3 tier: Application server and database server, client with user and application.    
+
+## DBMS Types
+
+![Relational and non-relational](./SQL-noSQL.png)
+
+## Joins
+
+![SQL Joins](./SQLJoins.jpg)
+
+[Some Disagree](https://blog.jooq.org/say-no-to-venn-diagrams-when-explaining-joins/)
+
+## Takeaways
+
+FBS is usually how things start; structure is expensive and ex ante required.
+
+**The challenge**: When to transition?
+
+In many ways, the distinction comes down to when to no longer trust organic collaboration by imposing structure.
+
+## A Class Assignment to Conclude
+
+**How do you think Willamette stores your data?**
+
+FBS or DBMS
+What organizes it and why?
