@@ -117,6 +117,11 @@ FBS is usually how things start; structure is expensive and ex ante required.
 
 In many ways, the distinction comes down to when to no longer trust organic collaboration by imposing structure.
 
+# Musings
+
+- Much of this distinction may soon become moot.   
+- AI makes mistakes and those could be awful.    
+
 ## A Class Assignment to Conclude
 
 **How do you think Willamette stores your data?**
