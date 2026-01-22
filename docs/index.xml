@@ -10,7 +10,57 @@
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Tue, 20 Jan 2026 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 22 Jan 2026 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Data Storage</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Today, we expand on file based systems to consider database management systems (DBMS).</p>
+<p>Our reading for today includes Data Organization in Spreadsheets and an excellent primer from Tim Johnson exploring this topic.</p>
+<section id="the-class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
+<ol type="1">
+<li>Storage types.<br>
+</li>
+<li>Spreadsheets and the like are FBS.<br>
+</li>
+<li>Details on Spreadsheets<br>
+</li>
+<li>FBMS of two forms.</li>
+</ol>
+</section>
+<section id="supplementary-information" class="level2">
+<h2 class="anchored" data-anchor-id="supplementary-information">Supplementary Information</h2>
+<ol type="1">
+<li><a href="https://www.geeksforgeeks.org/dbms/dbms/">Geeks for Geeks on DBMS</a>.<br>
+</li>
+<li><a href="https://www.integrate.io/blog/the-sql-vs-nosql-difference/">SQL vs.&nbsp;NoSQL</a>.</li>
+</ol>
+<p><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/SQLnoSQL.png" class="img-fluid" alt="SQL and NoSQL graphic from Geeks for Geeks">.</p>
+<p>Your assignment for next time:</p>
+<ol type="1">
+<li>Readings on data visualization.</li>
+<li>Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. We will use this next time.</li>
+</ol>
+</section>
+<section id="in-class-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="in-class-assignment">In-Class Assignment</h2>
+<p><strong>Thinking about Willamette’s data storage.</strong></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/</guid>
+  <pubDate>Thu, 22 Jan 2026 08:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
 <item>
   <title>Types of Data</title>
   <dc:creator>Robert W. Walker</dc:creator>
@@ -143,56 +193,6 @@
   <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-20-2026/</guid>
   <pubDate>Tue, 20 Jan 2026 08:00:00 GMT</pubDate>
   <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-20-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
-</item>
-<item>
-  <title>Data Storage</title>
-  <dc:creator>Robert W. Walker</dc:creator>
-  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Today, we expand on file based systems to consider database management systems (DBMS).</p>
-<p>Our reading for today includes Data Organization in Spreadsheets and an excellent primer from Tim Johnson exploring this topic.</p>
-<section id="the-class-plan" class="level2">
-<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
-<ol type="1">
-<li>Storage types.<br>
-</li>
-<li>Spreadsheets and the like are FBS.<br>
-</li>
-<li>Details on Spreadsheets<br>
-</li>
-<li>FBMS of two forms.</li>
-</ol>
-</section>
-<section id="supplementary-information" class="level2">
-<h2 class="anchored" data-anchor-id="supplementary-information">Supplementary Information</h2>
-<ol type="1">
-<li><a href="https://www.geeksforgeeks.org/dbms/dbms/">Geeks for Geeks on DBMS</a>.<br>
-</li>
-<li><a href="https://www.integrate.io/blog/the-sql-vs-nosql-difference/">SQL vs.&nbsp;NoSQL</a>.</li>
-</ol>
-<p><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/SQLnoSQL.png" class="img-fluid" alt="SQL and NoSQL graphic from Geeks for Geeks">.</p>
-<p>Your assignment for next time:</p>
-<ol type="1">
-<li>Readings on data visualization.</li>
-<li>Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. We will use this next time.</li>
-</ol>
-</section>
-<section id="in-class-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="in-class-assignment">In-Class Assignment</h2>
-<p><strong>Thinking about Willamette’s data storage.</strong></p>
-
-
-</section>
-
- ]]></description>
-  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/</guid>
-  <pubDate>Tue, 20 Jan 2026 08:00:00 GMT</pubDate>
-  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 <item>
   <title>On Models</title>
