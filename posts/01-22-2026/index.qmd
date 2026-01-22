@@ -20,7 +20,7 @@ Our reading for today includes Data Organization in Spreadsheets and an excellen
 Your assignment for next time:
 
 1. Readings on data visualization.
-2. Collect two or three data visualizations that you like.  We will use them next time.
+2. Collect three data visualizations.  Think about the approach to visualization presented and how your graphics manifest it.  We will use this next time.
 
 ## In-Class Assignment
 
