@@ -16,6 +16,12 @@ Our reading for today includes Data Organization in Spreadsheets and an excellen
 3. Details on Spreadsheets  
 4. FBMS of two forms.  
 
+## Supplementary Information
+
+1. [Geeks for Geeks on DBMS](https://www.geeksforgeeks.org/dbms/dbms/).  
+2. [SQL vs. NoSQL](https://www.integrate.io/blog/the-sql-vs-nosql-difference/).  
+
+![SQL and NoSQL graphic from Geeks for Geeks](./SQLnoSQL.png).
 
 Your assignment for next time:
 
