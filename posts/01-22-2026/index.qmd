@@ -1,0 +1,27 @@
+---
+title: "Data Storage"
+author: "Robert W. Walker"
+date: "2026-01-20"
+image: "image.png"
+---
+
+Today, we expand on file based systems to consider database management systems (DBMS).
+
+Our reading for today includes Data Organization in Spreadsheets and an excellent primer from Tim Johnson exploring this topic.
+
+## The class plan:
+
+1. Storage types.   
+2. Spreadsheets and the like are FBS.  
+3. Details on Spreadsheets  
+4. FBMS of two forms.  
+
+
+Your assignment for next time:
+
+1. Readings on data visualization.
+2. Collect two or three data visualizations that you like.  We will use them next time.
+
+## In-Class Assignment
+
+**Thinking about Willamette's data storage.**

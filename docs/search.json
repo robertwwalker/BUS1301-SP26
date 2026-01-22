@@ -430,7 +430,7 @@
     "href": "index.html",
     "title": "BUS1301-SP26",
     "section": "",
-    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTypes of Data\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
+    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTypes of Data\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nData Storage\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/01-15-2026/index.html",
@@ -1420,5 +1420,26 @@
       "Slides",
       "Data Storage"
     ]
+  },
+  {
+    "objectID": "posts/01-22-2026/index.html",
+    "href": "posts/01-22-2026/index.html",
+    "title": "Data Storage",
+    "section": "",
+    "text": "Today, we expand on file based systems to consider database management systems (DBMS).\nOur reading for today includes Data Organization in Spreadsheets and an excellent primer from Tim Johnson exploring this topic."
+  },
+  {
+    "objectID": "posts/01-22-2026/index.html#the-class-plan",
+    "href": "posts/01-22-2026/index.html#the-class-plan",
+    "title": "Data Storage",
+    "section": "The class plan:",
+    "text": "The class plan:\n\nStorage types.\n\nSpreadsheets and the like are FBS.\n\nDetails on Spreadsheets\n\nFBMS of two forms.\n\nYour assignment for next time:\n\nReadings on data visualization.\nCollect two or three data visualizations that you like. We will use them next time."
+  },
+  {
+    "objectID": "posts/01-22-2026/index.html#in-class-assignment",
+    "href": "posts/01-22-2026/index.html#in-class-assignment",
+    "title": "Data Storage",
+    "section": "In-Class Assignment",
+    "text": "In-Class Assignment\nThinking about Willamette’s data storage."
   }
 ]
