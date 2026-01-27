@@ -1489,7 +1489,7 @@
     "href": "posts/01-27-2026/index.html#the-class-plan",
     "title": "Data Visualization",
     "section": "The class plan:",
-    "text": "The class plan:\n\nA spreadsheet is a visualization.\n\nIn some ways, so is JSON.\n\nData types: quantitative vs. qualitative.\n\nData types: measurement of quantitative variables.\n\nUnits of analysis\nIn class classification\n\nYour assignment for this time:\n\nDo the reading.\nCollect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course."
+    "text": "The class plan:\n\nA spreadsheet is a visualization.\n\nIn some ways, so is JSON.\n\nTwo types of summary\n\nTwo dimensions: center and spread.\n\nPivots and formulae\nVisualizations and types\n\nYour assignment for this time:\n\nDo the reading.\nFrom last time. Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. Post them and describe them. What type of data do they represent and how? What is the name of the type of visualization?"
   },
   {
     "objectID": "posts/01-27-2026/index.html#in-class-assignment",
@@ -1503,7 +1503,7 @@
     "href": "posts/01-27-2026/index.html#for-next-class",
     "title": "Data Visualization",
     "section": "For Next Class:",
-    "text": "For Next Class:\n\nReading: Chapter 1: Open Introduction to Statistics: (On Canvas &gt; Files &gt; OpenIntroStatistics), primer on Data Storage, Data Organization in Spreadsheets.\n\nDeliverable: An In-class exercise [Assignment 5] if not completed before departing"
+    "text": "For Next Class:\n\nReading: Chapters 1 and 2 and Wickham on Data Visualization\nDeliverable: An In-class exercise [Assignment 5] if not completed before departing"
   },
   {
     "objectID": "posts/01-27-2026/index.html#prompt-what-is-the-lorenz-model-of-climate-extremes",

@@ -159,28 +159,23 @@ font-style: inherit;">"values"</span>)</span></code></pre></div></div>
 </li>
 <li>In some ways, so is JSON.<br>
 </li>
-<li>Data types: quantitative vs.&nbsp;qualitative.<br>
+<li>Two types of summary<br>
 </li>
-<li>Data types: measurement of quantitative variables.<br>
+<li>Two dimensions: center and spread.<br>
 </li>
-<li>Units of analysis</li>
-<li>In class classification</li>
+<li>Pivots and formulae</li>
+<li>Visualizations and types</li>
 </ol>
 <p>Your assignment for this time:</p>
 <ol type="1">
 <li>Do the reading.</li>
-<li>Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course.</li>
+<li><strong>From last time</strong>. Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. Post them and describe them. What type of data do they represent and how? What is the name of the type of visualization?</li>
 </ol>
-</section>
-<section id="in-class-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="in-class-assignment">In-Class Assignment</h2>
-<p>An example dataset linked in the assignment.</p>
 </section>
 <section id="for-next-class" class="level2">
 <h2 class="anchored" data-anchor-id="for-next-class">For Next Class:</h2>
 <ol type="1">
-<li>Reading: Chapter 1: Open Introduction to Statistics: <em>(On Canvas &gt; Files &gt; OpenIntroStatistics)</em>, primer on Data Storage, Data Organization in Spreadsheets.<br>
-</li>
+<li>Reading: Chapters 1 and 2 and Wickham on Data Visualization</li>
 <li>Deliverable: An In-class exercise [Assignment 5] if not completed before departing</li>
 </ol>
 
