@@ -1,0 +1,255 @@
+---
+title: "Data Visualization"
+subtitle: "Lecture 5: Data Viz I"
+author: "Robert W. Walker"
+format: 
+   revealjs:
+     multiplex: true
+     preview-links: true
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301 [27 Jan 26]"
+     chalkboard: true
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: convex
+     code-fold: true
+     code-tools: true
+---
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+```{r setup, include=FALSE}
+library(fontawesome)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, tidy=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', eval=TRUE)
+library(tidyverse)
+library(DT)
+theme_set(hrbrthemes::theme_ipsum_rc())
+options(
+  digits = 3,
+  width = 75,
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis",
+  ggplot2.discrete.colour = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442"),
+  ggplot2.discrete.fill = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442")
+)
+load(url("https://github.com/robertwwalker/DADMStuff/raw/master/R-Workspace-Lecture-1.RData"))
+FastFood <- read.csv("./FastFood.csv", na.strings = "NA")
+FFood <- FastFood
+```
+
+## Outline
+
+- Readings: Chapters 1 and 2
+
+## Some Data
+
+[Google Sheets](https://docs.google.com/spreadsheets/d/1FlKFaxlJeZ12OF8LbzUIMUA3V1wGFfWDXwqxBU5LAH0/edit?usp=sharing) 
+
+## A Data Taxonomy
+
++ Generally column-centric.  
++ Variables in columns.  
++ Units in rows.  
+
+# Some Key Book Things
+
+## Chapter 1
+
+-   Rows for cases or units, columns for variables. I will call this tidy. A rectangular matrix.
+-   Types of variables: \[1.2.2\] **it's about arithmetic**
+    -   continuous numerics \[ratio-scale and interval-level\]
+    -   discrete numerics
+    -   ordered categoricals
+    -   nominal categoricals
+-   Relationships: Positive and negative in two variables.
+-   Observational studies vs. experiments and the credibility revolution
+-   Populations and Samples
+-   simple random, stratified, cluster, and multistage sampling
+-   experiments
+
+## Chapter 2
+
+-   Means and standard deviations \[TBC\]
+-   Boxplots and percentile statistics \[TBC\]
+-   Histograms, densities, and shape
+-   Outliers, robust statistics, and shape
+-   Transformations
+
+# Summarizing Data
+
+## Center
+
+## The Mean \[Arithmetic\]
+
+The arithmetic mean of a variable, call it x, adds up all values of x and divides by the total number:
+
+$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+
+```{r}
+mean(FastFood$calories)
+```
+
+## Deviations about the mean sum to zero
+
+By definition, the sum of the deviations about the average must be zero.
+
+```{r}
+sum(FastFood$calories - mean(FastFood$calories))
+```
+
+## On Summaries
+
+The average is sensitive to outlying values. Think income in Seattle and the samples that include Jeff Bezos, Paul Allen, MacKenzie Scott, and Bill Gates. That is why we examine the median -- the value such that half are above and half are below; magnitude doesn't matter.
+
+## The median \[and percentiles\]
+
+The median is a percentile; it is the 50th percentile. We are often also interested in the middle 50 percent: the 25th and 75th percentiles or the first and third quartiles. In R, generically, these are quantiles.
+
+```{r}
+quantile(FastFood$protein, probs = c(0,0.25,0.5,0.75,1), na.rm=TRUE)
+```
+
+As a technical matter, the median is only unique with an odd number of observations; we approximate it with the midpoint of the middle two.
+
+## The Mode
+
+The most frequent or most common value. If it is unique, it is meaningful but it is often not even a small set of values. R doesn't calculate it. But it is visible in a density or histogram.
+
+## Variation or Spread
+
+With means, we describe the standard deviation. Note, it is singular; it implies the two sides of the center are the same -- symmetry. Because the deviations sum to zero, to measure variation, we can't use untransformed deviation from an average. We work with squares \[variance, in the squared metric\] or the square root of squares \[to maintain the original metric\].
+
+$$s=\sqrt{\frac{1}{N-1}\sum_{i=1}^{N}(x_{i}-\overline{x})^2}$$
+
+```{r}
+sd(FastFood$calories)
+```
+
+We could also work with absolute deviations. The mathematical properties are messier.
+
+## Variation in Percentiles
+
+We typically measure a range \[min to max\] or the interquartile range (IQR) -- the span of the middle 50%.
+
+```{r}
+quantile(FastFood$calories, probs = c(0,0.25,0.5,0.75,1))
+IQR(FastFood$calories)
+```
+
+Here it spans 360 calories. The total range is 2410 calories.
+
+## `transforming`
+
+Is a key element of radiant used for transforming data. Some of the most common:
+
+-   z-scoring $z = \frac{x - \overline{x}}{s_{x}}$ which makes any variable mean 0 and standard deviation 1. In effect, z-scored variables have standard deviation as metric.
+-   binning variables
+-   non-linear functions
+-   recoding
+
+
+## Some Essential Excel/Sheets
+
+- Formulae  
+- Absolute and relative references  
+- Pivot tables   
+
+It has some nice features.  
+
+It fails the simple test of manipulability of the underlying data.
+
+## Formulae
+
+Pre-programmed functions that take input ranges of cells and produce particular outputs.
+
+A [link to some data](https://github.com/robertwwalker/DADMStuff/raw/master/BondFunds.csv).
+
+e.g. set cell `J5` to be:
+
+```
+=AVERAGE(C2:C21)
+```
+
+This averages the range between C2 and C21 [Assets].
+
+## A Visual
+
+![Image](./images/Screenshot 2024-08-27 at 3.37.10 PM.png)
+
+
+## Adjusting Formulae
+
+When we copy this left or right, up or down, the numbers and/or letters adjust.  
+
+Copy that formula and paste it into K5.  Then L5.
+
+## A Visual
+
+![Image](./images/Screenshot 2024-08-27 at 3.44.49 PM.png)
+
+## A Bit More Complex
+
+**Let's try to make column M into `=C2 - J5` , then C3-J5, etc. all the way down to C21.**  
+
+The 5 won't stop changing.
+
+## Cell Referencing
+
+We may not want that.  Suppose that I want to create a column showing the difference of assets and average assets.  In essence, we have *rescaled* assets such that 0 is the average and we are measuring above or below that average [and by how much].  The `$` holds an index constant [F4].  We have two.  In our case, we can hold both the rows and the column constant for the average.
+
+
+Because we are only copying down, the `$5` would have sufficed.
+
+```
+=C2 - $J$5
+=C2 - J$5
+```
+
+Then copy the formula down to L21.  Notice the C changes [no $] but the J doesn't. **The $ enables absolute cell referencing.** 
+
+As expected.  Average assets over the first 20 is 1894.7; the first is 5373.4 above the average for this set.
+
+## A Visual
+
+![Image](./images/Screenshot 2024-08-27 at 3.41.21 PM.png)
+
+
+## Formulae and Recursion
+
+This can become quite involved; spreadsheets are programming tools.  **Their underlying problem is that they do not enforce rules or discipline along the way.**
+
+The key to our formulae are one or more inputs, a series of transformation and operations, and one or more outputs defined in a precise fashion.   Functions link inputs and outputs. 
+
+**They are models.**
+
+
+# Pivot Tables
+
+
+## Pivot Tables
+
+Are really cool; they are a very simple and quick way to slice and data and to gain useful comparative and/or summary insight.
+
+They have the added virtue of being drag and drop.
+
+## Example
+
+![](./images/Screenshot 2024-08-27 at 3.48.39 PM.png)
+
+All of the action comes in the calculations shown in the pivot table.  Unfortunately, it is extraordinarily limited.  
+
++ What if I want the median?  
++ How about the first and third quartiles?
+
+# Cautionary Tale
+
+[Excel has probably killed people...  recently](https://www.bbc.com/news/technology-54423988)
+
+
+
+## A Class Assignment to Conclude
+
+[A Visualization: A carryover](https://docs.google.com/spreadsheets/d/1Tqn-bqezFnsBD4QhmKBZ14oYO14tzh4dL_LHZhiRy0A/edit?usp=sharing)

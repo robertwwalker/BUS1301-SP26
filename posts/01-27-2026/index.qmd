@@ -1,0 +1,112 @@
+---
+title: "Data Visualization"
+author: "Robert W. Walker"
+date: "2026-01-27"
+image: "image.png"
+---
+
+Today, we introduce data visualization.
+
+Our reading for today includes a section of Open Intro Stats and a primer on data types.
+
+In the text book, we will pay extra attention to sections 1, 3, and 5.2.
+
+## Five bits of data
+
+- [datasaurus](./data/datasaurus.csv).   
+- [BondFunds](./data/BondFunds.csv).   
+- [UCB-Admissions](./data/UCB-Admit.csv).   
+- [CADDS](./data/CADDS.csv).   
+- [Fast Food](./data/FastFood.csv).   
+
+
+## Bond Funds
+
+- Fund Number: An ID.   
+- Type: Intermediate Government or Short-term Corporate.   
+- Assets: Assets held by the fund in reported dollars.   
+- Fees: Are management fees assessed?  [Yes/No].   
+- Expense Ratio: Ratio of operating expenses to fund assets.    
+- Returns [for the year 2009, trailing 3 year and 5 year (from 2009)].   
+- The Morningstar risk classification [Below average, average, and above average].  
+
+```{r}
+library(jsonlite)
+BondFunds <- read.csv("./data/BondFunds.csv")
+```
+
+## The JSON
+
+### Rows
+
+```{r}
+toJSON(BondFunds, dataframe = "rows")
+```
+
+### Columns
+
+```{r}
+toJSON(BondFunds, dataframe = "columns")
+```
+
+### Values
+
+```{r}
+toJSON(BondFunds, dataframe = "values")
+```
+
+# [The flipbook](https://robertwwalker.github.io/dadm-slides/flipbookSLE/)
+
+# [The pages](https://robertwwalker.github.io/DADM-FAQ/)
+
+# Slides
+
+[Link is here](https://robertwwalker.github.com/BUS1301-SP26/slides/01-27-2026/)
+
+## CADDS
+
+The data set presented is designed to represent a sample of 1,000 DDS consumers (which provides a 95% confidence interval with a margin of error of plus-or-minus   3.5% for this 250,000 consumer population). The data set includes six variables (i.e., fields) which are: ID, age cohort/age (binned/unbinned), gender, expenditures, and ethnicity. NB: The data set originated from DDS’s Client Master File. In order to remain in compliance with California State Legislation, the data have been altered to protect the rights and privacy of specific individual consumers. The provided data set is based on actual attributes of consumers. 
+
+**ID** is the unique identification code for each consumer. It is similar to a social security number and used for identification purposes. 
+
+**Age cohort/age** is a key variable in the case exercise. While age is a legal basis for discrimination in many situations, age is not an attribute that would be considered in a discrimination claim for this particular population. The purpose of providing funds to those with developmental disabilities is to help them live like those without disabilities. As consumers get older, their financial needs increase as they move out of their parent’s home, etc. Therefore, it is expected that expenditures for older consumers will be higher than for the younger consumers. 
+
+We have included both binned (**Age cohort**) and unbinned (**Age**) variables to represent a consumer’s age. The binned age variable is represented in the data set as six age cohorts. Each consumer is assigned to an age cohort based on their years since birth. The six cohorts include: 0-5 years old, 6-12, 13-17, 18-21, 22-50, and 51+. The cohorts are established based on the amount of financial support typically required during a particular life phase. 
+
+The 0-5 cohort (preschool age) has the fewest needs and requires the least amount of funding. For the 6-12 cohort (elementary school age) and 13-17 (high school age), a number of needed services are provided by schools. The 18-21 cohort is typically in a transition phase as the consumers begin moving out from their parents’ homes into community centers or living on their own. The majority of those in the 22-50 cohort no longer live with their parents but may still receive some support from their family. Those in the 51+ cohort have the most needs and require the most amount of funding because they are living on their own or in community centers and often have no living parents. 
+
+**Gender** is included in the data set as another variable to consider because it is an attribute on which many discrimination cases are based. 
+
+**Expenditures** variable represents the annual expenditures the State spends on each consumer in supporting these individuals and their families. It is important that students realize this is the amount each consumer receives from the State. Expenditures include services such as: respite for their families, psychological services, medical expenses, transportation, and costs related to housing such as rent (especially for adult consumers living outside their parent’s home). 
+
+**Ethnicity** is the key demographic variable in the data set as it pertains to the case. Eight ethnic groups are represented in the data set. These groups reflect the demographic profile of the State of California.  Our key area of interest will become Hispanic and White, non-Hispanic comparisons.
+
+
+## UCB Admissions
+
+**Is there evidence of sex bias in admission practices?**  Data on admissions to the University of California at Berkeley graduate programs in six departments are presented for the population of applicants.  **Admit** measures whether or not the applicant was admitted; **M.F** measures the gender of the applicant; **Dept** measures the department in a classification ranging from A to F.  
+
+
+## The class plan:
+
+1. A spreadsheet is a visualization.   
+2. In some ways, so is JSON.  
+3. Data types: quantitative vs. qualitative.  
+4. Data types: measurement of quantitative variables.  
+5. Units of analysis
+6. In class classification
+
+
+Your assignment for this time:
+
+1. Do the reading.
+2. Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar.  If you did not run across at least three unfamiliar references, you need a more advanced course.
+
+## In-Class Assignment
+
+An example dataset linked in the assignment.
+
+## For Next Class:
+
+1. Reading: Chapter 1: Open Introduction to Statistics: *(On Canvas > Files > OpenIntroStatistics)*, primer on Data Storage, Data Organization in Spreadsheets.  
+2. Deliverable: An In-class exercise [Assignment 5] if not completed before departing
