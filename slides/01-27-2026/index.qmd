@@ -88,17 +88,44 @@ The arithmetic mean of a variable, call it x, adds up all values of x and divide
 
 $$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
 
-```{r}
+- `AVERAGE` (only count numbers) vs `AVERAGEA` (count cells).  
+
+
+::: {layout-ncol=2}
+
+
+## Benchmark
+
+```{r, echo=FALSE}
 mean(FastFood$calories)
+mean(FastFood$protein, na.rm=TRUE)
 ```
+
+
+## Google Sheets
+
+![Calories](./images/Screenshot 2026-01-27 at 5.27.18 PM.png)
+
+:::
 
 ## Deviations about the mean sum to zero
 
 By definition, the sum of the deviations about the average must be zero.
 
+::: {layout-ncol=2}
+
+## Deviations and Sum
+
 ```{r}
+head(FastFood$calories - mean(FastFood$calories))
 sum(FastFood$calories - mean(FastFood$calories))
 ```
+
+## Deviations and Sum GS
+
+![Pic](./images/Screenshot 2026-01-27 at 5.36.48 PM.png)
+
+:::
 
 ## On Summaries
 
@@ -239,7 +266,7 @@ They have the added virtue of being drag and drop.
 
 ![](./images/Screenshot 2024-08-27 at 3.48.39 PM.png)
 
-All of the action comes in the calculations shown in the pivot table.  Unfortunately, it is extraordinarily limited.  
+All of the action comes in the calculations shown in the pivot table.  Unfortunately, it is extraordinarily limited. Sheets is a bit better. 
 
 + What if I want the median?  
 + How about the first and third quartiles?

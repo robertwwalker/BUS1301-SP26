@@ -1707,7 +1707,7 @@
     "href": "slides/01-27-2026/index.html#example",
     "title": "Data Visualization",
     "section": "Example",
-    "text": "Example\n\nAll of the action comes in the calculations shown in the pivot table. Unfortunately, it is extraordinarily limited.\n\nWhat if I want the median?\n\nHow about the first and third quartiles?",
+    "text": "Example\n\nAll of the action comes in the calculations shown in the pivot table. Unfortunately, it is extraordinarily limited. Sheets is a bit better.\n\nWhat if I want the median?\n\nHow about the first and third quartiles?",
     "crumbs": [
       "About",
       "Slides",
@@ -1876,7 +1876,7 @@
     "href": "slides/01-27-2026/index.html#the-mean-arithmetic",
     "title": "Data Visualization",
     "section": "The Mean [Arithmetic]",
-    "text": "The Mean [Arithmetic]\nThe arithmetic mean of a variable, call it x, adds up all values of x and divides by the total number:\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\n\nCode\nmean(FastFood$calories)\n\n\n[1] 531",
+    "text": "The Mean [Arithmetic]\nThe arithmetic mean of a variable, call it x, adds up all values of x and divides by the total number:\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\nAVERAGE (only count numbers) vs AVERAGEA (count cells).\n\n\n\n\nBenchmark\n\n[1] 531\n\n\n[1] 27.9\n\n\n\nGoogle Sheets\n\n\n\nCalories",
     "crumbs": [
       "About",
       "Slides",
@@ -1889,7 +1889,7 @@
     "href": "slides/01-27-2026/index.html#deviations-about-the-mean-sum-to-zero",
     "title": "Data Visualization",
     "section": "Deviations about the mean sum to zero",
-    "text": "Deviations about the mean sum to zero\nBy definition, the sum of the deviations about the average must be zero.\n\n\nCode\nsum(FastFood$calories - mean(FastFood$calories))\n\n\n[1] 3.41e-12",
+    "text": "Deviations about the mean sum to zero\nBy definition, the sum of the deviations about the average must be zero.\n\nCode\nhead(FastFood$calories - mean(FastFood$calories))\nsum(FastFood$calories - mean(FastFood$calories))\n\n\n\n\nDeviations and Sum\n\n[1] -150.91  309.09  599.09  219.09  389.09    9.09\n\n\n[1] 3.41e-12\n\n\n\nDeviations and Sum GS\n\n\n\nPic",
     "crumbs": [
       "About",
       "Slides",
