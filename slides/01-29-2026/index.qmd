@@ -534,7 +534,29 @@ fig.update_traces(marker=dict(size=12, opacity=0.8, line=dict(width=1, color='Da
 fig.show()
 ```
 
+## ECDFs and Probability: A Link
+
+```{python, echo=FALSE}
+# Create the figure with two subplots side by side
+fig, axes = plt.subplots(1, 2, figsize=(12, 6))
+
+# 1. ECDF of Assets Overall
+sns.ecdfplot(data=df, x='Assets', ax=axes[0])
+axes[0].set_title('ECDF of Assets (Overall)')
+axes[0].set_xlabel('Assets (in millions)')
+axes[0].set_ylabel('Proportion')
+axes[0].grid(True, linestyle='--', alpha=0.5)
+
+# 2. ECDF of Assets by Type
+sns.ecdfplot(data=df, x='Assets', hue='Type', ax=axes[1])
+axes[1].set_title('ECDF of Assets by Fund Type')
+axes[1].set_xlabel('Assets (in millions)')
+axes[1].set_ylabel('Proportion')
+axes[1].grid(True, linestyle='--', alpha=0.5)
+
+# Adjust layout
+plt.tight_layout()
+```
+
 
 ## A Class Assignment to Conclude
-
-[A Visualization: A carryover](https://docs.google.com/spreadsheets/d/1Tqn-bqezFnsBD4QhmKBZ14oYO14tzh4dL_LHZhiRy0A/edit?usp=sharing)

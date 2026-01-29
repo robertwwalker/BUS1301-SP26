@@ -56,7 +56,7 @@
     "href": "slides/01-29-2026/index.html#summarizing-data",
     "title": "Data Visualization",
     "section": "Summarizing Data",
-    "text": "Summarizing Data",
+    "text": "Summarizing Data\n\n\n\nSummary Statistics\n\n\n\nPrompt\n\n\n\n\nOutput\n\n\n\nOutput",
     "crumbs": [
       "About",
       "Slides",
@@ -69,7 +69,7 @@
     "href": "slides/01-29-2026/index.html#start-with-a-categorical-variable",
     "title": "Data Visualization",
     "section": "Start with a categorical variable",
-    "text": "Start with a categorical variable\nWhat can we do? Generically, nothing more than frequency. A table or a figure.",
+    "text": "Start with a categorical variable\nWhat can we do? Generically, nothing more than frequency. A table or a figure.\n\n\n\nTable\n\n\n\nTables\n\n\n\n\nBar plot\n\n\n\nBar plot",
     "crumbs": [
       "About",
       "Slides",
@@ -147,7 +147,7 @@
     "href": "slides/01-29-2026/index.html#a-class-assignment-to-conclude",
     "title": "Data Visualization",
     "section": "A Class Assignment to Conclude",
-    "text": "A Class Assignment to Conclude\nA Visualization: A carryover",
+    "text": "A Class Assignment to Conclude",
     "crumbs": [
       "About",
       "Slides",
@@ -1004,7 +1004,7 @@
     "href": "slides/01-29-2026/index.html#the-boxenplot",
     "title": "Data Visualization",
     "section": "The boxenplot",
-    "text": "The boxenplot\n\n\nHow’s that done?\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\n# Create the boxenplot for 'Return 2009' by 'Type'\nplt.figure(figsize=(8, 5))\nsns.boxenplot(x='Type', y='Return 2009', data=df, palette='muted')\n\n# Styling\nplt.title('Boxenplot of 2009 Returns by Fund Type')\nplt.xlabel('Fund Type')\nplt.ylabel('Return 2009 (%)')\nplt.grid(axis='y', linestyle='--', alpha=0.3)\n\nplt.tight_layout()",
+    "text": "The boxenplot\n\n\nCode\nimport pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n\n# Create the boxenplot for 'Return 2009' by 'Type'\nplt.figure(figsize=(8, 5))\nsns.boxenplot(x='Type', y='Return 2009', data=df, palette='muted')\n\n# Styling\nplt.title('Boxenplot of 2009 Returns by Fund Type')\nplt.xlabel('Fund Type')\nplt.ylabel('Return 2009 (%)')\nplt.grid(axis='y', linestyle='--', alpha=0.3)\n\nplt.tight_layout()",
     "crumbs": [
       "About",
       "Slides",
@@ -1017,7 +1017,7 @@
     "href": "slides/01-29-2026/index.html#violins",
     "title": "Data Visualization",
     "section": "Violins",
-    "text": "Violins\n\n\n\n\n\n\nNote\n\n\n\nPrompt: Can you show a violin plot of returns in 2009 by risk and type?\n\n\n\n\nHow’s that done?\n# Set categorical order for Risk\nrisk_order = ['Below average', 'Average', 'Above average']\ndf['Risk'] = pd.Categorical(df['Risk'], categories=risk_order, ordered=True)\n\n# Create the violin plot\nplt.figure(figsize=(8, 5))\nsns.violinplot(x='Risk', y='Return 2009', hue='Type', data=df, split=True, palette='muted', inner='quartile')\n\n# Styling\nplt.title('Violin Plot of 2009 Returns by Risk and Fund Type', fontsize=14)\nplt.xlabel('Risk Level', fontsize=12)\nplt.ylabel('Return 2009 (%)', fontsize=12)\nplt.legend(title='Fund Type')\nplt.grid(axis='y', linestyle='--', alpha=0.3)\n\nplt.tight_layout()",
+    "text": "Violins\n\n\n\n\n\n\nNote\n\n\nPrompt: Can you show a violin plot of returns in 2009 by risk and type?\n\n\n\n\n\nCode\n# Set categorical order for Risk\nrisk_order = ['Below average', 'Average', 'Above average']\ndf['Risk'] = pd.Categorical(df['Risk'], categories=risk_order, ordered=True)\n\n# Create the violin plot\nplt.figure(figsize=(8, 5))\nsns.violinplot(x='Risk', y='Return 2009', hue='Type', data=df, split=True, palette='muted', inner='quartile')\n\n# Styling\nplt.title('Violin Plot of 2009 Returns by Risk and Fund Type', fontsize=14)\nplt.xlabel('Risk Level', fontsize=12)\nplt.ylabel('Return 2009 (%)', fontsize=12)\nplt.legend(title='Fund Type')\nplt.grid(axis='y', linestyle='--', alpha=0.3)\n\nplt.tight_layout()",
     "crumbs": [
       "About",
       "Slides",
@@ -1030,7 +1030,7 @@
     "href": "slides/01-29-2026/index.html#adjustment",
     "title": "Data Visualization",
     "section": "Adjustment",
-    "text": "Adjustment\n\n\n\n\n\n\nNote\n\n\n\nPrompt: That is quite nice. I would prefer that they be oriented horizontally with each rising above the horizontal axis\n\n\n\n\n\nHorizontals",
+    "text": "Adjustment\n\n\n\n\n\n\nNote\n\n\nPrompt: That is quite nice. I would prefer that they be oriented horizontally with each rising above the horizontal axis\n\n\n\n\n\n\nHorizontals",
     "crumbs": [
       "About",
       "Slides",
@@ -1069,7 +1069,7 @@
     "href": "slides/01-29-2026/index.html#section-1",
     "title": "Data Visualization",
     "section": "",
-    "text": "Important\n\n\n\nPrompt: create a scatterplot of returns by assets",
+    "text": "Important\n\n\nPrompt: create a scatterplot of returns by assets",
     "crumbs": [
       "About",
       "Slides",
@@ -1095,7 +1095,7 @@
     "href": "slides/01-29-2026/index.html#section-3",
     "title": "Data Visualization",
     "section": "",
-    "text": "Important\n\n\n\nPrompt: use a checkmark for yes and an X for no as the symbols",
+    "text": "Important\n\n\nPrompt: use a checkmark for yes and an X for no as the symbols",
     "crumbs": [
       "About",
       "Slides",
@@ -1265,5 +1265,18 @@
     "title": "Data Visualization",
     "section": "Fast Food",
     "text": "Fast Food\nThis data has missing values.\n\n\nHow’s that done?\nimport pandas as pd\n\n# 1. Import the CSV file\nurl = \"./data/FastFood.csv\"\ndf = pd.read_csv(url)\n\n# 2. Count of Missing Values (for all columns)\nprint(\"--- Count of Missing Values ---\")\n\n\n--- Count of Missing Values ---\n\n\nHow’s that done?\nprint(df.isnull().sum())\n\n\nrestaurant       0\nitem             0\ncalories         0\ncal_fat          0\ntotal_fat        0\nsat_fat          0\ntrans_fat        0\ncholesterol      0\nsodium           0\ntotal_carb       0\nfiber           12\nsugar            0\nprotein          1\nvit_a          214\nvit_c          210\ncalcium        210\nsalad            0\ndtype: int64\n\n\nHow’s that done?\nprint(\"\\n\")\n\n\nHow’s that done?\n# Filter for numeric columns only for the statistical calculations\nnumeric_df = df.select_dtypes(include='number')\n\n# 3. Mean\nprint(\"--- Mean ---\")\n\n\n--- Mean ---\n\n\nHow’s that done?\nprint(numeric_df.mean())\n\n\ncalories        530.912621\ncal_fat         238.813592\ntotal_fat        26.590291\nsat_fat           8.153398\ntrans_fat         0.465049\ncholesterol      72.456311\nsodium         1246.737864\ntotal_carb       45.664078\nfiber             4.137177\nsugar             7.262136\nprotein          27.891051\nvit_a            18.857143\nvit_c            20.170492\ncalcium          24.852459\ndtype: float64\n\n\nHow’s that done?\nprint(\"\\n\")\n\n\nHow’s that done?\n# 4. Standard Deviation\nprint(\"--- Standard Deviation ---\")\n\n\n--- Standard Deviation ---\n\n\nHow’s that done?\nprint(numeric_df.std())\n\n\ncalories       282.436147\ncal_fat        166.407510\ntotal_fat       18.411876\nsat_fat          6.418811\ntrans_fat        0.839644\ncholesterol     63.160406\nsodium         689.954278\ntotal_carb      24.883342\nfiber            3.037460\nsugar            6.761301\nprotein         17.683921\nvit_a           31.384330\nvit_c           30.592243\ncalcium         25.522073\ndtype: float64\n\n\nHow’s that done?\nprint(\"\\n\")\n\n\nHow’s that done?\n# 5. Five Number Summary (Min, Q1, Median, Q3, Max)\n# The describe() function includes count, mean, std, and the 5-number summary.\n# We will select specific rows to isolate the 5-number summary.\nprint(\"--- Five Number Summary ---\")\n\n\n--- Five Number Summary ---\n\n\nHow’s that done?\nprint(numeric_df.describe().loc[['min', '25%', '50%', '75%', 'max']])\n\n\n     calories  cal_fat  total_fat  sat_fat  ...  protein  vit_a  vit_c  calcium\nmin      20.0      0.0        0.0      0.0  ...      1.0    0.0    0.0      0.0\n25%     330.0    120.0       14.0      4.0  ...     16.0    4.0    4.0      8.0\n50%     490.0    210.0       23.0      7.0  ...     24.5   10.0   10.0     20.0\n75%     690.0    310.0       35.0     11.0  ...     36.0   20.0   30.0     30.0\nmax    2430.0   1270.0      141.0     47.0  ...    186.0  180.0  400.0    290.0\n\n[5 rows x 14 columns]"
+  },
+  {
+    "objectID": "slides/01-29-2026/index.html#ecdfs-and-probability-a-link",
+    "href": "slides/01-29-2026/index.html#ecdfs-and-probability-a-link",
+    "title": "Data Visualization",
+    "section": "ECDFs and Probability: A Link",
+    "text": "ECDFs and Probability: A Link",
+    "crumbs": [
+      "About",
+      "Slides",
+      "Slides",
+      "Data Visualization"
+    ]
   }
 ]
