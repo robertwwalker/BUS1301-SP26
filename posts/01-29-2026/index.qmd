@@ -111,26 +111,92 @@ The 0-5 cohort (preschool age) has the fewest needs and requires the least amoun
 
 ## UCB Admissions
 
-**Is there evidence of sex bias in admission practices?**  Data on admissions to the University of California at Berkeley graduate programs in six departments are presented for the population of applicants.  **Admit** measures whether or not the applicant was admitted; **M.F** measures the gender of the applicant; **Dept** measures the department in a classification ranging from A to F.  
+**Is there evidence of sex bias in admission practices?**  Data on admissions to the University of California at Berkeley graduate programs in six departments are presented for the population of applicants.  **Admit** measures whether or not the applicant was admitted; **M.F** measures the [self-reported, two options] gender of the applicant; **Dept** measures the department in a classification ranging from A to F.  
 
+```{python}
+import pandas as pd
+
+df = pd.read_csv('./data/UCB-Admit.csv')
+print(df.head())
+print(df.info())
+```
+
+```{python}
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Aggregate data
+# We want to count occurrences of each (M.F, Admit) pair
+counts = df.groupby(['M.F', 'Admit']).size().unstack(fill_value=0)
+
+# Inspect the aggregated data
+print(counts)
+
+# Plotting
+# X-axis: M.F (Index of counts)
+# Stacks: Admit (Columns of counts)
+# Using pandas plot kind='bar', stacked=True is easiest
+
+ax = counts.plot(kind='bar', stacked=True, figsize=(10, 6), color=['#d65f5f', '#5fba7d'])
+plt.title('Admission Status by Gender')
+plt.xlabel('Gender')
+plt.ylabel('Count')
+plt.xticks(rotation=0)
+plt.legend(title='Admit')
+plt.tight_layout()
+```
+
+## Fast Food
+
+This data has missing values.
+
+```{python}
+import pandas as pd
+
+# 1. Import the CSV file
+url = "./data/FastFood.csv"
+df = pd.read_csv(url)
+
+# 2. Count of Missing Values (for all columns)
+print("--- Count of Missing Values ---")
+print(df.isnull().sum())
+print("\n")
+
+# Filter for numeric columns only for the statistical calculations
+numeric_df = df.select_dtypes(include='number')
+
+# 3. Mean
+print("--- Mean ---")
+print(numeric_df.mean())
+print("\n")
+
+# 4. Standard Deviation
+print("--- Standard Deviation ---")
+print(numeric_df.std())
+print("\n")
+
+# 5. Five Number Summary (Min, Q1, Median, Q3, Max)
+# The describe() function includes count, mean, std, and the 5-number summary.
+# We will select specific rows to isolate the 5-number summary.
+print("--- Five Number Summary ---")
+print(numeric_df.describe().loc[['min', '25%', '50%', '75%', 'max']])
+```
 
 ## The class plan:
 
-1. A spreadsheet is a visualization.   
-2. In some ways, so is JSON.  
-3. Two types of summary  
-4. Two dimensions: center and spread.  
-5. Pivots and formulae
-6. Visualizations and types
+1. Pivots and formulae.   
+2. Visualizations and types.  
+3. Gemini visualizing data.  We will use FastFood.  Two notes: uploads and missing data
 
 
 Your assignment for this time:
 
 1. Do the reading.
-2. **From last time**. Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. Post them and describe them.  What type of data do they represent and how?  What is the name of the type of visualization?
+2. **From last time**. Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. Post them and describe them.  What type of data do they represent and how?  What is the name of the type of visualization?   
+3. For this time, provide three uploaded visualizations.  One should use FastFood.  The others may use whatever data you wish.
 
 
 ## For Next Class:
 
-1. Reading: Chapters 1 and 2 and Wickham on Data Visualization
-2. Deliverable: An In-class exercise [Assignment 5] if not completed before departing
+1. Reading: Probability
+2. Deliverable: An In-class exercise [Assignment 6] if not completed before departing

@@ -280,21 +280,21 @@
     "href": "posts/01-29-2026/index.html#ucb-admissions",
     "title": "Data Visualization",
     "section": "UCB Admissions",
-    "text": "UCB Admissions\nIs there evidence of sex bias in admission practices? Data on admissions to the University of California at Berkeley graduate programs in six departments are presented for the population of applicants. Admit measures whether or not the applicant was admitted; M.F measures the gender of the applicant; Dept measures the department in a classification ranging from A to F."
+    "text": "UCB Admissions\nIs there evidence of sex bias in admission practices? Data on admissions to the University of California at Berkeley graduate programs in six departments are presented for the population of applicants. Admit measures whether or not the applicant was admitted; M.F measures the [self-reported, two options] gender of the applicant; Dept measures the department in a classification ranging from A to F.\n\n\nHow’s that done?\nimport pandas as pd\n\ndf = pd.read_csv('./data/UCB-Admit.csv')\nprint(df.head())\n\n\n    M.F Admit Dept\n0  Male   Yes    A\n1  Male   Yes    A\n2  Male   Yes    A\n3  Male   Yes    A\n4  Male   Yes    A\n\n\nHow’s that done?\nprint(df.info())\n\n\n&lt;class 'pandas.DataFrame'&gt;\nRangeIndex: 4526 entries, 0 to 4525\nData columns (total 3 columns):\n #   Column  Non-Null Count  Dtype\n---  ------  --------------  -----\n 0   M.F     4526 non-null   str  \n 1   Admit   4526 non-null   str  \n 2   Dept    4526 non-null   str  \ndtypes: str(3)\nmemory usage: 106.2 KB\nNone\n\n\n\n\nHow’s that done?\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Aggregate data\n# We want to count occurrences of each (M.F, Admit) pair\ncounts = df.groupby(['M.F', 'Admit']).size().unstack(fill_value=0)\n\n# Inspect the aggregated data\nprint(counts)\n\n\nAdmit     No   Yes\nM.F               \nFemale  1278   557\nMale    1493  1198\n\n\nHow’s that done?\n# Plotting\n# X-axis: M.F (Index of counts)\n# Stacks: Admit (Columns of counts)\n# Using pandas plot kind='bar', stacked=True is easiest\n\nax = counts.plot(kind='bar', stacked=True, figsize=(10, 6), color=['#d65f5f', '#5fba7d'])\nplt.title('Admission Status by Gender')\nplt.xlabel('Gender')\nplt.ylabel('Count')\nplt.xticks(rotation=0)\n\n\n(array([0, 1]), [Text(0, 0, 'Female'), Text(1, 0, 'Male')])\n\n\nHow’s that done?\nplt.legend(title='Admit')\nplt.tight_layout()"
   },
   {
     "objectID": "posts/01-29-2026/index.html#the-class-plan",
     "href": "posts/01-29-2026/index.html#the-class-plan",
     "title": "Data Visualization",
     "section": "The class plan:",
-    "text": "The class plan:\n\nA spreadsheet is a visualization.\n\nIn some ways, so is JSON.\n\nTwo types of summary\n\nTwo dimensions: center and spread.\n\nPivots and formulae\nVisualizations and types\n\nYour assignment for this time:\n\nDo the reading.\nFrom last time. Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. Post them and describe them. What type of data do they represent and how? What is the name of the type of visualization?"
+    "text": "The class plan:\n\nPivots and formulae.\n\nVisualizations and types.\n\nGemini visualizing data. We will use FastFood. Two notes: uploads and missing data\n\nYour assignment for this time:\n\nDo the reading.\nFrom last time. Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. Post them and describe them. What type of data do they represent and how? What is the name of the type of visualization?\n\nFor this time, provide three uploaded visualizations. One should use FastFood. The others may use whatever data you wish."
   },
   {
     "objectID": "posts/01-29-2026/index.html#for-next-class",
     "href": "posts/01-29-2026/index.html#for-next-class",
     "title": "Data Visualization",
     "section": "For Next Class:",
-    "text": "For Next Class:\n\nReading: Chapters 1 and 2 and Wickham on Data Visualization\nDeliverable: An In-class exercise [Assignment 5] if not completed before departing"
+    "text": "For Next Class:\n\nReading: Probability\nDeliverable: An In-class exercise [Assignment 6] if not completed before departing"
   },
   {
     "objectID": "writeups/Lesson-Learned/index.html",
@@ -1258,5 +1258,12 @@
       "Writeups",
       "Gemini on Models"
     ]
+  },
+  {
+    "objectID": "posts/01-29-2026/index.html#fast-food",
+    "href": "posts/01-29-2026/index.html#fast-food",
+    "title": "Data Visualization",
+    "section": "Fast Food",
+    "text": "Fast Food\nThis data has missing values.\n\n\nHow’s that done?\nimport pandas as pd\n\n# 1. Import the CSV file\nurl = \"./data/FastFood.csv\"\ndf = pd.read_csv(url)\n\n# 2. Count of Missing Values (for all columns)\nprint(\"--- Count of Missing Values ---\")\n\n\n--- Count of Missing Values ---\n\n\nHow’s that done?\nprint(df.isnull().sum())\n\n\nrestaurant       0\nitem             0\ncalories         0\ncal_fat          0\ntotal_fat        0\nsat_fat          0\ntrans_fat        0\ncholesterol      0\nsodium           0\ntotal_carb       0\nfiber           12\nsugar            0\nprotein          1\nvit_a          214\nvit_c          210\ncalcium        210\nsalad            0\ndtype: int64\n\n\nHow’s that done?\nprint(\"\\n\")\n\n\nHow’s that done?\n# Filter for numeric columns only for the statistical calculations\nnumeric_df = df.select_dtypes(include='number')\n\n# 3. Mean\nprint(\"--- Mean ---\")\n\n\n--- Mean ---\n\n\nHow’s that done?\nprint(numeric_df.mean())\n\n\ncalories        530.912621\ncal_fat         238.813592\ntotal_fat        26.590291\nsat_fat           8.153398\ntrans_fat         0.465049\ncholesterol      72.456311\nsodium         1246.737864\ntotal_carb       45.664078\nfiber             4.137177\nsugar             7.262136\nprotein          27.891051\nvit_a            18.857143\nvit_c            20.170492\ncalcium          24.852459\ndtype: float64\n\n\nHow’s that done?\nprint(\"\\n\")\n\n\nHow’s that done?\n# 4. Standard Deviation\nprint(\"--- Standard Deviation ---\")\n\n\n--- Standard Deviation ---\n\n\nHow’s that done?\nprint(numeric_df.std())\n\n\ncalories       282.436147\ncal_fat        166.407510\ntotal_fat       18.411876\nsat_fat          6.418811\ntrans_fat        0.839644\ncholesterol     63.160406\nsodium         689.954278\ntotal_carb      24.883342\nfiber            3.037460\nsugar            6.761301\nprotein         17.683921\nvit_a           31.384330\nvit_c           30.592243\ncalcium         25.522073\ndtype: float64\n\n\nHow’s that done?\nprint(\"\\n\")\n\n\nHow’s that done?\n# 5. Five Number Summary (Min, Q1, Median, Q3, Max)\n# The describe() function includes count, mean, std, and the 5-number summary.\n# We will select specific rows to isolate the 5-number summary.\nprint(\"--- Five Number Summary ---\")\n\n\n--- Five Number Summary ---\n\n\nHow’s that done?\nprint(numeric_df.describe().loc[['min', '25%', '50%', '75%', 'max']])\n\n\n     calories  cal_fat  total_fat  sat_fat  ...  protein  vit_a  vit_c  calcium\nmin      20.0      0.0        0.0      0.0  ...      1.0    0.0    0.0      0.0\n25%     330.0    120.0       14.0      4.0  ...     16.0    4.0    4.0      8.0\n50%     490.0    210.0       23.0      7.0  ...     24.5   10.0   10.0     20.0\n75%     690.0    310.0       35.0     11.0  ...     36.0   20.0   30.0     30.0\nmax    2430.0   1270.0      141.0     47.0  ...    186.0  180.0  400.0    290.0\n\n[5 rows x 14 columns]"
   }
 ]
