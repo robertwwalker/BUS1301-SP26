@@ -9,7 +9,7 @@
 <link>https://robertwwalker.github.io/BUS1301-SP26/</link>
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
-<generator>quarto-1.8.24</generator>
+<generator>quarto-1.8.25</generator>
 <lastBuildDate>Thu, 29 Jan 2026 08:00:00 GMT</lastBuildDate>
 <item>
   <title>Data Visualization</title>
@@ -81,7 +81,7 @@ font-style: inherit;">library</span>(reticulate)</span></code></pre></div></div>
 </section>
 <section id="slides" class="level1">
 <h1>Slides</h1>
-<p><a href="https://robertwwalker.github.com/BUS1301-SP26/slides/01-27-2026/">Link is here</a></p>
+<p><a href="https://robertwwalker.github.com/BUS1301-SP26/slides/01-29-2026/">Link is here</a></p>
 <section id="just-about-any-model-will-do" class="level2">
 <h2 class="anchored" data-anchor-id="just-about-any-model-will-do">Just about any model will do</h2>
 <p>I will use <code>Gemini</code>. <code>Claude</code> can also do this.</p>
@@ -298,16 +298,16 @@ background-color: null;
 font-style: inherit;">print</span>(df.info())</span></code></pre></div></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'pandas.DataFrame'&gt;
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 4526 entries, 0 to 4525
 Data columns (total 3 columns):
- #   Column  Non-Null Count  Dtype
----  ------  --------------  -----
- 0   M.F     4526 non-null   str  
- 1   Admit   4526 non-null   str  
- 2   Dept    4526 non-null   str  
-dtypes: str(3)
-memory usage: 106.2 KB
+ #   Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   M.F     4526 non-null   object
+ 1   Admit   4526 non-null   object
+ 2   Dept    4526 non-null   object
+dtypes: object(3)
+memory usage: 106.2+ KB
 None</code></pre>
 </div>
 </div>

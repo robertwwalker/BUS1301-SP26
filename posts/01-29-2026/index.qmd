@@ -40,7 +40,7 @@ library(reticulate)
 
 # Slides
 
-[Link is here](https://robertwwalker.github.com/BUS1301-SP26/slides/01-27-2026/)
+[Link is here](https://robertwwalker.github.com/BUS1301-SP26/slides/01-29-2026/)
 
 ## Just about any model will do
 
