@@ -1,0 +1,540 @@
+---
+title: "Data Visualization"
+subtitle: "Lecture 5: Data Viz II"
+author: "Robert W. Walker"
+format: 
+   revealjs:
+     multiplex:
+       url: 'https://multiplex-5adl.onrender.com'
+     preview-links: true
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301 [29 Jan 26]"
+     chalkboard: true
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: convex
+     code-fold: true
+     echo: false
+     code-tools: false
+     lightbox: true
+---
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+```{r setup, include=FALSE}
+library(reticulate)
+# use_condaenv("bus1301")
+library(fontawesome)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, tidy=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', eval=TRUE)
+library(tidyverse)
+library(DT)
+theme_set(hrbrthemes::theme_ipsum_rc())
+options(
+  digits = 3,
+  width = 75,
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis",
+  ggplot2.discrete.colour = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442"),
+  ggplot2.discrete.fill = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442")
+)
+load(url("https://github.com/robertwwalker/DADMStuff/raw/master/R-Workspace-Lecture-1.RData"))
+FastFood <- read.csv("./FastFood.csv", na.strings = "NA")
+FFood <- FastFood
+```
+
+## Outline
+
+- Readings: Chapters 1 and 2 and Wickham
+
+## Some Data
+
+[Google Sheets](https://docs.google.com/spreadsheets/d/1FlKFaxlJeZ12OF8LbzUIMUA3V1wGFfWDXwqxBU5LAH0/edit?usp=sharing) 
+
+## A Data Taxonomy
+
++ Generally column-centric.  
++ Variables in columns.  
++ Units in rows.  
+
+![Long data](./images/DataTypesSeaborn.png)
+
+[This is how Python also thinks about long data.](https://seaborn.pydata.org/tutorial/data_structure.html)
+
+## Chapter 2
+
+-   Means and standard deviations \[TBC\]
+-   Boxplots and percentile statistics \[TBC\]
+-   Histograms, densities, and shape
+-   Outliers, robust statistics, and shape
+-   Transformations
+
+# A note on context, or why you want to upload the csv [or similar]
+
+## Summarizing Data
+
+::: {layout-ncol=2}
+
+## Summary Statistics
+
+![Prompt](./images/Screenshot 2026-01-27 at 6.40.31 PM.png)
+
+## Output
+
+![Output](./images/Screenshot 2026-01-27 at 6.42.03 PM.png)
+:::
+
+# Seaborn is the current tool... {background-image="./images/seaborn.png"}
+
+# All kinda of possibilities
+
+[Seaborn-Cat](https://seaborn.pydata.org/tutorial/categorical.html)
+
+## Start with a categorical variable
+
+What can we do? **Generically, nothing more than frequency.  A table or a figure.**
+
+::: {layout-ncol=2}
+
+## Table
+
+
+
+![Tables](./images/Screenshot 2026-01-27 at 7.08.55 PM.png)
+
+## Bar plot
+
+
+
+![Bar plot](./images/Screenshot 2026-01-27 at 7.11.26 PM.png)
+
+:::
+
+## A Lollipop Chart
+
+`could you turn that into a lollipop chart`
+
+![lollipop](./images/Screenshot 2026-01-27 at 7.22.15 PM.png)
+
+## 
+
+## Two Categorical Variables [Stacked]
+
+![Prompt and Result](./images/Screenshot 2026-01-27 at 7.24.08 PM.png)
+
+## Two Categorical Variables [Dodge]
+
+![Dodgy](./images/Screenshot 2026-01-27 at 7.29.13 PM.png)
+
+## A Mosaic {background-image="./images/BGMosaic.png" background-size="contain"}
+
+*Could you constuct a mosaic plot of risk and fees?*
+
+# Quantitative Variables
+
+The core idea is they exist on a continuum; the likelihood of any particular realization is usually zero.
+
+As a result:   
+
+- we bin them.  
+- we smooth their incidence.  
+
+## Quantitative Variables
+
+`Show a histogram of assets`
+
+```{python, echo=FALSE}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataset
+df = pd.read_csv('BondFunds.csv')
+
+# Create the histogram for the 'Assets' column
+plt.figure(figsize=(8, 5))
+plt.hist(df['Assets'], bins=30, color='skyblue', edgecolor='black')
+
+# Adding titles and labels
+plt.title('Histogram of Assets')
+plt.xlabel('Assets (in millions)')
+plt.ylabel('Frequency')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+plt.tight_layout()
+```
+
+
+## Controlling bins
+
+*show a histogram of assets with bins of size 100 million starting with 0 to 100 million*
+
+```{python, echo=FALSE}
+import numpy as np
+
+# Determine the maximum value to set the upper limit for bins
+max_assets = df['Assets'].max()
+
+# Define bins: size 100, starting from 0 to slightly beyond the max value
+bins = np.arange(0, max_assets + 100, 100)
+
+# Create the histogram
+plt.figure(figsize=(10, 5))
+plt.hist(df['Assets'], bins=bins, color='skyblue', edgecolor='black')
+
+# Adding titles and labels
+plt.title('Histogram of Assets (Bin Size = 100 Million)')
+plt.xlabel('Assets (in millions)')
+plt.ylabel('Frequency')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+```
+
+## Densities
+
+```{python, echo=FALSE, results="hide"}
+from scipy.stats import gaussian_kde
+
+# Load the dataset
+assets = df['Assets'].dropna()
+
+# Define bin parameters
+bin_size = 100
+bins = np.arange(0, assets.max() + bin_size, bin_size)
+
+# Create the plot
+plt.figure(figsize=(9, 5))
+
+# 1. Histogram (Density=True so the KDE overlays correctly)
+plt.hist(assets, bins=bins, density=True, color='skyblue', edgecolor='black', alpha=0.5, label='Histogram (100M bins)')
+
+# 2. KDE with default bandwidth
+kde_default = gaussian_kde(assets)
+x_range = np.linspace(0, assets.max(), 1000)
+plt.plot(x_range, kde_default(x_range), color='blue', lw=2, label='Density (Default BW)')
+
+# 3. KDE with bandwidth = 2 (interpreted as bw_method=2 for smoothing factor)
+kde_bw2 = gaussian_kde(assets, bw_method=2)
+plt.plot(x_range, kde_bw2(x_range), color='red', lw=2, linestyle='--', label='Density (BW Factor = 2)')
+
+# Adding titles and labels
+plt.title('Histogram of Assets with Density Overlays')
+plt.xlabel('Assets (in millions)')
+plt.ylabel('Density')
+plt.legend()
+plt.grid(axis='y', linestyle='--', alpha=0.3)
+
+# Adjust x-axis for better visibility
+plt.xticks(np.arange(0, assets.max() + 1000, 1000), rotation=45)
+
+plt.tight_layout()
+```
+
+## Boxplots
+
+```{python, echo=FALSE, results="hide"}
+# Define bin parameters
+bin_size = 100
+bins = np.arange(0, assets.max() + bin_size, bin_size)
+
+# Create the figure with two subplots
+fig, (ax_box, ax_hist) = plt.subplots(2, 1, sharex=True, 
+                                     gridspec_kw={"height_ratios": (.15, .85)},
+                                     figsize=(10, 6))
+
+# 1. Boxplot (top panel)
+ax_box.boxplot(assets, vert=False, patch_artist=True, 
+               boxprops=dict(facecolor='skyblue', alpha=0.5),
+               medianprops=dict(color='black'))
+ax_box.set(yticks=[], title='Distribution of Assets with Boxplot and Density Overlays')
+ax_box.set_xlabel('')
+
+# 2. Histogram and Densities (bottom panel)
+# Histogram
+ax_hist.hist(assets, bins=bins, density=True, color='skyblue', edgecolor='black', alpha=0.5, label='Histogram (Bins=100m)')
+
+# Generate points for the KDE lines
+x_eval = np.linspace(0, assets.max(), 1000)
+
+# Density with Default Bandwidth
+kde_default = gaussian_kde(assets)
+ax_hist.plot(x_eval, kde_default(x_eval), color='blue', lw=2, label='Density (Default BW)')
+
+# Density with Bandwidth = 2
+kde_bw2 = gaussian_kde(assets, bw_method=2.0)
+ax_hist.plot(x_eval, kde_bw2(x_eval), color='red', lw=2, linestyle='--', label='Density (BW Factor = 2)')
+
+# Formatting
+ax_hist.set_xlabel('Assets (in millions)')
+ax_hist.set_ylabel('Density')
+ax_hist.legend()
+ax_hist.grid(axis='y', linestyle='--', alpha=0.3)
+
+# Adjust x-axis ticks
+plt.xticks(np.arange(0, assets.max() + 1000, 1000), rotation=45)
+plt.tight_layout()
+```
+
+## Qualitative/Quantitative Combinations
+
+
+
+## A Combination of Three Plots
+
+A violin, boxplot, and raincloud
+
+```{python, warning=FALSE, message=FALSE, echo=FALSE, results="hide"}
+import seaborn as sns
+
+# Set the theme
+sns.set_theme(style="whitegrid")
+plt.figure(figsize=(10, 6))
+
+# Define the data
+types = df['Type'].unique()
+colors = sns.color_palette("muted")
+
+# Create the Raincloud Plot
+for i, fund_type in enumerate(types):
+    data = df[df['Type'] == fund_type]['Assets'].dropna()
+    
+    # 1. The Cloud (Half-Violin)
+    # We use violinplot but need to adjust to show only half if possible, 
+    # or just use a standard violin with high sensitivity as a substitute for the "cloud"
+    sns.violinplot(y=data, x=df['Type'], bw_adjust=0.25, cut=0, inner=None, 
+                   hue=df['Type'], palette="muted", alpha=0.3)
+    
+    # Actually, to make a true raincloud manually:
+    # Let's clear and do it properly with offsets
+    
+plt.clf()
+plt.figure(figsize=(10, 6))
+
+for i, fund_type in enumerate(types):
+    data = df[df['Type'] == fund_type]['Assets'].dropna()
+    
+    # 1. The Cloud (KDE)
+    from scipy.stats import gaussian_kde
+    kde = gaussian_kde(data, bw_method=0.25)
+    dist_space = np.linspace(data.min(), data.max(), 500)
+    kde_vals = kde(dist_space)
+    kde_vals = kde_vals / kde_vals.max() * 0.4
+    
+    plt.fill_betweenx(dist_space, i, i + kde_vals, color=colors[i], alpha=0.3)
+    plt.plot(i + kde_vals, dist_space, color=colors[i], alpha=0.5)
+    
+    # 2. The Rain
+    jitter = np.random.uniform(-0.15, -0.05, size=len(data))
+    plt.scatter(i + jitter, data, color=colors[i], s=10, alpha=0.5)
+    
+    # 3. The Boxplot
+    plt.boxplot(data, positions=[i - 0.2], vert=True, widths=0.05, 
+                patch_artist=True, boxprops=dict(facecolor=colors[i], alpha=0.5),
+                medianprops=dict(color='black'), showfliers=False)
+
+plt.title('Raincloud Plot of Assets by Fund Type (4x Bandwidth Sensitivity)')
+plt.xticks(range(len(types)), types)
+plt.ylabel('Assets (in millions)')
+plt.xlabel('Fund Type')
+plt.grid(axis='y', linestyle='--', alpha=0.3)
+plt.tight_layout()
+```
+
+## The boxenplot
+
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+
+# Create the boxenplot for 'Return 2009' by 'Type'
+plt.figure(figsize=(8, 5))
+sns.boxenplot(x='Type', y='Return 2009', data=df, palette='muted')
+
+# Styling
+plt.title('Boxenplot of 2009 Returns by Fund Type')
+plt.xlabel('Fund Type')
+plt.ylabel('Return 2009 (%)')
+plt.grid(axis='y', linestyle='--', alpha=0.3)
+
+plt.tight_layout()
+```
+
+## Violins
+
+::: {.callout-note}
+Prompt: Can you show a violin plot of returns in 2009 by risk and type?
+:::
+
+```{python}
+# Set categorical order for Risk
+risk_order = ['Below average', 'Average', 'Above average']
+df['Risk'] = pd.Categorical(df['Risk'], categories=risk_order, ordered=True)
+
+# Create the violin plot
+plt.figure(figsize=(8, 5))
+sns.violinplot(x='Risk', y='Return 2009', hue='Type', data=df, split=True, palette='muted', inner='quartile')
+
+# Styling
+plt.title('Violin Plot of 2009 Returns by Risk and Fund Type', fontsize=14)
+plt.xlabel('Risk Level', fontsize=12)
+plt.ylabel('Return 2009 (%)', fontsize=12)
+plt.legend(title='Fund Type')
+plt.grid(axis='y', linestyle='--', alpha=0.3)
+
+plt.tight_layout()
+```
+
+## Adjustment
+
+::: {.callout-note}
+Prompt: That is quite nice.  I would prefer that they be oriented horizontally with each rising above the horizontal axis
+:::
+
+![Horizontals](./HorizViolin.png)
+
+## Bandwidth adjustment
+
+![Final](./FinalViolins.png)
+
+## Two Quantitative Variables
+
+# Scatterplots [Lines just connect points]
+
+##
+
+::: {.callout-important}
+Prompt: create a scatterplot of returns by assets
+:::
+
+```{python, echo=FALSE}
+# Create the scatterplot
+plt.figure(figsize=(8, 5))
+sns.scatterplot(data=df, x='Assets', y='Return 2009', alpha=0.7)
+
+# Adding titles and labels
+plt.title('Scatterplot of 2009 Returns by Assets')
+plt.xlabel('Assets (in millions)')
+plt.ylabel('Return 2009 (%)')
+plt.grid(True, linestyle='--', alpha=0.6)
+
+plt.tight_layout()
+```
+
+##
+
+::: {.callout--important}
+Prompt: create a scatterplot of expense ratios and returns with symbols from fees and colors from risk
+:::
+
+```{python, echo=FALSE}
+# Define categorical order for Risk
+risk_order = ['Below average', 'Average', 'Above average']
+df['Risk'] = pd.Categorical(df['Risk'], categories=risk_order, ordered=True)
+
+# Create the scatterplot
+plt.figure(figsize=(10, 6))
+scatter = sns.scatterplot(
+    data=df, 
+    x='Expense Ratio', 
+    y='Return 2009', 
+    hue='Risk', 
+    style='Fees', 
+    s=100, 
+    alpha=0.8
+)
+
+# Styling
+plt.title('Scatterplot of 2009 Returns vs. Expense Ratio')
+plt.xlabel('Expense Ratio (%)')
+plt.ylabel('Return 2009 (%)')
+plt.grid(True, linestyle='--', alpha=0.5)
+
+# Adjust legend
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+
+plt.tight_layout()
+```
+
+##
+
+::: {.callout-important}
+Prompt: use a checkmark for yes and an X for no as the symbols
+:::
+
+```{python, echo=FALSE}
+# Define categorical order for Risk
+risk_order = ['Below average', 'Average', 'Above average']
+df['Risk'] = pd.Categorical(df['Risk'], categories=risk_order, ordered=True)
+
+# Define custom markers: Check for 'Yes', X for 'No'
+# Matplotlib supports LaTeX for markers.
+markers = {"Yes": r'$\checkmark$', "No": "X"}
+
+# Create the scatterplot
+plt.figure(figsize=(9, 6))
+# Note: Using style and markers together
+scatter = sns.scatterplot(
+    data=df,
+    x='Expense Ratio',
+    y='Return 2009',
+    hue='Risk',
+    style='Fees',
+    markers=markers,
+    s=150,  # Increased size for better visibility of the custom markers
+    alpha=0.8
+)
+
+# Styling
+plt.title('2009 Returns vs. Expense Ratio (Risk Color-coded, Fees by Symbol)')
+plt.xlabel('Expense Ratio (%)')
+plt.ylabel('Return 2009 (%)')
+plt.grid(True, linestyle='--', alpha=0.5)
+
+# Adjust legend
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', title="Risk / Fees")
+
+plt.tight_layout()
+```
+
+## plotly
+
+```{python, echo=FALSE, results="hide", include=FALSE}
+import plotly.express as px
+
+# Ensure Risk has a logical order
+risk_order = ['Below average', 'Average', 'Above average']
+
+# Create the interactive scatter plot
+fig = px.scatter(
+    df, 
+    x='Expense Ratio', 
+    y='Return 2009', 
+    color='Risk', 
+    symbol='Fees',
+    symbol_map={'Yes': 'star', 'No': 'x'},
+    category_orders={'Risk': risk_order},
+    title='2009 Returns vs. Expense Ratio',
+    labels={
+        'Expense Ratio': 'Expense Ratio (%)', 
+        'Return 2009': 'Return 2009 (%)'
+    },
+    # Hovering shows additional details like Fund Number and Type
+    hover_data=['Fund Number', 'Type', 'Assets'],
+    template='plotly_white'
+)
+
+# Customize marker appearance
+fig.update_traces(marker=dict(size=12, opacity=0.8, line=dict(width=1, color='DarkSlateGrey')))
+```
+
+```{python, echo=FALSE}
+fig.show()
+```
+
+
+## A Class Assignment to Conclude
+
+[A Visualization: A carryover](https://docs.google.com/spreadsheets/d/1Tqn-bqezFnsBD4QhmKBZ14oYO14tzh4dL_LHZhiRy0A/edit?usp=sharing)

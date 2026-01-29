@@ -10,7 +10,298 @@
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Tue, 27 Jan 2026 08:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 29 Jan 2026 08:00:00 GMT</lastBuildDate>
+<item>
+  <title>Data Visualization</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Today, we continue data visualization.</p>
+<p>Our reading for today includes a section of Open Intro Stats and Hadley Wickham’s <em>Grammar of Graphics</em>.</p>
+<section id="five-bits-of-data" class="level2">
+<h2 class="anchored" data-anchor-id="five-bits-of-data">Five bits of data</h2>
+<ul>
+<li><a href="./data/datasaurus.csv">datasaurus</a>.<br>
+</li>
+<li><a href="./data/BondFunds.csv">BondFunds</a>.<br>
+</li>
+<li><a href="./data/UCB-Admit.csv">UCB-Admissions</a>.<br>
+</li>
+<li><a href="./data/CADDS.csv">CADDS</a>.<br>
+</li>
+<li><a href="./data/FastFood.csv">Fast Food</a>.</li>
+</ul>
+</section>
+<section id="bond-funds" class="level2">
+<h2 class="anchored" data-anchor-id="bond-funds">Bond Funds</h2>
+<ul>
+<li>Fund Number: An ID.<br>
+</li>
+<li>Type: Intermediate Government or Short-term Corporate.<br>
+</li>
+<li>Assets: Assets held by the fund in reported dollars.<br>
+</li>
+<li>Fees: Are management fees assessed? [Yes/No].<br>
+</li>
+<li>Expense Ratio: Ratio of operating expenses to fund assets.<br>
+</li>
+<li>Returns [for the year 2009, trailing 3 year and 5 year (from 2009)].<br>
+</li>
+<li>The Morningstar risk classification [Below average, average, and above average].</li>
+</ul>
+<div class="cell">
+<details class="code-fold">
+<summary>How’s that done?</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(jsonlite)</span>
+<span id="cb1-2">BondFunds <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read.csv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./data/BondFunds.csv"</span>)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(reticulate)</span></code></pre></div></div>
+</details>
+</div>
+</section>
+<section id="the-flipbook" class="level1">
+<h1><a href="https://robertwwalker.github.io/dadm-slides/flipbookSLE/">The flipbook</a></h1>
+</section>
+<section id="the-pages" class="level1">
+<h1><a href="https://robertwwalker.github.io/DADM-FAQ/">The pages</a></h1>
+</section>
+<section id="slides" class="level1">
+<h1>Slides</h1>
+<p><a href="https://robertwwalker.github.com/BUS1301-SP26/slides/01-27-2026/">Link is here</a></p>
+<section id="just-about-any-model-will-do" class="level2">
+<h2 class="anchored" data-anchor-id="just-about-any-model-will-do">Just about any model will do</h2>
+<p>I will use <code>Gemini</code>. <code>Claude</code> can also do this.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Prompt: Can you provide a histogram of assets and a boxplot of assets by type for the following spreadsheet?</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./reply.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="reply"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/reply.png" class="img-fluid figure-img" alt="reply"></a></p>
+<figcaption>reply</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./image.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="output"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/image.png" class="img-fluid figure-img" alt="output"></a></p>
+<figcaption>output</figcaption>
+</figure>
+</div>
+</section>
+<section id="chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="chatgpt"><code>ChatGPT</code></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./chatgpt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="ChatGPT"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/chatgpt.png" class="img-fluid figure-img" alt="ChatGPT"></a></p>
+<figcaption>ChatGPT</figcaption>
+</figure>
+</div>
+</section>
+<section id="plotnine" class="level2">
+<h2 class="anchored" data-anchor-id="plotnine"><code>plotnine</code></h2>
+<div class="cell">
+<details class="code-fold">
+<summary>How’s that done?</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb2-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> plotnine <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> (</span>
+<span id="cb2-3">    ggplot, aes, geom_histogram, geom_boxplot,</span>
+<span id="cb2-4">    labs, theme, element_text, coord_flip</span>
+<span id="cb2-5">)</span>
+<span id="cb2-6"></span>
+<span id="cb2-7">df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'./data/BondFunds.csv'</span>)</span>
+<span id="cb2-8"></span>
+<span id="cb2-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Histogram of Assets</span></span>
+<span id="cb2-10">hist_plot <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (</span>
+<span id="cb2-11">    ggplot(df, aes(x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Assets'</span>))</span>
+<span id="cb2-12">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> geom_histogram(bins<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>)</span>
+<span id="cb2-13">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> labs(title<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Histogram of Assets'</span>, x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Assets'</span>, y<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Frequency'</span>)</span>
+<span id="cb2-14">)</span>
+<span id="cb2-15">hist_plot.show()</span></code></pre></div></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="614"></a></p>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>How’s that done?</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Boxplot of Assets by Type</span></span>
+<span id="cb3-2">box_plot <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (</span>
+<span id="cb3-3">    ggplot(df, aes(x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Type'</span>, y<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Assets'</span>))</span>
+<span id="cb3-4">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> geom_boxplot()</span>
+<span id="cb3-5">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> labs(title<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Assets by Fund Type'</span>, x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Type'</span>, y<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Assets'</span>)</span>
+<span id="cb3-6">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> theme(axis_text_x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>element_text(rotation<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">90</span>, hjust<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)) </span>
+<span id="cb3-7">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> coord_flip()</span>
+<span id="cb3-8">)</span>
+<span id="cb3-9">box_plot.show()</span></code></pre></div></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="index_files/figure-html/unnamed-chunk-2-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/index_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid figure-img" width="614"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="cadds" class="level2">
+<h2 class="anchored" data-anchor-id="cadds">CADDS</h2>
+<p>The data set presented is designed to represent a sample of 1,000 DDS consumers (which provides a 95% confidence interval with a margin of error of plus-or-minus 3.5% for this 250,000 consumer population). The data set includes six variables (i.e., fields) which are: ID, age cohort/age (binned/unbinned), gender, expenditures, and ethnicity. NB: The data set originated from DDS’s Client Master File. In order to remain in compliance with California State Legislation, the data have been altered to protect the rights and privacy of specific individual consumers. The provided data set is based on actual attributes of consumers.</p>
+<p><strong>ID</strong> is the unique identification code for each consumer. It is similar to a social security number and used for identification purposes.</p>
+<p><strong>Age cohort/age</strong> is a key variable in the case exercise. While age is a legal basis for discrimination in many situations, age is not an attribute that would be considered in a discrimination claim for this particular population. The purpose of providing funds to those with developmental disabilities is to help them live like those without disabilities. As consumers get older, their financial needs increase as they move out of their parent’s home, etc. Therefore, it is expected that expenditures for older consumers will be higher than for the younger consumers.</p>
+<p>We have included both binned (<strong>Age cohort</strong>) and unbinned (<strong>Age</strong>) variables to represent a consumer’s age. The binned age variable is represented in the data set as six age cohorts. Each consumer is assigned to an age cohort based on their years since birth. The six cohorts include: 0-5 years old, 6-12, 13-17, 18-21, 22-50, and 51+. The cohorts are established based on the amount of financial support typically required during a particular life phase.</p>
+<p>The 0-5 cohort (preschool age) has the fewest needs and requires the least amount of funding. For the 6-12 cohort (elementary school age) and 13-17 (high school age), a number of needed services are provided by schools. The 18-21 cohort is typically in a transition phase as the consumers begin moving out from their parents’ homes into community centers or living on their own. The majority of those in the 22-50 cohort no longer live with their parents but may still receive some support from their family. Those in the 51+ cohort have the most needs and require the most amount of funding because they are living on their own or in community centers and often have no living parents.</p>
+<p><strong>Gender</strong> is included in the data set as another variable to consider because it is an attribute on which many discrimination cases are based.</p>
+<p><strong>Expenditures</strong> variable represents the annual expenditures the State spends on each consumer in supporting these individuals and their families. It is important that students realize this is the amount each consumer receives from the State. Expenditures include services such as: respite for their families, psychological services, medical expenses, transportation, and costs related to housing such as rent (especially for adult consumers living outside their parent’s home).</p>
+<p><strong>Ethnicity</strong> is the key demographic variable in the data set as it pertains to the case. Eight ethnic groups are represented in the data set. These groups reflect the demographic profile of the State of California. Our key area of interest will become Hispanic and White, non-Hispanic comparisons.</p>
+</section>
+<section id="ucb-admissions" class="level2">
+<h2 class="anchored" data-anchor-id="ucb-admissions">UCB Admissions</h2>
+<p><strong>Is there evidence of sex bias in admission practices?</strong> Data on admissions to the University of California at Berkeley graduate programs in six departments are presented for the population of applicants. <strong>Admit</strong> measures whether or not the applicant was admitted; <strong>M.F</strong> measures the gender of the applicant; <strong>Dept</strong> measures the department in a classification ranging from A to F.</p>
+</section>
+<section id="the-class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
+<ol type="1">
+<li>A spreadsheet is a visualization.<br>
+</li>
+<li>In some ways, so is JSON.<br>
+</li>
+<li>Two types of summary<br>
+</li>
+<li>Two dimensions: center and spread.<br>
+</li>
+<li>Pivots and formulae</li>
+<li>Visualizations and types</li>
+</ol>
+<p>Your assignment for this time:</p>
+<ol type="1">
+<li>Do the reading.</li>
+<li><strong>From last time</strong>. Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. Post them and describe them. What type of data do they represent and how? What is the name of the type of visualization?</li>
+</ol>
+</section>
+<section id="for-next-class" class="level2">
+<h2 class="anchored" data-anchor-id="for-next-class">For Next Class:</h2>
+<ol type="1">
+<li>Reading: Chapters 1 and 2 and Wickham on Data Visualization</li>
+<li>Deliverable: An In-class exercise [Assignment 5] if not completed before departing</li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/</guid>
+  <pubDate>Thu, 29 Jan 2026 08:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/image.png" medium="image" type="image/png" height="59" width="144"/>
+</item>
 <item>
   <title>Data Visualization</title>
   <dc:creator>Robert W. Walker</dc:creator>
