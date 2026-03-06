@@ -1,0 +1,40 @@
+---
+title: "Probability and Inference"
+author: "Robert W. Walker"
+date: "2026-02-24"
+image: "image.png"
+---
+
+Today, we continue probability distributions and begin inferential statistical techniques.
+
+## One key bit of data
+
+- [UCB-Admissions](./data/UCB-Admit.csv).   
+
+# Gemini Does the Work
+
+[Example](https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Binomial-Analysis/)
+
+# Claude Does the Work
+
+[Example](https://robertwwalker.github.io/BUS1301-SP26/writeups/Claude-Binomial-Analysis/)
+
+
+# Slides
+
+[Link is here](https://robertwwalker.github.io/BUS1301-SP26/slides/02-24-2026/)
+
+
+## The class plan:
+
+1. Complete probability distributions and single sample binary inference.
+
+Your post-class exercise:
+
+1. Have a read through [election simulation](https://www.niemanlab.org/2020/07/this-is-how-fivethirtyeight-is-trying-to-build-the-right-amount-of-uncertainty-into-its-2020-election-data-analysis/).  
+2. The assignment: an inference example for your qualitative/binary data.
+
+## For Next Class:
+
+1. Reading
+2. Deliverable: An inference example from your data [Assignment 13].   

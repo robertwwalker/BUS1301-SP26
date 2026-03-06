@@ -1,0 +1,196 @@
+---
+title: "Formatting a Gemini Response"
+author: "Robert W. Walker"
+date: "2026-01-14"
+image: "image.png"
+---
+
+# TL;DR
+
+Gemini is powerful, and a few tidbits help a great deal.  I use `markdown` formatting for text inputs and Gemini is well versed in this.  My prompts now use `please format responses in markdown and include links to the noted sources`.
+
+# Getting Formatted Responses from Gemini
+
+Our homework for tomorrow is to utilize Gemini to assist us in reading the Stanford entry on models.  I provided three examples, let me focus on the **ontology** response.  First, let me replay the interaction noting that the ultimate concern is formatting.
+
+::: {.callout-note appearance="simple"}
+
+## Prompt: What is ontology?
+
+:::
+
+Ontology is, at its core, the study of what exists and how things are related.1
+
+Depending on whether you are talking to a philosopher or a computer scientist, the definition shifts from abstract reality to practical data structures.2
+
+Here is the breakdown of the two main perspectives:
+1. In Philosophy (The Origin)3
+In philosophy, ontology is the "study of being."4 It is a branch of metaphysics that asks deep questions about the nature of reality.5
+
+
+The Goal: To discover the fundamental categories of existence.6
+
+
+Key Questions: What does it mean "to exist"? Do abstract ideas (like the number 7 or "justice") exist in the same way a rock exists?
+Example: A philosopher might analyze if "holes" are real things, or if they are just the absence of something else.
+2. In Computer Science (The Application)
+In computer science (specifically AI and Information Science), an ontology is a formal blueprint used to model knowledge.7 It is a specific way of organizing data so that computers can "understand" it.8
+
+
+Instead of asking "what is reality," a computational ontology declares: "For this specific system, these are the only things that exist, and here is how they connect."
+The Goal: To help software share data, reason about information, and avoid confusion.9
+
+
+The "Triples" Structure: Most computational ontologies are built on three main components:
+Classes (The Nouns): The categories of things (e.g., Patient, Doctor, Drug).10
+
+
+Attributes (The Adjectives): The properties of those things (e.g., Name, Dosage, Blood Type).11
+
+
+Relationships (The Verbs): How they interact (e.g., Doctor prescribes Drug).
+Summary Comparison
+Feature
+Philosophical Ontology
+Computational Ontology
+Focus
+The nature of reality.
+The structure of a specific domain's data.
+Goal
+Truth and wisdom.
+Interoperability (systems talking to each other).
+Output
+Theories and essays.
+Knowledge Graphs, code (OWL/RDF), databases.
+Example
+"Is the mind separate from the body?"
+"A Smartphone is-a Device."
+
+Why is this important right now?
+You likely interact with ontologies every day without realizing it:
+Google Search: When you search for "Jaguar," Google uses an ontology to figure out if you mean the animal, the car, or the football team based on the other words in your query.
+Healthcare: Ontologies allow different hospitals to share records. One system might say "Heart Attack" and another "Myocardial Infarction," but the ontology links them as the exact same concept.
+Next Step
+Would you like me to show you a text-based example of what a simple ontology looks like for a common domain, like a Library or a Smart Home?
+
+## Commentary
+
+The content is excellent.  The formatting is not.  And the `Docs` version is no better.
+
+![Gemini output](./Gemini-Doc.png)
+
+The notes have no content.  It looks fine but it is not complete.  Let me prompt again and see if I can get something to work with.
+
+
+
+# The Second Response
+
+::: {.callout-note appearance="simple"}
+
+## Prompt: What is ontology?
+
+This is a great response. When it is exported to google docs, the footnotes with citations are lost. Could you instead respond with harder to read markdown code so that the citations and notes are present in the response in a format that is easy to re-render?
+
+:::
+
+**Ontology** is, at its core, the study of **what exists** and **how things are related**.
+
+Depending on whether you are talking to a philosopher or a computer scientist, the definition shifts from abstract reality to practical data structures.
+
+Here is the breakdown of the two main perspectives:
+
+### 1. In Philosophy (The Origin)
+In philosophy, ontology is the "study of being." It is a branch of metaphysics that asks deep questions about the nature of reality.
+* **The Goal:** To discover the fundamental categories of existence.
+* **Key Questions:** What does it mean "to exist"? Do abstract ideas (like the number 7 or "justice") exist in the same way a rock exists?
+* **Example:** A philosopher might analyze if "holes" are real things, or if they are just the absence of something else.
+
+### 2. In Computer Science (The Application)
+In computer science (specifically AI and Information Science), an ontology is a **formal blueprint** used to model knowledge. It is a specific way of organizing data so that computers can "understand" it.
+
+Instead of asking "what is reality," a computational ontology declares: *"For this specific system, these are the only things that exist, and here is how they connect."*
+
+* **The Goal:** To help software share data, reason about information, and avoid confusion.
+* **The "Triples" Structure:** Most computational ontologies are built on three main components:
+    1.  **Classes (The Nouns):** The categories of things (e.g., `Patient`, `Doctor`, `Drug`).
+    2.  **Attributes (The Adjectives):** The properties of those things (e.g., `Name`, `Dosage`, `Blood Type`).
+    3.  **Relationships (The Verbs):** How they interact (e.g., `Doctor` *prescribes* `Drug`).
+
+---
+
+### Summary Comparison
+
+| Feature | Philosophical Ontology | Computational Ontology |
+| :--- | :--- | :--- |
+| **Focus** | The nature of reality. | The structure of a specific domain's data. |
+| **Goal** | Truth and wisdom. | Interoperability (systems talking to each other). |
+| **Output** | Theories and essays. | Knowledge Graphs, code (OWL/RDF), databases. |
+| **Example** | "Is the mind separate from the body?" | "A `Smartphone` **is-a** `Device`." |
+
+### Why is this important right now?
+You likely interact with ontologies every day without realizing it:
+* **Google Search:** When you search for "Jaguar," Google uses an ontology to figure out if you mean the **animal**, the **car**, or the **football team** based on the other words in your query.
+* **Healthcare:** Ontologies allow different hospitals to share records. One system might say "Heart Attack" and another "Myocardial Infarction," but the ontology links them as the exact same concept.
+
+### Commentary
+
+::: {.callout-note appearance="simple"}
+
+## Prompt: 
+
+That is much better. The notes or links for the elements of the response are and remain the problem; I would like them included in the document / markdown syntax that you provided so that they may be followed for more detailed inquiry.
+
+:::
+
+
+# What is Ontology?
+
+**Ontology** is, at its core, the study of **what exists** and **how things are related**. 
+
+Depending on whether you are talking to a philosopher or a computer scientist, the definition shifts from abstract reality to practical data structures.
+
+Here is the breakdown of the two main perspectives:
+
+### 1. In Philosophy (The Origin)
+In philosophy, ontology is the "study of being." It is a branch of metaphysics that asks deep questions about the nature of reality. This tradition traces back to [Aristotle's Metaphysics](https://plato.stanford.edu/entries/aristotle-metaphysics/) and continues in modern analytic philosophy.
+
+* **The Goal:** To discover the fundamental categories of existence.
+* **Key Questions:** What does it mean "to exist"? Do abstract ideas (like the number 7 or "justice") exist in the same way a rock exists? This is often referred to as [Ontological Commitment](https://plato.stanford.edu/entries/ontological-commitment/).
+* **Example:** A philosopher might analyze if "holes" are real things, or if they are just the absence of something else.
+
+### 2. In Computer Science (The Application)
+In computer science (specifically AI and Information Science), an ontology is a **formal blueprint** used to model knowledge. It is a specific way of organizing data so that computers can "understand" it.
+
+The most widely cited definition comes from **Tom Gruber**, who defined an ontology as a ["formal, explicit specification of a shared conceptualization"](https://tomgruber.org/writing/ontology-definition-2007.htm).
+
+Instead of asking "what is reality," a computational ontology declares: *"For this specific system, these are the only things that exist, and here is how they connect."*
+
+* **The Goal:** To help software share data, reason about information, and avoid confusion (Interoperability).
+* **The "Triples" Structure:** Most computational ontologies (like those built with the [W3C Web Ontology Language (OWL)](https://www.w3.org/OWL/)) are built on three main components:
+    1.  **Classes (The Nouns):** The categories of things (e.g., `Patient`, `Doctor`, `Drug`).
+    2.  **Attributes (The Adjectives):** The properties of those things (e.g., `Name`, `Dosage`, `Blood Type`).
+    3.  **Relationships (The Verbs):** How they interact (e.g., `Doctor` *prescribes* `Drug`).
+
+---
+
+### Summary Comparison
+
+| Feature | Philosophical Ontology | Computational Ontology |
+| :--- | :--- | :--- |
+| **Focus** | The nature of reality. | The structure of a specific domain's data. |
+| **Goal** | Truth and wisdom. | Interoperability (systems talking to each other). |
+| **Output** | Theories and essays. | Knowledge Graphs, code (OWL/RDF), databases. |
+| **Example** | "Is the mind separate from the body?" | "A `Smartphone` **is-a** `Device`." |
+
+### Why is this important right now?
+You likely interact with ontologies every day without realizing it:
+* **Google Search:** When you search for "Jaguar," Google uses a [Knowledge Graph](https://blog.google/products/search/about-knowledge-graph/) (an ontology) to figure out if you mean the **animal**, the **car**, or the **football team**.
+* **Healthcare:** Ontologies allow different hospitals to share records. One system might say "Heart Attack" and another "Myocardial Infarction," but the ontology links them as the exact same concept (see [SNOMED CT](https://www.snomed.org/)).
+
+---
+
+### References & Further Reading
+* **Philosophy:** Hofweber, T. (2020). ["Logic and Ontology"](https://plato.stanford.edu/entries/logic-ontology/). *The Stanford Encyclopedia of Philosophy*.
+* **Computer Science:** Gruber, T. (1993). ["What is an Ontology?"](https://tomgruber.org/writing/ontology-definition-2007.htm).
+* **Standards:** World Wide Web Consortium (W3C). ["OWL 2 Web Ontology Language Document Overview"](https://www.w3.org/TR/owl2-overview/).
+* **Comparison:** Smith, B. (2003). ["Ontology: Philosophical and Computational"](http://ontology.buffalo.edu/smith/articles/ontologies.htm).

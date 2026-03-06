@@ -1,0 +1,31 @@
+---
+title: "On Causality"
+author: "Robert W. Walker"
+date: "2026-02-04"
+---
+
+# Randomization
+
+The first wave of the causal revolution began with renewed attention to randomization.  The JPAL reference on [`randomization`](https://www.povertyactionlab.org/resource/randomization) is intended to focus our attention on this recurring theme.
+
+# On Causality
+
+Causation is at the heart of the highest order human reasoning.  Doing so with data is an objective if not an end result of modern fascination with machine learning.  Yet, these are age old philosophical questions and modern work at the intersection of data and causation is perhaps best exemplified in the work of Judea Pearl.  His most recent work, The Book of Why, details a lifetime of investigating causes and causal models at the intersection of computing, philosophy, and statistics.  Though wide ranging, [his podcast with Lex Fridman is worth listening to](https://share.google/FqVPW7tanZqALa2NM).  The excerpt on [correlation and causation is very useful.](https://www.youtube.com/watch?v=oFy2927b8jQ)
+
+He develops a ladder of causation.  [This is quite well explained in this two page primer](https://web.cs.ucla.edu/~kaoru/3-layer-causal-hierarchy.pdf).
+
+1. Associational
+
+2. Interventional
+
+3. Counterfactual
+
+We want to understand precisely how these various levels influence what we learn from data and deploy data to accomplish.
+
+[Judea Pearl’s website](https://bayes.cs.ucla.edu/home.htm)
+
+The [book on statistics and causal inference](https://web.cs.ucla.edu/~kaoru/primer-complete-2019.pdf)
+
+[A lecture on the Book of Why](https://youtu.be/nWaM6XmQEmU?si=nAtQu51kIfjoboBi)
+
+Sections 2.1 to 2.10 of the Causal Mixtape are a [very succinct read](https://mixtape.scunning.com/02-probability_and_regression).

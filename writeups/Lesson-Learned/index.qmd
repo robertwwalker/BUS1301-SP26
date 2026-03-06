@@ -1,0 +1,90 @@
+---
+title: "Lesson Learned on Gemini"
+author: "Robert W. Walker"
+date: "2026-01-14"
+image: "image.png"
+---
+
+![Of Note](./ModelsData.png)
+
+# TL;DR
+
+Gemini is powerful, and a few tidbits help a great deal.  I use `markdown` formatting for text inputs and Gemini is well versed in this.  My prompts now use `please format responses in markdown and include links to the noted sources`.
+
+# Getting Formatted Responses from Gemini the First Time
+
+::: {.callout-note appearance="simple"}
+
+## Prompt: 
+
+Please take the following link: `https://plato.stanford.edu/archives/fall2013/entries/models-science/` and rewrite the document for me at an early high school level.  The response should formatted with references in markdown code.
+
+:::
+
+# Models in Science
+
+**Source:** [Stanford Encyclopedia of Philosophy: Models in Science](https://plato.stanford.edu/archives/fall2013/entries/models-science/)
+
+In science, models are some of the most important tools researchers use. You might have seen the "billiard ball model" of a gas in chemistry or the "double helix" model of DNA in biology. Scientists spend a lot of time building, testing, and fixing these models.
+
+But what exactly is a model? Philosophers of science have thought a lot about this. This article explores what models are, how they represent the world, and how we learn from them.
+
+## 1. How Models Represent the World
+
+Models are like maps or pictures—they represent something else. Philosophers usually divide them into two main types based on what they represent.
+
+### Models of Phenomena
+These are models of things or events in the real world.
+* **Examples:** The Bohr model of the atom, a scale model of a bridge, or a computer model of the weather.
+* **The Big Question:** How does a model (which is just an object or an idea) represent a real phenomenon? It's similar to asking how a painting represents a landscape.
+
+### Models of Data
+Scientific data often comes from observations that are "messy." There might be errors or irrelevant details.
+* **What they do:** A "model of data" is a cleaned-up version of that information.
+* **Example:** If you plot points on a graph and they are scattered, you might draw a smooth curve through them. That smooth curve is the *model* of the data. It helps scientists see the pattern rather than just the noise.
+
+### Different Styles of Models
+Scientists use different styles to represent things, just like artists use different styles (like realism or abstract art).
+
+* **Scale Models:** These are just smaller (or larger) physical copies of the target.
+    * *Example:* A wooden model of a car or a plastic model of a DNA molecule. They look like the real thing but might be made of different materials.
+* **Idealized Models:** These models simplify reality to make it easier to understand.
+    * **"Stripping Away" (Aristotelian):** You ignore details that don't matter for your problem. For example, when studying planetary orbits, you might treat a planet as a simple dot with mass, ignoring its mountains and oceans.
+    * **"Distorting" (Galilean):** You imagine a world that physically cannot exist to test a theory. For example, imagining a surface with *zero friction* or a market where everyone knows *everything*.
+* **Analogical Models:** These use a familiar object to explain something new.
+    * *Example:* Describing the nucleus of an atom as a "liquid drop." It isn't actually a drop of liquid, but it behaves like one in some ways.
+
+## 2. What Are Models Made Of? (Ontology)
+
+If you hold a model car, it’s made of wood or plastic. But what is a *scientific* model made of?
+
+* **Physical Objects:** Some are real material things, like the model of a bridge used in a wind tunnel.
+* **Fictional Objects:** Some philosophers argue that models are like characters in a book (like Sherlock Holmes). They don't exist in the real world, but we can still study them and learn true things about them.
+* **Math and Sets:** Many scientists view models as mathematical structures (sets of equations and rules).
+* **Descriptions:** Some simply say a model is just a detailed description of a system.
+
+## 3. Learning with Models (Epistemology)
+
+We use models because we can't always test the real world. We can't easily crash real trains to test safety, so we use models. Learning happens in two steps:
+
+1.  **Learning *about* the Model:** We run experiments or simulations on the model itself. For example, we might run a computer program to see how a digital disease spreads.
+2.  **Translating to Reality:** We take what we learned from the model and apply it to the real world. If the model bridge collapses in the wind tunnel, we assume the real bridge might collapse in a real storm.
+
+## 4. Models vs. Theories
+
+Is a model the same thing as a theory? It's a bit fuzzy, but here are two main views:
+
+* **The Syntactic View:** This is an older view that focuses on logic. It says a "theory" is a set of sentences or math equations, and a "model" is just a way to interpret those equations.
+* **The Semantic View:** This is the more modern view. It says that the *theory* is actually a collection of models. For example, "Classical Mechanics" isn't just a list of rules; it's the family of all the different models (pendulums, planetary orbits, billiard balls) that follow those rules.
+
+## 5. Conclusion
+
+Models are central to how modern science works. They are not just side-projects; they are the main instruments scientists use to represent the world, manipulate data, and formulate theories. Whether they are physical objects, complex equations, or imagined fictions, models help us grasp the complexity of the universe.
+
+***
+
+### References & Further Reading
+
+* **Original Article:** Frigg, Roman and Hartmann, Stephan, ["Models in Science"](https://plato.stanford.edu/archives/fall2013/entries/models-science/), *The Stanford Encyclopedia of Philosophy* (Fall 2013 Edition), Edward N. Zalta (ed.).
+* **Reference on Representation:** [Van Fraassen, B. C. (1980). *The Scientific Image*. Oxford: Clarendon.](https://plato.stanford.edu/archives/fall2013/entries/models-science/#Bib)
+* **Reference on Data Models:** [Suppes, P. (1962). "Models of Data".](https://plato.stanford.edu/archives/fall2013/entries/models-science/#Bib)

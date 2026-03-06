@@ -1,0 +1,183 @@
+---
+title: "Gemini Binomial Analysis"
+author: "Robert W. Walker"
+date: "2026-02-24"
+image: "image.png"
+format:
+    html:
+     fig-format: retina
+     fig-dpi: 600
+     fig-height: 6
+     fig-width: 8
+---
+
+```{r setup, include=FALSE}
+library(reticulate)
+```
+
+
+::: {.callout-note appearance="simple"}
+## Prompt
+
+1. This dataset represents Admissions decisions by two traits: M.F. captures Male/Female election and Dept captures the department, labeled A through F.   Please provide exact binomial confidence intervals, 95%, for the probability of Admission for Males, for Females, and then for each of Males and Females by department
+
+2. This is great, now please reanalyse the data using the normal approximation and provide differences overall and for each department.
+
+3. Could you collect your responses and code into a quarto markdown document with python code chunks?
+
+4. Can you create the text file, the chunks are hampered by your rendering?
+:::
+
+
+## Introduction
+
+This document analyzes a dataset representing admissions decisions. The dataset includes gender (`M.F`), department (`Dept`, labeled A through F), and the admission decision (`Admit`). 
+
+Below, we compute 95% confidence intervals for the probability of admission for Males and Females, both overall and broken down by department, using two different methods.
+
+---
+
+## Part 1: Exact Binomial Confidence Intervals
+
+First, we calculate the exact binomial (Clopper-Pearson) confidence intervals for the probability of Admission using the Beta distribution method.
+
+```{python}
+#| label: exact-binomial-ci
+#| tbl-cap: "Exact Binomial Confidence Intervals"
+
+import pandas as pd
+from statsmodels.stats.proportion import proportion_confint
+
+# Load the dataset
+df = pd.read_csv('./data/UCB-Admit.csv')
+
+def get_exact_ci(successes, trials):
+    if trials == 0:
+        return (None, None)
+    return proportion_confint(successes, trials, alpha=0.05, method='beta')
+
+results = []
+
+# Overall Males
+males = df[df['M.F'] == 'Male']
+k_m = (males['Admit'] == 'Yes').sum()
+n_m = len(males)
+ci_m = get_exact_ci(k_m, n_m)
+results.append({
+    'Group': 'Males (Overall)', 'Successes': k_m, 'Trials': n_m, 
+    'Prob': k_m/n_m if n_m else 0, 'Lower 95% CI': ci_m[0], 'Upper 95% CI': ci_m[1]
+})
+
+# Overall Females
+females = df[df['M.F'] == 'Female']
+k_f = (females['Admit'] == 'Yes').sum()
+n_f = len(females)
+ci_f = get_exact_ci(k_f, n_f)
+results.append({
+    'Group': 'Females (Overall)', 'Successes': k_f, 'Trials': n_f, 
+    'Prob': k_f/n_f if n_f else 0, 'Lower 95% CI': ci_f[0], 'Upper 95% CI': ci_f[1]
+})
+
+# By Department
+for dept in sorted(df['Dept'].unique()):
+    for gender in ['Male', 'Female']:
+        subset = df[(df['M.F'] == gender) & (df['Dept'] == dept)]
+        k = (subset['Admit'] == 'Yes').sum()
+        n = len(subset)
+        ci = get_exact_ci(k, n)
+        prob = k/n if n else None
+        results.append({
+            'Group': f'{gender}s in Dept {dept}', 'Successes': k, 'Trials': n, 
+            'Prob': prob, 'Lower 95% CI': ci[0], 'Upper 95% CI': ci[1]
+        })
+
+# Display Results
+res_exact_df = pd.DataFrame(results)
+res_exact_df.style.format({
+    'Prob': '{:.2%}', 
+    'Lower 95% CI': '{:.2%}', 
+    'Upper 95% CI': '{:.2%}'
+})
+```
+
+### Interpretation of Exact Intervals
+
+Overall, Males had an admission rate of **44.52%** (95% CI: 42.63% - 46.42%), while Females had an admission rate of **30.35%** (95% CI: 28.26% - 32.52%). 
+
+---
+
+## Part 2: Normal Approximation (Wald Method) and Differences
+
+Next, we re-analyze the data utilizing the normal approximation (Wald method) for binomial confidence intervals at 95%. This allows us to easily calculate the confidence intervals for the *differences* in probability of admission (Male minus Female).
+
+```{python}
+#| label: normal-approx-ci
+#| tbl-cap: "Normal Approximation Confidence Intervals and Differences"
+
+import numpy as np
+from scipy.stats import norm
+
+z = norm.ppf(0.975) # 1.96 for 95% CI
+
+def wald_ci(k, n):
+    if n == 0: return np.nan, np.nan, np.nan
+    p = k / n
+    se = np.sqrt(p * (1 - p) / n)
+    return p, p - z * se, p + z * se
+
+def wald_diff_ci(k1, n1, k2, n2):
+    if n1 == 0 or n2 == 0: return np.nan, np.nan, np.nan
+    p1 = k1 / n1
+    p2 = k2 / n2
+    diff = p1 - p2
+    se = np.sqrt(p1 * (1 - p1) / n1 + p2 * (1 - p2) / n2)
+    return diff, diff - z * se, diff + z * se
+
+# Overall Stats Calculation
+pm, pm_low, pm_high = wald_ci(k_m, n_m)
+pf, pf_low, pf_high = wald_ci(k_f, n_f)
+diff_o, diff_o_low, diff_o_high = wald_diff_ci(k_m, n_m, k_f, n_f)
+
+print("--- Overall Admission Differences ---")
+print(f"Overall Males: p={pm:.4f}, CI=({pm_low:.4f}, {pm_high:.4f})")
+print(f"Overall Females: p={pf:.4f}, CI=({pf_low:.4f}, {pf_high:.4f})")
+print(f"Overall Diff (M-F): diff={diff_o:.4f}, CI=({diff_o_low:.4f}, {diff_o_high:.4f})\n")
+
+# Department Level Calculation
+dept_results = []
+for dept in sorted(df['Dept'].unique()):
+    m_sub = df[(df['M.F'] == 'Male') & (df['Dept'] == dept)]
+    f_sub = df[(df['M.F'] == 'Female') & (df['Dept'] == dept)]
+    
+    k_m_dept = (m_sub['Admit'] == 'Yes').sum()
+    n_m_dept = len(m_sub)
+    k_f_dept = (f_sub['Admit'] == 'Yes').sum()
+    n_f_dept = len(f_sub)
+    
+    p_m, pm_l, pm_h = wald_ci(k_m_dept, n_m_dept)
+    p_f, pf_l, pf_h = wald_ci(k_f_dept, n_f_dept)
+    diff, diff_l, diff_h = wald_diff_ci(k_m_dept, n_m_dept, k_f_dept, n_f_dept)
+    
+    dept_results.append({
+        'Dept': dept,
+        'Male_p': p_m, 'Male_CI_L': pm_l, 'Male_CI_U': pm_h,
+        'Female_p': p_f, 'Female_CI_L': pf_l, 'Female_CI_U': pf_h,
+        'Diff': diff, 'Diff_CI_L': diff_l, 'Diff_CI_U': diff_h
+    })
+
+res_diff_df = pd.DataFrame(dept_results)
+res_diff_df.style.format({
+    'Male_p': '{:.2%}', 'Male_CI_L': '{:.2%}', 'Male_CI_U': '{:.2%}',
+    'Female_p': '{:.2%}', 'Female_CI_L': '{:.2%}', 'Female_CI_U': '{:.2%}',
+    'Diff': '{:.2%}', 'Diff_CI_L': '{:.2%}', 'Diff_CI_U': '{:.2%}'
+})
+```
+
+### Analysis of the Differences & Simpson's Paradox
+
+1. **Overall:** Males had a higher probability of being admitted compared to Females. Based on the normal approximation, the overall difference in probability is statistically significant because the 95% CI for the difference (+11.34% to +16.98%) does not cross zero.
+2. **By Department (Simpson's Paradox):** When we re-examine the data by looking at each department separately, the trend reverses or disappears:
+   * **Department A:** Females were admitted at a significantly higher rate than Males (the 95% CI for the Male-Female difference is entirely negative: -28.25% to -12.44%).
+   * **Departments B, C, D, E, F:** The 95% confidence intervals for the differences all cross zero, meaning there is **no statistically significant difference** between Male and Female admission probabilities in any of these individual departments. 
+
+This illustrates a classic example of **Simpson's Paradox**: a trend appears in different groups of data but disappears or reverses when these groups are combined.

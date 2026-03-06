@@ -1,0 +1,26 @@
+---
+title: "BUS1301-SP26"
+listing:
+  contents: posts
+  feed: true
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+<marquee scrollamount="10"><h1><p style="color:purple;">{{< fa brands r-project >}}obertwwalker.github.io <br></p></h1></marquee>
+
+```{r, echo=FALSE}
+# library(here)
+slides.dirs <- dir("slides")
+slides.orig <- paste0("./",slides.dirs,"/index-speaker.html")
+slides.dest <- paste0("./docs/slides/",slides.dirs,"/index-speaker.html")
+for(i in 1:length(slides.dirs)) {
+  file.copy(from=slides.orig[[i]], to=slides.dest[[i]], overwrite=TRUE)
+}
+```
+

@@ -1,0 +1,21 @@
+---
+title: "GrokAI on Models"
+author: "Robert W. Walker"
+date: "2026-01-14"
+image: "image.png"
+---
+
+# TL;DR
+
+Grok AI, from Elon Musk's xAI, is a powerful AI tool.  I will use it here to help me think about the use of models.  A [link to the interaction](https://grok.com/share/bGVnYWN5_24078414-1bd4-41fd-a05a-0ef81389778c).
+
+![Grok Interactions](./image.png)
+
+::: {.callout-note appearance="simple"}
+
+## Prompt: 
+
+how are models used in academic disciplines? give an example or two of common models in at least 20 academic disciplines in a formatted table with a linked reference for each model that provides more extensive detail and a column that includes whether the model is predictive or explanatory.  the response should be functional markdown code
+:::
+
+Grok did not really comply.  Ever.

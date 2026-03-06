@@ -1,0 +1,86 @@
+---
+title: "Managing with Data, Analytics and AI"
+subtitle: "Lecture 1: Syllabus and Models"
+author: "Robert W. Walker"
+format: 
+   revealjs:
+     multiplex: true
+     preview-links: true
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301 [13 Jan 26]"
+     chalkboard: true
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: convex
+     code-fold: true
+     code-tools: true
+---
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+```{r setup, include=FALSE}
+library(fontawesome)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, tidy=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', eval=TRUE)
+library(tidyverse)
+library(DT)
+theme_set(hrbrthemes::theme_ipsum_rc())
+options(
+  digits = 3,
+  width = 75,
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis",
+  ggplot2.discrete.colour = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442"),
+  ggplot2.discrete.fill = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442")
+)
+```
+
+## Outline
+
+- Syllabus
+- Overview
+- What is a Model?
+
+## Canvas
+
+- Files
+- Pages
+- Syllabus
+- Assignments
+
+## Syllabus
+
+On Canvas
+
+## Website
+
+[BUS 1301](https://robertwwalker.github.io/BUS1301-SP26/)
+
+## Course Tools
+
+- Docs or Word.  
+- Sheets or Excel.  
+- NotebookLM.  
+- Gemini.  
+
+## What is a Model?
+
+From OED: [A representation of structure, and related senses.](https://www.oed.com/dictionary/model_n?tab=meaning_and_use#36510538)
+
+Your reading for next time explores this and interacting with it and an LLM is your assignment.
+
+## What is an LLM?
+
+A model of lots of language?
+
+## On LLM's
+
+- What are they?
+- How do they work?
+- The corpus
+- [Thinking Like AI](https://www.oneusefulthing.org/p/thinking-like-an-ai)
+- [Attention is all you need....](https://towardsdatascience.com/transformers-explained-visually-part-1-overview-of-functionality-95a6dd460452/)
+
+## An Assignment for Next Time

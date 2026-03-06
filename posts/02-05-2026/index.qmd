@@ -1,0 +1,50 @@
+---
+title: "Data Quality"
+author: "Robert W. Walker"
+date: "2026-02-05"
+image: "image.png"
+---
+
+Today, we conclude data sources and consider data quality.
+
+Readings for this week.
+
+- [Active versus passive collection](https://www.informationgovernanceservices.com/articles/active-vs-passive-digital-data-collection-ethical-risks-of-an-ambiguous-distinction/).   
+- [Surveys](https://www.qualtrics.com/articles/strategy-research/survey-basics/).    
+- [CDC Program Evaluation Framework](https://www.cdc.gov/evaluation/media/pdfs/2025/12/CDC-Program-Evaluation-Framework-Action-Guide.pdf).  
+- [The potential existential threat of large language models to online survey research](https://www.pnas.org/doi/epdf/10.1073/pnas.2518075122).   
+- [On Randomization](https://www.povertyactionlab.org/resource/randomization).  
+
+# Slides
+
+[Link is here](https://robertwwalker.github.io/BUS1301-SP26/slides/02-05-2026/)
+
+# Where is AI headed?
+
+The following two videos detail the thinking of the most important infrastructure leader on the future of the technology.  NVIDIA founder Jensen Huang comments on where and how NVIDIA hardware is likely to be deployed.
+
+## NVIDIA at CES
+
+{{< video https://www.youtube.com/embed/0NBILspM4c4?si=mUCGFfW3CG2BjFjR >}}
+
+## AI's Future
+
+A fascinating discussion between Larry Fink of Blackrock and Jensen Huang from the World Economic Forum in January 2026.
+
+{{< video https://www.youtube.com/embed/uAk2QcLSxoU?si=OjHyP1ay6AkNJXsk >}}
+
+
+## The class plan:
+
+1. A bit more on sources of data.  
+2. The CDC.  
+3. Bots and data quality.  
+4. Transitioning to probability.
+
+Your assignment for this time:
+
+
+## For Next Class:
+
+1. Reading: The readings and the textbook through Chapter 3 on Probability.
+2. Deliverable: 

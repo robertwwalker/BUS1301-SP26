@@ -1,0 +1,7 @@
+---
+title: "BUS 1301 Slides"
+listing:
+  contents: . 
+  type: table   # options: default, grid, or table
+  sort: "desc"
+---

@@ -1,0 +1,12 @@
+---
+title: "A Dashboard"
+author: "Robert W. Walker"
+date: "2026-02-11"
+image: "image.png"
+---
+
+# TL;DR: A Python Dashboard
+
+```{=html}
+<iframe width="900" height="600" src="https://robertwwalker.github.io/BUS1301-SP26/writeups/Dashboards/img/Dashboard.html" title="Python Dashboard"></iframe>
+```

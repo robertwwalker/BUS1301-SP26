@@ -1,0 +1,41 @@
+---
+title: "Where do Data Come From?"
+author: "Robert W. Walker"
+date: "2026-02-03"
+image: "image.png"
+---
+
+Today, we conclude data visualization and think about where data come from.
+
+## Five bits of data
+
+- [datasaurus](./data/datasaurus.csv).   
+- [BondFunds](./data/BondFunds.csv).   
+- [UCB-Admissions](./data/UCB-Admit.csv).   
+- [CADDS](./data/CADDS.csv).   
+- [Fast Food](./data/FastFood.csv).   
+
+
+# Slides
+
+[Link is here](https://robertwwalker.github.io/BUS1301-SP26/slides/02-03-2026/)
+
+
+
+## The class plan:
+
+1. A bit on two quantitative variables.   
+2. Sources of data.  
+3. The readings on data.   
+
+
+Your assignment for this time:
+
+1. Do the reading.
+2. **From last time**. Create three data visualizations.
+
+
+## For Next Class:
+
+1. Reading: The readings and the textbook through Chapter 2.
+2. Deliverable: Find and document two sources for data.  One that contains at least three qualitative variables and one with at least two quantitative variables of at least six variables [Assignment 7]. For reading for next time beyond the book, conduct a bit of research on each of Campbell’s Law and Goodhart’s Law; it will form a part of your assignment for next time in addition to the CDC guide to evaluation, if you have not already.  

@@ -1,0 +1,67 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/03-05-2027/index.html",
+      "/posts/03-03-2026/index.html",
+      "/posts/02-26-2026/index.html",
+      "/posts/02-24-2026/index.html",
+      "/posts/02-19-2026/index.html",
+      "/posts/02-17-2026/index.html",
+      "/posts/02-12-2026/index.html",
+      "/posts/02-10-2026/index.html",
+      "/posts/02-05-2026/index.html",
+      "/posts/02-03-2026/index.html",
+      "/posts/01-29-2026/index.html",
+      "/posts/01-27-2026/index.html",
+      "/posts/01-22-2026/index.html",
+      "/posts/01-20-2026/index.html",
+      "/posts/01-15-2026/index.html",
+      "/posts/01-13-2026/index.html",
+      "/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/slides/index.html",
+    "items": [
+      "/slides/01-13-2026/index.html",
+      "/slides/01-15-2026/index.html",
+      "/slides/01-20-2026/index.html",
+      "/slides/01-22-2026/index.html",
+      "/slides/01-27-2026/index.html",
+      "/slides/01-29-2026/index.html",
+      "/slides/02-03-2026/index.html",
+      "/slides/02-05-2026/index.html",
+      "/slides/02-10-2026/index.html",
+      "/slides/02-12-2026/index.html",
+      "/slides/02-17-2026/index.html",
+      "/slides/02-19-2026/index.html",
+      "/slides/02-24-2026/index.html",
+      "/slides/02-26-2026/index.html",
+      "/slides/03-03-2026/index.html"
+    ]
+  },
+  {
+    "listing": "/writeups/index.html",
+    "items": [
+      "/writeups/Dashboards/img/Dashboard.html",
+      "/writeups/Gemini-MultiAgent/index.html",
+      "/writeups/Claude-Binomial-Analysis/index.html",
+      "/writeups/Gemini-Binomial-Analysis/index.html",
+      "/writeups/Gemini-Monte-Carlo/index.html",
+      "/writeups/Dashboards/index.html",
+      "/writeups/Gemini-CDC/index.html",
+      "/writeups/Gemini-Data-Ownership/index.html",
+      "/writeups/causality/index.html",
+      "/writeups/Gemini-Business-Models/index.html",
+      "/writeups/ChatGPT-Models/index.html",
+      "/writeups/Claude-Models/index.html",
+      "/writeups/Gemini-Analysis/index.html",
+      "/writeups/Gemini-Chat/index.html",
+      "/writeups/Gemini-Formatting/index.html",
+      "/writeups/Gemini-Models/index.html",
+      "/writeups/GrokAI-Models/index.html",
+      "/writeups/Lesson-Learned/index.html"
+    ]
+  }
+]

@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-01-01">
+
+<title>BUS 1301: Managing with Data, Analytics, and Artificial Intelligence – Managing with Data, Analytics, AI</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-da20e9629ea62fd4d48d83a1230651f9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+</head><body class="nav-sidebar docked nav-fixed fullcontent quarto-light">\linespread{1.05}
+
+
+<link rel="stylesheet" href="../styles.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../AGSMlogo.jpeg" alt="" class="navbar-logo light-content">
+    <img src="../AGSMlogo.jpeg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">BUS 1301</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/robertwwalker/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/PieRatio"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">BUS 1301: Managing with Data, Analytics, and Artificial Intelligence</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../writeups/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Write-ups</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">BUS 1301: Managing with Data, Analytics, and Artificial Intelligence</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="course-description" class="level2">
+<h2 class="anchored" data-anchor-id="course-description">Course description</h2>
+<p>This course will introduce students to how managers and organizations collect, process, and interpret observations about the world around them to facilitate informed decisions with the aid of models including those of artificial intelligence. The first portion of the course introduces students to models, the concept of data, and the use of data in workplace settings. Students will learn different practical methods of data gathering – from surveys and archives to experiments and crowd sourcing and explore basic methods of organizing data for robust and sustainable deployment. With data in hand, we explore how managers can use data, highlighting the incredible value resulting from cross tabulation, frequency distributions, and simple plots. This value is enhanced with basic statistical inference and populating models with data. One of the greatest barriers to linking data and decisions was the necessary computing; artificial intelligence tools have fundamentally changed that. The final portion of the course will focus on the use of artificial intelligence (AI), highlighting general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business and explore the likely future.</p>
+<p>Information is a resource; it should be used judiciously and efficiently. While a wealth of information is available at our fingertips, high quality information can remain a surprisingly scarce resource. We are inundated with data, facts, and figures that only become actionable through identifying meaningful patterns and trends, developing fundamental managerial insights, and extracting information essential to inform effective managerial decisions. The tools of this course are among the most important tools of effective managers.</p>
+<p>While effective, there is a sense in which limitations imposed by linking decisions to measures and data are reductionist, potentially misleading, and pose potentially deep ethical challenges. Mindful of the central role that ethics must play in shaping organizational pursuits, we will tackle these challenges head on though only you can ground these in your deepest moral sentiments.</p>
+</section>
+<section id="course-goals" class="level1">
+<h1>Course goals</h1>
+<p>Upon successful completion of this course, you should –</p>
+<ol type="1">
+<li>Distinguish various means of data collection and discuss their tradeoffs.</li>
+<li>Describe common models of data management and their tradeoffs.</li>
+<li>Understand the basics of relational databases and the ways that they are combined.</li>
+<li>Articulate the application of common analytic techniques, their function, and their domain of application.</li>
+<li>Comfortably discuss AI’s historical development, current functionality, and valid use cases.</li>
+<li>Recognize and evaluate the myriad ethical concerns in data, analytics, and artificial intelligence.</li>
+<li>Be able to utilize AI tools [and verify their veracity] for performing data analysis and decision support.</li>
+</ol>
+</section>
+<section id="course-materials" class="level1">
+<h1>Course Materials</h1>
+<p>The primary organizing resource for the course is the <strong>Open Introduction to Statistics</strong>. It is open and freely available in a variety of digital formats. Paper copies can be obtained as well if you so choose.</p>
+<pre><code>Diez, David M., Christopher D. Barr, and Mine Cetinkaya-Rundel.  2019.  
+  OpenIntro Statistics: Fourth Edition.</code></pre>
+<p>Additional course materials – readings, examples, and exercises – will be posted regularly to our Canvas course site and the class website. I maintain Files and a Pages document with .pdfs and links on Canvas and will frequently link things via the course website on github.</p>
+<p>To access the university sites, you will be prompted for your Willamette University login in order to gain access to course materials. The course will combine the use of Excel or Sheets for many tasks but we have reached an age where what once were difficult computing barriers have become trivial for LLM tools. We will exploit them.</p>
+<p>Slides are always posted before class. Supplemental resources can be found on Canvas.</p>
+</section>
+<section id="policies" class="level1">
+<h1>Policies</h1>
+<section id="individuals-and-groups" class="level2">
+<h2 class="anchored" data-anchor-id="individuals-and-groups">Individuals and Groups</h2>
+<p>This course will require you to complete both individual assignments and group assignments. For individual assignments, I do not allow any form of student collaboration. I define student collaboration as any assistance given from one student to another student. Please feel free to talk with me before you engage in any activity that might satisfy the definition of “collaboration”; I would be happy to provide you my guidance on whether or not the activity is acceptable. By enrolling in this course, you agree to be held to my definition of “individual assignments” and “student collaboration.” For group assignments, students can and should work interactively, making it difficult to distinguish who completed which portions of the project. In the list of deliverables below, I designate individual work and group work.</p>
+</section>
+<section id="ai-tools-and-their-use" class="level2">
+<h2 class="anchored" data-anchor-id="ai-tools-and-their-use">AI Tools and Their Use</h2>
+<p>Exams with integrity are a challenge. I am not restricting use of AI tools at all for your exam prep memos or for class exercises. However, you must keep two things in mind: using an AI system does not absolve you from the need to cite others’ work and you have to verify any information that an AI system provides. You will receive point deductions for uncited or incorrect information, as well as for uncited incorrect information (the latter sounds strange, but it can happen if you echo someone else’s erroneous ideas). You also must disclose when you use AI in your work; this disclosure should not be viewed as a hassle, but, instead, as an opportunity to display your skill in using AI systems. If you do find yourself thinking that the use of an AI system for a given activity is something you would rather not disclose, then I would contend that you do not need any further evidence to realize that you ought to dispense with the use of AI in that situation: just do the work on your own.</p>
+</section>
+<section id="holidays-and-absence" class="level2">
+<h2 class="anchored" data-anchor-id="holidays-and-absence">Holidays and Absence</h2>
+<p>The academic calendar spans religious holidays, days of personal obligation, exceptional one-time work situations, bouts of illness, and unexpected difficult incidents that change our lives, such as the loss of family members or friends. If one of those important events (or any other important circumstance not listed) occurs on or near a day when we have a class session or deliverable due, please contact me. Together we will figure out an alternative arrangement that allows you to complete the requirements of this course without penalty while maintaining focus on important things that require personal attention. If you face a particularly severe situation that will require you to miss many class sessions, please contact me so that we can work together to determine whether it makes sense for you to step away from the course and complete it in the future, thus avoiding an additional stressor in the midst of exceptional challenges. In any event, please know that I firmly believe in accommodating every student’s important religious and personal commitments.</p>
+</section>
+<section id="attendance-policy" class="level2">
+<h2 class="anchored" data-anchor-id="attendance-policy">Attendance policy</h2>
+<ul>
+<li>Because <code>google meet</code> recordings of every course meeting are available, there are opportunities for making up missed classes; I take this as license to assume you are familiar with the complete contents of every class meeting. It is not a substitute for attentive and active presence. It is an opportunity not to miss things.</li>
+</ul>
+<p>The university views this course as <code>in-person</code>. Students cannot complete class exercises remotely, however, thus those attending remotely will need to schedule a meeting with me to complete the exercise.</p>
+<p><a href="unknown.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="unknown.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="grading" class="level1">
+<h1>Grading</h1>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Grade</th>
+<th style="text-align: right;">Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">95-100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A-</td>
+<td style="text-align: right;">90-94.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B+</td>
+<td style="text-align: right;">85-89.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">80-84.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B-</td>
+<td style="text-align: right;">75-79.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">70-74.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C-</td>
+<td style="text-align: right;">65-69.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D+</td>
+<td style="text-align: right;">60-64.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">55-59.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">0-54.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>I am not 100 percent certain on this part, we will discuss it.</strong></p>
+<section id="willamette-code-of-conduct" class="level2">
+<h2 class="anchored" data-anchor-id="willamette-code-of-conduct">Willamette Code of Conduct</h2>
+<p>Every student is expected at all times to abide by the Willamette University Atkinson Graduate School of Management Honor Code, Academic Integrity Policy, and Expectations of Academic and Professional Behavior as detailed in the current student handbook: https://willamette.edu/mba/students/full-time/mba-student-handbook/index.html</p>
+<p>College of Arts and Sciences https://my.willamette.edu/site/policies/academic-integrity</p>
+</section>
+<section id="diversity-and-inclusion-statement" class="level2">
+<h2 class="anchored" data-anchor-id="diversity-and-inclusion-statement">Diversity and Inclusion Statement:</h2>
+<p>I intend for students from all backgrounds and perspectives to be well served by this course. The Diversity of thought and experience that everyone brings to this class should be viewed as a resource, strength, and benefit. As such, we will strive to be open-minded and understanding of everyone’s perspectives and polite to each other when we disagree.</p>
+</section>
+</section>
+<section id="class-recordings" class="level1">
+<h1>Class Recordings</h1>
+<p>I will do my very best to insure useful <code>google meet</code> recodings for every class. They are accessible via Canvas.</p>
+</section>
+<section id="solicitation-of-input" class="level1">
+<h1>Solicitation of Input</h1>
+<p>Student input for the purpose of course improvement is taken very seriously and will potentially be done periodically. Please take the time to evaluate this course and the instructor, especially at the end of the semester. Evaluations will in no way affect your grade. I simply cannot know the student experience in the classroom without your perspective.</p>
+<section id="campus-weather-closure" class="level2">
+<h2 class="anchored" data-anchor-id="campus-weather-closure">Campus Weather Closure</h2>
+<p>In case of extreme weather conditions or when the university is closed, classes are expected to be fully on <code>google meet</code>. Unless the instructor makes a notification 24 hours before the class starting hour, attendance will not be required and the class will be recorded and shared for one week to the students. Students should attend the session live or watch the recorded session to keep up with the materials</p>
+</section>
+</section>
+<section id="campus-resources" class="level1">
+<h1>Campus resources</h1>
+<section id="accessible-education-services-and-the-americans-with-disabilities-act" class="level2">
+<h2 class="anchored" data-anchor-id="accessible-education-services-and-the-americans-with-disabilities-act">Accessible Education Services and the Americans with Disabilities Act</h2>
+<p>I aim to create a learning environment that accommodates the diverse abilities of all students. As a result, I will move quickly to work with you so that, together, we can uphold the University’s official practice: “Students with disabilities who require accommodation should notify the instructor of the nature of accommodation in the first week of class. Additional support is available from the Willamette University Accessible Education Services Office.”</p>
+<p>,</p>
+<p>telephone 503-370-6737.</p>
+</section>
+</section>
+<section id="educational-philosophy" class="level1">
+<h1>Educational Philosophy</h1>
+<p>I expect you to be occupied first and foremost with managing your own learning. I am very much available to assist you in accomplishing our learning objectives but you must take an active role and that includes being proactive about knowledge gaps, struggles, and shortcomings before we can develop strategies for solving them. Indeed, the ability to recognize the limits of one’s own knowledge and expertise and seek out expert counsel is widely regarded as a key trait among successful professionals. As a matter of logic, managing your own success in the course cannot fall to anyone but you. I promise to do all that I can to assist you when you actively manage your mastery of course objectives.</p>
+<p>The first class meeting engages a discussion about my philosophy on assessments, grading, and how learning occurs.</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="detailed-timeline" class="level1">
+<h1>Detailed Timeline</h1>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Course Schedule.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Date</th>
+<th style="text-align: center;">Class</th>
+<th style="text-align: center;">Week</th>
+<th style="text-align: left;">Lecture</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2026-01-13</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Introduction and Models</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-01-15</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">What are Models?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-01-20</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Data Types</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-01-22</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Data Storage</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-01-27</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Visualization I</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-01-29</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Visualization II</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-02-03</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Sources of Data</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-02-05</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Data Quality</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-02-10</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Probability I</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-02-12</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Probability II</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-02-17</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Distributions I</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-02-19</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Distributions II</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-02-24</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Interpretation I</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-02-26</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Interpretation II</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-03-03</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Recapping Data</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-03-05</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Midterm Examination</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-03-10</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Analytics I</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-03-12</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Analytics II</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-03-17</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Analytics III</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-03-19</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">Analytics IV</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-03-31</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">AI and the LLM</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-04-02</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">AI Parameters</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-04-09</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: left;">AI Prompts</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-04-14</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">AI Simulation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-04-16</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">AI Ethics</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-04-21</td>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Non-LLM AI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026-04-23</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">AI and Analytics: Summary</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026-04-28</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: left;">Final Review</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<section id="introduction-and-models" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-and-models">1. Introduction and Models</h2>
+<section id="syllabus-and-model" class="level3">
+<h3 class="anchored" data-anchor-id="syllabus-and-model"><code>Syllabus and Model</code></h3>
+<p>Class 1 provides an introduction to the course. An overview of the syllabus, how I have planned the course, my expectations and accommodations, and the flow of our journey through models, data, analytics, and artificial intelligence.</p>
+<p>LO: Models as crucial to the manager’s deployment of data, analytics, and AI</p>
+<p>Ethics: What risks do model’s pose for their users?</p>
+<p>Reading: Syllabus</p>
+<p>Deliverable: Assignment 1 on canvas due 15-01-2026 at 11:59 PM. LLMs as reading support.</p>
+</section>
+<section id="what-are-models" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-models"><code>What are Models?</code></h3>
+<p>Class 2 provides an introduction to models. What is a model?</p>
+<p>LO: Models are ubiquitous, in management and in nearly every field of study at the university. We will explore types of models and their use with a view to combining them with observable information.</p>
+<p>Ethics: Is importance associated, unnecessarily, with measurability?</p>
+<p>Reading: The Stanford Encyclopedia of Philosophy on Models in Science.</p>
+<p>Deliverable(s):</p>
+</section>
+</section>
+<section id="on-data" class="level2">
+<h2 class="anchored" data-anchor-id="on-data">2. On Data</h2>
+<section id="types-of-data" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-data"><code>Types of Data</code></h3>
+<p>Class 3 examines models and types of data</p>
+<ul>
+<li><p>The qualitative/quantitative distinction</p></li>
+<li><p>Nominal</p></li>
+<li><p>Ordinal</p></li>
+<li><p>Interval</p></li>
+<li><p>Ratio-scale</p></li>
+</ul>
+<p>LO: Understand common ways of defining data via units of analysis, level of measurement, and variable type.</p>
+<p>Ethics: Are there things we should not measure?</p>
+<p>Reading: Chapter 1 of Open Intro Statistics</p>
+</section>
+<section id="data-storage" class="level3">
+<h3 class="anchored" data-anchor-id="data-storage"><code>Data Storage</code></h3>
+<p>Class 4 considers two distinct models of data storage: FMS and DBMS, the particulars of spreadsheets, and quick and dirty relational data.</p>
+<p>LO: Understand different means of storing data and the tradeoffs associated with each method.</p>
+<p>Ethics: When should we delete data? What data?</p>
+<p>Readings: Data Organization in Spreadsheets</p>
+</section>
+<section id="visualization-i" class="level3">
+<h3 class="anchored" data-anchor-id="visualization-i"><code>Visualization I</code></h3>
+<p>Class 5 examines data visualization.</p>
+<p>We take our motivation from Hadley Wickham’s <a href="https://vita.had.co.nz/papers/layered-grammar.html">Grammar of Graphics</a> to be read for next time.</p>
+<p>LO: Understand the role of contingency tables and simple visualization methods in understanding the contents of a data set.</p>
+<p>Ethics: Is any visualization inherently deceptive [except a spreadsheet]?</p>
+<p>Readings: Open Intro, Chapter 2</p>
+</section>
+<section id="visualization-ii" class="level3">
+<h3 class="anchored" data-anchor-id="visualization-ii"><code>Visualization II</code></h3>
+<p>Class 6 continues summary and data visualization motivated by Hadley Wickham’s <a href="https://vita.had.co.nz/papers/layered-grammar.html">Grammar of Graphics</a> which we should have read for this time.</p>
+<p>LO: Understand the interaction of summary and visualization highlighted by <code>datasaurus</code>. Differentiate appropriate visualizations by data type.</p>
+<p>Ethics: Is there a truly neutral visualization of data?</p>
+<p>Readings: Chapter 2 and <a href="https://medium.economist.com/mistakes-weve-drawn-a-few-8cdd8a42d368">Visualization Errors by the Economist</a></p>
+</section>
+<section id="sources-of-data" class="level3">
+<h3 class="anchored" data-anchor-id="sources-of-data"><code>Sources of Data</code></h3>
+<p>Class 7 examines data sources. How are data collected and/or generated?</p>
+<p>LO: How are data collected? Describe the modes and consequences.</p>
+<p>Ethics: What principles should guide data collection?</p>
+<p>Readings:<br>
+Chapter 1, Sections 2.5, 3, and 4</p>
+<ul>
+<li><a href="https://www.informationgovernanceservices.com/articles/active-vs-passive-digital-data-collection-ethical-risks-of-an-ambiguous-distinction/">Active versus passive collection</a><br>
+</li>
+<li><a href="https://www.qualtrics.com/articles/strategy-research/survey-basics/">Surveys</a><br>
+</li>
+<li><a href="https://www.cdc.gov/evaluation/media/pdfs/2025/12/CDC-Program-Evaluation-Framework-Action-Guide.pdf">CDC Program Evaluation Framework</a><br>
+</li>
+<li><a href="https://www.pnas.org/doi/epdf/10.1073/pnas.2518075122">The potential existential threat of large language models to online survey research</a></li>
+</ul>
+</section>
+<section id="data-quality" class="level3">
+<h3 class="anchored" data-anchor-id="data-quality"><code>Data Quality</code></h3>
+<p>Class 8 considers the quality and reliability of data.</p>
+<p>LO: Methods of collection influence the reliability of conclusions.</p>
+<p>Ethics: Is inference morally questionable when it implies individual characteristics?</p>
+<p>Readings: Chapter 1, Sections 1.3 and 1.4 <a href="https://www.povertyactionlab.org/resource/randomization">On Randomization</a></p>
+</section>
+</section>
+<section id="probability" class="level2">
+<h2 class="anchored" data-anchor-id="probability">3. Probability</h2>
+<section id="probability-i" class="level3">
+<h3 class="anchored" data-anchor-id="probability-i"><code>Probability I</code></h3>
+<p>Class 9 introduces probability.</p>
+<p>LO: Defining probability and its arithmetic, calculating proportions in tables.</p>
+<p>Ethics: Does probability deny absolute truth?</p>
+Readings: Chapter 3
+</section>
+<section id="probability-ii" class="level3">
+<h3 class="anchored" data-anchor-id="probability-ii"><code>Probability II</code></h3>
+<p>Class 10 concludes probability.</p>
+<p>LO: Bayes Rule, decision trees, and constructing distributions?</p>
+<p>Ethics: Are ecological inferences dehumanizing?</p>
+<p>Readings: Chapter 3 and selections from Jaynes on Canvas.</p>
+</section>
+</section>
+<section id="probability-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="probability-distributions">4. Probability Distributions</h2>
+<section id="probability-distributions-i" class="level3">
+<h3 class="anchored" data-anchor-id="probability-distributions-i"><code>Probability Distributions I</code></h3>
+<p>Class 11 introduces probability distributions.</p>
+<p>LO: What is a probability distribution?</p>
+<p>Ethics: Are probability distributions inherently reductionist?</p>
+<p>Readings: Chapter 4</p>
+</section>
+<section id="probability-distributions-ii" class="level3">
+<h3 class="anchored" data-anchor-id="probability-distributions-ii"><code>Probability Distributions II</code></h3>
+<p>Class 12 elaborates probability distributions with a focus on specific discrete and continuous distributions.</p>
+<p>LO: Learning and applying common applications for probability distributions in management settings. Why do we make such assumptions?</p>
+<p>Ethics: Should some the distributions of some phenomena not be studied and understood?</p>
+<p>Readings: Chapter 4</p>
+</section>
+</section>
+<section id="data-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="data-interpretation">5. Data Interpretation</h2>
+<section id="data-interpretation-i" class="level3">
+<h3 class="anchored" data-anchor-id="data-interpretation-i"><code>Data Interpretation I</code></h3>
+<p>Class 13 introduces statistical inference with a focus on binary outcomes in single and multiple samples.</p>
+<p>LO: Defining inference and inferring quantities from binary data.</p>
+<p>Ethics: What can we make of the concept of <em>on average</em> as it relates to people?</p>
+<p>Readings: Chapters 5 and 6</p>
+</section>
+<section id="data-interpretation-ii" class="level3">
+<h3 class="anchored" data-anchor-id="data-interpretation-ii"><code>Data Interpretation II</code></h3>
+<p>Class 14 continues statistical inference with a focus on quantitative outcomes in single and multiple samples paying attention to dependent samples.</p>
+<p>LO: Defining inference and inferring quantities from metric data.</p>
+<p>Ethics: What can we make of the concept of <em>on average</em> as it relates to people?</p>
+<p>Readings: Chapters 5 through 7</p>
+</section>
+</section>
+<section id="midterm-week" class="level2">
+<h2 class="anchored" data-anchor-id="midterm-week">Midterm Week</h2>
+<section id="recapping-models-and-data" class="level3">
+<h3 class="anchored" data-anchor-id="recapping-models-and-data"><code>Recapping Models and Data</code></h3>
+<p>Class 15 provides a recap of our progress and a review for the midterm examination.</p>
+<p>Ethics: Are exams good data? What might be better?</p>
+<p>Assignment for discussion: Midterm Preparation Assignment</p>
+</section>
+<section id="midterm-examination" class="level3">
+<h3 class="anchored" data-anchor-id="midterm-examination"><code>Midterm Examination</code></h3>
+<p>Class 16 is the midterm examination.</p>
+</section>
+</section>
+<section id="analytics" class="level2">
+<h2 class="anchored" data-anchor-id="analytics">6. Analytics</h2>
+<section id="analytics-i" class="level3">
+<h3 class="anchored" data-anchor-id="analytics-i"><code>Analytics I</code></h3>
+<p>Class 17 examines correlation and relationships among variables.</p>
+<p>LO: Correlation is not causation but could it be?</p>
+<p>Ethics: The ethics of intervening randomly</p>
+<p>Reading: Chapter 8.1 and Pearl’s Ladder of Causation</p>
+</section>
+<section id="analytics-ii" class="level3">
+<h3 class="anchored" data-anchor-id="analytics-ii"><code>Analytics II</code></h3>
+<p>Class 18 provides analytical tools deploying our developed skills across the generic management field of operations.</p>
+<p>Examples: Six sigma methods, scheduling, and queueing theory</p>
+<p>Readings:<br>
+- <a href="https://www.ebsco.com/research-starters/business-and-management/flow-shop-scheduling">Flow Shop Schedules</a></p>
+</section>
+<section id="analytics-iii" class="level3">
+<h3 class="anchored" data-anchor-id="analytics-iii"><code>Analytics III</code></h3>
+<p>Class 19 provides analytical tools deploying developed skills in finance and accounting with examples from options pricing and cost accounting.</p>
+<p>Examples: BSM Options Pricing and Cost Accounting</p>
+</section>
+<section id="analytics-iv" class="level3">
+<h3 class="anchored" data-anchor-id="analytics-iv"><code>Analytics IV</code></h3>
+<p>Class 20 provides applications of our analytical tools in human resource management. We explore the interaction of what is measured and employee response and consider the role of automated screening for employment.</p>
+<p>LO: Understand basic applications of inferential tools to human resources and stakeholder management.</p>
+</section>
+</section>
+<section id="artificial-intelligence" class="level2">
+<h2 class="anchored" data-anchor-id="artificial-intelligence">7. Artificial Intelligence</h2>
+<section id="ai-as-llms-i" class="level3">
+<h3 class="anchored" data-anchor-id="ai-as-llms-i"><code>AI as LLMs I</code></h3>
+<p>Class 21 introduces and defines the core of large language models, our AI tool of choice.</p>
+<p>LO: How do LLM’s work? Is it just predicting a next word?</p>
+<p>Reading:<br>
+- <a href="https://developers.google.com/machine-learning/crash-course/llm">Google’s crash course on LLMs</a></p>
+</section>
+<section id="ai-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="ai-parameters"><code>AI Parameters</code></h3>
+<p>Class 22 deepens our understanding of large language models with a focus on model parameters.</p>
+<p>Readings: - <a href="https://blog.lukesalamone.com/posts/what-is-temperature/">What is Temperature?</a>.<br>
+- <a href="https://www.ibm.com/think/topics/llm-parameters">LLM Parameters from IBM</a> - <a href="https://neptune.ai/blog/hyperparameter-optimization-for-llms">Advanced: Hyperparameter optimization</a></p>
+</section>
+<section id="ai-prompts" class="level3">
+<h3 class="anchored" data-anchor-id="ai-prompts"><code>AI Prompts</code></h3>
+<p>Class 23 provides an overview of techniques for prompting large language models.</p>
+<p>LO: Refining inputs to an LLM to improve the quality of outputs</p>
+<p>Ethics: Do organizations have a responsibility to train employees on AI usage?</p>
+<p>Readings:<br>
+- <a href="https://www.promptingguide.ai/techniques">Prompting Techniques</a></p>
+</section>
+<section id="ai-simulation-the-system-command" class="level3">
+<h3 class="anchored" data-anchor-id="ai-simulation-the-system-command"><code>AI Simulation: The System Command</code></h3>
+<p>Class 24 examines the use of large language models in simulation with particular attention to the <code>system</code> role.</p>
+<p>LO: Understand the role of system in providing context for an LLM</p>
+<p>Ethics: What are the risks of simulating living persons?</p>
+<p>Reading:<br>
++ <a href="https://www.nature.com/articles/s41586-023-06647-8">Role Playing with LLMs</a></p>
+</section>
+<section id="ai-ethics" class="level3">
+<h3 class="anchored" data-anchor-id="ai-ethics"><code>AI Ethics</code></h3>
+<p>Class 25 is dedicated to ethical issues in AI.</p>
+<p>LO: Understand the ethical implications of each step of the AI development and deployment process.</p>
+<p>Reading: Stochastic Parrots by Bender et al.</p>
+</section>
+<section id="non-llm-ai" class="level3">
+<h3 class="anchored" data-anchor-id="non-llm-ai"><code>Non-LLM AI</code></h3>
+<p>Class 26 touches on the theory of the mind and intelligence before turning to the broad array of AI that is not LLM.</p>
+<p>Readings:<br>
++ <a href="https://marcushutchins.com/blog/tech/opinions/the-ai-intelligence-paradox.html">LLMs and Intelligence</a>.<br>
++ Jensen Huang at CES</p>
+</section>
+</section>
+<section id="summary-remarks-and-conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="summary-remarks-and-conclusions">8. Summary Remarks and Conclusions</h2>
+<section id="ai-and-analytics-summary" class="level3">
+<h3 class="anchored" data-anchor-id="ai-and-analytics-summary"><code>AI and Analytics: Summary</code></h3>
+<p>Class 27 summarizes our exploration of artificial intelligence via LLMs and the other models of AI in development.</p>
+</section>
+<section id="final-exam-review" class="level3">
+<h3 class="anchored" data-anchor-id="final-exam-review"><code>Final Exam Review</code></h3>
+<p>Class 28 provides a review for the final examination and a summary of course topics.</p>
+<p>Deliverable: Exam Preparation Assignment</p>
+</section>
+</section>
+<section id="final-examination" class="level2">
+<h2 class="anchored" data-anchor-id="final-examination">Final Examination</h2>
+<p>TBA at the scheduled time.</p>
+</section>
+</section>
+<section id="final-thoughts" class="level1">
+<h1>Final thoughts</h1>
+<p>This document is a roadmap for our semester. We are learning about data and artificial intelligence tools together and our individual experiences shape how we interpret and value data. Like all your classes, you will get out what you put into this course. Asking for help from one another and your instructors is important, don’t be afraid to ask a question about something you don’t know or if you want to check your knowledge about something you think you know.</p>
+<section id="notes-and-acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="notes-and-acknowledgements">Notes and Acknowledgements</h2>
+<p><strong>If this document is updated, a copy will be supplied to you via Canvas and changes will be announced in class.</strong>. This version was rendered 2026-03-03 18:34:33.592461. I would like to acknowledge the <a href="https://github.com/thefallingduck/RmdSyllabus"><code>RmdSyllabus</code></a> package and <code>@TheFallingDuck - Ben Linzmeier of the University of South Alabama</code> for an excellent and easy to use tool for creating syllabi in R using markdown. The particulars of the course borrow much from prior iterations of this course developed by Professor Tim Johnson of the Atkinson Graduate School of Management at Willamette University.</p>
+<p>NB: There are a few universally applicable policies across all campus units at Willamette University detailed herein. Otherwise, as a faculty member in the Atkinson Graduate School of Management, the syllabus is intended to comply with the requirements of Atkinson syllabi as they interact with Willamette College rules.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/robertwwalker\.github\.io\/BUS1301-SP26");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

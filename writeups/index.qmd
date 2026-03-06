@@ -1,0 +1,8 @@
+---
+title: "BUS 1301 Writeups"
+listing:
+  contents: . 
+  type: table   # options: default, grid, or table
+  sort: "date desc"
+---
+

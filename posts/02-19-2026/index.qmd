@@ -1,0 +1,36 @@
+---
+title: "Probability Distributions"
+author: "Robert W. Walker"
+date: "2026-02-19"
+image: "image.jpg"
+---
+
+Today, we continue probability distributions.
+
+
+# Apps
+
+[App](https://robertwwalker.github.io/GeminiStatsDist/)
+
+
+# Slides
+
+[Link is here](https://robertwwalker.github.io/BUS1301-SP26/slides/02-19-2026/)
+
+
+## The class plan:
+
+1. Examples of normals and uniforms.   
+2. A bit more continuous distributions then discrete things.  
+3. Homework: (1) Recreate the evidence in the slides.  Answering the substantive questions given the models/assumptions we have made.  You will simply attest to doing this.  The real assignment is: come up with some simulation linking three probability distributions as a follow on to your previous find on distributions for last class.  If that proves difficult, trying something new is fine.
+
+
+Your assignment for this time:
+
+1. Do the reading.
+2. The assignment: an application of a probability distribution.
+
+## For Next Class:
+
+1. Reading: Inference.
+2. Deliverable: A Gemini simulation [Assignment 12].   

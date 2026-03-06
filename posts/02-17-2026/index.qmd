@@ -1,0 +1,53 @@
+---
+title: "Probability Distributions"
+author: "Robert W. Walker"
+date: "2026-02-17"
+image: "image.jpg"
+---
+
+Today, we explore probability distributions.
+
+## LLMs are Built on Probability Distributions
+
+The next token prediction conditional on the current and prior tokens is exactly what large language models do.
+
+
+![The Last Supper](./img/GGI.png)
+
+More of a banquet...
+
+![Banquet](./img/GGI2.png)
+
+![Titled](./img/GGI3.png)
+
+## One key bit of data
+
+- [UCB-Admissions](./data/UCB-Admit.csv).   
+
+# An App?
+
+[App](https://robertwwalker.github.io/GeminiStatsDist/)
+
+
+# Slides
+
+[Link is here](https://robertwwalker.github.io/BUS1301-SP26/slides/02-17-2026/)
+
+
+## The class plan:
+
+1. Defining probability.   
+2. Pivots and tables.  
+3. Visualizing tables.  
+
+![GSheets](./img/GSheets.png)
+
+Your assignment for this time:
+
+1. Do the reading.
+2. The assignment: use Gemini and/or Notebook LM to complete the three excerpts from Jaynes.
+
+## For Next Class:
+
+1. Reading: Chapter 3 if not already and read through Jaynes on Probability.
+2. Deliverable: A conversation on probability [Assignment 9].   

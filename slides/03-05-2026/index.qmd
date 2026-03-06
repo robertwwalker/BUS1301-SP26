@@ -1,0 +1,166 @@
+---
+title: "Comparing Quantitative Data and Sampling"
+subtitle: "Linking Probability and Data"  
+author: "Robert  W. Walker"
+date: '`r Sys.Date()`'
+format: 
+   revealjs:
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301-SP26"
+     multiplex:
+       url: 'https://multiplex-5adl.onrender.com'
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: zoom
+     preview-links: true
+     lightbox: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', dev.args = list(bg = "white"), eval=TRUE)
+library(tidyverse)
+library(magrittr)
+library(fontawesome)
+library(DT)
+library(magrittr)
+options(scipen=8)
+library(tidyverse)
+library(gganimate)
+library(hrbrthemes)
+theme_set(theme_ipsum_rc())
+```
+
+
+
+
+
+```{r}
+load(url("https://github.com/robertwwalker/DADMStuff/raw/master/Big-Week-6-RSpace.RData"))
+```
+
+
+
+## Paired t-test
+
+### Twinsberg
+
+The paired t-test is a single sample average applied to the measured difference.  The key is knowing who is matched with whom and believing that there is at least some variation in both outcomes that depends on the unit in question.  
+
+There is a linguistic distinction; this is an average difference instead of the previous difference in averages.  The language describes the order of operation.  For the paired comparison, I must know what to subtract from what.
+
+Take the example of *Concrete*.
+
+---
+
+Twelve distinct batches of concrete are subjected to an additive.  Does the additive strengthen concrete?
+
+```{r}
+Concrete %>% datatable()
+```
+
+
+## The Average Difference
+
+For each batch, we can calculate the difference between those with and without an additive.  To do so, we need *mutate*.  Let's plot it.
+
+```{r}
+library(ResampleProps)
+Concrete <- Concrete %>% mutate(Difference = Additive - No.Add)
+hist(Concrete$Difference)
+```
+
+## Resampling
+
+```{r}
+Concrete.Diff <- data.frame(Sampled.Mean.Difference = ResampleMean(Concrete$Difference))
+quantile(Concrete.Diff$Sampled.Mean.Difference, probs=c(0.025, 0.975))
+```
+
+## Graphic
+
+```{r}
+Concrete.Diff %>% ggplot() + aes(x=Sampled.Mean.Difference) + geom_density() + theme_ipsum_rc()
+```
+
+## t-test
+
+```{r}
+t.test(Concrete$Difference)
+```
+
+With 95% confidence, the additive increases the average break-weight of the concrete by 37.3 to 279.4 pounds.
+
+## Is this what Marketing Wants?
+
+Probably not.
+
+```{r}
+t.test(Concrete$Difference, alt="greater")
+```
+
+**In 90 percent of your applications, additive concrete is 60 units stronger.**
+
+# An Inference Map
+
+With proportions: If we claim a value of $\pi$, then use it for the standard error.  If not, use the data.
+
+With quantities: If comparing them, are samples independent or dependent?  All the relevant quantities are known [or assumed] functions of the data.
+
+For differences, the `magic number` is nearly always zero -- no difference.
+
+## Code Summary {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+### Discrete
+
+For one proportion:
+
+- `ResampleProps::ResampleProp(vec.data, k=1000, tab.col=1)`
+- `binom.test(x, n, alternative="?", p=0.5, conf.level=0.95)`
+- `prop.test(x, n, alternative="?", p=0.5, conf.level=0.95, correct=TRUE)`
+
+For two proportions:
+
+- `prop.test(x=c(10,20), n=c(50, 50), alternative="?", p=0.5, conf.level=0.95, correct=TRUE)`
+
+:::
+::: {.column width="50%"}
+
+### Quantities
+
+For one mean:
+
+- `ResampleMeans::ResampleMean(vec.data, k=1000)`
+- `t.test(x, alternative="?", mu=0, conf.level=0.95)`
+
+For two means:
+
+- `ResampleDiffMeans(vec.1, vec.2, k=1000)`
+
+- Two types:
+   + Independent: `t.test(x, y, alternative="?", mu=0, conf.level=0.95, paired=FALSE, var.equal=FALSE)`
+   + Paired: `t.test(x, y, alternative="?", mu=0, conf.level=0.95, paired=TRUE)`
+
+:::
+::::
+
+```
+
+
+
+# A Workflow
+
+1. Do we want an hypothesis test or a confidence interval?
+
+2. Choose a level of confidence/significance/probability.
+
+3. If hypothesis test, derive the relevant critical value by combining the reference distribution with the level of confidence/significance/probability.  What value of $z$ or $t$ would be required to reject the hypothesis?  If an confidence interval, how many standard errors from the mean are covered by the given level of probability.
+
+4. If an hypothesis test, calculate the test statistic.
+
+5. Compute the confidence interval or compare the test statistic to the relevant critical value.

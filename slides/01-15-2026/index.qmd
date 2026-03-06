@@ -1,0 +1,98 @@
+---
+title: "What is a Model?  On Models"
+subtitle: "Lecture 2: Models and Their Use"
+author: "Robert W. Walker"
+format: 
+   revealjs:
+     multiplex: true
+     preview-links: true
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301 [15 Jan 26]"
+     chalkboard: true
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: convex
+     code-fold: true
+     code-tools: true
+---
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+```{r setup, include=FALSE}
+library(fontawesome)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, tidy=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', eval=TRUE)
+library(tidyverse)
+library(DT)
+theme_set(hrbrthemes::theme_ipsum_rc())
+options(
+  digits = 3,
+  width = 75,
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis",
+  ggplot2.discrete.colour = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442"),
+  ggplot2.discrete.fill = c("#D55E00", "#0072B2", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#F0E442")
+)
+```
+
+## Outline
+
+- Defining models
+- The span of models
+- Models in business
+- For next time: Data Types and Chapter 1
+
+## Syllabus
+
+Updates:
+Readings for next week, primers, posted.
+
+## Website
+
+[BUS 1301](https://robertwwalker.github.io/BUS1301-SP26/)
+
+## Course Tools
+
+- Docs or Word.  
+- Sheets or Excel.  
+- NotebookLM.  
+- Gemini.  
+
+## What is a Model?
+
+From OED: [A representation of structure, and related senses.](https://www.oed.com/dictionary/model_n?tab=meaning_and_use#36510538)
+
+## The span of models
+
+Models are everywhere and in use in virtually all academic disciplines.
+
+Writeups.  
+- [Formatting a Gemini Response](https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Formatting/).  
+- [Gemini](https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Models/), [Claude](https://robertwwalker.github.io/BUS1301-SP26/writeups/Claude-Models/), [ChatGPT](https://robertwwalker.github.io/BUS1301-SP26/writeups/ChatGPT-Models/), [GrokAI](https://robertwwalker.github.io/BUS1301-SP26/writeups/GrokAI-Models/).  
+
+
+# Models in business
+
+Models span the business disciplines.   
+
+- [Business Models](https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Business-Models/)
+
+## AI Models are Models
+
+They are models of text -- the way we communicate.
+
+## Website References
+
+- [A Takeaway to Work From](https://robertwwalker.github.io/BUS1301-SP26/writeups/Lesson-Learned/).
+
+
+## One Model: Gemini for Data Analysis
+
+The world is changing fast.  This was a homework assignment just a few years ago.
+
+[CAPM](https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Analysis/)
+
+## An Exercise with NotebookLM
+

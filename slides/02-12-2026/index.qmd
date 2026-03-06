@@ -1,0 +1,292 @@
+---
+title: "On Probability, II"
+subtitle: "OIS Chapter 3 and Jaynes"  
+author: "Robert W. Walker"
+date: '`r Sys.Date()`'
+format: 
+   revealjs:
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301-SP26"
+     multiplex:
+       url: 'https://multiplex-5adl.onrender.com'
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: zoom
+     preview-links: true
+     lightbox: true
+---
+
+```{r setup, include=FALSE}
+library(tidyverse) 
+library(dplyr)
+library(reticulate)
+library(janitor)
+knitr::opts_chunk$set(fig.retina=3, fig.height=6, fig.width=9, echo=TRUE, eval=TRUE)
+load(url("https://github.com/robertwwalker/DADMStuff/raw/master/Week3Data.RData"))
+```
+
+# Overview
+
+- Tables
+- Probability
+
+Ethics: Dehumanization for Aggregation
+
+## Three Concepts from Set Theory
+
+- Intersection [and]
+- Union [or] **avoid double counting the intersection**
+- Complement [not]
+
+## Three Distinct Probabilities
+
+- Joint: Pr(x=x and y=y)
+- Marginal: Pr(x=x) or Pr(y=y)
+- Conditional: Pr(x=x | y=y) or Pr(y =y | x = x)
+
+## Joint Probability
+
+**The table sums to one**.  
+
+For Berkeley:
+
+```{r}
+UCBAdmit %>% tabyl(M.F, Admit) %>% adorn_percentages("all")
+prop.table(table(UCBAdmit$M.F,UCBAdmit$Admit))
+```
+
+## Marginal Probability
+
+**The row/column sums to one**.  We collapse the table to a single margin.  Here, two can be identified.  The probability of Admit and the probability of M.F.  
+
+::::{.columns}
+
+::: {.column width="50%"}
+
+```{r}
+UCBAdmit %>% tabyl(M.F)
+UCBAdmit %>% tabyl(Admit)
+```
+
+:::
+
+
+::: {.column width="50%"}
+
+```{r}
+prop.table(table(UCBAdmit$M.F))
+prop.table(table(UCBAdmit$Admit))
+```
+:::
+
+::::
+
+## Conditional Probability
+
+How does one margin of the table break down given values of another?  **Each row or column sums to one**  
+
+Four can be identified, the probability of admission/rejection for Male, for Female; the probability of male or female for admits/rejects.
+
+For Berkeley:
+
+::::{.columns}
+
+::: {.column width="50%"}
+
+```{r}
+UCBAdmit %>% tabyl(M.F, Admit) %>% adorn_percentages("row")
+prop.table(table(UCBAdmit$M.F,UCBAdmit$Admit), 1)
+```
+
+:::
+
+
+::: {.column width="50%"}
+
+```{r}
+UCBAdmit %>% tabyl(M.F, Admit) %>% adorn_percentages("col")
+prop.table(table(UCBAdmit$M.F,UCBAdmit$Admit), 2)
+```
+
+:::
+
+::::
+
+## Law of Total Probability
+
+Is a combination of the distributive property of multiplication and the fact that probabilities sum to one.
+
+For example, the probability of Admitted and Male is the probability of admission for males times the probability of male.
+
+$$ Pr(x=x, y=y) = Pr(y | x)Pr(x) $$
+
+Or it is the probability of being admitted times the probability of being male among admits.
+
+$$ Pr(x=x, y=y) = Pr(x | y)Pr(y) $$
+
+
+## Now the Substance
+
+::::{.columns}
+
+::: {.column width="50%"}
+The `fill` aesthetic is great for displaying these things.   For example, are males and females equally likely to be admitted to Berkeley?
+
+**Plaintiffs say no.**
+
+```{r, echo=TRUE, eval=FALSE}
+ggplot(UCBAdmit) + aes(x=M.F, fill=Admit) + geom_bar() + scale_fill_viridis_d()
+```
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE}
+ggplot(UCBAdmit) + aes(x=M.F, fill=Admit) + geom_bar() + scale_fill_viridis_d()
+```
+:::
+
+::::
+
+## Is that an Adequate Comparison?
+
+::::{.columns}
+
+::: {.column width="50%"}
+
+The University says no.  Why?  The most important factor in the probability of admission is likely to be the department.  This has a huge impact on what we see.
+
+
+```{r, eval=FALSE}
+ggplot(UCBAdmit) + 
+  aes(x=M.F, fill=Admit) + 
+  geom_bar(position="fill") + 
+  scale_fill_viridis_d() + 
+  facet_wrap(vars(Dept))
+```
+:::
+
+::: {.column width="50%"}
+```{r, eval=TRUE, echo=FALSE}
+ggplot(UCBAdmit) + aes(x=M.F, fill=Admit) + geom_bar(position="fill") + scale_fill_viridis_d() + facet_wrap(vars(Dept))
+```
+
+:::
+
+::::
+
+
+## The Magic of Bayes Rule
+
+To find the joint probability [the intersection] of x and y, we can use either of the aforementioned methods.  To turn this into a conditional probability, we simply take it is a proportion of the relevant margin.
+
+$$ Pr(x | y) = \frac{Pr(y | x) Pr(x)}{Pr(y)} $$
+
+## Applications of these Topics
+
+## Churn
+
+Prior customers and current customers; engagement metrics, etc.
+The rows are prior state: customer/user and not.
+The columns are current state: customer/user and not.
+
+The `churn rate` is the rate at which prior customers become current non-customers: a conditional probability.
+
+[Churn by Stripe](https://stripe.com/en-jp/resources/more/how-to-build-a-customer-churn-model-a-guide-for-businesses)
+
+## General Markov Processes/Matrices
+
+[Markov Chains](https://en.wikipedia.org/wiki/Markov_chain)
+
+![Markov Chains](./img/MChain.png)
+
+## A Bit on Juries
+
+- Start from Section 3.2.7
+- The juror's decision tree
+
+![Tree](img/JTree2.png)
+
+Three nodes: guilty and not at each, convict at the third.
+
+## The Magic of Bayes Rule
+
+To find the joint probability [the intersection] of x and y, we can use either of the aforementioned methods.  To turn this into a conditional probability, we simply take it is a proportion of the relevant margin.
+
+$$ Pr(x | y) = \frac{Pr(y | x) Pr(x)}{Pr(y)} $$
+
+By itself, this is algebra.  It is magic in an application.
+
+$$ Pr(User | +) = \frac{Pr(+ | User) Pr(User)}{Pr(+)} $$
+
+This poses the question: what does a positive test mean?
+
+## Working an Example
+
+Suppose a test is 99% accurate for Users and 95% accurate for non-Users.  Moreover, suppose that Users make up 10% of the population.  So given some population to which this applies, we have:
+
+$Pr(User, +) = Pr(+ | User)*Pr(User)$
+
+$Pr(User, -) = Pr(- | User)*Pr(User)$
+
+$Pr(\overline{User}, +) = Pr(+ | \overline{User})*Pr(\overline{User})$
+
+and
+
+$Pr(\overline{User}, -) = Pr(- | \overline{User})*Pr(\overline{User})$
+
+## The Table
+
+
+ Status  |  Positive | Negative | Total
+---------|-----------|----------|------
+ User    | 0.099     | 0.001    | 0.1
+non-User | 0.045     | 0.855    | 0.9
+---------|-----------|----------|------
+Total    | 0.144     | 0.856    | 1.0
+
+$Pr(User | +) = \frac{Pr(+ | User) Pr(User)}{Pr(+)}$
+
+yields:
+
+$Pr(User | +) = \frac{0.099 [0.99*0.1]}{0.144[0.99*0.1 + 0.05*0.9]} = 0.6875$
+
+## Some Language
+
+*Sensitivity* refers to the ability of a test to designate an individual with a disease as positive.  *Specificity* refers to the ability of a test to designate an individual without a disease as negative.
+
+*False positives* are then the complement/opposite of specificity and *false negatives* are the complement/opposite of sensitivity.
+
+
+Truth | Positive Test   |  Negative Test
+------------- | --------|-----
+Positive  | Sensitivity  |  False Negative
+Negative  | False Positive.  | Specificity
+
+## Applied to Hypothesis Testing
+
+When we get to *hypothesis testing* in inference, this comes up again with null and alternative hypotheses and the related decision.        
+
+
+Truth        | Reject Null   |  Accept Null
+-------------|---------------|-----
+Alternative  | Correct       |  Type II error
+Null         | Type I error  | Correct
+
+
+## A Core Idea: Independence
+
+What does it mean to say something **is independent** of something else?  The simplest way to think about it is, "do I learn something more about x by knowing y than not".  If two things are independent, I don't need to care about y if x is my objective.
+
+## Random Variables
+
+I do not love the book definition of this.  Technically, it is a variable whose values are generated according to some random process; your book implies that these are limited to quantities.  **It is really a measurable function defined on a probability space that maps from the sample space [the set of possible outcomes] to the real numbers.**
+
+
+## Bayesian Reasoning is Core to Decisions with Data {background-image="img/BayesRuleRWW.jpeg"}
+
+
+$$ Pr(Decision | data) = \frac{Pr(data | Decision) Pr(Decision)}{Pr(Data)} $$
+

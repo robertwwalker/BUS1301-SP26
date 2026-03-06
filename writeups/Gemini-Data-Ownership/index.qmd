@@ -1,0 +1,65 @@
+---
+title: "Who owns data?"
+author: "Robert W. Walker"
+date: "2026-02-04"
+image: "image.png"
+format:
+    html:
+     fig-format: retina
+     fig-dpi: 600
+     fig-height: 6
+     fig-width: 8
+---
+
+::: {.callout-note appearance="simple"}
+## Prompt
+
+how do individuals own data differently across countries
+:::
+
+# How Individuals "Own" Data Differently Across Countries
+
+The concept of "owning" data varies significantly because, legally speaking, **individuals rarely "own" their data** in the way they own a car or a house. Instead, countries grant individuals specific **rights** to control how their data is used.
+
+The differences in these rights largely stem from three distinct cultural and legal philosophies: **Dignity** (Europe), **Commerce** (United States), and **Security** (China).
+
+## 1. The European Model (GDPR): Data as a Human Right
+In the European Union, privacy is treated as a fundamental human right. The philosophy here is that your data is an extension of your personhood, not just a commodity.
+
+* **How you "own" it:** You have a high degree of control. You can proactively stop companies from using your data.
+* **Key Rights:**
+    * **Right to be Forgotten (Erasure):** You can demand a company delete your data entirely if it's no longer necessary for the original purpose.
+    * **Opt-In Consent:** Companies generally need your explicit permission *before* they collect your data.
+    * **Data Portability:** You have the right to take your data from one service (like Facebook) and move it to another, preventing "lock-in."
+
+## 2. The American Model (CCPA/State Laws): Data as a Consumer Good
+The U.S. lacks a single federal privacy law for all data. Instead, it uses a sector-based approach (e.g., HIPAA for health, GLBA for finance) and a patchwork of state laws (like California’s CCPA/CPRA). The philosophy is market-oriented: data flow is good for business, and regulation focuses on preventing harm rather than protecting dignity.
+
+* **How you "own" it:** Your "ownership" is mostly the ability to say "no" after the fact. It is an **Opt-Out** system.
+* **Key Rights:**
+    * **Right to Opt-Out:** Companies can collect and sell your data by default. You have to actively tell them to stop (e.g., "Do Not Sell My Personal Information" buttons).
+    * **Transparency:** You have the right to know *what* is being collected, but stopping the collection is harder than in the EU.
+    * **Limited "Erasure":** While California offers a right to delete, it has more exceptions than the EU version (e.g., if the data is needed to complete a transaction).
+
+## 3. The Chinese Model (PIPL): Data as a National Asset
+China’s Personal Information Protection Law (PIPL) resembles the EU’s GDPR in its text (giving individuals strong rights against corporations), but it sits under a framework where national security is paramount.
+
+* **How you "own" it:** You have strong rights against private companies, but weak rights against the state. The government retains ultimate sovereignty over data as a national resource.
+* **Key Rights:**
+    * **Strict Localization:** Your data is legally required to be stored on servers within China.
+    * **Consent:** Like the EU, companies need consent to collect data. However, the state has broad exemptions to access this data for "national security" or "public interest" without consent.
+
+### Summary of Differences
+
+| Feature | European Union (GDPR) | United States (CCPA/State) | China (PIPL) |
+| :--- | :--- | :--- | :--- |
+| **Philosophy** | **Dignity:** Privacy is a human right. | **Commerce:** Privacy is a consumer protection issue. | **Security:** Data is a strategic national asset. |
+| **Default Mode** | **Opt-In:** Ask me first. | **Opt-Out:** Catch me if you can. | **State-Controlled:** Strong rights vs. companies, weak vs. state. |
+| **Who "Owns" It?** | You have strong "moral rights" to the data. | Companies effectively own it unless you object. | The State has ultimate sovereignty; you have rights. |
+| **Correction Rights**| Very Strong. | Varies (Strong in CA, weak elsewhere). | Strong. |
+
+### A Note on "Property" vs. "Rights"
+It is important to note that almost no jurisdiction treats personal data as **Property**.
+* **If it were Property:** You could sell your data for a one-time fee, and then you would lose all rights to it (just like selling a used car).
+* **Since it is Rights-based:** You can never truly "sell" your privacy away. Even if you trade data for a free service, you generally retain the right to revoke that access later.
+Data can be collected actively and passively though with automation this distinction must be carefully elucidated.

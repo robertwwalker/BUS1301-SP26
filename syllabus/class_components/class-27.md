@@ -1,0 +1,1 @@
+Class 27 summarizes our exploration of artificial intelligence via LLMs and the other models of AI in development.
