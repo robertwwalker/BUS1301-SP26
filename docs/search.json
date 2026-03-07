@@ -4373,10 +4373,31 @@
     "href": "writeups/index.html",
     "title": "BUS 1301 Writeups",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\n \n\n\nA Dashboard\n\n\n \n\n\n\n\n\n\nMar 3, 2026\n\n\nGemini Multi-Agent Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 24, 2026\n\n\nClaude Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 24, 2026\n\n\nGemini Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 16, 2026\n\n\nMonte Carlo Simulation\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 11, 2026\n\n\nA Dashboard\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nThe CDC Program Eval Framework from Gemini\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nWho owns data?\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nOn Causality\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 15, 2026\n\n\nGemini on Business Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nChatGPT on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nClaude on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini Data Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nFormatting a Gemini Response\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGrokAI on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nLesson Learned on Gemini\n\n\nRobert W. Walker\n\n\n\n\n\n\nNo matching items",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\n \n\n\nA Dashboard\n\n\n \n\n\n\n\n\n\nMar 6, 2026\n\n\nBasic Computer Literacy\n\n\nRobert W. Walker\n\n\n\n\n\n\nMar 3, 2026\n\n\nGemini Multi-Agent Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 24, 2026\n\n\nClaude Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 24, 2026\n\n\nGemini Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 16, 2026\n\n\nMonte Carlo Simulation\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 11, 2026\n\n\nA Dashboard\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nThe CDC Program Eval Framework from Gemini\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nWho owns data?\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nOn Causality\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 15, 2026\n\n\nGemini on Business Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nChatGPT on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nClaude on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini Data Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nFormatting a Gemini Response\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGrokAI on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nLesson Learned on Gemini\n\n\nRobert W. Walker\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "About",
       "Write-ups"
     ]
+  },
+  {
+    "objectID": "writeups/Literacy/index.html",
+    "href": "writeups/Literacy/index.html",
+    "title": "Basic Computer Literacy",
+    "section": "",
+    "text": "At Tim’s suggestion, Claude and I built something"
+  },
+  {
+    "objectID": "writeups/Literacy/index.html#core-concepts-refresher",
+    "href": "writeups/Literacy/index.html#core-concepts-refresher",
+    "title": "Basic Computer Literacy",
+    "section": "Core Concepts Refresher",
+    "text": "Core Concepts Refresher\n\nHardware vs. Software: Hardware is the physical machine (monitor, keyboard, motherboard). Software is the invisible instructions (apps, operating systems).\nThe Operating System (OS): The “manager” of your computer (Windows, macOS). It tells the hardware how to run the software.\nStorage vs. Memory (RAM): Storage (Hard Drive/SSD) is your filing cabinet—it holds things permanently. RAM is your desk—it holds what you are actively working on right now.\nLocal vs. Cloud: Local means the file lives physically on the device you are holding. Cloud means it lives on a server far away, and you look at it through the internet."
+  },
+  {
+    "objectID": "writeups/Literacy/index.html#real-world-case-studies",
+    "href": "writeups/Literacy/index.html#real-world-case-studies",
+    "title": "Basic Computer Literacy",
+    "section": "Real-World Case Studies",
+    "text": "Real-World Case Studies\nClick on the scenarios below to test your troubleshooting skills:\n\nCase 1: The Frozen Screen\nCase 2: The Airplane Edit\nCase 3: The Format War\nCase 4: The Missing Download\nCase 5: The Network Outage\nCase 6: The Sluggish Machine\nCase 7: The Unrecognized Drive\nCase 8: The Browser vs. Desktop App\nCase 9: The Panic Delete\nCase 10: The Phantom Wi-Fi"
   }
 ]

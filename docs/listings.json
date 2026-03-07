@@ -46,6 +46,7 @@
     "listing": "/writeups/index.html",
     "items": [
       "/writeups/Dashboards/img/Dashboard.html",
+      "/writeups/Literacy/index.html",
       "/writeups/Gemini-MultiAgent/index.html",
       "/writeups/Claude-Binomial-Analysis/index.html",
       "/writeups/Gemini-Binomial-Analysis/index.html",
