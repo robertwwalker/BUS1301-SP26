@@ -176,7 +176,7 @@
 <path fill="none" stroke-width="1.066978" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(100%, 100%, 100%)" stroke-opacity="1" stroke-miterlimit="10" d="M 443.367188 398.847656 L 443.367188 5.480469 "/>
 </g>
 <g clip-path="url(#clip-17)">
-<path fill="none" stroke-width="1.066978" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 41.152344 380.96875 L 60.304688 380.96875 L 60.304688 135.292969 L 187.992188 135.292969 L 187.992188 45.175781 L 315.679688 45.175781 L 315.679688 25.148438 L 443.367188 25.148438 L 443.367188 23.359375 L 462.519531 23.359375 "/>
+<path fill="none" stroke-width="1.066978" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 41.152344 380.96875 L 60.304688 380.96875 L 60.304688 130.285156 L 187.992188 130.285156 L 187.992188 45.53125 L 315.679688 45.53125 L 315.679688 26.578125 L 443.367188 26.578125 L 443.367188 23.359375 L 462.519531 23.359375 "/>
 </g>
 <g fill="rgb(30.196078%, 30.196078%, 30.196078%)" fill-opacity="1">
 <use xlink:href="#glyph-0-1" x="19.21875" y="384.245117"/>
