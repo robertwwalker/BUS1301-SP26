@@ -1,27 +1,5 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/posts/03-05-2027/index.html",
-      "/posts/03-03-2026/index.html",
-      "/posts/02-26-2026/index.html",
-      "/posts/02-24-2026/index.html",
-      "/posts/02-19-2026/index.html",
-      "/posts/02-17-2026/index.html",
-      "/posts/02-12-2026/index.html",
-      "/posts/02-10-2026/index.html",
-      "/posts/02-05-2026/index.html",
-      "/posts/02-03-2026/index.html",
-      "/posts/01-29-2026/index.html",
-      "/posts/01-27-2026/index.html",
-      "/posts/01-22-2026/index.html",
-      "/posts/01-20-2026/index.html",
-      "/posts/01-15-2026/index.html",
-      "/posts/01-13-2026/index.html",
-      "/posts/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/slides/index.html",
     "items": [
       "/slides/01-13-2026/index.html",
@@ -40,6 +18,29 @@
       "/slides/02-26-2026/index.html",
       "/slides/03-03-2026/index.html",
       "/slides/03-05-2026/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/03-10-2026/index.html",
+      "/posts/03-05-2026/index.html",
+      "/posts/03-03-2026/index.html",
+      "/posts/02-26-2026/index.html",
+      "/posts/02-24-2026/index.html",
+      "/posts/02-19-2026/index.html",
+      "/posts/02-17-2026/index.html",
+      "/posts/02-12-2026/index.html",
+      "/posts/02-10-2026/index.html",
+      "/posts/02-05-2026/index.html",
+      "/posts/02-03-2026/index.html",
+      "/posts/01-29-2026/index.html",
+      "/posts/01-27-2026/index.html",
+      "/posts/01-22-2026/index.html",
+      "/posts/01-20-2026/index.html",
+      "/posts/01-15-2026/index.html",
+      "/posts/01-13-2026/index.html",
+      "/posts/welcome/index.html"
     ]
   },
   {
