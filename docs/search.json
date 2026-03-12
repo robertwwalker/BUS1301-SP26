@@ -4819,5 +4819,47 @@
       "About",
       "Write-ups"
     ]
+  },
+  {
+    "objectID": "writeups/Claude-Regression/index.html",
+    "href": "writeups/Claude-Regression/index.html",
+    "title": "Claude on Models",
+    "section": "",
+    "text": "This document illustrates how ordinary least squares (OLS) regression applies to cost accounting. We simulate 52 weeks of production data, estimate a cost function, and explore the regression output interactively.\nThe data-generating process (DGP) is:\n\\[\\text{Cost}_t = \\underbrace{16{,}750}_{\\text{fixed overhead}} + \\underbrace{150}_{\\beta_1} \\times \\text{Units}_t + \\underbrace{\\varepsilon_t}_{\\text{error}}\\]\nwhere \\(\\varepsilon_t \\sim \\mathcal{N}(16{,}750,\\; 4{,}000^2)\\) and \\(\\text{Units}_t\\) follows a Poisson distribution with arrival rate \\(\\lambda = 2{,}000\\) truncated below at \\(1{,}500\\).\n\n\n\n\n\n\nNoteIntercept interpretation\n\n\n\nThe error term has a non-zero mean of $16,750, so the effective DGP intercept is \\(16{,}750 + 16{,}750 = \\$33{,}500\\). The OLS estimator targets this combined value. Managers should distinguish the accounting fixed cost ($16,750) from the statistical intercept estimated by regression."
+  },
+  {
+    "objectID": "writeups/Claude-Regression/index.html#overview",
+    "href": "writeups/Claude-Regression/index.html#overview",
+    "title": "Claude on Models",
+    "section": "",
+    "text": "This document illustrates how ordinary least squares (OLS) regression applies to cost accounting. We simulate 52 weeks of production data, estimate a cost function, and explore the regression output interactively.\nThe data-generating process (DGP) is:\n\\[\\text{Cost}_t = \\underbrace{16{,}750}_{\\text{fixed overhead}} + \\underbrace{150}_{\\beta_1} \\times \\text{Units}_t + \\underbrace{\\varepsilon_t}_{\\text{error}}\\]\nwhere \\(\\varepsilon_t \\sim \\mathcal{N}(16{,}750,\\; 4{,}000^2)\\) and \\(\\text{Units}_t\\) follows a Poisson distribution with arrival rate \\(\\lambda = 2{,}000\\) truncated below at \\(1{,}500\\).\n\n\n\n\n\n\nNoteIntercept interpretation\n\n\n\nThe error term has a non-zero mean of $16,750, so the effective DGP intercept is \\(16{,}750 + 16{,}750 = \\$33{,}500\\). The OLS estimator targets this combined value. Managers should distinguish the accounting fixed cost ($16,750) from the statistical intercept estimated by regression."
+  },
+  {
+    "objectID": "writeups/Claude-Regression/index.html#parameters",
+    "href": "writeups/Claude-Regression/index.html#parameters",
+    "title": "Claude on Models",
+    "section": "Parameters",
+    "text": "Parameters\n\nSimulation parameters\n\n\nParameter\nSymbol\nValue\n\n\n\n\nPoisson arrival rate\n\\(\\lambda\\)\n2,000 units\n\n\nTruncation lower bound\n—\n1,500 units\n\n\nVariable cost per unit\n\\(\\beta_1\\)\n$150\n\n\nFixed overhead\n\\(\\beta_0^{\\text{acct}}\\)\n$16,750\n\n\nError mean\n\\(\\mu_\\varepsilon\\)\n$16,750\n\n\nError std dev\n\\(\\sigma_\\varepsilon\\)\n$4,000\n\n\nEffective DGP intercept\n\\(\\beta_0^{\\text{DGP}}\\)\n$33,500\n\n\nSample size\n\\(n\\)\n52 weeks"
+  },
+  {
+    "objectID": "writeups/Claude-Regression/index.html#interactive-explorer",
+    "href": "writeups/Claude-Regression/index.html#interactive-explorer",
+    "title": "Claude on Models",
+    "section": "Interactive explorer",
+    "text": "Interactive explorer\nThe widget below generates a fresh 52-week sample and provides four analytical views. Use the New sample button to resample and observe how estimates vary.\n\n\n\n  \n    Observations\n      52\n    R²\n      —\n    Slope (β₁)\n      —\n    Intercept (β₀)\n      —\n  \n\n  \n    Scatter plot\n    Residuals\n    Distributions\n    Prediction tool\n    ↻ New sample\n  \n\n  \n    \n      Show:\n       OLS fit\n       True DGP\n       95% CI band\n    \n    \n  \n\n  \n    \n      X-axis:\n      \n        Fitted values\n        Units\n        Week\n      \n    \n    \n    \n      Residual mean\n        —\n      Residual std dev\n        —\n      RMSE\n        —\n    \n  \n\n  \n    \n      Units\n      Total costs\n      Residuals\n    \n    \n    \n  \n\n  \n    \n      \n        Drag slider to set production volume and read off cost forecast.\n      \n        Units:\n        \n        2,000\n      \n      \n        OLS prediction\n          —\n        95% PI lower\n          —\n        95% PI upper\n          —\n      \n      \n        Decomposition\n        —"
+  },
+  {
+    "objectID": "writeups/Claude-Regression/index.html#conceptual-notes",
+    "href": "writeups/Claude-Regression/index.html#conceptual-notes",
+    "title": "Claude on Models",
+    "section": "Conceptual notes",
+    "text": "Conceptual notes\n\nScatter plot\nEach point is one week. The OLS line minimises the sum of squared vertical distances from each point to the line. Key comparisons:\n\nOLS fit vs True DGP — in practice the true line is never observed; this toggle shows how well estimation recovers it from one year of data.\n95% CI band — confidence in the mean cost at a given volume level, narrowest near \\(\bar{x}\\) and widening at the extremes.\n\n\n\nResiduals diagnostic\n\n\n\n\n\n\nTipWhat to look for\n\n\n\nA well-specified model shows residuals randomly scattered around zero with constant spread. Systematic patterns suggest:\n\nFan shape — heteroskedasticity (variance grows with output)\nCurve — non-linearity (a quadratic term may help)\nDrift over time — an omitted seasonal or trend variable\n\n\n\n\n\nDistributions\n\nDistribution panel guide\n\n\nPanel\nWhat it shows\n\n\n\n\nUnits\nLeft boundary at 1,500 visible; Poisson shape above\n\n\nTotal costs\nDriven by both volume variation and the error term\n\n\nResiduals\nShould look approximately bell-shaped, centred near zero\n\n\n\n\n\nPrediction intervals\nThe 95% prediction interval (PI) is wider than a confidence interval (CI) because it covers a single future week, not the mean:\n\\[\\hat{y} \\pm t_{n-2,\\,0.025} \\cdot \\hat{\\sigma}\\sqrt{1 + \frac{1}{n} + \frac{(x^* - \bar{x})^2}{\\sum(x_i - \bar{x})^2}}\\]"
+  },
+  {
+    "objectID": "writeups/Claude-Regression/index.html#key-formula-reference",
+    "href": "writeups/Claude-Regression/index.html#key-formula-reference",
+    "title": "Claude on Models",
+    "section": "Key formula reference",
+    "text": "Key formula reference\n\nParameter truth vs. estimation\n\n\nComponent\nTrue value\nOLS target\n\n\n\n\nIntercept \\(\beta_0\\)\n$33,500\nVaries by sample\n\n\nSlope \\(\beta_1\\)\n$150 / unit\nVaries by sample\n\n\nError std dev \\(\\sigma\\)\n$4,000\nRMSE \\(\u0007pprox\\) $4,000\n\n\n\n\n\n\n\n\n\nWarningSampling variability\n\n\n\nResample repeatedly to observe how much \\(\\hat{\beta}_0\\), \\(\\hat{\beta}_1\\), and \\(R^2\\) fluctuate. Regression coefficients are themselves random variables.\n\n\n\nSimulated data — not real company figures."
   }
 ]
