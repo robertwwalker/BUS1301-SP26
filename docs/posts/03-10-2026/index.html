@@ -78,6 +78,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-2df08f76ba5aa34906d2bfbc583b5b12.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -288,8 +291,8 @@ window.Quarto = {
 <section id="the-class-plan" class="level2">
 <h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
 <ol type="1">
-<li>Hypothesis testing in detail.</li>
-<li>The hypothesis of no relationship.</li>
+<li>Squares, correlation and regression</li>
+<li>a Claude app</li>
 </ol>
 <p>Your post-class exercise:</p>
 <ol type="1">
@@ -366,8 +369,23 @@ window.Quarto = {
 <p>The <a href="https://web.cs.ucla.edu/~kaoru/primer-complete-2019.pdf">book on statistics and causal inference</a></p>
 <p><a href="https://youtu.be/nWaM6XmQEmU?si=nAtQu51kIfjoboBi">A lecture on the Book of Why</a></p>
 <p>Sections 2.1 to 2.10 of the Causal Mixtape are a <a href="https://mixtape.scunning.com/02-probability_and_regression">very succinct read</a>.</p>
+<section id="illustrating-an-hypothesis-test-with-the-normal" class="level2">
+<h2 class="anchored" data-anchor-id="illustrating-an-hypothesis-test-with-the-normal">Illustrating an Hypothesis Test with the Normal</h2>
+<p>Let’s take the example of Berkeley. Let’s test the hypothesis that <span class="math inline">\(\pi=0.5\)</span> first and let’s examine it with 99% confidence.</p>
+<p>I will use the class tool to find that percentage.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image"><img src="./img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="img-fluid figure-img" alt="Image"></a></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>Anything within 2.576 standard deviations above or below the mean is possible with 99% confidence.</p>
+<p>The standard error in this case is</p>
+<p><span class="math display">\[\sqrt{\frac{\pi(1-\pi)}{n}}\]</span></p>
+<p>This gives us <span class="math inline">\(0.5 \pm z*\)</span> 0.0074321.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -772,6 +790,38 @@ window.Quarto = {
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

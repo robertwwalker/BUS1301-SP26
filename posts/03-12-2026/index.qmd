@@ -1,0 +1,117 @@
+---
+title: "Hypothesis Testing and Relationships"
+author: "Robert W. Walker"
+date: "2026-03-12"
+image: "image.png"
+---
+
+```{r setup,include=FALSE}
+library(reticulate)
+```
+
+
+Today, we will spend extensive time revisiting the logic of hypothesis testing and apply it to relationships among two variables along with a backward looking exploration of existing tests.
+
+## Two key bits of data
+
+- [CADDS](./data/CADDS.csv).   
+- [Berkeley](./data/UCB-Admit.csv).   
+
+:::{.callout-warning}
+## Hypotheses must be complete
+
+With binary data, all we have is $\pi$ or $\hat{p}$.  Whichever we have, we use.
+:::
+
+
+# Slides
+
+[Link is here](https://robertwwalker.github.io/BUS1301-SP26/slides/03-10-2026/index.html)
+
+
+## The class plan:
+
+1. Squares, correlation and regression
+2. a Claude app
+
+
+Your post-class exercise:
+
+1. The midterm.  
+2. Use an LLM and the suggested materials to grapple with Pearl's argument.
+
+# Hypothesis Testing
+
+```{r}
+Concrete <- read.csv("data/Concrete.csv")
+Concrete
+mean(Concrete$Diff)
+sd(Concrete$Diff)
+sd(Concrete$Diff)/sqrt(12)
+(mean(Concrete$Diff) - 0)/(sd(Concrete$Diff)/sqrt(12))
+```
+
+
+
+# On Causality
+
+Causation is at the heart of the highest order human reasoning.  Doing so with data is an objective if not an end result of modern fascination with machine learning.  Yet, these are age old philosophical questions and modern work at the intersection of data and causation is perhaps best exemplified in the work of Judea Pearl.  His most recent work, The Book of Why, details a lifetime of investigating causes and causal models at the intersection of computing, philosophy, and statistics.  Though wide ranging, [his podcast with Lex Fridman is worth listening to](https://share.google/FqVPW7tanZqALa2NM).  The excerpt on [correlation and causation is very useful.](https://www.youtube.com/watch?v=oFy2927b8jQ)
+
+He develops a ladder of causation.  [This is quite well explained in this two page primer](https://web.cs.ucla.edu/~kaoru/3-layer-causal-hierarchy.pdf).
+
+1. Associational
+
+2. Interventional
+
+3. Counterfactual
+
+We want to understand precisely how these various levels influence what we learn from data and deploy data to accomplish.
+
+[Judea Pearl’s website](https://bayes.cs.ucla.edu/home.htm)
+
+The [book on statistics and causal inference](https://web.cs.ucla.edu/~kaoru/primer-complete-2019.pdf)
+
+[A lecture on the Book of Why](https://youtu.be/nWaM6XmQEmU?si=nAtQu51kIfjoboBi)
+
+Sections 2.1 to 2.10 of the Causal Mixtape are a [very succinct read](https://mixtape.scunning.com/02-probability_and_regression).
+
+
+## Illustrating an Hypothesis Test with the Normal
+
+Let's take the example of Berkeley.  Let's test the hypothesis that $\pi=0.5$ first and let's examine it with 99% confidence.
+
+I will use the class tool to find that percentage.
+
+![Image](./img/Screenshot 2026-03-12 at 12.17.20 PM.png)
+
+Anything within 2.576 standard deviations above or below the mean is possible with 99% confidence.
+
+The standard error in this case is 
+
+$$\sqrt{\frac{\pi(1-\pi)}{n}}$$
+
+This gives us $0.5 \pm z*$ `r sqrt(0.5*0.5/4526)`.
+
+Or $0.5 \pm 0.019$.
+
+Anything between 0.481 and 0.519 could be observed if 0.5 is true.
+
+## A Single Tail
+
+Let's take the example of Berkeley.  Let's test the hypothesis that $\pi \leq 0.5$ against the alternative that it is bigger and let's examine it with 99% confidence.
+
+I will use the class tool to find that percentage.
+
+![Image](./img/Screenshot 2026-03-12 at 12.22.18 PM.png)
+
+Anything within 2.236 standard deviations above the mean is possible with 99% confidence.
+
+The standard error in this case is 
+
+$$\sqrt{\frac{\pi(1-\pi)}{n}}$$
+
+This gives us $0.5 - z*$ `r sqrt(0.5*0.5/4526)`.
+
+Or $0.5 + 2.236*0.019$.
+
+Anything below 0.5166 could be observed if 0.5 or less is true.

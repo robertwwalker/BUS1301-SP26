@@ -10,11 +10,11 @@
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Tue, 10 Mar 2026 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 12 Mar 2026 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Hypothesis Testing and Relationships</title>
   <dc:creator>Robert W. Walker</dc:creator>
-  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/03-10-2026/</link>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/03-12-2026/</link>
   <description><![CDATA[ 
 
 
@@ -49,8 +49,8 @@
 <section id="the-class-plan" class="level2">
 <h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
 <ol type="1">
-<li>Hypothesis testing in detail.</li>
-<li>The hypothesis of no relationship.</li>
+<li>Squares, correlation and regression</li>
+<li>a Claude app</li>
 </ol>
 <p>Your post-class exercise:</p>
 <ol type="1">
@@ -171,8 +171,226 @@ font-style: inherit;">12</span>))</span></code></pre></div></div>
 <p>The <a href="https://web.cs.ucla.edu/~kaoru/primer-complete-2019.pdf">book on statistics and causal inference</a></p>
 <p><a href="https://youtu.be/nWaM6XmQEmU?si=nAtQu51kIfjoboBi">A lecture on the Book of Why</a></p>
 <p>Sections 2.1 to 2.10 of the Causal Mixtape are a <a href="https://mixtape.scunning.com/02-probability_and_regression">very succinct read</a>.</p>
+<section id="illustrating-an-hypothesis-test-with-the-normal" class="level2">
+<h2 class="anchored" data-anchor-id="illustrating-an-hypothesis-test-with-the-normal">Illustrating an Hypothesis Test with the Normal</h2>
+<p>Let’s take the example of Berkeley. Let’s test the hypothesis that <img src="https://latex.codecogs.com/png.latex?%5Cpi=0.5"> first and let’s examine it with 99% confidence.</p>
+<p>I will use the class tool to find that percentage.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/03-12-2026/img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="img-fluid figure-img" alt="Image"></a></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>Anything within 2.576 standard deviations above or below the mean is possible with 99% confidence.</p>
+<p>The standard error in this case is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cfrac%7B%5Cpi(1-%5Cpi)%7D%7Bn%7D%7D"></p>
+<p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20%5Cpm%20z*"> 0.0074321.</p>
+<p>Or <img src="https://latex.codecogs.com/png.latex?0.5%20%5Cpm%200.019">.</p>
+<p>Anything between 0.481 and 0.519 could be observed if 0.5 is true.</p>
+</section>
+<section id="a-single-tail" class="level2">
+<h2 class="anchored" data-anchor-id="a-single-tail">A Single Tail</h2>
+<p>Let’s take the example of Berkeley. Let’s test the hypothesis that <img src="https://latex.codecogs.com/png.latex?%5Cpi%20%5Cleq%200.5"> against the alternative that it is bigger and let’s examine it with 99% confidence.</p>
+<p>I will use the class tool to find that percentage.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/Screenshot 2026-03-12 at 12.22.18 PM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Image"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/03-12-2026/img/Screenshot 2026-03-12 at 12.22.18 PM.png" class="img-fluid figure-img" alt="Image"></a></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>Anything within 2.236 standard deviations above the mean is possible with 99% confidence.</p>
+<p>The standard error in this case is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cfrac%7B%5Cpi(1-%5Cpi)%7D%7Bn%7D%7D"></p>
+<p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20-%20z*"> 0.0074321.</p>
+<p>Or <img src="https://latex.codecogs.com/png.latex?0.5%20+%202.236*0.019">.</p>
+<p>Anything below 0.5166 could be observed if 0.5 or less is true.</p>
 
 
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/03-12-2026/</guid>
+  <pubDate>Thu, 12 Mar 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/03-12-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
+<item>
+  <title>Hypothesis Testing and Relationships</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/03-10-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Today, we will spend extensive time revisiting the logic of hypothesis testing and apply it to relationships among two variables along with a backward looking exploration of existing tests.</p>
+<section id="two-key-bits-of-data" class="level2">
+<h2 class="anchored" data-anchor-id="two-key-bits-of-data">Two key bits of data</h2>
+<ul>
+<li><a href="./data/CADDS.csv">CADDS</a>.<br>
+</li>
+<li><a href="./data/UCB-Admit.csv">Berkeley</a>.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Hypotheses must be complete
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With binary data, all we have is <img src="https://latex.codecogs.com/png.latex?%5Cpi"> or <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D">. Whichever we have, we use.</p>
+</div>
+</div>
+</section>
+<section id="slides" class="level1">
+<h1>Slides</h1>
+<p><a href="https://robertwwalker.github.io/BUS1301-SP26/slides/03-10-2026/index.html">Link is here</a></p>
+<section id="the-class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
+<ol type="1">
+<li>Squares, correlation and regression</li>
+<li>a Claude app</li>
+</ol>
+<p>Your post-class exercise:</p>
+<ol type="1">
+<li>The midterm.<br>
+</li>
+<li>Use an LLM and the suggested materials to grapple with Pearl’s argument.</li>
+</ol>
+</section>
+</section>
+<section id="hypothesis-testing" class="level1">
+<h1>Hypothesis Testing</h1>
+<div class="cell">
+<details class="code-fold">
+<summary>How’s that done?</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">Concrete <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">read.csv</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"data/Concrete.csv"</span>)</span>
+<span id="cb1-2">Concrete</span></code></pre></div></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Batch No.Add Additive Diff
+1      1   4550     4600  -50
+2      2   4950     4900   50
+3      3   6250     6650 -400
+4      4   5700     5950 -250
+5      5   5350     5700 -350
+6      6   5300     5400 -100
+7      7   5150     5400 -250
+8      8   5800     5850  -50
+9      9   4900     4850   50
+10    10   6050     6450 -400
+11    11   5550     5850 -300
+12    12   5750     5600  150</code></pre>
+</div>
+<details class="code-fold">
+<summary>How’s that done?</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(Concrete<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>Diff)</span></code></pre></div></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -158.3333</code></pre>
+</div>
+<details class="code-fold">
+<summary>How’s that done?</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sd</span>(Concrete<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>Diff)</span></code></pre></div></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 190.4938</code></pre>
+</div>
+<details class="code-fold">
+<summary>How’s that done?</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sd</span>(Concrete<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>Diff)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span></code></pre></div></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 54.99082</code></pre>
+</div>
+<details class="code-fold">
+<summary>How’s that done?</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(Concrete<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>Diff) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sd</span>(Concrete<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>Diff)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>))</span></code></pre></div></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -2.879269</code></pre>
+</div>
+</div>
+</section>
+<section id="on-causality" class="level1">
+<h1>On Causality</h1>
+<p>Causation is at the heart of the highest order human reasoning. Doing so with data is an objective if not an end result of modern fascination with machine learning. Yet, these are age old philosophical questions and modern work at the intersection of data and causation is perhaps best exemplified in the work of Judea Pearl. His most recent work, The Book of Why, details a lifetime of investigating causes and causal models at the intersection of computing, philosophy, and statistics. Though wide ranging, <a href="https://share.google/FqVPW7tanZqALa2NM">his podcast with Lex Fridman is worth listening to</a>. The excerpt on <a href="https://www.youtube.com/watch?v=oFy2927b8jQ">correlation and causation is very useful.</a></p>
+<p>He develops a ladder of causation. <a href="https://web.cs.ucla.edu/~kaoru/3-layer-causal-hierarchy.pdf">This is quite well explained in this two page primer</a>.</p>
+<ol type="1">
+<li><p>Associational</p></li>
+<li><p>Interventional</p></li>
+<li><p>Counterfactual</p></li>
+</ol>
+<p>We want to understand precisely how these various levels influence what we learn from data and deploy data to accomplish.</p>
+<p><a href="https://bayes.cs.ucla.edu/home.htm">Judea Pearl’s website</a></p>
+<p>The <a href="https://web.cs.ucla.edu/~kaoru/primer-complete-2019.pdf">book on statistics and causal inference</a></p>
+<p><a href="https://youtu.be/nWaM6XmQEmU?si=nAtQu51kIfjoboBi">A lecture on the Book of Why</a></p>
+<p>Sections 2.1 to 2.10 of the Causal Mixtape are a <a href="https://mixtape.scunning.com/02-probability_and_regression">very succinct read</a>.</p>
+<section id="illustrating-an-hypothesis-test-with-the-normal" class="level2">
+<h2 class="anchored" data-anchor-id="illustrating-an-hypothesis-test-with-the-normal">Illustrating an Hypothesis Test with the Normal</h2>
+<p>Let’s take the example of Berkeley. Let’s test the hypothesis that <img src="https://latex.codecogs.com/png.latex?%5Cpi=0.5"> first and let’s examine it with 99% confidence.</p>
+<p>I will use the class tool to find that percentage.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/03-10-2026/img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="img-fluid figure-img" alt="Image"></a></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>Anything within 2.576 standard deviations above or below the mean is possible with 99% confidence.</p>
+<p>The standard error in this case is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cfrac%7B%5Cpi(1-%5Cpi)%7D%7Bn%7D%7D"></p>
+<p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20%5Cpm%20z*"> 0.0074321.</p>
+
+
+</section>
 </section>
 
  ]]></description>
