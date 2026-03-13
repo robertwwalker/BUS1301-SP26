@@ -12,7 +12,7 @@
 <generator>quarto-1.8.24</generator>
 <lastBuildDate>Thu, 12 Mar 2026 07:00:00 GMT</lastBuildDate>
 <item>
-  <title>Hypothesis Testing and Relationships</title>
+  <title>Relationships</title>
   <dc:creator>Robert W. Walker</dc:creator>
   <link>https://robertwwalker.github.io/BUS1301-SP26/posts/03-12-2026/</link>
   <description><![CDATA[ 
@@ -204,6 +204,776 @@ font-style: inherit;">12</span>))</span></code></pre></div></div>
 <p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20-%20z*"> 0.0074321.</p>
 <p>Or <img src="https://latex.codecogs.com/png.latex?0.5%20+%202.236*0.019">.</p>
 <p>Anything below 0.5166 could be observed if 0.5 or less is true.</p>
+</section>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This document illustrates how <strong>ordinary least squares (OLS) regression</strong> applies to cost accounting. We simulate 52 weeks of production data, estimate a cost function, and explore the regression output interactively.</p>
+<p>The data-generating process (DGP) is:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BCost%7D_t%20=%20%5Cunderbrace%7B16%7B,%7D750%7D_%7B%5Ctext%7Bfixed%20overhead%7D%7D%20+%20%5Cunderbrace%7B150%7D_%7B%5Cbeta_1%7D%20%5Ctimes%20%5Ctext%7BUnits%7D_t%20+%20%5Cunderbrace%7B%5Cvarepsilon_t%7D_%7B%5Ctext%7Berror%7D%7D"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon_t%20%5Csim%20%5Cmathcal%7BN%7D(16%7B,%7D750,%5C;%204%7B,%7D000%5E2)"> and <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BUnits%7D_t"> follows a Poisson distribution with arrival rate <img src="https://latex.codecogs.com/png.latex?%5Clambda%20=%202%7B,%7D000"> truncated below at <img src="https://latex.codecogs.com/png.latex?1%7B,%7D500">.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Intercept interpretation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The error term has a non-zero mean of $16,750, so the <strong>effective DGP intercept</strong> is <img src="https://latex.codecogs.com/png.latex?16%7B,%7D750%20+%2016%7B,%7D750%20=%20%5C$33%7B,%7D500">. The OLS estimator targets this combined value. Managers should distinguish the <em>accounting</em> fixed cost ($16,750) from the <em>statistical</em> intercept estimated by regression.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="parameters" class="level2">
+<h2 class="anchored" data-anchor-id="parameters">Parameters</h2>
+<table class="table-striped table-hover caption-top table">
+<caption>Simulation parameters</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Poisson arrival rate</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%5Clambda"></td>
+<td style="text-align: right;">2,000 units</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Truncation lower bound</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: right;">1,500 units</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Variable cost per unit</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%5Cbeta_1"></td>
+<td style="text-align: right;">$150</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fixed overhead</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%5Cbeta_0%5E%7B%5Ctext%7Bacct%7D%7D"></td>
+<td style="text-align: right;">$16,750</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Error mean</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%5Cmu_%5Cvarepsilon"></td>
+<td style="text-align: right;">$16,750</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Error std dev</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%5Csigma_%5Cvarepsilon"></td>
+<td style="text-align: right;">$4,000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Effective DGP intercept</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?%5Cbeta_0%5E%7B%5Ctext%7BDGP%7D%7D"></td>
+<td style="text-align: right;">$33,500</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sample size</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?n"></td>
+<td style="text-align: right;">52 weeks</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="interactive-explorer" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-explorer">Interactive explorer</h2>
+<p>The widget below generates a fresh 52-week sample and provides four analytical views. Use the <strong>New sample</strong> button to resample and observe how estimates vary.</p>
+<style>
+#rce-wrap * { box-sizing: border-box; }
+.rce-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.rce-btn { background: transparent; border: 1px solid #bbb; padding: 6px 14px;
+  font-size: 13px; cursor: pointer; color: #555; border-radius: 8px; font-family: inherit; }
+.rce-btn.active { background: #e2e8f0; color: #111; font-weight: 600; border-color: #888; }
+.rce-metrics { display: grid; grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 10px; margin-bottom: 1.25rem; }
+.rce-card { background: #f1f5f9; border-radius: 8px; padding: 12px 16px; }
+.rce-card-label { font-size: 12px; color: #64748b; margin: 0 0 4px; }
+.rce-card-val { font-size: 20px; font-weight: 600; margin: 0; color: #1e293b; }
+.rce-panel { display: none; }
+.rce-panel.active { display: block; }
+.rce-chart-wrap { width: 100%; margin-bottom: 0.5rem; }
+.rce-controls { display: flex; gap: 12px; align-items: center;
+  margin-bottom: 12px; flex-wrap: wrap; font-size: 13px; color: #555; }
+.rce-controls select { border: 1px solid #ccc; border-radius: 6px;
+  padding: 4px 8px; font-size: 13px; }
+.rce-pred-box { background: #f1f5f9; border-radius: 10px;
+  padding: 1.25rem; margin-bottom: 1rem; }
+.rce-pred-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 10px; margin-top: 16px; }
+.rce-decomp { margin-top: 16px; padding: 12px; background: #fff;
+  border-radius: 8px; border: 1px solid #e2e8f0; font-size: 13px; }
+.rce-decomp p { margin: 0; color: #1e293b; }
+.rce-note { font-size: 12px; color: #64748b; margin-top: 8px; }
+.rce-sub-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 10px; margin-top: 12px; }
+@media (max-width: 600px) {
+  .rce-metrics { grid-template-columns: repeat(2, 1fr); }
+  .rce-pred-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+<div id="rce-wrap">
+  <div class="rce-metrics">
+    <div class="rce-card"><p class="rce-card-label">Observations</p>
+      <p class="rce-card-val" id="rce-m-n">52</p></div>
+    <div class="rce-card"><p class="rce-card-label">R²</p>
+      <p class="rce-card-val" id="rce-m-r2">—</p></div>
+    <div class="rce-card"><p class="rce-card-label">Slope (β₁)</p>
+      <p class="rce-card-val" id="rce-m-slope">—</p></div>
+    <div class="rce-card"><p class="rce-card-label">Intercept (β₀)</p>
+      <p class="rce-card-val" id="rce-m-int">—</p></div>
+  </div>
+
+  <div class="rce-tabs">
+    <button class="rce-btn active" onclick="rceTab('scatter',this)">Scatter plot</button>
+    <button class="rce-btn" onclick="rceTab('residuals',this)">Residuals</button>
+    <button class="rce-btn" onclick="rceTab('dist',this)">Distributions</button>
+    <button class="rce-btn" onclick="rceTab('predict',this)">Prediction tool</button>
+    <button class="rce-btn" onclick="rceResample()">↻ New sample</button>
+  </div>
+
+  <div id="rce-panel-scatter" class="rce-panel active">
+    <div class="rce-controls">
+      <span>Show:</span>
+      <label><input type="checkbox" id="rce-chk-ols" checked="" onchange="rceDrawScatter()"> OLS fit</label>
+      <label><input type="checkbox" id="rce-chk-true" onchange="rceDrawScatter()"> True DGP</label>
+      <label><input type="checkbox" id="rce-chk-ci" onchange="rceDrawScatter()"> 95% CI band</label>
+    </div>
+    <div class="rce-chart-wrap"><canvas id="rce-c-scatter" height="340"></canvas></div>
+  </div>
+
+  <div id="rce-panel-residuals" class="rce-panel">
+    <div class="rce-controls">
+      <span>X-axis:</span>
+      <select id="rce-res-xaxis" onchange="rceDrawResid()">
+        <option value="fitted">Fitted values</option>
+        <option value="units">Units</option>
+        <option value="week">Week</option>
+      </select>
+    </div>
+    <div class="rce-chart-wrap"><canvas id="rce-c-resid" height="320"></canvas></div>
+    <div class="rce-sub-grid">
+      <div class="rce-card"><p class="rce-card-label">Residual mean</p>
+        <p class="rce-card-val" id="rce-r-mean">—</p></div>
+      <div class="rce-card"><p class="rce-card-label">Residual std dev</p>
+        <p class="rce-card-val" id="rce-r-std">—</p></div>
+      <div class="rce-card"><p class="rce-card-label">RMSE</p>
+        <p class="rce-card-val" id="rce-r-rmse">—</p></div>
+    </div>
+  </div>
+
+  <div id="rce-panel-dist" class="rce-panel">
+    <div class="rce-tabs" style="margin-bottom:12px;">
+      <button class="rce-btn active" id="rce-dt-units" onclick="rceDrawDist('units')">Units</button>
+      <button class="rce-btn" id="rce-dt-costs" onclick="rceDrawDist('costs')">Total costs</button>
+      <button class="rce-btn" id="rce-dt-errors" onclick="rceDrawDist('errors')">Residuals</button>
+    </div>
+    <div class="rce-chart-wrap"><canvas id="rce-c-dist" height="300"></canvas></div>
+    <p class="rce-note" id="rce-dist-note"></p>
+  </div>
+
+  <div id="rce-panel-predict" class="rce-panel">
+    <div class="rce-pred-box">
+      <p style="font-size:13px;color:#64748b;margin:0 0 12px;">
+        Drag slider to set production volume and read off cost forecast.</p>
+      <div class="rce-controls">
+        <label>Units:</label>
+        <input type="range" min="1500" max="2700" value="2000" id="rce-pred-slider" oninput="rcePred()" style="flex:1;min-width:120px;">
+        <span style="font-size:14px;font-weight:600;min-width:52px;color:#1e293b;" id="rce-pred-uout">2,000</span>
+      </div>
+      <div class="rce-pred-grid">
+        <div class="rce-card"><p class="rce-card-label">OLS prediction</p>
+          <p class="rce-card-val" id="rce-pred-ols">—</p></div>
+        <div class="rce-card"><p class="rce-card-label">95% PI lower</p>
+          <p class="rce-card-val" id="rce-pred-lo">—</p></div>
+        <div class="rce-card"><p class="rce-card-label">95% PI upper</p>
+          <p class="rce-card-val" id="rce-pred-hi">—</p></div>
+      </div>
+      <div class="rce-decomp">
+        <p style="font-size:12px;color:#64748b;margin:0 0 4px;">Decomposition</p>
+        <p id="rce-pred-decomp">—</p>
+      </div>
+    </div>
+    <div class="rce-chart-wrap"><canvas id="rce-c-predict" height="300"></canvas></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var D = [], FIT, CUR_DIST = 'units', CUR_TAB = 'scatter';
+
+  // --- Random number generation ---
+  // For Poisson(lambda=2000), use Normal approx: N(2000, sqrt(2000)).
+  // P(X < 1500) < 10^-28, so truncation at 1500 is essentially never triggered.
+  function rng_normal(mu, sigma) {
+    var u, v;
+    do { u = Math.random(); } while (u === 0);
+    do { v = Math.random(); } while (v === 0);
+    return mu + sigma * Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+  }
+  function rng_trunc_poisson(lam, lo) {
+    // Normal approximation valid for large lambda (lambda=2000 here).
+    var v;
+    do { v = Math.round(rng_normal(lam, Math.sqrt(lam))); } while (v < lo);
+    return v;
+  }
+
+  function generate() {
+    D = [];
+    for (var w = 1; w <= 52; w++) {
+      var u = rng_trunc_poisson(2000, 1500);
+      var e = rng_normal(16750, 4000);
+      D.push({ week: w, units: u, error: e, cost: 16750 + u * 150 + e });
+    }
+  }
+
+  // --- OLS ---
+  function ols() {
+    var n = D.length;
+    var xs = D.map(function (d) { return d.units; });
+    var ys = D.map(function (d) { return d.cost; });
+    var mx = xs.reduce(function (a, b) { return a + b; }, 0) / n;
+    var my = ys.reduce(function (a, b) { return a + b; }, 0) / n;
+    var ss = 0, sp = 0, i;
+    for (i = 0; i < n; i++) {
+      ss += (xs[i] - mx) * (xs[i] - mx);
+      sp += (xs[i] - mx) * (ys[i] - my);
+    }
+    var b1 = sp / ss, b0 = my - b1 * mx;
+    var fitted = xs.map(function (x) { return b0 + b1 * x; });
+    var resids = ys.map(function (y, i) { return y - fitted[i]; });
+    var sst = ys.reduce(function (a, y) { return a + (y - my) * (y - my); }, 0);
+    var sse = resids.reduce(function (a, r) { return a + r * r; }, 0);
+    return { b0: b0, b1: b1, fitted: fitted, resids: resids,
+             r2: 1 - sse / sst, se2: sse / (n - 2), n: n, mx: mx, ss: ss };
+  }
+
+  function fmt(n) { return n.toLocaleString(); }
+  function set(id, v) { document.getElementById(id).textContent = v; }
+
+  function updateCards() {
+    FIT = ols();
+    set('rce-m-r2',    FIT.r2.toFixed(3));
+    set('rce-m-slope', '$' + fmt(Math.round(FIT.b1)));
+    set('rce-m-int',   '$' + fmt(Math.round(FIT.b0)));
+    var rmse  = Math.sqrt(FIT.se2);
+    var rMean = FIT.resids.reduce(function (a, b) { return a + b; }, 0) / FIT.n;
+    var rStd  = Math.sqrt(
+      FIT.resids.reduce(function (a, r) { return a + (r - rMean) * (r - rMean); }, 0) / (FIT.n - 1));
+    set('rce-r-rmse', '$' + fmt(Math.round(rmse)));
+    set('rce-r-mean', '$' + fmt(Math.round(rMean)));
+    set('rce-r-std',  '$' + fmt(Math.round(rStd)));
+  }
+
+  // --- Canvas helpers ---
+  var PAD = { top: 20, right: 20, bottom: 50, left: 78 };
+
+  function setupCanvas(id) {
+    var c = document.getElementById(id);
+    c.width = c.parentNode.clientWidth || 700;
+    return c;
+  }
+
+  function area(c) {
+    return {
+      x0: PAD.left,
+      y0: PAD.top,
+      x1: c.width - PAD.right,
+      y1: c.height - PAD.bottom,
+      w:  c.width  - PAD.left - PAD.right,
+      h:  c.height - PAD.top  - PAD.bottom
+    };
+  }
+
+  function cx(v, lo, hi, a) { return a.x0 + (v - lo) / (hi - lo) * a.w; }
+  function cy(v, lo, hi, a) { return a.y1 - (v - lo) / (hi - lo) * a.h; }
+
+  function niceTicks(lo, hi, n) {
+    var range = hi - lo;
+    var step = Math.pow(10, Math.floor(Math.log(range / n) / Math.LN10));
+    var nice = [1, 2, 2.5, 5, 10];
+    for (var i = 0; i < nice.length; i++) {
+      if (range / (step * nice[i]) <= n) { step = step * nice[i]; break; }
+    }
+    var ticks = [], start = Math.ceil(lo / step) * step;
+    for (var t = start; t <= hi + 1e-9; t = parseFloat((t + step).toFixed(10))) {
+      ticks.push(t);
+    }
+    return ticks;
+  }
+
+  function padRange(vals, frac) {
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    var p = (hi - lo) * frac;
+    return [lo - p, hi + p];
+  }
+
+  function drawAxes(ctx, c, a, xLo, xHi, yLo, yHi, xLabel, yLabel, xFmt, yFmt) {
+    ctx.clearRect(0, 0, c.width, c.height);
+    var xTicks = niceTicks(xLo, xHi, 6);
+    var yTicks = niceTicks(yLo, yHi, 6);
+    // grid
+    ctx.strokeStyle = '#e2e8f0';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    xTicks.forEach(function (t) {
+      var x = cx(t, xLo, xHi, a);
+      ctx.moveTo(x, a.y0); ctx.lineTo(x, a.y1);
+    });
+    yTicks.forEach(function (t) {
+      var y = cy(t, yLo, yHi, a);
+      ctx.moveTo(a.x0, y); ctx.lineTo(a.x1, y);
+    });
+    ctx.stroke();
+    // axes
+    ctx.strokeStyle = '#94a3b8';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(a.x0, a.y0); ctx.lineTo(a.x0, a.y1); ctx.lineTo(a.x1, a.y1);
+    ctx.stroke();
+    // tick labels
+    ctx.fillStyle = '#64748b';
+    ctx.font = '11px system-ui,sans-serif';
+    ctx.textAlign = 'center';
+    xTicks.forEach(function (t) {
+      ctx.fillText(xFmt(t), cx(t, xLo, xHi, a), a.y1 + 16);
+    });
+    ctx.textAlign = 'right';
+    yTicks.forEach(function (t) {
+      ctx.fillText(yFmt(t), a.x0 - 6, cy(t, yLo, yHi, a) + 4);
+    });
+    // axis labels
+    ctx.fillStyle = '#334155';
+    ctx.font = '12px system-ui,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(xLabel, a.x0 + a.w / 2, c.height - 6);
+    ctx.save();
+    ctx.translate(13, a.y0 + a.h / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText(yLabel, 0, 0);
+    ctx.restore();
+  }
+
+  // --- Scatter ---
+  function rceDrawScatter() {
+    var c = setupCanvas('rce-c-scatter');
+    var ctx = c.getContext('2d');
+    var a = area(c);
+    var xs = D.map(function (d) { return d.units; });
+    var ys = D.map(function (d) { return d.cost;  });
+    var xR = padRange(xs, 0.04), yR = padRange(ys, 0.07);
+    var xLo = xR[0], xHi = xR[1], yLo = yR[0], yHi = yR[1];
+    var tx = function (v) { return cx(v, xLo, xHi, a); };
+    var ty = function (v) { return cy(v, yLo, yHi, a); };
+    var showCI   = document.getElementById('rce-chk-ci').checked;
+    var showOLS  = document.getElementById('rce-chk-ols').checked;
+    var showTrue = document.getElementById('rce-chk-true').checked;
+
+    drawAxes(ctx, c, a, xLo, xHi, yLo, yHi,
+      'Units produced', 'Total cost ($)',
+      function (v) { return fmt(Math.round(v)); },
+      function (v) { return '$' + fmt(Math.round(v / 1000)) + 'k'; });
+
+    if (showCI) {
+      var tC = 2.01, N = 60, i;
+      ctx.beginPath();
+      for (i = 0; i <= N; i++) {
+        var xv = xLo + (xHi - xLo) * i / N;
+        var se = Math.sqrt(FIT.se2 * (1 / FIT.n + (xv - FIT.mx) * (xv - FIT.mx) / FIT.ss));
+        var yu = FIT.b0 + FIT.b1 * xv + tC * se;
+        if (i === 0) ctx.moveTo(tx(xv), ty(yu)); else ctx.lineTo(tx(xv), ty(yu));
+      }
+      for (i = N; i >= 0; i--) {
+        var xv = xLo + (xHi - xLo) * i / N;
+        var se = Math.sqrt(FIT.se2 * (1 / FIT.n + (xv - FIT.mx) * (xv - FIT.mx) / FIT.ss));
+        ctx.lineTo(tx(xv), ty(FIT.b0 + FIT.b1 * xv - tC * se));
+      }
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(216,90,48,0.10)'; ctx.fill();
+    }
+    if (showTrue) {
+      ctx.beginPath();
+      ctx.moveTo(tx(xLo), ty(33500 + xLo * 150));
+      ctx.lineTo(tx(xHi), ty(33500 + xHi * 150));
+      ctx.strokeStyle = '#1D9E75'; ctx.lineWidth = 2;
+      ctx.setLineDash([7, 4]); ctx.stroke(); ctx.setLineDash([]);
+    }
+    if (showOLS) {
+      ctx.beginPath();
+      ctx.moveTo(tx(xLo), ty(FIT.b0 + FIT.b1 * xLo));
+      ctx.lineTo(tx(xHi), ty(FIT.b0 + FIT.b1 * xHi));
+      ctx.strokeStyle = '#D85A30'; ctx.lineWidth = 2.5; ctx.stroke();
+    }
+    xs.forEach(function (x, i) {
+      ctx.beginPath();
+      ctx.arc(tx(x), ty(ys[i]), 4.5, 0, 2 * Math.PI);
+      ctx.fillStyle = 'rgba(55,138,221,0.45)';
+      ctx.strokeStyle = '#185FA5'; ctx.lineWidth = 1;
+      ctx.fill(); ctx.stroke();
+    });
+    // legend
+    var leg = [];
+    if (showOLS)  leg.push({ c: '#D85A30', dash: false, l: 'OLS fit'  });
+    if (showTrue) leg.push({ c: '#1D9E75', dash: true,  l: 'True DGP' });
+    if (showCI)   leg.push({ c: 'rgba(216,90,48,0.5)', dash: true, l: '95% CI' });
+    var lx = a.x0 + 8, ly = a.y0 + 14;
+    ctx.font = '11px system-ui,sans-serif'; ctx.textAlign = 'left';
+    leg.forEach(function (item) {
+      ctx.beginPath();
+      ctx.setLineDash(item.dash ? [5, 3] : []);
+      ctx.moveTo(lx, ly); ctx.lineTo(lx + 22, ly);
+      ctx.strokeStyle = item.c; ctx.lineWidth = 2; ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = '#334155';
+      ctx.fillText(item.l, lx + 26, ly + 4);
+      lx += ctx.measureText(item.l).width + 52;
+    });
+  }
+
+  // --- Residuals ---
+  function rceDrawResid() {
+    var c = setupCanvas('rce-c-resid');
+    var ctx = c.getContext('2d');
+    var a = area(c);
+    var axis = document.getElementById('rce-res-xaxis').value;
+    var xs = D.map(function (d, i) {
+      return axis === 'fitted' ? FIT.fitted[i] : axis === 'units' ? d.units : d.week;
+    });
+    var ys = FIT.resids;
+    var xR = padRange(xs, 0.05), yR = padRange(ys, 0.12);
+    var xLo = xR[0], xHi = xR[1], yLo = yR[0], yHi = yR[1];
+    var xLabel = axis === 'fitted' ? 'Fitted values ($)' :
+                 axis === 'units'  ? 'Units' : 'Week';
+    var xFmt   = axis === 'fitted'
+      ? function (v) { return '$' + fmt(Math.round(v / 1000)) + 'k'; }
+      : function (v) { return fmt(Math.round(v)); };
+    var tx = function (v) { return cx(v, xLo, xHi, a); };
+    var ty = function (v) { return cy(v, yLo, yHi, a); };
+
+    drawAxes(ctx, c, a, xLo, xHi, yLo, yHi,
+      xLabel, 'Residual ($)', xFmt,
+      function (v) { return '$' + fmt(Math.round(v)); });
+
+    if (0 >= yLo && 0 <= yHi) {
+      var y0 = ty(0);
+      ctx.beginPath(); ctx.moveTo(a.x0, y0); ctx.lineTo(a.x1, y0);
+      ctx.strokeStyle = '#E24B4A'; ctx.lineWidth = 1.5;
+      ctx.setLineDash([5, 4]); ctx.stroke(); ctx.setLineDash([]);
+    }
+    xs.forEach(function (x, i) {
+      ctx.beginPath();
+      ctx.arc(tx(x), ty(ys[i]), 4.5, 0, 2 * Math.PI);
+      ctx.fillStyle = 'rgba(127,119,221,0.45)';
+      ctx.strokeStyle = '#534AB7'; ctx.lineWidth = 1;
+      ctx.fill(); ctx.stroke();
+    });
+  }
+
+  // --- Distributions ---
+  function rceDrawDist(which) {
+    CUR_DIST = which;
+    ['units', 'costs', 'errors'].forEach(function (k) {
+      document.getElementById('rce-dt-' + k).classList.toggle('active', k === which);
+    });
+    var vals, label, color, note, mn, sd, i;
+    if (which === 'units') {
+      vals = D.map(function (d) { return d.units; });
+      label = 'Units'; color = '#185FA5';
+      mn = vals.reduce(function (a, b) { return a + b; }, 0) / vals.length;
+      sd = Math.sqrt(vals.map(function (v) { return (v-mn)*(v-mn); })
+                        .reduce(function (a, b) { return a + b; }, 0) / (vals.length - 1));
+      note = 'Truncated Poisson (lambda=2000, min=1500). Mean: ' +
+             fmt(Math.round(mn)) + ', SD: ' + fmt(Math.round(sd));
+    } else if (which === 'costs') {
+      vals = D.map(function (d) { return d.cost; });
+      label = 'Total cost ($)'; color = '#D85A30';
+      mn = vals.reduce(function (a, b) { return a + b; }, 0) / vals.length;
+      sd = Math.sqrt(vals.map(function (v) { return (v-mn)*(v-mn); })
+                        .reduce(function (a, b) { return a + b; }, 0) / (vals.length - 1));
+      note = 'Observed total costs. Mean: $' + fmt(Math.round(mn)) +
+             ', SD: $' + fmt(Math.round(sd));
+    } else {
+      vals = FIT.resids;
+      label = 'Residuals ($)'; color = '#534AB7';
+      mn = vals.reduce(function (a, b) { return a + b; }, 0) / vals.length;
+      sd = Math.sqrt(vals.map(function (v) { return (v-mn)*(v-mn); })
+                        .reduce(function (a, b) { return a + b; }, 0) / (vals.length - 1));
+      note = 'OLS residuals (should be approx N(0, sigma^2)). Mean: $' +
+             fmt(Math.round(mn)) + ', SD: $' + fmt(Math.round(sd));
+    }
+    document.getElementById('rce-dist-note').textContent = note;
+
+    var nBins = 12;
+    var vLo = Math.min.apply(null, vals), vHi = Math.max.apply(null, vals);
+    var bw = (vHi - vLo) / nBins;
+    var counts = [];
+    for (i = 0; i < nBins; i++) counts.push(0);
+    vals.forEach(function (v) {
+      var idx = Math.min(Math.floor((v - vLo) / bw), nBins - 1);
+      counts[idx]++;
+    });
+    var cMax = Math.max.apply(null, counts);
+
+    var c = setupCanvas('rce-c-dist');
+    var ctx = c.getContext('2d');
+    var a = area(c);
+    var xLo = vLo, xHi = vLo + nBins * bw, yLo = 0, yHi = cMax * 1.15;
+    var tx = function (v) { return cx(v, xLo, xHi, a); };
+    var ty = function (v) { return cy(v, yLo, yHi, a); };
+    var xFmt = which === 'units'
+      ? function (v) { return fmt(Math.round(v)); }
+      : function (v) { return '$' + fmt(Math.round(v / 1000)) + 'k'; };
+
+    drawAxes(ctx, c, a, xLo, xHi, yLo, yHi, label, 'Count',
+      xFmt, function (v) { return String(Math.round(v)); });
+
+    for (i = 0; i < nBins; i++) {
+      var bx0 = tx(vLo + i * bw) + 1;
+      var bx1 = tx(vLo + (i + 1) * bw) - 1;
+      var by0 = ty(counts[i]);
+      var by1 = ty(0);
+      ctx.fillStyle = color + 'bb';
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1;
+      ctx.fillRect(bx0, by0, bx1 - bx0, by1 - by0);
+      ctx.strokeRect(bx0, by0, bx1 - bx0, by1 - by0);
+    }
+  }
+
+  // --- Prediction ---
+  function rcePred() {
+    var u = parseInt(document.getElementById('rce-pred-slider').value, 10);
+    set('rce-pred-uout', fmt(u));
+    var pred = FIT.b0 + FIT.b1 * u, tC = 2.01;
+    var se = Math.sqrt(FIT.se2 * (1 + 1 / FIT.n + (u - FIT.mx) * (u - FIT.mx) / FIT.ss));
+    var lo = pred - tC * se, hi = pred + tC * se;
+    set('rce-pred-ols', '$' + fmt(Math.round(pred)));
+    set('rce-pred-lo',  '$' + fmt(Math.round(lo)));
+    set('rce-pred-hi',  '$' + fmt(Math.round(hi)));
+    set('rce-pred-decomp',
+      '\u03b2\u2080: $' + fmt(Math.round(FIT.b0)) +
+      '  +  \u03b2\u2081 x ' + fmt(u) +
+      ' = $' + fmt(Math.round(FIT.b1 * u)) +
+      '  =>  Total: $' + fmt(Math.round(pred)));
+    rceDrawPredict(u, pred, lo, hi);
+  }
+
+  function rceDrawPredict(selU, pred, lo, hi) {
+    var c = setupCanvas('rce-c-predict');
+    var ctx = c.getContext('2d');
+    var a = area(c);
+    var xs = D.map(function (d) { return d.units; });
+    var ys = D.map(function (d) { return d.cost;  });
+    var xR = padRange(xs.concat([selU]), 0.04);
+    var yR = padRange(ys.concat([lo, hi]), 0.07);
+    var xLo = xR[0], xHi = xR[1], yLo = yR[0], yHi = yR[1];
+    var tx = function (v) { return cx(v, xLo, xHi, a); };
+    var ty = function (v) { return cy(v, yLo, yHi, a); };
+
+    drawAxes(ctx, c, a, xLo, xHi, yLo, yHi,
+      'Units produced', 'Total cost ($)',
+      function (v) { return fmt(Math.round(v)); },
+      function (v) { return '$' + fmt(Math.round(v / 1000)) + 'k'; });
+
+    // PI band
+    var N = 60, i;
+    ctx.beginPath();
+    for (i = 0; i <= N; i++) {
+      var xv = xLo + (xHi - xLo) * i / N;
+      var s = Math.sqrt(FIT.se2 * (1 + 1 / FIT.n + (xv - FIT.mx) * (xv - FIT.mx) / FIT.ss));
+      var yu = FIT.b0 + FIT.b1 * xv + 2.01 * s;
+      if (i === 0) ctx.moveTo(tx(xv), ty(yu)); else ctx.lineTo(tx(xv), ty(yu));
+    }
+    for (i = N; i >= 0; i--) {
+      var xv = xLo + (xHi - xLo) * i / N;
+      var s = Math.sqrt(FIT.se2 * (1 + 1 / FIT.n + (xv - FIT.mx) * (xv - FIT.mx) / FIT.ss));
+      ctx.lineTo(tx(xv), ty(FIT.b0 + FIT.b1 * xv - 2.01 * s));
+    }
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(216,90,48,0.09)'; ctx.fill();
+
+    // OLS line
+    ctx.beginPath();
+    ctx.moveTo(tx(xLo), ty(FIT.b0 + FIT.b1 * xLo));
+    ctx.lineTo(tx(xHi), ty(FIT.b0 + FIT.b1 * xHi));
+    ctx.strokeStyle = '#D85A30'; ctx.lineWidth = 2; ctx.stroke();
+
+    // data points
+    xs.forEach(function (x, i) {
+      ctx.beginPath();
+      ctx.arc(tx(x), ty(ys[i]), 4, 0, 2 * Math.PI);
+      ctx.fillStyle = 'rgba(55,173,210,0.35)';
+      ctx.strokeStyle = '#0f6e90'; ctx.lineWidth = 0.8;
+      ctx.fill(); ctx.stroke();
+    });
+
+    // forecast cross
+    var fx = tx(selU), fy = ty(pred);
+    ctx.strokeStyle = '#E24B4A'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(fx - 9, fy - 9); ctx.lineTo(fx + 9, fy + 9); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(fx + 9, fy - 9); ctx.lineTo(fx - 9, fy + 9); ctx.stroke();
+
+    // PI bar
+    ctx.strokeStyle = 'rgba(226,75,74,0.5)'; ctx.lineWidth = 1.5;
+    ctx.setLineDash([3, 3]);
+    ctx.beginPath(); ctx.moveTo(fx, ty(lo)); ctx.lineTo(fx, ty(hi)); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#E24B4A';
+    [ty(lo), ty(hi)].forEach(function (fy2) {
+      ctx.beginPath(); ctx.arc(fx, fy2, 3, 0, 2 * Math.PI); ctx.fill();
+    });
+  }
+
+  // --- Tab switching and resampling ---
+  function redraw() {
+    if      (CUR_TAB === 'scatter')   rceDrawScatter();
+    else if (CUR_TAB === 'residuals') rceDrawResid();
+    else if (CUR_TAB === 'dist')      rceDrawDist(CUR_DIST);
+    else if (CUR_TAB === 'predict')   rcePred();
+  }
+
+  window.rceTab = function (tab, btn) {
+    document.querySelectorAll('.rce-panel').forEach(function (p) { p.classList.remove('active'); });
+    document.querySelectorAll('.rce-btn').forEach(function (b) { b.classList.remove('active'); });
+    document.getElementById('rce-panel-' + tab).classList.add('active');
+    if (btn) btn.classList.add('active');
+    CUR_TAB = tab;
+    redraw();
+  };
+  window.rceDrawScatter = rceDrawScatter;
+  window.rceDrawResid   = rceDrawResid;
+  window.rceDrawDist    = rceDrawDist;
+  window.rcePred        = rcePred;
+  window.rceResample = function () {
+    generate();
+    updateCards();
+    redraw();
+  };
+
+  // Boot: defer until DOM is laid out so clientWidth is correct
+  generate();
+  updateCards();
+  setTimeout(redraw, 0);
+}());
+</script>
+<hr>
+</section>
+<section id="conceptual-notes" class="level2">
+<h2 class="anchored" data-anchor-id="conceptual-notes">Conceptual notes</h2>
+<section id="scatter-plot" class="level3">
+<h3 class="anchored" data-anchor-id="scatter-plot">Scatter plot</h3>
+<p>Each point is one week. The OLS line minimises the sum of squared vertical distances from each point to the line. Key comparisons:</p>
+<ul>
+<li><strong>OLS fit vs True DGP</strong> — in practice the true line is never observed; this toggle shows how well estimation recovers it from one year of data.</li>
+<li><strong>95% CI band</strong> — confidence in the <em>mean</em> cost at a given volume level, narrowest near <img src="https://latex.codecogs.com/png.latex?%5Cbar%7Bx%7D"> and widening at the extremes.</li>
+</ul>
+</section>
+<section id="residuals-diagnostic" class="level3">
+<h3 class="anchored" data-anchor-id="residuals-diagnostic">Residuals diagnostic</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>What to look for
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A well-specified model shows residuals <strong>randomly scattered around zero</strong> with constant spread. Systematic patterns suggest:</p>
+<ul>
+<li><strong>Fan shape</strong> — heteroskedasticity (variance grows with output)</li>
+<li><strong>Curve</strong> — non-linearity (a quadratic term may help)</li>
+<li><strong>Drift over time</strong> — an omitted seasonal or trend variable</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="distributions" class="level3">
+<h3 class="anchored" data-anchor-id="distributions">Distributions</h3>
+<table class="table-striped caption-top table">
+<caption>Distribution panel guide</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Panel</th>
+<th style="text-align: left;">What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Units</td>
+<td style="text-align: left;">Left boundary at 1,500 visible; Poisson shape above</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total costs</td>
+<td style="text-align: left;">Driven by both volume variation and the error term</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Residuals</td>
+<td style="text-align: left;">Should look approximately bell-shaped, centred near zero</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prediction-intervals" class="level3">
+<h3 class="anchored" data-anchor-id="prediction-intervals">Prediction intervals</h3>
+<p>The 95% <strong>prediction interval</strong> (PI) is wider than a confidence interval (CI) because it covers a <em>single future week</em>, not the mean:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Chat%7By%7D%20%5Cpm%20t_%7Bn-2,%5C,0.025%7D%20%5Ccdot%20%5Chat%7B%5Csigma%7D%5Csqrt%7B1%20+%20%5Cfrac%7B1%7D%7Bn%7D%20+%20%5Cfrac%7B(x%5E*%20-%20%5Cbar%7Bx%7D)%5E2%7D%7B%5Csum(x_i%20-%20%5Cbar%7Bx%7D)%5E2%7D%7D"></p>
+<hr>
+</section>
+</section>
+<section id="key-formula-reference" class="level2">
+<h2 class="anchored" data-anchor-id="key-formula-reference">Key formula reference</h2>
+<table class="table-striped table-hover caption-top table">
+<caption>Parameter truth vs.&nbsp;estimation</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: right;">True value</th>
+<th style="text-align: right;">OLS target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Intercept <img src="https://latex.codecogs.com/png.latex?%5Cbeta_0"></td>
+<td style="text-align: right;">$33,500</td>
+<td style="text-align: right;">Varies by sample</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Slope <img src="https://latex.codecogs.com/png.latex?%5Cbeta_1"></td>
+<td style="text-align: right;">$150 / unit</td>
+<td style="text-align: right;">Varies by sample</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Error std dev <img src="https://latex.codecogs.com/png.latex?%5Csigma"></td>
+<td style="text-align: right;">$4,000</td>
+<td style="text-align: right;">RMSE <img src="https://latex.codecogs.com/png.latex?%5Capprox"> $4,000</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Sampling variability
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Resample repeatedly to observe how much <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_0">, <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_1">, and <img src="https://latex.codecogs.com/png.latex?R%5E2"> fluctuate. Regression coefficients are themselves random variables.</p>
+</div>
+</div>
+<hr>
+<p><em>Simulated data — not real company figures.</em></p>
 
 
 </section>

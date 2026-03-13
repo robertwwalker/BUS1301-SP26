@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Robert W. Walker">
-<meta name="dcterms.date" content="2026-01-14">
+<meta name="dcterms.date" content="2026-03-12">
 
 <title>Claude on Models – Managing with Data, Analytics, AI</title>
 <style>
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-2df08f76ba5aa34906d2bfbc583b5b12.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -212,7 +212,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 14, 2026</p>
+      <p class="date">March 12, 2026</p>
     </div>
   </div>
   
@@ -892,7 +892,7 @@ window.Quarto = {
 <p>Each point is one week. The OLS line minimises the sum of squared vertical distances from each point to the line. Key comparisons:</p>
 <ul>
 <li><strong>OLS fit vs True DGP</strong> — in practice the true line is never observed; this toggle shows how well estimation recovers it from one year of data.</li>
-<li><strong>95% CI band</strong> — confidence in the <em>mean</em> cost at a given volume level, narrowest near <span class="math inline">\(ar{x}\)</span> and widening at the extremes.</li>
+<li><strong>95% CI band</strong> — confidence in the <em>mean</em> cost at a given volume level, narrowest near <span class="math inline">\(\bar{x}\)</span> and widening at the extremes.</li>
 </ul>
 </section>
 <section id="residuals-diagnostic" class="level3">
@@ -945,7 +945,7 @@ window.Quarto = {
 <section id="prediction-intervals" class="level3">
 <h3 class="anchored" data-anchor-id="prediction-intervals">Prediction intervals</h3>
 <p>The 95% <strong>prediction interval</strong> (PI) is wider than a confidence interval (CI) because it covers a <em>single future week</em>, not the mean:</p>
-<p><span class="math display">\[\hat{y} \pm t_{n-2,\,0.025} \cdot \hat{\sigma}\sqrt{1 + rac{1}{n} + rac{(x^* - ar{x})^2}{\sum(x_i - ar{x})^2}}\]</span></p>
+<p><span class="math display">\[\hat{y} \pm t_{n-2,\,0.025} \cdot \hat{\sigma}\sqrt{1 + \frac{1}{n} + \frac{(x^* - \bar{x})^2}{\sum(x_i - \bar{x})^2}}\]</span></p>
 <hr>
 </section>
 </section>
@@ -962,19 +962,19 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Intercept <span class="math inline">\(eta_0\)</span></td>
+<td style="text-align: left;">Intercept <span class="math inline">\(\beta_0\)</span></td>
 <td style="text-align: right;">$33,500</td>
 <td style="text-align: right;">Varies by sample</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Slope <span class="math inline">\(eta_1\)</span></td>
+<td style="text-align: left;">Slope <span class="math inline">\(\beta_1\)</span></td>
 <td style="text-align: right;">$150 / unit</td>
 <td style="text-align: right;">Varies by sample</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Error std dev <span class="math inline">\(\sigma\)</span></td>
 <td style="text-align: right;">$4,000</td>
-<td style="text-align: right;">RMSE <span class="math inline">\(pprox\)</span> $4,000</td>
+<td style="text-align: right;">RMSE <span class="math inline">\(\approx\)</span> $4,000</td>
 </tr>
 </tbody>
 </table>
@@ -988,7 +988,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Resample repeatedly to observe how much <span class="math inline">\(\hat{eta}_0\)</span>, <span class="math inline">\(\hat{eta}_1\)</span>, and <span class="math inline">\(R^2\)</span> fluctuate. Regression coefficients are themselves random variables.</p>
+<p>Resample repeatedly to observe how much <span class="math inline">\(\hat{\beta}_0\)</span>, <span class="math inline">\(\hat{\beta}_1\)</span>, and <span class="math inline">\(R^2\)</span> fluctuate. Regression coefficients are themselves random variables.</p>
 </div>
 </div>
 <hr>

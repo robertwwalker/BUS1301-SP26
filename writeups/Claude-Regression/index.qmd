@@ -1,7 +1,7 @@
 ---
 title: "Claude on Models"
 author: "Robert W. Walker"
-date: "2026-01-14"
+date: "2026-03-12"
 image: "image.png"
 ---
 
@@ -647,7 +647,7 @@ distances from each point to the line. Key comparisons:
 - **OLS fit vs True DGP** --- in practice the true line is never observed;
   this toggle shows how well estimation recovers it from one year of data.
 - **95% CI band** --- confidence in the *mean* cost at a given volume level,
-  narrowest near $ar{x}$ and widening at the extremes.
+  narrowest near $\bar{x}$ and widening at the extremes.
 
 ### Residuals diagnostic
 
@@ -676,7 +676,7 @@ with constant spread. Systematic patterns suggest:
 The 95% **prediction interval** (PI) is wider than a confidence interval (CI)
 because it covers a *single future week*, not the mean:
 
-$$\hat{y} \pm t_{n-2,\,0.025} \cdot \hat{\sigma}\sqrt{1 + rac{1}{n} + rac{(x^* - ar{x})^2}{\sum(x_i - ar{x})^2}}$$
+$$\hat{y} \pm t_{n-2,\,0.025} \cdot \hat{\sigma}\sqrt{1 + \frac{1}{n} + \frac{(x^* - \bar{x})^2}{\sum(x_i - \bar{x})^2}}$$
 
 ---
 
@@ -684,15 +684,15 @@ $$\hat{y} \pm t_{n-2,\,0.025} \cdot \hat{\sigma}\sqrt{1 + rac{1}{n} + rac{(x^*
 
 | Component | True value | OLS target |
 |:---|---:|---:|
-| Intercept $eta_0$ | \$33,500 | Varies by sample |
-| Slope $eta_1$ | \$150 / unit | Varies by sample |
-| Error std dev $\sigma$ | \$4,000 | RMSE $pprox$ \$4,000 |
+| Intercept $\beta_0$ | \$33,500 | Varies by sample |
+| Slope $\beta_1$ | \$150 / unit | Varies by sample |
+| Error std dev $\sigma$ | \$4,000 | RMSE $\approx$ \$4,000 |
 
 : Parameter truth vs. estimation {.striped .hover}
 
 ::: {.callout-warning}
 ## Sampling variability
-Resample repeatedly to observe how much $\hat{eta}_0$, $\hat{eta}_1$, and
+Resample repeatedly to observe how much $\hat{\beta}_0$, $\hat{\beta}_1$, and
 $R^2$ fluctuate. Regression coefficients are themselves random variables.
 :::
 
