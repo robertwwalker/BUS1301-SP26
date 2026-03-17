@@ -1,0 +1,19 @@
+{
+  "hash": "8b82e8eb058b18d4bf78144157902d07",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Analytics III: Ops, Finance and Accounting\"\nauthor: \"Robert  W. Walker\"\ndate: '2026-03-17'\nformat: \n   revealjs:\n     theme: [custom.scss]\n     scrollable: true\n     logo: AGSMlogo.jpeg\n     footer: \"BUS 1301-SP26\"\n     multiplex:\n       url: 'https://multiplex-5adl.onrender.com'\n       secret: \"7af99b9bf4796dd3e5d8f2ee555098f4\"\n       id: \"f3ecaf1fa854e20ca0b3e624bf2ee1210f73a24f392ca39e40484a800d4488c1\"\n     html-math-method: katex\n     incremental: true\n     slide-number: c/t\n     transition: zoom\n     preview-links: true\n     lightbox: true\n---\n\n\n\n## A Model\n\nFor our purposes, it is a systematic description of a phenomenon that shares important and essential features of that phenomenon.  Models frequently give us leverage on problems in the absence of alternative approaches.\n\n## One Review Problem: Six Sigma\n\n$6\\sigma$ is a widely used tool in TQM [total quality management].  But $6\\sigma$ isn't actually $6\\sigma$.  The famous mantra that goes with it is 3.4 dipmo [defects per million opportunities].  This means that the outer limit [and it only considers one-sided/tailed] on defects is 0.0000034.\n\n## The Probability Distribution {.smaller}\n\n:::: {.columns}\n\n::: {.column width=\"40%\"}\n\n::: {.cell}\n\n```{.r .cell-code}\noptions(scipen=8)\nlibrary(radiant)\nresult <- prob_norm(mean = 0, stdev = 1, plb = 0.0000034)\nsummary(result, type = \"probs\")\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\nProbability calculator\nDistribution: Normal\nMean        : 0 \nSt. dev     : 1 \nLower bound : 0.0000034 \nUpper bound : 1 \n\nP(X < -4.5) = 0.0000034\nP(X > -4.5) = 1\n```\n\n\n:::\n:::\n\n\n$6\\sigma$ is only $4.5$.\n\n![Six Sigma from Wikipedia](img/SixSigmaDrift.png)\n\n:::\n\n::: {.column width=\"60%\"}\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(result, type = \"probs\") + theme_minimal()\n```\n\n::: {.cell-output-display}\n![](index_files/figure-revealjs/unnamed-chunk-2-1.svg){width=624}\n:::\n:::\n\n:::\n\n::::\n\n## Take Away\n\nThere are two sources of variation: realizations and averages and both vary.  4.5 $\\sigma$ in the data and $1.5\\sigma$ in the average.  Total is six.\n\n## Simulating Operations\n\n[A Queue Laboratory](https://robertwwalker.github.io/AI-Tools/ClaudeQueues/)\n\n## Accounting and Finance Applications\n\n[A Web Writeup](https://robertwwalker.github.io/BUS1301-SP26/writeups/F-A-Models/index.html)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "hash": "18e9bf6472c1472f1ded37dd2e7c24eb",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"BUS1301-SP26\"\nlisting:\n  contents: posts\n  feed: true\n  sort: \"date desc\"\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\npage-layout: full\ntitle-block-banner: true\n---\n\n<marquee scrollamount=\"10\"><h1><p style=\"color:purple;\">{{< fa brands r-project >}}obertwwalker.github.io <br></p></h1></marquee>\n\n\n::: {.cell}\n\n:::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

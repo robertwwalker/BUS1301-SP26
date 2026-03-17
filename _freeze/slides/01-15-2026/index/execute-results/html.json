@@ -1,0 +1,19 @@
+{
+  "hash": "544989706ab81fce372062469abe1ab7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"What is a Model?  On Models\"\nsubtitle: \"Lecture 2: Models and Their Use\"\nauthor: \"Robert W. Walker\"\nformat: \n   revealjs:\n     multiplex: true\n     preview-links: true\n     theme: [custom.scss]\n     scrollable: true\n     logo: AGSMlogo.jpeg\n     footer: \"BUS 1301 [15 Jan 26]\"\n     chalkboard: true\n     html-math-method: katex\n     incremental: true\n     slide-number: c/t\n     transition: convex\n     code-fold: true\n     code-tools: true\n---\n\n<link href=\"//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\">\n\n\n\n## Outline\n\n- Defining models\n- The span of models\n- Models in business\n- For next time: Data Types and Chapter 1\n\n## Syllabus\n\nUpdates:\nReadings for next week, primers, posted.\n\n## Website\n\n[BUS 1301](https://robertwwalker.github.io/BUS1301-SP26/)\n\n## Course Tools\n\n- Docs or Word.  \n- Sheets or Excel.  \n- NotebookLM.  \n- Gemini.  \n\n## What is a Model?\n\nFrom OED: [A representation of structure, and related senses.](https://www.oed.com/dictionary/model_n?tab=meaning_and_use#36510538)\n\n## The span of models\n\nModels are everywhere and in use in virtually all academic disciplines.\n\nWriteups.  \n- [Formatting a Gemini Response](https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Formatting/).  \n- [Gemini](https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Models/), [Claude](https://robertwwalker.github.io/BUS1301-SP26/writeups/Claude-Models/), [ChatGPT](https://robertwwalker.github.io/BUS1301-SP26/writeups/ChatGPT-Models/), [GrokAI](https://robertwwalker.github.io/BUS1301-SP26/writeups/GrokAI-Models/).  \n\n\n# Models in business\n\nModels span the business disciplines.   \n\n- [Business Models](https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Business-Models/)\n\n## AI Models are Models\n\nThey are models of text -- the way we communicate.\n\n## Website References\n\n- [A Takeaway to Work From](https://robertwwalker.github.io/BUS1301-SP26/writeups/Lesson-Learned/).\n\n\n## One Model: Gemini for Data Analysis\n\nThe world is changing fast.  This was a homework assignment just a few years ago.\n\n[CAPM](https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Analysis/)\n\n## An Exercise with NotebookLM\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/03-17-2026/index.html",
       "/posts/03-12-2026/index.html",
       "/posts/03-10-2026/index.html",
       "/posts/03-05-2026/index.html",
@@ -42,7 +43,8 @@
       "/slides/02-26-2026/index.html",
       "/slides/03-03-2026/index.html",
       "/slides/03-05-2026/index.html",
-      "/slides/03-10-2026/index.html"
+      "/slides/03-10-2026/index.html",
+      "/slides/03-17-2026/index.html"
     ]
   },
   {

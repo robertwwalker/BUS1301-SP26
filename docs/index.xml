@@ -10,7 +10,85 @@
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Thu, 12 Mar 2026 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 17 Mar 2026 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Operations, Finance and Accounting</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/03-17-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Operations, accounting, and finance applications are in order for the day.</p>
+<section id="slides" class="level1">
+<h1>Slides</h1>
+<p><a href="https://robertwwalker.github.io/BUS1301-SP26/slides/03-17-2026/index.html">Link is here</a></p>
+<section id="the-class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
+<ol type="1">
+<li>Exploring applications and tools. <a href="https://robertwwalker.github.io/AI-Tools/ClaudeQueues/">Operations tool</a> and <a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/F-A-Models/index.html">some Finance and Accounting topics</a></li>
+</ol>
+</section>
+</section>
+<section id="on-causality" class="level1">
+<h1>On Causality</h1>
+<p>Causation is at the heart of the highest order human reasoning. Doing so with data is an objective if not an end result of modern fascination with machine learning. Yet, these are age old philosophical questions and modern work at the intersection of data and causation is perhaps best exemplified in the work of Judea Pearl. His most recent work, The Book of Why, details a lifetime of investigating causes and causal models at the intersection of computing, philosophy, and statistics. Though wide ranging, <a href="https://share.google/FqVPW7tanZqALa2NM">his podcast with Lex Fridman is worth listening to</a>. The excerpt on <a href="https://www.youtube.com/watch?v=oFy2927b8jQ">correlation and causation is very useful.</a></p>
+<p>He develops a ladder of causation. <a href="https://web.cs.ucla.edu/~kaoru/3-layer-causal-hierarchy.pdf">This is quite well explained in this two page primer</a>.</p>
+<ol type="1">
+<li><p>Associational</p></li>
+<li><p>Interventional</p></li>
+<li><p>Counterfactual</p></li>
+</ol>
+<p>We want to understand precisely how these various levels influence what we learn from data and deploy data to accomplish.</p>
+<p><a href="https://bayes.cs.ucla.edu/home.htm">Judea Pearl’s website</a></p>
+<p>The <a href="https://web.cs.ucla.edu/~kaoru/primer-complete-2019.pdf">book on statistics and causal inference</a></p>
+<p><a href="https://youtu.be/nWaM6XmQEmU?si=nAtQu51kIfjoboBi">A lecture on the Book of Why</a></p>
+<p>Sections 2.1 to 2.10 of the Causal Mixtape are a <a href="https://mixtape.scunning.com/02-probability_and_regression">very succinct read</a>.</p>
+<section id="illustrating-an-hypothesis-test-with-the-normal" class="level2">
+<h2 class="anchored" data-anchor-id="illustrating-an-hypothesis-test-with-the-normal">Illustrating an Hypothesis Test with the Normal</h2>
+<p>Let’s take the example of Berkeley. Let’s test the hypothesis that <img src="https://latex.codecogs.com/png.latex?%5Cpi=0.5"> first and let’s examine it with 99% confidence.</p>
+<p>I will use the class tool to find that percentage.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/03-17-2026/img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="img-fluid figure-img" alt="Image"></a></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>Anything within 2.576 standard deviations above or below the mean is possible with 99% confidence.</p>
+<p>The standard error in this case is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cfrac%7B%5Cpi(1-%5Cpi)%7D%7Bn%7D%7D"></p>
+<p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20%5Cpm%20z*"> 0.0074321.</p>
+<p>Or <img src="https://latex.codecogs.com/png.latex?0.5%20%5Cpm%200.019">.</p>
+<p>Anything between 0.481 and 0.519 could be observed if 0.5 is true.</p>
+</section>
+<section id="a-single-tail" class="level2">
+<h2 class="anchored" data-anchor-id="a-single-tail">A Single Tail</h2>
+<p>Let’s take the example of Berkeley. Let’s test the hypothesis that <img src="https://latex.codecogs.com/png.latex?%5Cpi%20%5Cleq%200.5"> against the alternative that it is bigger and let’s examine it with 99% confidence.</p>
+<p>I will use the class tool to find that percentage.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/Screenshot 2026-03-12 at 12.22.18 PM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Image"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/03-17-2026/img/Screenshot 2026-03-12 at 12.22.18 PM.png" class="img-fluid figure-img" alt="Image"></a></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>Anything within 2.236 standard deviations above the mean is possible with 99% confidence.</p>
+<p>The standard error in this case is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cfrac%7B%5Cpi(1-%5Cpi)%7D%7Bn%7D%7D"></p>
+<p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20-%20z*"> 0.0074321.</p>
+<p>Or <img src="https://latex.codecogs.com/png.latex?0.5%20+%202.236*0.019">.</p>
+<p>Anything below 0.5166 could be observed if 0.5 or less is true.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/03-17-2026/</guid>
+  <pubDate>Tue, 17 Mar 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/03-17-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
 <item>
   <title>Relationships</title>
   <dc:creator>Robert W. Walker</dc:creator>

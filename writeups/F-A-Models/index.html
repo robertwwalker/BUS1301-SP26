@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI in Accounting & Finance</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal-50:  #E1F5EE;
+    --teal-100: #9FE1CB;
+    --teal-200: #5DCAA5;
+    --teal-600: #0F6E56;
+    --teal-800: #085041;
+    --purple-50:  #EEEDFE;
+    --purple-100: #CECBF6;
+    --purple-200: #AFA9EC;
+    --purple-600: #534AB7;
+    --purple-800: #3C3489;
+    --gray-50:  #F7F6F3;
+    --gray-100: #EDECE8;
+    --gray-200: #D3D1C7;
+    --gray-600: #5F5E5A;
+    --gray-800: #2C2C2A;
+    --amber-400: #EF9F27;
+    --bg: #0e0e10;
+    --bg2: #17171a;
+    --bg3: #1f1f24;
+    --border: rgba(255,255,255,0.07);
+    --text-primary: #f0ede6;
+    --text-secondary: #9c9a90;
+    --text-muted: #5e5c55;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    padding: 80px 48px 64px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: -80px;
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse, rgba(15,110,86,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -80px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(ellipse, rgba(83,74,183,0.13) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--teal-200);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    max-width: 680px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--teal-200);
+  }
+  .hero-sub {
+    margin-top: 24px;
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 300;
+    max-width: 520px;
+    line-height: 1.7;
+  }
+  .hero-meta {
+    margin-top: 40px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .meta-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-family: 'DM Mono', monospace;
+  }
+  .meta-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+  .dot-teal   { background: var(--teal-200); }
+  .dot-purple { background: var(--purple-200); }
+
+  /* ─── LAYOUT ─── */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  @media (max-width: 860px) {
+    .grid-container { grid-template-columns: 1fr; }
+    .hero { padding: 48px 24px 40px; }
+    .detail-panel { padding: 32px 24px; }
+  }
+
+  /* ─── COLUMN HEADERS ─── */
+  .column-header {
+    padding: 28px 40px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .col-acct { border-right: 1px solid var(--border); }
+  .column-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .badge-teal   { background: rgba(15,110,86,0.18); color: var(--teal-200); border: 1px solid rgba(93,202,165,0.25); }
+  .badge-purple { background: rgba(83,74,183,0.18); color: var(--purple-200); border: 1px solid rgba(175,169,236,0.25); }
+  .col-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-left: auto;
+  }
+
+  /* ─── APP LIST ─── */
+  .app-list {
+    list-style: none;
+  }
+  .col-acct .app-list { border-right: 1px solid var(--border); }
+
+  .app-item {
+    padding: 0;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.15s;
+    position: relative;
+  }
+  .app-item:last-child { border-bottom: none; }
+  .app-item:hover { background: rgba(255,255,255,0.03); }
+  .app-item.active-acct  { background: rgba(15,110,86,0.1); }
+  .app-item.active-purp  { background: rgba(83,74,183,0.1); }
+
+  .app-inner {
+    padding: 20px 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .app-index {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    min-width: 20px;
+    padding-top: 3px;
+  }
+  .app-text { flex: 1; }
+  .app-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+  .app-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 3px;
+    font-weight: 300;
+  }
+  .app-arrow {
+    color: var(--text-muted);
+    font-size: 14px;
+    padding-top: 2px;
+    transition: transform 0.2s, color 0.2s;
+  }
+  .app-item:hover .app-arrow { transform: translateX(3px); }
+  .app-item.active-acct .app-arrow  { color: var(--teal-200); }
+  .app-item.active-purp .app-arrow  { color: var(--purple-200); }
+
+  /* ─── ACTIVE INDICATOR BAR ─── */
+  .app-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-radius: 0 2px 2px 0;
+  }
+  .col-acct .app-item::before   { background: var(--teal-200); }
+  .col-finance .app-item::before { background: var(--purple-200); }
+  .app-item.active-acct::before,
+  .app-item.active-purp::before { opacity: 1; }
+
+  /* ─── DETAIL PANEL ─── */
+  .detail-panel {
+    padding: 48px 48px 48px;
+    border-bottom: 1px solid var(--border);
+    min-height: 320px;
+    position: relative;
+  }
+  .detail-panel.hidden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .detail-empty {
+    text-align: center;
+    color: var(--text-muted);
+  }
+  .detail-empty-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    opacity: 0.3;
+  }
+  .detail-empty p {
+    font-size: 13px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .detail-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .detail-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-top: 4px;
+  }
+  .detail-badge.acct   { background: rgba(15,110,86,0.18); color: var(--teal-200);   border: 1px solid rgba(93,202,165,0.25); }
+  .detail-badge.finance { background: rgba(83,74,183,0.18); color: var(--purple-200); border: 1px solid rgba(175,169,236,0.25); }
+
+  .detail-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    flex: 1;
+  }
+
+  .detail-section {
+    margin-bottom: 28px;
+  }
+  .detail-section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .detail-section p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  .detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    padding: 4px 12px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .detail-examples {
+    display: grid;
+    gap: 10px;
+  }
+  .example-card {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+  }
+  .example-card-name {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .example-card-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .detail-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 24px 0;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .footer-stats {
+    display: flex;
+    gap: 24px;
+  }
+  .stat {
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: 'DM Mono', monospace;
+  }
+  .teal-text   { color: var(--teal-200); }
+  .purple-text { color: var(--purple-200); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-label">Interactive Reference Guide</div>
+  <h1>AI Applications in<br><em>Accounting &amp; Finance</em></h1>
+  <p class="hero-sub">Explore how artificial intelligence is transforming two of the most data-intensive disciplines in business — click any application to learn more.</p>
+  <div class="hero-meta">
+    <div class="meta-pill"><span class="meta-dot dot-teal"></span>9 Accounting applications</div>
+    <div class="meta-pill"><span class="meta-dot dot-purple"></span>9 Finance applications</div>
+  </div>
+</header>
+
+<!-- COLUMN HEADERS -->
+<div class="grid-container">
+  <div class="column-header col-acct">
+    <span class="column-badge badge-teal">Accounting</span>
+    <span class="col-count">9 applications</span>
+  </div>
+  <div class="column-header col-finance">
+    <span class="column-badge badge-purple">Finance</span>
+    <span class="col-count">9 applications</span>
+  </div>
+</div>
+
+<!-- MAIN GRID: LISTS -->
+<div class="grid-container">
+  <!-- ACCOUNTING -->
+  <div class="col-acct">
+    <ul class="app-list" id="acct-list">
+      <li class="app-item" data-domain="acct" data-id="0" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">01</span>
+          <div class="app-text">
+            <div class="app-name">Automated Bookkeeping</div>
+            <div class="app-desc">Transaction coding and data entry</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="acct" data-id="1" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">02</span>
+          <div class="app-text">
+            <div class="app-name">Audit &amp; Anomaly Detection</div>
+            <div class="app-desc">Flags outliers across all transactions</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="acct" data-id="2" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">03</span>
+          <div class="app-text">
+            <div class="app-name">Tax Compliance &amp; Prep</div>
+            <div class="app-desc">Auto-classify, flag deductions, file</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="acct" data-id="3" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">04</span>
+          <div class="app-text">
+            <div class="app-name">AP / AR Automation</div>
+            <div class="app-desc">Invoice processing, payment matching</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="acct" data-id="4" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">05</span>
+          <div class="app-text">
+            <div class="app-name">Financial Statement Generation</div>
+            <div class="app-desc">Drafts reports, memos, disclosures</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="acct" data-id="5" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">06</span>
+          <div class="app-text">
+            <div class="app-name">Expense Management</div>
+            <div class="app-desc">Receipt OCR, policy enforcement</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="acct" data-id="6" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">07</span>
+          <div class="app-text">
+            <div class="app-name">Regulatory Compliance Monitoring</div>
+            <div class="app-desc">Tracks rule changes, flags gaps</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="acct" data-id="7" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">08</span>
+          <div class="app-text">
+            <div class="app-name">Cash Flow Forecasting</div>
+            <div class="app-desc">Predicts liquidity from patterns</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="acct" data-id="8" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">09</span>
+          <div class="app-text">
+            <div class="app-name">Internal Controls (SOX)</div>
+            <div class="app-desc">Continuous control monitoring</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- FINANCE -->
+  <div class="col-finance">
+    <ul class="app-list" id="finance-list">
+      <li class="app-item" data-domain="finance" data-id="0" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">01</span>
+          <div class="app-text">
+            <div class="app-name">Algorithmic Trading</div>
+            <div class="app-desc">AI-driven execution and signal generation</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="finance" data-id="1" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">02</span>
+          <div class="app-text">
+            <div class="app-name">Credit Scoring &amp; Underwriting</div>
+            <div class="app-desc">Alternative data, real-time scoring</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="finance" data-id="2" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">03</span>
+          <div class="app-text">
+            <div class="app-name">Fraud Detection</div>
+            <div class="app-desc">Real-time card and transaction alerts</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="finance" data-id="3" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">04</span>
+          <div class="app-text">
+            <div class="app-name">Portfolio Optimization</div>
+            <div class="app-desc">Risk-return balancing at scale</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="finance" data-id="4" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">05</span>
+          <div class="app-text">
+            <div class="app-name">Robo-Advisors</div>
+            <div class="app-desc">Automated personalized wealth management</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="finance" data-id="5" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">06</span>
+          <div class="app-text">
+            <div class="app-name">Risk Management</div>
+            <div class="app-desc">Scenario modeling, stress testing</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="finance" data-id="6" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">07</span>
+          <div class="app-text">
+            <div class="app-name">Market Sentiment Analysis</div>
+            <div class="app-desc">NLP on news, filings, social media</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="finance" data-id="7" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">08</span>
+          <div class="app-text">
+            <div class="app-name">AML / KYC Compliance</div>
+            <div class="app-desc">Automated identity and risk checks</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+      <li class="app-item" data-domain="finance" data-id="8" onclick="select(this)">
+        <div class="app-inner">
+          <span class="app-index">09</span>
+          <div class="app-text">
+            <div class="app-name">Financial Forecasting &amp; Valuation</div>
+            <div class="app-desc">Earnings models, DCF automation</div>
+          </div>
+          <span class="app-arrow">→</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- DETAIL PANEL -->
+<div class="detail-panel hidden" id="detail-panel">
+  <div class="detail-empty" id="detail-empty">
+    <div class="detail-empty-icon">↑</div>
+    <p>Select an application above to explore it</p>
+  </div>
+  <div id="detail-content" style="display:none; width:100%">
+    <div class="detail-header">
+      <div class="detail-title" id="d-title"></div>
+      <span class="detail-badge" id="d-badge"></span>
+    </div>
+    <div class="detail-section">
+      <div class="detail-section-label">Overview</div>
+      <p id="d-overview"></p>
+    </div>
+    <hr class="detail-divider">
+    <div class="detail-section">
+      <div class="detail-section-label">How AI is applied</div>
+      <p id="d-how"></p>
+    </div>
+    <hr class="detail-divider">
+    <div class="detail-section">
+      <div class="detail-section-label">Real-world examples</div>
+      <div class="detail-examples" id="d-examples"></div>
+    </div>
+    <hr class="detail-divider">
+    <div class="detail-section">
+      <div class="detail-section-label">Key technologies</div>
+      <div class="detail-tags" id="d-tags"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-text">AI in Accounting &amp; Finance — Interactive Reference</div>
+  <div class="footer-stats">
+    <div class="stat">
+      <div class="stat-num teal-text">9</div>
+      <div class="stat-label">Accounting</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num purple-text">9</div>
+      <div class="stat-label">Finance</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" style="color: var(--amber-400)">18</div>
+      <div class="stat-label">Total apps</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const DATA = {
+  acct: [
+    {
+      title: "Automated Bookkeeping",
+      overview: "AI replaces manual data entry by automatically capturing, categorizing, and posting financial transactions. By reading bank feeds, invoices, and receipts, AI systems can maintain the general ledger with minimal human input, dramatically reducing the hours spent on routine bookkeeping.",
+      how: "Machine learning models are trained on historical transaction data to recognize patterns and assign the correct chart-of-accounts codes. Optical character recognition (OCR) extracts data from scanned receipts and PDFs, while natural language processing interprets unstructured vendor descriptions. The system learns from corrections over time, improving accuracy continuously.",
+      examples: [
+        { name: "QuickBooks AI Categorization", desc: "Automatically categorizes bank transactions based on payee, amount, and past behavior, learning from manual overrides." },
+        { name: "Xero's Bank Reconciliation", desc: "Suggests matches between bank statement lines and outstanding invoices using pattern recognition." },
+        { name: "Pilot (YC-backed startup)", desc: "Combines AI automation with human accountant review to deliver fully managed bookkeeping for startups." }
+      ],
+      tags: ["Machine Learning", "OCR", "NLP", "Bank Feeds API", "General Ledger"]
+    },
+    {
+      title: "Audit & Anomaly Detection",
+      overview: "Traditional audits sample a small fraction of transactions. AI enables continuous, 100% population auditing — analyzing every transaction in real time and flagging statistical anomalies that would be invisible to human reviewers working through samples.",
+      how: "Unsupervised learning algorithms (isolation forests, autoencoders) build a model of 'normal' transaction behavior across dimensions like amount, timing, vendor, and approver. Transactions that deviate significantly from expected patterns are surfaced for review. Supervised models can also be trained on historical audit findings to predict likely misstatements.",
+      examples: [
+        { name: "MindBridge Ai Auditor", desc: "Scores every transaction in a general ledger by risk level using multiple AI models simultaneously." },
+        { name: "KPMG Clara", desc: "Deloitte and KPMG both use AI platforms that ingest client ERP data and run anomaly detection as part of the audit workflow." },
+        { name: "Benford's Law Models", desc: "AI systems apply and extend Benford's Law analysis at scale to detect fabricated or manipulated numbers." }
+      ],
+      tags: ["Anomaly Detection", "Isolation Forest", "Autoencoder", "Continuous Auditing", "Statistical Modeling"]
+    },
+    {
+      title: "Tax Compliance & Preparation",
+      overview: "AI accelerates tax preparation by automatically classifying income and expenses, identifying eligible deductions, running compliance checks against current tax code, and in some cases filing returns. It also monitors legislative changes and alerts businesses to new obligations.",
+      how: "Large language models and rule-based systems work together: LLMs extract and interpret unstructured financial data from documents, while rule engines apply current tax regulations. ML classifiers map transactions to tax categories. Some systems use reinforcement learning to optimize tax positions within legal boundaries.",
+      examples: [
+        { name: "Harvey (law/tax AI)", desc: "Used by major tax firms to analyze documents, draft responses, and research tax positions across multiple jurisdictions." },
+        { name: "Thomson Reuters CoCounsel", desc: "AI-assisted tax research and document drafting embedded into professional tax workflows." },
+        { name: "TurboTax AI features", desc: "Consumer-facing AI that asks clarifying questions, finds deductions, and checks for errors before filing." }
+      ],
+      tags: ["LLM", "Rule Engine", "Document Classification", "Regulatory NLP", "Multi-jurisdiction"]
+    },
+    {
+      title: "AP / AR Automation",
+      overview: "Accounts payable and receivable processes involve enormous volumes of repetitive document handling — matching purchase orders to invoices to receipts, chasing overdue payments, and reconciling payments received. AI automates the bulk of this three-way matching and prioritization work.",
+      how: "Computer vision and OCR extract line items from invoices regardless of format. ML models match invoices to POs and goods receipts, flagging exceptions that need human review. For AR, predictive models score each outstanding invoice by likelihood and expected date of payment, allowing collections teams to focus effort where it matters most.",
+      examples: [
+        { name: "Tipalti", desc: "End-to-end AP automation using AI for invoice capture, PO matching, and supplier payment across 190+ countries." },
+        { name: "Esker", desc: "AI-driven AR platform that predicts payment behavior and automates dunning communications." },
+        { name: "SAP Intelligent Invoice Management", desc: "Embedded AI within SAP S/4HANA for automated three-way matching and exception handling." }
+      ],
+      tags: ["OCR", "Computer Vision", "Three-way Matching", "Predictive Analytics", "Workflow Automation"]
+    },
+    {
+      title: "Financial Statement Generation",
+      overview: "AI assists in drafting financial statements, management commentary, MD&A sections, earnings releases, and board reports — translating raw financial data into coherent narrative. This reduces the days spent on drafting and allows finance teams to focus on analysis rather than writing.",
+      how: "Large language models are prompted with structured financial data (trial balances, variance reports, KPIs) and generate draft narratives following company tone and regulatory requirements. The output is reviewed and edited by humans but saves significant drafting time. Some systems embed checks against accounting standards (GAAP, IFRS) to flag potential disclosure gaps.",
+      examples: [
+        { name: "Workiva Reporting Platform", desc: "Uses AI to automate narrative generation and link financial data directly to formatted disclosure documents." },
+        { name: "Narrative Science (Quill)", desc: "Pioneering NLG tool that converts financial data into plain-language commentary, now part of Salesforce." },
+        { name: "Prophix AI", desc: "Financial planning platform with AI-generated commentary on budget vs actuals reports." }
+      ],
+      tags: ["LLM", "Natural Language Generation", "NLG", "XBRL", "Disclosure Management"]
+    },
+    {
+      title: "Expense Management",
+      overview: "AI transforms expense reporting from a tedious manual process to a near-automatic one. Employees photograph receipts; AI extracts the data, checks policy compliance, detects duplicates, and routes for approval — often without any manual data entry.",
+      how: "OCR and computer vision extract merchant, amount, date, and category from receipt images. Classification models match spending to expense categories and flag policy violations (alcohol, personal purchases, over-limit claims). Duplicate detection algorithms compare new submissions against the historical database. Anomaly detection models identify unusual patterns that may indicate fraud.",
+      examples: [
+        { name: "Expensify SmartScan", desc: "Uses AI to extract all data from receipt photos and auto-create expense reports with zero typing." },
+        { name: "Concur Detect by Audit", desc: "Post-submission AI audit that scores every expense report for policy violations and fraud risk." },
+        { name: "Brex AI", desc: "Corporate card platform using AI to auto-categorize spending and enforce spending policies in real time." }
+      ],
+      tags: ["OCR", "Computer Vision", "Fraud Detection", "Policy Enforcement", "Duplicate Detection"]
+    },
+    {
+      title: "Regulatory Compliance Monitoring",
+      overview: "Financial regulations change constantly — new standards, amendments, guidance updates, and jurisdictional rules. AI monitors regulatory sources continuously, interprets changes in the context of a company's specific situation, and alerts compliance teams to obligations requiring action.",
+      how: "NLP models scrape and parse regulatory publications, SEC filings, FASB/IASB updates, and agency guidance. Named entity recognition identifies affected standards and rules. Similarity algorithms match regulatory changes to a company's chart of accounts, business activities, and existing controls to assess impact and urgency.",
+      examples: [
+        { name: "Ascent RegTech", desc: "AI that reads regulations in plain text and produces actionable obligation libraries for financial institutions." },
+        { name: "Wolters Kluwer CCH Tagetik", desc: "Compliance and reporting platform with AI monitoring for IFRS and GAAP standard changes." },
+        { name: "IBM OpenPages with Watson", desc: "GRC platform using AI to map regulatory obligations to internal controls and flag compliance gaps." }
+      ],
+      tags: ["NLP", "Named Entity Recognition", "Regulatory Intelligence", "GRC", "Change Management"]
+    },
+    {
+      title: "Cash Flow Forecasting",
+      overview: "Accurate cash flow forecasting is critical for treasury management, yet traditional models based on spreadsheets and historical averages are often imprecise. AI improves forecast accuracy by incorporating far more variables and updating predictions dynamically as new data arrives.",
+      how: "Time-series models (LSTM networks, Prophet, gradient boosting) learn from historical cash flow patterns, seasonality, and macroeconomic indicators. They also incorporate real-time signals: current AR aging, AP due dates, known commitments, and sales pipeline data. Ensemble methods combine multiple models for improved accuracy across different time horizons.",
+      examples: [
+        { name: "Kyriba Treasury AI", desc: "Uses ML to generate 13-week and longer-range cash forecasts integrated with ERP and bank data." },
+        { name: "HighRadius Cash Forecasting", desc: "AI platform that combines historical patterns, AR data, and machine learning for daily cash projections." },
+        { name: "Anaplan Connected Planning", desc: "Unified planning platform with ML-powered cash forecasting integrated with FP&A workflows." }
+      ],
+      tags: ["LSTM", "Time Series", "Prophet", "Treasury Management", "Ensemble Methods"]
+    },
+    {
+      title: "Internal Controls (SOX)",
+      overview: "Sarbanes-Oxley compliance requires companies to document, test, and certify their internal controls over financial reporting. AI enables continuous controls monitoring (CCM) — testing controls every day instead of once a quarter — and dramatically reduces the cost and effort of SOX compliance.",
+      how: "AI systems connect directly to ERP and financial systems, extracting transaction logs and user access records. Rules engines test control effectiveness (e.g., segregation of duties violations, unauthorized journal entries, access outside business hours). ML models detect unusual control behaviors that may indicate control failures or circumvention attempts. Results feed dashboards for control owners and auditors.",
+      examples: [
+        { name: "Galvanize (ACL) HighBond", desc: "GRC and CCM platform using automated testing across financial controls with AI-powered risk scoring." },
+        { name: "SAP GRC Access Control", desc: "Monitors and enforces segregation of duties across SAP environments using role-based AI analysis." },
+        { name: "ServiceNow IRM with AI", desc: "Integrated Risk Management platform using AI to prioritize control deficiencies by business impact." }
+      ],
+      tags: ["Continuous Controls Monitoring", "SOX", "Segregation of Duties", "GRC", "ERP Integration"]
+    }
+  ],
+  finance: [
+    {
+      title: "Algorithmic Trading",
+      overview: "AI-powered algorithmic trading systems execute orders at speeds and scales impossible for humans, using statistical patterns, price signals, and predictive models to generate alpha. They range from simple execution algorithms that minimize market impact to complex strategies that learn from market microstructure.",
+      how: "Reinforcement learning agents learn optimal trading strategies through simulated and live market interaction. Deep learning models identify price patterns and regime changes in tick data. NLP models parse news and social media in milliseconds to trade on sentiment shifts before the market fully reacts. Execution algorithms use real-time order book analysis to minimize slippage.",
+      examples: [
+        { name: "Renaissance Technologies Medallion Fund", desc: "The most famous quant fund, using sophisticated ML models to generate extraordinary returns over decades." },
+        { name: "Two Sigma", desc: "Data-science-driven hedge fund applying ML across equities, futures, and alternative data." },
+        { name: "JPMorgan LOXM", desc: "AI execution algorithm that optimizes trade execution to minimize market impact and transaction costs." }
+      ],
+      tags: ["Reinforcement Learning", "Deep Learning", "NLP Sentiment", "Market Microstructure", "High Frequency"]
+    },
+    {
+      title: "Credit Scoring & Underwriting",
+      overview: "AI expands credit access by scoring borrowers using thousands of data signals beyond the traditional FICO model — including banking behavior, employment patterns, rent payment history, and more. It also speeds up underwriting decisions from days to seconds.",
+      how: "Gradient boosting models (XGBoost, LightGBM) and neural networks trained on large loan performance datasets learn which combinations of features predict default risk. Alternative data sources (utility payments, mobile phone behavior, e-commerce history) are incorporated to score thin-file applicants. Explainability tools (SHAP values) ensure regulatory compliance with adverse action notice requirements.",
+      examples: [
+        { name: "Upstart", desc: "AI lending platform that uses 1,000+ variables to underwrite personal loans, approved by the CFPB for fair lending." },
+        { name: "Zest AI", desc: "Machine learning underwriting platform used by credit unions and banks, with a focus on fairness and explainability." },
+        { name: "Apple Card (Goldman Sachs)", desc: "Uses ML to underwrite credit in real time during card application without a hard pull initially." }
+      ],
+      tags: ["Gradient Boosting", "XGBoost", "Alternative Data", "SHAP", "Fair Lending"]
+    },
+    {
+      title: "Fraud Detection",
+      overview: "Financial fraud costs the global economy hundreds of billions annually. AI has become the primary defense layer for card networks, banks, and payment processors — analyzing every transaction in real time and scoring it for fraud probability within milliseconds of authorization.",
+      how: "Graph neural networks map relationships between accounts, devices, and behavioral patterns to detect fraud rings. Sequence models detect behavioral anomalies in transaction streams. Ensemble models combine dozens of signals — device fingerprint, geolocation, spending velocity, merchant category — into a fraud score that triggers real-time holds or step-up authentication.",
+      examples: [
+        { name: "Visa Advanced Authorization", desc: "AI system that evaluates 500+ risk attributes on each of Visa's 200+ billion annual transactions." },
+        { name: "Mastercard Decision Intelligence", desc: "Real-time AI scoring system that improved fraud detection rates by 50% while reducing false positives." },
+        { name: "Stripe Radar", desc: "ML-based fraud prevention that learns from signals across millions of businesses on the Stripe network." }
+      ],
+      tags: ["Graph Neural Networks", "Real-time Scoring", "Behavioral Analytics", "Ensemble Models", "Network Effects"]
+    },
+    {
+      title: "Portfolio Optimization",
+      overview: "AI extends classical mean-variance optimization by incorporating non-linear relationships, alternative data, tail-risk modeling, and dynamic rebalancing. Machine learning helps construct portfolios that better balance expected return against multiple dimensions of risk.",
+      how: "Reinforcement learning agents learn portfolio allocation policies by optimizing for risk-adjusted returns in simulated environments. Deep learning models forecast asset return distributions. Natural language processing extracts sentiment and earnings signals from filings and news. Black-Litterman models are augmented with ML-generated views. Transaction cost modeling ensures rebalancing decisions account for market impact.",
+      examples: [
+        { name: "BlackRock Aladdin", desc: "Enterprise risk platform managing risk analytics for $20+ trillion in assets, with AI-driven factor analysis." },
+        { name: "Wealthfront Automated Investing", desc: "Direct indexing and daily tax-loss harvesting at scale, powered by continuous ML optimization." },
+        { name: "Bridgewater Pure Alpha", desc: "Systematic macro hedge fund using AI to model global economic relationships and optimize macro positions." }
+      ],
+      tags: ["Reinforcement Learning", "Mean-Variance", "Black-Litterman", "Factor Models", "Tax-Loss Harvesting"]
+    },
+    {
+      title: "Robo-Advisors",
+      overview: "Robo-advisors democratize access to professional-grade wealth management by automating financial planning, asset allocation, and ongoing portfolio management. AI enables personalized advice at scale, bringing institutional-quality strategies to retail investors at a fraction of the traditional cost.",
+      how: "Goal-based planning algorithms map client risk tolerance, time horizon, and objectives to appropriate asset allocations. ML models personalize recommendations based on behavioral patterns and life events. NLP enables conversational interfaces that guide clients through financial planning questions. Tax optimization algorithms continuously harvest losses and manage capital gains across accounts.",
+      examples: [
+        { name: "Betterment", desc: "Pioneer robo-advisor managing $40B+ using goals-based AI allocation and automated tax-loss harvesting." },
+        { name: "Schwab Intelligent Portfolios", desc: "No-advisory-fee robo-advisor using AI to allocate across ETFs based on client questionnaire and goals." },
+        { name: "Vanguard Digital Advisor", desc: "Hybrid model combining AI automation with access to human advisors for complex planning needs." }
+      ],
+      tags: ["Goal-based Planning", "Risk Profiling", "ETF Optimization", "Tax-Loss Harvesting", "Behavioral Finance"]
+    },
+    {
+      title: "Risk Management",
+      overview: "AI enhances enterprise risk management by modeling complex, interconnected risks — market, credit, liquidity, operational, and systemic — that traditional VaR models fail to capture. It enables faster, more granular stress testing and scenario analysis.",
+      how: "Monte Carlo simulations augmented by ML generate thousands of realistic market scenarios. Deep learning models capture non-linear dependencies between risk factors missed by linear correlation matrices. NLP monitors news and regulatory developments for emerging risk signals. Network analysis maps contagion pathways across counterparty exposures. Explainable AI ensures risk models meet regulatory model risk management (SR 11-7) requirements.",
+      examples: [
+        { name: "Moody's Analytics AXIS", desc: "AI-powered risk platform for insurance and banking with stress testing across interconnected risk factors." },
+        { name: "AxiomSL (Adenza)", desc: "Regulatory reporting and risk aggregation platform serving tier-1 banks with AI-driven data lineage." },
+        { name: "Bloomberg MARS", desc: "Multi-Asset Risk System using advanced analytics for real-time risk across complex derivatives portfolios." }
+      ],
+      tags: ["Monte Carlo", "VaR", "Stress Testing", "Network Analysis", "Explainable AI"]
+    },
+    {
+      title: "Market Sentiment Analysis",
+      overview: "Markets move on information. AI monitors and interprets vast streams of text — earnings calls, news articles, SEC filings, social media, patent applications, satellite data — to extract sentiment signals and alternative data that give traders and analysts an informational edge.",
+      how: "Transformer-based NLP models fine-tuned on financial text (FinBERT, BloombergGPT) classify sentiment and extract key entities from documents. Event detection models identify material disclosures in real time. Social media monitoring systems aggregate and score retail sentiment from platforms like Reddit and Twitter/X. Alternative data vendors provide structured sentiment datasets as alpha signals.",
+      examples: [
+        { name: "Bloomberg Terminal NLP", desc: "Embedded NLP analysis of news sentiment with direct integration into trading workflows." },
+        { name: "RavenPack", desc: "Alternative data platform processing 1M+ news sources daily into structured sentiment scores for funds." },
+        { name: "Refinitiv Machine Readable News", desc: "Ultra-low-latency news feed with automated sentiment scoring for systematic trading strategies." }
+      ],
+      tags: ["FinBERT", "Transformer NLP", "Alternative Data", "Event Detection", "Sentiment Scoring"]
+    },
+    {
+      title: "AML / KYC Compliance",
+      overview: "Anti-money laundering and know-your-customer compliance are among the most resource-intensive obligations in financial services. AI dramatically reduces false positive rates in transaction monitoring — the primary driver of compliance costs — while catching sophisticated laundering patterns humans miss.",
+      how: "Graph analytics map transaction networks to detect structuring, layering, and integration patterns characteristic of money laundering. Behavioral analytics compare each customer's activity against their own historical baseline and peer group. NLP extracts adverse media about customers from global news sources. ML models continuously learn from investigator feedback to improve alert quality. Digital identity verification uses computer vision and liveness detection for remote onboarding.",
+      examples: [
+        { name: "NICE Actimize", desc: "Market-leading AML platform using AI to reduce false positives by 40-60% while improving detection rates." },
+        { name: "Jumio Identity Verification", desc: "AI-powered KYC onboarding using document authentication and biometric liveness checks." },
+        { name: "Quantexa Contextual Decision Intelligence", desc: "Graph analytics platform connecting internal and external data to detect complex financial crime networks." }
+      ],
+      tags: ["Graph Analytics", "Behavioral Analytics", "Adverse Media NLP", "Liveness Detection", "Network Analysis"]
+    },
+    {
+      title: "Financial Forecasting & Valuation",
+      overview: "AI augments financial modeling by automating the extraction and analysis of financial data from filings, improving the accuracy of earnings forecasts, and automating parts of the discounted cash flow and comparable company analysis processes traditionally done manually by analysts.",
+      how: "NLP models extract financial data from 10-K/10-Q filings and earnings call transcripts at scale. Time-series and ensemble ML models forecast revenue, margins, and earnings with higher accuracy than consensus estimates on average. LLMs draft preliminary valuation memos and comparable company analyses. AI tools generate and stress-test multiple scenario cases simultaneously, a task that previously required hours of spreadsheet work.",
+      examples: [
+        { name: "Visible Alpha", desc: "Aggregates sell-side model assumptions using AI to extract granular KPIs from analyst models." },
+        { name: "Kensho (S&P Global)", desc: "AI analytics engine that answers complex financial questions by analyzing large datasets and filings." },
+        { name: "AlphaSense", desc: "AI-powered search and analysis platform that extracts insights from filings, transcripts, and broker research." }
+      ],
+      tags: ["Earnings Forecasting", "NLP", "DCF Automation", "Scenario Analysis", "Alternative Data"]
+    }
+  ]
+};
+
+let currentItem = null;
+
+function select(el) {
+  // Clear previous
+  document.querySelectorAll('.app-item').forEach(i => {
+    i.classList.remove('active-acct','active-purp');
+  });
+
+  const domain = el.dataset.domain;
+  const id = parseInt(el.dataset.id);
+  const data = DATA[domain][id];
+
+  el.classList.add(domain === 'acct' ? 'active-acct' : 'active-purp');
+
+  const panel = document.getElementById('detail-panel');
+  panel.classList.remove('hidden');
+  document.getElementById('detail-empty').style.display = 'none';
+  const content = document.getElementById('detail-content');
+  content.style.display = 'block';
+
+  // Fade transition
+  content.style.opacity = '0';
+  content.style.transform = 'translateY(8px)';
+  content.style.transition = 'none';
+
+  document.getElementById('d-title').textContent = data.title;
+
+  const badge = document.getElementById('d-badge');
+  badge.textContent = domain === 'acct' ? 'Accounting' : 'Finance';
+  badge.className = 'detail-badge ' + (domain === 'acct' ? 'acct' : 'finance');
+
+  document.getElementById('d-overview').textContent = data.overview;
+  document.getElementById('d-how').textContent = data.how;
+
+  const examplesEl = document.getElementById('d-examples');
+  examplesEl.innerHTML = data.examples.map(e =>
+    `<div class="example-card">
+      <div class="example-card-name">${e.name}</div>
+      <div class="example-card-desc">${e.desc}</div>
+    </div>`
+  ).join('');
+
+  const tagsEl = document.getElementById('d-tags');
+  tagsEl.innerHTML = data.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+  requestAnimationFrame(() => {
+    content.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+    content.style.opacity = '1';
+    content.style.transform = 'translateY(0)';
+  });
+
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+</body>
+</html>

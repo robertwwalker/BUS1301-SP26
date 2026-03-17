@@ -1,0 +1,15 @@
+{
+  "hash": "8befc0a92db32e0a36de42cf948f4b8a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: About\nabout:\n  template: marquee\n  links:\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com/PieRatio\n    - icon: linkedin\n      text: LinkedIn\n      href: https://www.linkedin.com/in/robert-w-walker\n    - icon: github\n      text: Github\n      href: https://github.com/robertwwalker\n---\n\n\n\n<marquee scrollamount=\"10\"><h1><p style=\"color:purple;\">{{< fa brands r-project >}}obertwwalker.github.io <br></p></h1></marquee>\n\n\n# Robert W. Walker, Ph. D.\n\n:::: {.columns}\n::: {.column width=\"40%\"}\n![](RWW.jpeg)\n:::\n::: {.column width=\"10%\"}\n\n:::\n::: {.column width=\"50%\"}\nRobert W. Walker is an Associate Professor of Quantitative Methods in the [Atkinson Graduate School of Management](https://willamette.edu/mba/admission/index.html) at [Willamette University](https://willamette.edu/)\n\nHe earned a Ph. D. in political science from the University of Rochester in 2005 and has previously held teaching positions at Dartmouth College, Rice University, Texas A&M University, and Washington University in Saint Louis. His current research develops and applies semi-Markov processes to time-series, cross-section data in international relations and international/comparative political economy. He teaches courses in quantitative methods/applied statistics and microeconomic strategy and previously taught four iterations in the U. S. National Science Foundation funded Empirical Implications of Theoretical Models sequence at Washington University in Saint Louis. His work with Curt Signorino and Muhammet Bas was awarded the Miller Prize for the best article in Political Analysis in 2009.\n\nHis web presence is [rww.science](https://robertwwalker.github.io) and his github is [https://github.com/robertwwalker](https://github.com/robertwwalker).\n        \n:::\n::::\n\nRobert's Erdos-Bacon Number is 8.\n\n\n::: {.cell}\n\n:::\n\n\n:::: {.columns}\n::: {.column width=\"30%\"}\n![Erdos Table](img/Erdos.png)\n:::\n\n::: {.column width=\"10%\"}\n:::\n\n::: {.column width=\"60%\"}\n![Bacon Table](img/Bacon.png)\n:::\n::::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
