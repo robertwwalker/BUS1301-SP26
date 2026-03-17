@@ -22,6 +22,28 @@ Operations, accounting, and finance applications are in order for the day.
 
 1. Exploring applications and tools.  [Operations tool](https://robertwwalker.github.io/AI-Tools/ClaudeQueues/) and [some Finance and Accounting topics](https://robertwwalker.github.io/BUS1301-SP26/writeups/F-A-Models/index.html)
 
+## Operations: AI Tools
+
+9 focused AI applications within supply chain, logistics, and operations management:
+
+1. **Demand Forecasting** — AI models ingest point-of-sale data, seasonality patterns, economic indicators, and even social media signals to predict SKU-level demand far more precisely than traditional statistical methods like moving averages or ARIMA models.
+
+2. **Dynamic Inventory Positioning** — Rather than static reorder points, AI continuously recalculates optimal safety stock levels and reorder quantities across a distribution network, balancing carrying costs against stockout risk in real time.
+
+3. **Supplier Risk Monitoring** — AI continuously scans news feeds, financial filings, geopolitical events, and weather data to flag suppliers at risk of disruption before it impacts your production schedule.
+
+4. **Route Optimization & Last-Mile Delivery** — AI solves complex vehicle routing problems (VRP) at scale, factoring in traffic, delivery windows, driver hours-of-service rules, and fuel costs — recalculating dynamically as conditions change.
+
+5. **Warehouse Slotting & Pick Path Optimization** — AI determines the optimal placement of SKUs within a warehouse based on velocity and co-purchase patterns, minimizing travel time for pickers and increasing throughput.
+
+6. **Predictive Maintenance of Equipment** — AI analyzes sensor data from forklifts, conveyor systems, and CNC machines to predict failures before they cause unplanned downtime, enabling maintenance to be scheduled during off-peak hours.
+
+7. **Production Scheduling & Sequencing** — AI optimizes job shop or flow shop scheduling by balancing machine capacity, labor availability, due dates, and changeover times — a problem too complex for manual planning at scale.
+
+8. **Network Design & Facility Location** — AI-driven simulation and optimization models evaluate tradeoffs between warehouse locations, transportation lanes, and service levels to recommend the most cost-effective distribution network configuration.
+
+9. **Freight Procurement & Spot Rate Prediction** — AI forecasts carrier spot market rates, helping logistics teams decide when to lock in contract rates versus use the spot market, and automates load tendering to preferred carriers based on cost and performance history.
+
 
 # On Causality
 

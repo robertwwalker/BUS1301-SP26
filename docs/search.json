@@ -4966,5 +4966,12 @@
       "About",
       "Write-ups"
     ]
+  },
+  {
+    "objectID": "posts/03-17-2026/index.html#operations-ai-tools",
+    "href": "posts/03-17-2026/index.html#operations-ai-tools",
+    "title": "Operations, Finance and Accounting",
+    "section": "Operations: AI Tools",
+    "text": "Operations: AI Tools\n9 focused AI applications within supply chain, logistics, and operations management:\n\nDemand Forecasting — AI models ingest point-of-sale data, seasonality patterns, economic indicators, and even social media signals to predict SKU-level demand far more precisely than traditional statistical methods like moving averages or ARIMA models.\nDynamic Inventory Positioning — Rather than static reorder points, AI continuously recalculates optimal safety stock levels and reorder quantities across a distribution network, balancing carrying costs against stockout risk in real time.\nSupplier Risk Monitoring — AI continuously scans news feeds, financial filings, geopolitical events, and weather data to flag suppliers at risk of disruption before it impacts your production schedule.\nRoute Optimization & Last-Mile Delivery — AI solves complex vehicle routing problems (VRP) at scale, factoring in traffic, delivery windows, driver hours-of-service rules, and fuel costs — recalculating dynamically as conditions change.\nWarehouse Slotting & Pick Path Optimization — AI determines the optimal placement of SKUs within a warehouse based on velocity and co-purchase patterns, minimizing travel time for pickers and increasing throughput.\nPredictive Maintenance of Equipment — AI analyzes sensor data from forklifts, conveyor systems, and CNC machines to predict failures before they cause unplanned downtime, enabling maintenance to be scheduled during off-peak hours.\nProduction Scheduling & Sequencing — AI optimizes job shop or flow shop scheduling by balancing machine capacity, labor availability, due dates, and changeover times — a problem too complex for manual planning at scale.\nNetwork Design & Facility Location — AI-driven simulation and optimization models evaluate tradeoffs between warehouse locations, transportation lanes, and service levels to recommend the most cost-effective distribution network configuration.\nFreight Procurement & Spot Rate Prediction — AI forecasts carrier spot market rates, helping logistics teams decide when to lock in contract rates versus use the spot market, and automates load tendering to preferred carriers based on cost and performance history."
   }
 ]

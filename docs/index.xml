@@ -31,6 +31,21 @@
 <li>Exploring applications and tools. <a href="https://robertwwalker.github.io/AI-Tools/ClaudeQueues/">Operations tool</a> and <a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/F-A-Models/index.html">some Finance and Accounting topics</a></li>
 </ol>
 </section>
+<section id="operations-ai-tools" class="level2">
+<h2 class="anchored" data-anchor-id="operations-ai-tools">Operations: AI Tools</h2>
+<p>9 focused AI applications within supply chain, logistics, and operations management:</p>
+<ol type="1">
+<li><p><strong>Demand Forecasting</strong> — AI models ingest point-of-sale data, seasonality patterns, economic indicators, and even social media signals to predict SKU-level demand far more precisely than traditional statistical methods like moving averages or ARIMA models.</p></li>
+<li><p><strong>Dynamic Inventory Positioning</strong> — Rather than static reorder points, AI continuously recalculates optimal safety stock levels and reorder quantities across a distribution network, balancing carrying costs against stockout risk in real time.</p></li>
+<li><p><strong>Supplier Risk Monitoring</strong> — AI continuously scans news feeds, financial filings, geopolitical events, and weather data to flag suppliers at risk of disruption before it impacts your production schedule.</p></li>
+<li><p><strong>Route Optimization &amp; Last-Mile Delivery</strong> — AI solves complex vehicle routing problems (VRP) at scale, factoring in traffic, delivery windows, driver hours-of-service rules, and fuel costs — recalculating dynamically as conditions change.</p></li>
+<li><p><strong>Warehouse Slotting &amp; Pick Path Optimization</strong> — AI determines the optimal placement of SKUs within a warehouse based on velocity and co-purchase patterns, minimizing travel time for pickers and increasing throughput.</p></li>
+<li><p><strong>Predictive Maintenance of Equipment</strong> — AI analyzes sensor data from forklifts, conveyor systems, and CNC machines to predict failures before they cause unplanned downtime, enabling maintenance to be scheduled during off-peak hours.</p></li>
+<li><p><strong>Production Scheduling &amp; Sequencing</strong> — AI optimizes job shop or flow shop scheduling by balancing machine capacity, labor availability, due dates, and changeover times — a problem too complex for manual planning at scale.</p></li>
+<li><p><strong>Network Design &amp; Facility Location</strong> — AI-driven simulation and optimization models evaluate tradeoffs between warehouse locations, transportation lanes, and service levels to recommend the most cost-effective distribution network configuration.</p></li>
+<li><p><strong>Freight Procurement &amp; Spot Rate Prediction</strong> — AI forecasts carrier spot market rates, helping logistics teams decide when to lock in contract rates versus use the spot market, and automates load tendering to preferred carriers based on cost and performance history.</p></li>
+</ol>
+</section>
 </section>
 <section id="on-causality" class="level1">
 <h1>On Causality</h1>
