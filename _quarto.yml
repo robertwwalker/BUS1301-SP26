@@ -3,7 +3,7 @@ project:
   output-dir: docs
   render:
         - "*.qmd"
-        - "Syllabus/Syllabus.Rmd"
+        - "Syllabus/index.Rmd"
         - "writeups/Dashboards/img/Dashboard.qmd"
   title: "BUS 1301: Managing with AI - Spring 2026"
 
@@ -29,7 +29,7 @@ website:
      style: "docked"
      contents:
        - text: "Syllabus"
-         href: syllabus/index.qmd
+         href: syllabus/index.html
        - text: "Slides"
          href: slides/index.qmd
        - text: "Write-ups"

@@ -10,7 +10,86 @@
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Tue, 17 Mar 2026 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 19 Mar 2026 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>Human Resource Management Analytics</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/03-19-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>HR applications are in order for the day.</p>
+<section id="a-writeup" class="level1">
+<h1>A writeup</h1>
+<p><a href="https://robertwwalker.github.io/Claude-HR/">Link is here</a></p>
+<section id="the-class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
+<ol type="1">
+<li><a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/F-A-Models/index.html">Some Finance and Accounting topics</a></li>
+<li><a href="https://robertwwalker.github.io/Claude-HR/">HR Analytics</a></li>
+</ol>
+</section>
+</section>
+<section id="on-causality" class="level1">
+<h1>On Causality</h1>
+<p>Causation is at the heart of the highest order human reasoning. Doing so with data is an objective if not an end result of modern fascination with machine learning. Yet, these are age old philosophical questions and modern work at the intersection of data and causation is perhaps best exemplified in the work of Judea Pearl. His most recent work, The Book of Why, details a lifetime of investigating causes and causal models at the intersection of computing, philosophy, and statistics. Though wide ranging, <a href="https://share.google/FqVPW7tanZqALa2NM">his podcast with Lex Fridman is worth listening to</a>. The excerpt on <a href="https://www.youtube.com/watch?v=oFy2927b8jQ">correlation and causation is very useful.</a></p>
+<p>He develops a ladder of causation. <a href="https://web.cs.ucla.edu/~kaoru/3-layer-causal-hierarchy.pdf">This is quite well explained in this two page primer</a>.</p>
+<ol type="1">
+<li><p>Associational</p></li>
+<li><p>Interventional</p></li>
+<li><p>Counterfactual</p></li>
+</ol>
+<p>We want to understand precisely how these various levels influence what we learn from data and deploy data to accomplish.</p>
+<p><a href="https://bayes.cs.ucla.edu/home.htm">Judea Pearl’s website</a></p>
+<p>The <a href="https://web.cs.ucla.edu/~kaoru/primer-complete-2019.pdf">book on statistics and causal inference</a></p>
+<p><a href="https://youtu.be/nWaM6XmQEmU?si=nAtQu51kIfjoboBi">A lecture on the Book of Why</a></p>
+<p>Sections 2.1 to 2.10 of the Causal Mixtape are a <a href="https://mixtape.scunning.com/02-probability_and_regression">very succinct read</a>.</p>
+<section id="illustrating-an-hypothesis-test-with-the-normal" class="level2">
+<h2 class="anchored" data-anchor-id="illustrating-an-hypothesis-test-with-the-normal">Illustrating an Hypothesis Test with the Normal</h2>
+<p>Let’s take the example of Berkeley. Let’s test the hypothesis that <img src="https://latex.codecogs.com/png.latex?%5Cpi=0.5"> first and let’s examine it with 99% confidence.</p>
+<p>I will use the class tool to find that percentage.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/03-19-2026/img/Screenshot 2026-03-12 at 12.17.20 PM.png" class="img-fluid figure-img" alt="Image"></a></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>Anything within 2.576 standard deviations above or below the mean is possible with 99% confidence.</p>
+<p>The standard error in this case is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cfrac%7B%5Cpi(1-%5Cpi)%7D%7Bn%7D%7D"></p>
+<p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20%5Cpm%20z*"> 0.0074321.</p>
+<p>Or <img src="https://latex.codecogs.com/png.latex?0.5%20%5Cpm%200.019">.</p>
+<p>Anything between 0.481 and 0.519 could be observed if 0.5 is true.</p>
+</section>
+<section id="a-single-tail" class="level2">
+<h2 class="anchored" data-anchor-id="a-single-tail">A Single Tail</h2>
+<p>Let’s take the example of Berkeley. Let’s test the hypothesis that <img src="https://latex.codecogs.com/png.latex?%5Cpi%20%5Cleq%200.5"> against the alternative that it is bigger and let’s examine it with 99% confidence.</p>
+<p>I will use the class tool to find that percentage.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/Screenshot 2026-03-12 at 12.22.18 PM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Image"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/03-19-2026/img/Screenshot 2026-03-12 at 12.22.18 PM.png" class="img-fluid figure-img" alt="Image"></a></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>Anything within 2.236 standard deviations above the mean is possible with 99% confidence.</p>
+<p>The standard error in this case is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cfrac%7B%5Cpi(1-%5Cpi)%7D%7Bn%7D%7D"></p>
+<p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20-%20z*"> 0.0074321.</p>
+<p>Or <img src="https://latex.codecogs.com/png.latex?0.5%20+%202.236*0.019">.</p>
+<p>Anything below 0.5166 could be observed if 0.5 or less is true.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/03-19-2026/</guid>
+  <pubDate>Thu, 19 Mar 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/03-19-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
 <item>
   <title>Operations, Finance and Accounting</title>
   <dc:creator>Robert W. Walker</dc:creator>
@@ -6021,94 +6100,6 @@ font-style: inherit;">"values"</span>)</span></code></pre></div></div>
   <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/</guid>
   <pubDate>Tue, 13 Jan 2026 08:00:00 GMT</pubDate>
   <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/image.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Welcome To BUS 1301: Managing with AI</title>
-  <dc:creator>Robert W. Walker</dc:creator>
-  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/</link>
-  <description><![CDATA[ 
-
-
-
-
-<marquee scrollamount="10">
-<h1>
-<p style="color:purple;">
-<i class="fa-brands fa-r-project" aria-label="r-project"></i>obertwwalker.github.io <br>
-</p>
-</h1>
-<p></p></marquee><p></p>
-<p>Welcome to Managing with Data, Analytics, and Artificial Intelligence!</p>
-<section id="our-goal-in-four-parts" class="level1">
-<h1>Our Goal in Four Parts</h1>
-<p>Together, we will investigate how managers collect, process, and interpret observations about the world around them to facilitate informed decisions.</p>
-<section id="models" class="level2">
-<h2 class="anchored" data-anchor-id="models">1. Models</h2>
-<ul>
-<li>Our organizing framework is the <em>model</em>. What is a model? Why models?</li>
-</ul>
-</section>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">2. Data</h2>
-<ul>
-<li><p>What is data and how do we get some? We start by defining data and our relationship with data. We will explore practical methods of data gathering – from surveys and archives to experiments and crowd sourcing.</p></li>
-<li><p>Have data, how is it typically organized? We will explore basic methods of organizing data for robust, sustainable use.</p></li>
-</ul>
-</section>
-<section id="deploying-data" class="level2">
-<h2 class="anchored" data-anchor-id="deploying-data">3. Deploying Data</h2>
-<ul>
-<li>How can managers use data? We will deploy basic tools of cross tabulation, frequency distributions, and simple plots before some statistical inference and model building.</li>
-</ul>
-</section>
-<section id="artificial-intelligence" class="level2">
-<h2 class="anchored" data-anchor-id="artificial-intelligence">4. Artificial Intelligence</h2>
-<ul>
-<li>What is artificial intelligence (AI)? We will highlight general features of how commonly deployed AI systems function and how they can solve challenges across various areas of business.</li>
-</ul>
-</section>
-</section>
-<section id="learning-objectives" class="level1">
-<h1>Learning Objectives</h1>
-<p>Our key learning objectives, for the course, are:</p>
-<ol type="1">
-<li>What is a model? What role do models play in the origination of data [for empiricists]?</li>
-<li>Distinguish among means of data collection and discuss their tradeoffs.<br>
-</li>
-<li>Describe common models of data management and their tradeoffs.<br>
-</li>
-<li>Articulate the applicability of popular analytic techniques to their uses and their function.<br>
-</li>
-<li>Discuss the historical development and current functionality of <em>AI</em>.<br>
-</li>
-<li>Ethical issues are ubiquitous in data, analytics, and AI in the workplace; we should confront them.</li>
-</ol>
-<p>Our week 1 learning objective is to define a model, give examples of models and their use in management activities, and the interrelationship between models and measures, a lead-in to specifics on data.</p>
-</section>
-<section id="core-tools" class="level1">
-<h1>Core Tools</h1>
-<p>We will make extensive use of a few software and computing tools.</p>
-<ul>
-<li>Microsoft Word and Microsoft Excel [licenses provided via Willamette if needed]</li>
-<li>Google Docs and Sheets</li>
-<li><a href="https://gemini.google.com/">Google Gemini</a>, in lieu of a subscription to OpenAI, Anthropic, or similar</li>
-<li><a href="https://notebooklm.google.com/">NotebookLM</a></li>
-</ul>
-</section>
-<section id="readings" class="level1">
-<h1>Readings</h1>
-<p>A free and open-source textbook will provide background and exercises in the generic field of statistics.</p>
-<ul>
-<li><a href="https://www.openintro.org/book/os/">Open Intro Statistics</a>. The .pdf file is available on canvas and a screen reader version can be obtained from the link.</li>
-</ul>
-
-
-</section>
-
- ]]></description>
-  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/</guid>
-  <pubDate>Mon, 12 Jan 2026 08:00:00 GMT</pubDate>
-  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
