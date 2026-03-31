@@ -1,0 +1,940 @@
+---
+title: "Intelligence, AI, and LLM's"
+author: "Robert  W. Walker"
+date: "2026-03-31"
+format: 
+   revealjs:
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301-SP26"
+     multiplex:
+       url: 'https://multiplex-5adl.onrender.com'
+       secret: "7af99b9bf4796dd3e5d8f2ee555098f4"
+       id: "f3ecaf1fa854e20ca0b3e624bf2ee1210f73a24f392ca39e40484a800d4488c1"
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: zoom
+     preview-links: true
+     lightbox: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', dev.args = list(bg = "white"), eval=TRUE)
+library(tidyverse)
+library(magrittr)
+library(fontawesome)
+library(DT)
+library(magrittr)
+options(scipen=8)
+library(tidyverse)
+library(gganimate)
+library(hrbrthemes)
+theme_set(theme_ipsum_rc())
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', dev.args = list(bg = "white"))
+library(kableExtra); library(tidyverse); library(skimr)
+```
+
+## Outline
+
+1. Intelligence.  
+2. The Basics of LLM's.  
+   + Embeddings.  
+   + Attention is all you need.  
+3. The Prediction.   
+   + The Context.  
+
+
+## Summary: Intelligence
+
+- Definitions of **human intelligence** and **artificial intelligence** often differ across psychology and computer science.
+- The paper argues that this mismatch creates confusion about what current AI systems actually demonstrate.
+- It proposes a **shared conceptual framework** so both fields can discuss intelligence with more precision.
+
+::: {.footer}
+Source: Gignac, G. E., & Szodorai, E. T. (2024). *Intelligence*, 104, 101832. https://doi.org/10.1016/j.intell.2024.101832
+:::
+
+## Core definitions proposed
+
+- **Human intelligence:** maximal capacity to complete **novel goals successfully** through **perceptual-cognitive processes**.
+- **Artificial intelligence:** maximal capacity to complete **novel goals successfully** through **computational processes**.
+- In both cases, intelligence is framed as a **capacity**, not just a record of past performance.
+- The authors also argue intelligence is better understood as **multidimensional**, not a single narrow skill.
+
+## Intelligence is not the same as achievement
+
+- The paper draws a sharp line between:
+  - **Intelligence** = flexible capacity for success on novel goals
+  - **Achievement / expertise** = strong performance built through training on specific tasks or domains
+- Many current AI systems may look impressive because they show **artificial achievement** rather than genuine artificial intelligence.
+- This distinction matters because benchmark success alone can overstate what systems actually generalize to.
+
+## Why “AI metrics” is needed
+
+- The authors argue AI evaluation should learn from **psychometrics**.
+- They call for an **AI metrics** discipline focused on:
+  - **reliability** (consistent measurement)
+  - **validity** (measuring the intended construct)
+  - **standardized procedures** for comparing systems fairly
+- Without stronger measurement practice, claims about intelligence or AGI remain difficult to justify.
+
+## Main takeaway for AGI debates
+
+- The paper suggests **AGI** should be understood analogously to **human general intelligence**:
+  - not merely broad competence,
+  - but the **shared variance** across many system performances.
+- Bottom line: current evidence supports **artificial achievement/expertise more strongly than artificial intelligence**.
+- The path forward is **interdisciplinary collaboration** plus better definitions and measurement.
+
+# A Brief History
+
+```{=html}
+<style>
+.reveal section h2 { margin-bottom: 0.45em; }
+.reveal section p, .reveal section li { font-size: 0.95em; }
+.small { font-size: 0.8em; }
+.tiny { font-size: 0.68em; color: #555; }
+.twocol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  align-items: start;
+}
+.card {
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  background: #fafafa;
+}
+.center { text-align: center; }
+</style>
+```
+
+## 1. Origins: early neural ideas and the birth of AI
+
+::: {.twocol}
+<div>
+
+**1940s–1950s**
+- In 1943, Warren McCulloch and Walter Pitts published a simplified mathematical model of a neuron and showed how networks of such units could implement logical operations.
+- In 1956, the Dartmouth Summer Research Project helped define **artificial intelligence** as a field and popularized the term itself.
+- Early AI combined several ambitions:
+  - symbolic reasoning
+  - machine learning
+  - search and planning
+  - neural models inspired by brains
+
+</div>
+<div class="center">
+
+```{=html}
+<svg viewBox="0 0 420 250" width="100%" aria-label="Early AI timeline">
+  <line x1="55" y1="125" x2="365" y2="125" stroke="#666" stroke-width="3"/>
+  <circle cx="120" cy="125" r="10" fill="#5f86c9"/>
+  <circle cx="280" cy="125" r="10" fill="#6aa84f"/>
+  <text x="86" y="95" font-size="18">1943</text>
+  <text x="38" y="165" font-size="17">McCulloch–Pitts</text>
+  <text x="245" y="95" font-size="18">1956</text>
+  <text x="218" y="165" font-size="17">Dartmouth workshop</text>
+</svg>
+```
+
+</div>
+:::
+
+<div class="tiny">
+Sources: McCulloch & Pitts (1943); Dartmouth AI history pages.
+</div>
+
+## 2. Perceptrons, optimism, and the first setbacks
+
+::: {.twocol}
+<div>
+
+**Late 1950s–1970s**
+- Frank Rosenblatt’s **perceptron** (1958) made neural learning seem highly promising.
+- Perceptrons could learn linear decision boundaries from examples.
+- But enthusiasm outpaced capability:
+  - early systems were limited
+  - compute was weak
+  - data were scarce
+- Critiques of single-layer perceptrons, especially their inability to solve some nonlinearly separable problems, contributed to a slowdown in neural-network enthusiasm.
+
+</div>
+<div class="card">
+
+**Why this mattered**
+- AI did not progress in a straight line.
+- Periods of excitement were followed by disappointment.
+- This helps explain later **AI winters** and why symbolic AI often overshadowed neural approaches for a time.
+
+</div>
+:::
+
+<div class="tiny">
+Sources: Rosenblatt (1958); historical reviews of neural networks and AI.
+</div>
+
+## 3. Backpropagation, expert systems, and statistical learning
+
+::: {.twocol}
+<div>
+
+**1980s–1990s**
+- In the 1980s, backpropagation became the key training method for multi-layer neural networks.
+- The famous 1986 Rumelhart, Hinton, and Williams paper showed how internal representations could be learned across layers.
+- At the same time, AI also advanced through:
+  - expert systems
+  - probabilistic models
+  - statistical pattern recognition
+- In the 1990s, neural nets remained important, but other methods often dominated practical machine learning.
+
+</div>
+<div class="center">
+
+```{=html}
+<svg viewBox="0 0 430 250" width="100%" aria-label="Multilayer network sketch">
+  <circle cx="80" cy="60" r="13" fill="#e8f0fe" stroke="#5f86c9"/>
+  <circle cx="80" cy="125" r="13" fill="#e8f0fe" stroke="#5f86c9"/>
+  <circle cx="80" cy="190" r="13" fill="#e8f0fe" stroke="#5f86c9"/>
+
+  <circle cx="210" cy="85" r="13" fill="#fff2cc" stroke="#bf9000"/>
+  <circle cx="210" cy="165" r="13" fill="#fff2cc" stroke="#bf9000"/>
+
+  <circle cx="340" cy="125" r="13" fill="#e6f4ea" stroke="#6aa84f"/>
+
+  <line x1="93" y1="60" x2="197" y2="85" stroke="#666"/>
+  <line x1="93" y1="60" x2="197" y2="165" stroke="#666"/>
+  <line x1="93" y1="125" x2="197" y2="85" stroke="#666"/>
+  <line x1="93" y1="125" x2="197" y2="165" stroke="#666"/>
+  <line x1="93" y1="190" x2="197" y2="85" stroke="#666"/>
+  <line x1="93" y1="190" x2="197" y2="165" stroke="#666"/>
+  <line x1="223" y1="85" x2="327" y2="125" stroke="#666"/>
+  <line x1="223" y1="165" x2="327" y2="125" stroke="#666"/>
+</svg>
+```
+
+<div class="small">Backpropagation made deeper, multi-layer learning much more practical.</div>
+</div>
+:::
+
+<div class="tiny">
+Sources: Rumelhart, Hinton & Williams (1986); LeCun, Bengio & Hinton (2015).
+</div>
+
+## 4. Deep learning's resurgence
+
+::: {.twocol}
+<div>
+
+**2000s–2010s**
+- Three things changed the field:
+  1. much more digital data
+  2. far more compute, especially GPUs
+  3. better training methods and architectures
+- Neural networks began to dominate difficult perception tasks such as:
+  - speech recognition
+  - image classification
+  - machine translation
+- By the mid-2010s, **deep learning** had become central to AI research and industry.
+
+</div>
+<div class="card">
+
+**Key idea**
+Deep learning systems learn layered representations automatically rather than relying only on hand-crafted features.
+
+**Consequence**
+AI moved from brittle rule systems toward large-scale representation learning from data.
+
+</div>
+:::
+
+<div class="tiny">
+Sources: LeCun, Bengio & Hinton (2015); broad historical overviews of modern AI.
+</div>
+
+## 5. Transformers, foundation models, and the LLM era
+
+::: {.twocol}
+<div>
+
+**Late 2010s–2020s**
+- In 2017, the transformer architecture showed that **attention** could replace recurrence for many sequence tasks.
+- This architecture scaled extremely well with data and compute.
+- Large pretrained models then became capable of:
+  - text generation
+  - summarization
+  - translation
+  - coding assistance
+  - question answering
+- Today’s LLMs sit at the intersection of:
+  - neural-network history
+  - large-scale optimization
+  - language modeling
+  - post-training alignment
+
+</div>
+<div class="center">
+
+```{=html}
+<svg viewBox="0 0 430 250" width="100%" aria-label="From early neural networks to LLMs">
+  <rect x="20" y="95" width="90" height="42" rx="10" fill="#e8f0fe" stroke="#5f86c9"/>
+  <text x="65" y="121" text-anchor="middle" font-size="18">Neurons</text>
+
+  <rect x="125" y="95" width="90" height="42" rx="10" fill="#fff2cc" stroke="#bf9000"/>
+  <text x="170" y="121" text-anchor="middle" font-size="18">Perceptrons</text>
+
+  <rect x="230" y="95" width="80" height="42" rx="10" fill="#e6f4ea" stroke="#6aa84f"/>
+  <text x="270" y="121" text-anchor="middle" font-size="18">Deep nets</text>
+
+  <rect x="325" y="95" width="80" height="42" rx="10" fill="#f4e1ff" stroke="#8e7cc3"/>
+  <text x="365" y="121" text-anchor="middle" font-size="18">LLMs</text>
+
+  <line x1="110" y1="116" x2="125" y2="116" stroke="#666" stroke-width="3"/>
+  <line x1="215" y1="116" x2="230" y2="116" stroke="#666" stroke-width="3"/>
+  <line x1="310" y1="116" x2="325" y2="116" stroke="#666" stroke-width="3"/>
+</svg>
+```
+
+</div>
+:::
+
+<div class="small">
+**Bottom line:** modern LLMs are not a sudden break from history; they are the latest stage in a long sequence of ideas about representation, learning, and computation.
+</div>
+
+<div class="tiny">
+Sources: Vaswani et al. (2017); Google ML Crash Course LLM materials; Ouyang et al. (2022).
+</div>
+
+
+# The LLM Defined and Explained
+
+```{=html}
+<style>
+.reveal section h2 { margin-bottom: 0.4em; }
+.reveal section p, .reveal section li { font-size: 0.95em; }
+.small { font-size: 0.78em; }
+.tiny { font-size: 0.68em; }
+.twocol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+.threecol {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+.card {
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  background: #fafafa;
+}
+.center { text-align: center; }
+.caption { font-size: 0.70em; color: #555; margin-top: 0.2rem; }
+.highlight { color: #0b5394; font-weight: 600; }
+svg text { font-family: Arial, Helvetica, sans-serif; }
+</style>
+```
+
+
+## This Specific Form of Intelligence
+
+::: {.twocol}
+<div>
+
+- LLMs now power chat, search, summarization, coding help, and tutoring.
+- Three ideas explain much of their behavior:
+  - **tokens**
+  - **embeddings**
+  - **transformers**
+- Modern systems add a fourth idea too:
+  - **alignment / post-training**
+
+</div>
+<div class="center">
+
+```{=html}
+<svg viewBox="0 0 520 260" width="100%" aria-label="Concept map for tokens, embeddings, transformers, and assistants">
+  <rect x="20" y="90" width="110" height="60" rx="12" fill="#e8f0fe" stroke="#5f86c9"/>
+  <text x="75" y="125" text-anchor="middle" font-size="22">Tokens</text>
+
+  <rect x="155" y="90" width="140" height="60" rx="12" fill="#e6f4ea" stroke="#6aa84f"/>
+  <text x="225" y="125" text-anchor="middle" font-size="22">Embeddings</text>
+
+  <rect x="320" y="90" width="150" height="60" rx="12" fill="#fff2cc" stroke="#bf9000"/>
+  <text x="395" y="125" text-anchor="middle" font-size="22">Transformers</text>
+
+  <rect x="190" y="180" width="170" height="55" rx="12" fill="#f4e1ff" stroke="#8e7cc3"/>
+  <text x="275" y="213" text-anchor="middle" font-size="20">LLM Assistant</text>
+
+  <line x1="130" y1="120" x2="155" y2="120" stroke="#666" stroke-width="3"/>
+  <line x1="295" y1="120" x2="320" y2="120" stroke="#666" stroke-width="3"/>
+  <line x1="395" y1="150" x2="330" y2="180" stroke="#666" stroke-width="3"/>
+  <line x1="225" y1="150" x2="240" y2="180" stroke="#666" stroke-width="3"/>
+</svg>
+```
+
+<div class="caption">From text units to a deployed assistant.</div>
+</div>
+:::
+
+## Roadmap
+
+1. What language models do  
+2. Tokens and embeddings  
+3. Context and attention  
+4. Transformer architecture  
+5. Training and alignment  
+6. Strengths, limits, and interpretation
+
+## What is a language model?
+
+A language model estimates the probability of the next token from earlier tokens:
+
+$$
+P(t_k \mid t_1, t_2, \ldots, t_{k-1})
+$$
+
+::: {.center}
+```{mermaid}
+flowchart LR
+    A["The"] --> B["cat"] --> C["sat"] --> D["on"] --> E["the"] --> F{"next token?"}
+    F --> G["mat"]
+    F --> H["floor"]
+    F --> I["chair"]
+```
+:::
+
+**Core idea:** generation is repeated next-token prediction.
+
+## Tokens: the model's working units
+
+::: {.twocol}
+<div>
+
+- LLMs usually do not read whole words directly.
+- They read **tokens**, such as:
+  - full words
+  - subwords
+  - punctuation
+  - number pieces
+- Tokenization helps with rare words and open vocabularies.
+
+</div>
+<div class="card">
+
+**Example tokenizations**
+
+| Text | Possible tokens |
+|---|---|
+| unbelievable | `un`, `believ`, `able` |
+| 2026 | `20`, `26` |
+| can't | `can`, `'t` |
+
+<div class="small">
+Different tokenizers split differently. The point is to turn raw text into reusable units.
+</div>
+</div>
+:::
+
+## From text to vectors
+
+::: {.center}
+```{mermaid}
+flowchart LR
+    A["Raw text"] --> B["Tokenizer"]
+    B --> C["Token IDs"]
+    C --> D["Embedding lookup"]
+    D --> E["Dense vectors"]
+    E --> F["Transformer layers"]
+    F --> G["Next-token probabilities"]
+```
+:::
+
+**Embedding:** a learned vector representation for a token or other object.
+
+## What is an embedding?
+
+::: {.twocol}
+<div>
+
+An embedding places items in a high-dimensional space so that related items often end up near one another.
+
+Why useful:
+
+- similarity becomes geometric
+- clusters can emerge
+- models can generalize beyond exact memorization
+
+</div>
+<div class="center">
+
+```{=html}
+<svg viewBox="0 0 420 280" width="100%" aria-label="Simple embedding space scatter with clusters">
+  <rect x="25" y="20" width="360" height="220" fill="white" stroke="#999"/>
+  <line x1="55" y1="220" x2="355" y2="220" stroke="#666"/>
+  <line x1="55" y1="220" x2="55" y2="40" stroke="#666"/>
+  <text x="360" y="235" font-size="14">dimension 1</text>
+  <text x="14" y="45" font-size="14" transform="rotate(-90 14,45)">dimension 2</text>
+
+  <circle cx="110" cy="170" r="7" fill="#5f86c9"/><text x="122" y="174" font-size="15">cat</text>
+  <circle cx="145" cy="150" r="7" fill="#5f86c9"/><text x="157" y="154" font-size="15">kitten</text>
+  <circle cx="170" cy="180" r="7" fill="#5f86c9"/><text x="182" y="184" font-size="15">dog</text>
+
+  <circle cx="250" cy="90" r="7" fill="#6aa84f"/><text x="262" y="94" font-size="15">Paris</text>
+  <circle cx="280" cy="115" r="7" fill="#6aa84f"/><text x="292" y="119" font-size="15">London</text>
+  <circle cx="315" cy="80" r="7" fill="#6aa84f"/><text x="327" y="84" font-size="15">Tokyo</text>
+</svg>
+```
+
+<div class="caption">Illustrative only: actual embeddings live in many dimensions.</div>
+</div>
+:::
+
+## Geometric intuition—and caution
+
+::: {.threecol}
+<div class="card">
+**Good intuition**
+
+Nearby points often mean similar usage or context.
+</div>
+<div class="card">
+**But not perfect**
+
+Distance is learned from data, not hand-written meaning.
+</div>
+<div class="card">
+**Also important**
+
+Embeddings can encode bias, noise, and spurious correlations.
+</div>
+:::
+
+## Static vs contextual embeddings
+
+::: {.twocol}
+<div class="card">
+
+**Static embedding**
+- one vector per word type
+- same `bank` everywhere
+
+</div>
+<div class="card">
+
+**Contextual embedding**
+- vector depends on surrounding text
+- `bank` changes with sentence context
+
+</div>
+:::
+
+::: {.center}
+```{mermaid}
+flowchart TB
+    A["river bank was muddy"] --> B["bank"]
+    C["bank approved the loan"] --> D["bank"]
+    B --> E["contextual vector A"]
+    D --> F["contextual vector B"]
+```
+:::
+
+This shift toward context-sensitive representations is one reason transformer systems became so effective.
+
+## Why earlier sequence models struggled
+
+::: {.twocol}
+<div>
+
+Earlier approaches included:
+
+- n-gram models
+- RNNs
+- LSTMs / GRUs
+
+Common problems:
+
+- weak long-range memory
+- harder parallel training
+- unstable signals over long sequences
+
+</div>
+<div class="center">
+
+```{=html}
+<svg viewBox="0 0 440 240" width="100%" aria-label="RNN chain through time">
+  <circle cx="60" cy="120" r="28" fill="#e8f0fe" stroke="#5f86c9"/>
+  <circle cx="160" cy="120" r="28" fill="#e8f0fe" stroke="#5f86c9"/>
+  <circle cx="260" cy="120" r="28" fill="#e8f0fe" stroke="#5f86c9"/>
+  <circle cx="360" cy="120" r="28" fill="#e8f0fe" stroke="#5f86c9"/>
+  <text x="60" y="126" text-anchor="middle" font-size="20">h₁</text>
+  <text x="160" y="126" text-anchor="middle" font-size="20">h₂</text>
+  <text x="260" y="126" text-anchor="middle" font-size="20">h₃</text>
+  <text x="360" y="126" text-anchor="middle" font-size="20">h₄</text>
+  <line x1="88" y1="120" x2="132" y2="120" stroke="#666" stroke-width="3"/>
+  <line x1="188" y1="120" x2="232" y2="120" stroke="#666" stroke-width="3"/>
+  <line x1="288" y1="120" x2="332" y2="120" stroke="#666" stroke-width="3"/>
+  <text x="52" y="185" font-size="16">token 1</text>
+  <text x="152" y="185" font-size="16">token 2</text>
+  <text x="252" y="185" font-size="16">token 3</text>
+  <text x="352" y="185" font-size="16">token 4</text>
+</svg>
+```
+
+<div class="caption">Sequential dependence made training harder to parallelize.</div>
+</div>
+:::
+
+## The transformer breakthrough
+
+The 2017 transformer paper replaced recurrence with attention-heavy computation.
+
+::: {.center}
+```{mermaid}
+flowchart LR
+    A["Input sequence"] --> B["Attention"]
+    B --> C["Feed-forward"]
+    C --> D["Repeated layers"]
+    D --> E["Output probabilities"]
+```
+:::
+
+Why this mattered:
+
+- stronger long-range interactions
+- better parallelization
+- excellent scaling with data and compute
+
+## A simple transformer picture
+
+::: {.center}
+```{mermaid}
+flowchart TB
+    A["Token embeddings + position"] --> B["Self-attention"]
+    B --> C["Add & normalize"]
+    C --> D["Feed-forward network"]
+    D --> E["Add & normalize"]
+    E --> F["Repeat many times"]
+    F --> G["Vocabulary scores"]
+```
+:::
+
+For text generation, many modern LLMs use a **decoder-style transformer**.
+
+## Why position must be added
+
+Embeddings alone do not encode order.
+
+::: {.twocol}
+<div class="card">
+
+**Sentence A**  
+Dog bites man.
+
+</div>
+<div class="card">
+
+**Sentence B**  
+Man bites dog.
+
+</div>
+:::
+
+Same words, different order, different meaning.
+
+So transformers add **positional information**:
+
+- learned positional vectors
+- sinusoidal encodings
+- relative position methods in newer variants
+
+## Self-attention: the core mechanism
+
+Self-attention lets each token look at other tokens and weight their relevance.
+
+::: {.center}
+```{mermaid}
+graph LR
+    A["The"] --- D["animal"]
+    B["tired"] --- D
+    C["dog"] --- D
+    E["slept"] --- D
+```
+:::
+
+When building the representation for one token, the model can ask:
+
+- Which earlier words matter most here?
+- Which words resolve ambiguity?
+- Which words define topic or syntax?
+
+## Query, key, and value intuition
+
+::: {.twocol}
+<div class="card">
+
+- **Query**: what this token is looking for  
+- **Key**: what this token offers as a match  
+- **Value**: the information it can contribute
+
+</div>
+<div>
+
+```{=html}
+<svg viewBox="0 0 420 250" width="100%" aria-label="QKV matching sketch">
+  <rect x="20" y="35" width="90" height="40" rx="10" fill="#e8f0fe" stroke="#5f86c9"/>
+  <text x="65" y="60" text-anchor="middle" font-size="20">Query</text>
+  <rect x="165" y="35" width="80" height="40" rx="10" fill="#fff2cc" stroke="#bf9000"/>
+  <text x="205" y="60" text-anchor="middle" font-size="20">Key</text>
+  <rect x="300" y="35" width="90" height="40" rx="10" fill="#e6f4ea" stroke="#6aa84f"/>
+  <text x="345" y="60" text-anchor="middle" font-size="20">Value</text>
+
+  <line x1="110" y1="55" x2="165" y2="55" stroke="#666" stroke-width="3"/>
+  <line x1="245" y1="55" x2="300" y2="55" stroke="#666" stroke-width="3"/>
+
+  <text x="45" y="120" font-size="17">1. compare Q to K</text>
+  <text x="45" y="150" font-size="17">2. turn scores into weights</text>
+  <text x="45" y="180" font-size="17">3. mix V using those weights</text>
+  <text x="45" y="215" font-size="17">→ context-sensitive representation</text>
+</svg>
+```
+
+</div>
+:::
+
+## Attention as weighted influence
+
+$$
+\text{Attention}(Q,K,V)=\text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$
+
+You do not need every algebraic detail to get the idea:
+
+- compare token features
+- compute relevance weights
+- blend information from multiple positions
+
+The result is a new representation that depends on context.
+
+## Multi-head attention
+
+::: {.center}
+```{mermaid}
+flowchart TB
+    A["Input representations"] --> B1["Head 1"]
+    A --> B2["Head 2"]
+    A --> B3["Head 3"]
+    A --> B4["Head 4"]
+    B1 --> C["Concatenate"]
+    B2 --> C
+    B3 --> C
+    B4 --> C
+    C --> D["Project to new representation"]
+```
+:::
+
+Different heads can learn different relational patterns, though their roles are not always cleanly interpretable.
+
+## From hidden states to next-token prediction
+
+::: {.center}
+```{mermaid}
+flowchart LR
+    A["Current hidden state"] --> B["Vocabulary scores (logits)"]
+    B --> C["Probabilities"]
+    C --> D["Select / sample next token"]
+    D --> E["Append token"]
+    E --> F["Repeat"]
+```
+:::
+
+This loop is **autoregressive generation**.
+
+## How LLMs are trained
+
+::: {.twocol}
+<div>
+
+Pretraining usually involves:
+
+1. collect massive text data  
+2. tokenize it  
+3. predict held-out next tokens  
+4. update parameters to reduce error  
+5. repeat many times  
+
+</div>
+<div class="card">
+
+**What is learned?**
+
+- grammar
+- discourse patterns
+- style regularities
+- broad factual patterns in the data
+- reusable internal features
+
+</div>
+:::
+
+## Scaling helps—but it is not magic
+
+::: {.center}
+```{=html}
+<svg viewBox="0 0 480 280" width="100%" aria-label="Conceptual curve of capability versus scale">
+  <rect x="50" y="25" width="360" height="200" fill="white" stroke="#999"/>
+  <line x1="70" y1="205" x2="380" y2="205" stroke="#666"/>
+  <line x1="70" y1="205" x2="70" y2="45" stroke="#666"/>
+  <path d="M75 190 C120 180, 160 165, 210 135 C250 110, 300 85, 375 55" fill="none" stroke="#0b5394" stroke-width="4"/>
+  <text x="310" y="235" font-size="15">compute / data / parameters</text>
+  <text x="20" y="55" font-size="15" transform="rotate(-90 20,55)">capability</text>
+</svg>
+```
+
+<div class="caption">Conceptual only: more scale often improves performance, but not without cost.</div>
+:::
+
+Trade-offs include compute cost, energy use, latency, and harder safety evaluation.
+
+## Fine-tuning, instruction tuning, and alignment
+
+::: {.center}
+```{mermaid}
+flowchart LR
+    A["Pretrained base model"] --> B["Supervised fine-tuning"]
+    B --> C["Preference / feedback tuning"]
+    C --> D["Aligned assistant behavior"]
+```
+:::
+
+Post-training aims to make the system:
+
+- follow instructions
+- be more useful in conversation
+- reduce unsafe or low-quality outputs
+- better match human preferences
+
+## How a system like ChatGPT differs from a raw base model
+
+::: {.threecol}
+<div class="card">
+**Base model**
+<br>predicts next tokens
+</div>
+<div class="card">
+**Post-training**
+<br>instruction following, preference shaping, safety
+</div>
+<div class="card">
+**System layer**
+<br>prompting, tools, formatting, policies
+</div>
+:::
+
+A deployed assistant is usually **more than just the pretrained model**.
+
+## What "understanding" means here
+
+::: {.twocol}
+<div class="card">
+
+**Strong appearance of understanding**
+- explanation
+- summarization
+- translation
+- coding help
+- question answering
+
+</div>
+<div class="card">
+
+**Reasons for caution**
+- no guaranteed grounding
+- confidence ≠ truth
+- behavior can be brittle
+- "understanding" remains debated
+
+</div>
+:::
+
+## Why LLMs hallucinate and fail
+
+::: {.threecol}
+<div class="card">
+**Hallucination**  
+plausible but false output
+</div>
+<div class="card">
+**Bias / distortion**  
+training data patterns reappear
+</div>
+<div class="card">
+**Reasoning brittleness**  
+multi-step tasks can break
+</div>
+:::
+
+::: {.threecol}
+<div class="card">
+**Context misses**  
+important prompt detail is ignored
+</div>
+<div class="card">
+**Knowledge limits**  
+post-training events may be unknown
+</div>
+<div class="card">
+**Overconfidence**  
+style can sound firmer than evidence
+</div>
+:::
+
+## A compact mental model
+
+::: {.center}
+```{mermaid}
+flowchart LR
+    A["Text"] --> B["Tokens"]
+    B --> C["Embeddings"]
+    C --> D["Attention + transformer layers"]
+    D --> E["Predicted next token"]
+    E --> F["Repeat"]
+    D --> G["Post-training / alignment"]
+    G --> H["Assistant behavior"]
+```
+:::
+
+## Discussion questions
+
+1. In what sense are embeddings a geometry of meaning?  
+2. Why did transformers scale better than RNNs?  
+3. Does next-token prediction produce reasoning, or simulate it?  
+4. Why can a model sound confident while being wrong?  
+5. Which matters more in practice: pretraining scale or post-training alignment?
+
+## Takeaways
+
+- **Tokenization** breaks text into manageable units.
+- **Embeddings** map those units into vector space.
+- **Attention** lets tokens influence one another contextually.
+- **Transformers** scale this idea very effectively.
+- **Training + post-training** turn a predictor into a usable assistant.
+- **Limits remain fundamental**, not incidental.
+
+## References
+
+- Google. *Machine Learning Crash Course*: Embeddings module. <https://developers.google.com/machine-learning/crash-course/embeddings>
+- Google. *Machine Learning Crash Course*: Introduction to Large Language Models. <https://developers.google.com/machine-learning/crash-course/llm>
+- Google. *LLMs: What's a large language model?* <https://developers.google.com/machine-learning/crash-course/llm/transformers>
+- Vaswani, Ashish, et al. 2017. "Attention Is All You Need." *Advances in Neural Information Processing Systems*. <https://arxiv.org/abs/1706.03762>
+- Ouyang, Long, et al. 2022. "Training Language Models to Follow Instructions with Human Feedback." *NeurIPS*. <https://arxiv.org/abs/2203.02155>

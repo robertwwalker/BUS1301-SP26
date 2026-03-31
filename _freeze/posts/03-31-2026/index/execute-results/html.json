@@ -1,0 +1,15 @@
+{
+  "hash": "23c3eefaa1b028c95bf2af727e300bda",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"AI and LLMs\"\nauthor: \"Robert W. Walker\"\ndate: \"2026-03-31\"\nimage: \"image.png\"\n---\n\n\n\n\nWhat is artificial intelligence and what is an LLM?\n\n```\nWhat is **artificial intelligence**?  Doesn't that require defining the *non-artificial* variety?  What is that?\n```\n\nFirst, [intelligence](https://doi.org/10.1016/j.intell.2024.101832).\n\n## The class plan:\n\n1. The Google Explainer on Large Language Models(https://developers.google.com/machine-learning/crash-course/llm)\n\nThis should probably have been preceded by [embeddings](https://developers.google.com/machine-learning/crash-course/embeddings).\n\nWhy the following matters.  What is **artificial intelligence**?  Doesn't that require defining the *non-artificial* variety?  What is that?\n\n# On Causality\n\nCausation is at the heart of the highest order human reasoning.  Doing so with data is an objective if not an end result of modern fascination with machine learning.  Yet, these are age old philosophical questions and modern work at the intersection of data and causation is perhaps best exemplified in the work of Judea Pearl.  His most recent work, The Book of Why, details a lifetime of investigating causes and causal models at the intersection of computing, philosophy, and statistics.  Though wide ranging, [his podcast with Lex Fridman is worth listening to](https://share.google/FqVPW7tanZqALa2NM).  The excerpt on [correlation and causation is very useful.](https://www.youtube.com/watch?v=oFy2927b8jQ)\n\nHe develops a ladder of causation.  [This is quite well explained in this two page primer](https://web.cs.ucla.edu/~kaoru/3-layer-causal-hierarchy.pdf).\n\n1. Associational\n\n2. Interventional\n\n3. Counterfactual\n\nWe want to understand precisely how these various levels influence what we learn from data and deploy data to accomplish.\n\n[Judea Pearl’s website](https://bayes.cs.ucla.edu/home.htm)\n\nThe [book on statistics and causal inference](https://web.cs.ucla.edu/~kaoru/primer-complete-2019.pdf)\n\n[A lecture on the Book of Why](https://youtu.be/nWaM6XmQEmU?si=nAtQu51kIfjoboBi)\n\nSections 2.1 to 2.10 of the Causal Mixtape are a [very succinct read](https://mixtape.scunning.com/02-probability_and_regression).\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

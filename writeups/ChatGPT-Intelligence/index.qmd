@@ -1,0 +1,172 @@
+---
+title: "ChatGPT on Intelligence"
+author: "Robert W. Walker"
+date: "2026-03-31"
+image: "image.png"
+---
+
+**Citation**  
+Gignac, G. E., & Szodorai, E. T. (2024). *Defining intelligence: Bridging the gap between human and artificial perspectives*. **Intelligence, 104**, 101832. https://doi.org/10.1016/j.intell.2024.101832
+
+## Overview
+
+This paper is a conceptual and interdisciplinary argument about how **human intelligence** and **artificial intelligence** should be defined in ways that are comparable across psychology and computer science. The authors argue that both fields suffer from inconsistent terminology, and that this weakens theory-building, measurement, and communication. Their central goal is to create a **shared nomenclature** that distinguishes **intelligence** from nearby but different ideas such as **achievement**, **expertise**, and **adaptation**.
+
+The paper’s main claim is that many present-day AI systems are better described as systems of **artificial achievement** or **artificial expertise** than as systems exhibiting intelligence in the stronger sense used in human intelligence research.
+
+## Core definitions proposed by the authors
+
+### Human intelligence
+
+The authors define human intelligence abstractly as a human’s:
+
+> maximal capacity to achieve a novel goal successfully using perceptual-cognitive processes.
+
+This definition highlights three points:
+
+1. **Maximal capacity**, not typical day-to-day performance. A person may possess high intellectual capacity without always expressing it in ordinary behavior.
+2. **Novelty**. Intelligence matters most when an individual faces problems that are not already familiar or overlearned.
+3. **Perceptual-cognitive processes**. Human intelligence is grounded in underlying mental processes such as attention, perception, integration of sensory information, memory, and reasoning.
+
+The authors also give an **operational** version of the definition: human intelligence should be assessed through performance on **novel standardized tasks with veridical scoring**. In other words, the task should be unfamiliar, administered in a standardized way, and scored against clear correct answers.
+
+### Artificial intelligence
+
+The authors propose a parallel definition for AI. Artificial intelligence is defined abstractly as an artificial system’s:
+
+> maximal capacity to successfully achieve a novel goal through computational algorithms.
+
+The parallel with the human definition is deliberate. The key difference is the mechanism: humans rely on perceptual-cognitive processes, whereas artificial systems rely on computational algorithms.
+
+They also propose an operational definition: AI should be understood as an artificial system’s:
+
+> maximal capacity to complete a novel standardized task with veridical scoring using computational algorithms.
+
+This is meant to replace weaker or circular definitions such as “machines doing tasks that usually require human intelligence,” which the authors argue is more a description of AI’s aspiration than a precise definition.
+
+## Why the authors think novelty matters so much
+
+A recurring theme in the paper is that **intelligence is most meaningfully demonstrated on novel problems**. If a system succeeds mainly because it has been trained extensively on similar tasks, memorized patterns, or been optimized narrowly for a known benchmark, then the success may indicate **achievement** or **expertise**, not intelligence.
+
+The authors use a sharp formulation: intelligence is what one does **when one does not know what to do**. That captures the distinction between broad capacity and practiced performance.
+
+This matters for current AI because many systems are trained on vast corpora, tuned on benchmark-like tasks, or heavily shaped by human engineering choices. On the authors’ view, such systems may be impressive and useful, but that does not automatically justify the stronger claim that they possess intelligence in the same conceptual sense as humans.
+
+## Intelligence versus achievement and expertise
+
+One of the most important contributions of the paper is its insistence on separating these concepts.
+
+- **Intelligence** is a broad capacity for successful performance on novel goals.
+- **Achievement** is realized performance in a domain, often supported by prior instruction, exposure, or practice.
+- **Expertise** is highly developed, domain-specific proficiency that typically depends on extensive training and specialization.
+
+The authors argue that much of what is currently celebrated as AI capability is more accurately placed in the latter two categories. A model that excels at code generation, a narrow game, or a benchmark suite may demonstrate a remarkable form of engineered or trained performance without thereby showing the broader flexible novelty-handling capacity that the authors want the term **intelligence** to imply.
+
+This is not meant as a dismissal of AI progress. The paper explicitly treats artificial achievement and artificial expertise as genuine scientific accomplishments. The point is conceptual precision: strong performance should not be mislabeled.
+
+## Intelligence is not just adaptation
+
+The paper also pushes back against very broad definitions of intelligence as mere **adaptation**. The authors accept that adaptation is relevant, but they think it is too broad on its own. A system can adapt in many ways that do not amount to intelligence in the specific psychological sense. Their preferred framing keeps the emphasis on **maximal capacity**, **novel goals**, and the processes by which performance is generated.
+
+## Intelligence as multidimensional
+
+A second major argument is that intelligence should not be reduced to a single narrow skill such as learning efficiency or adaptation. Drawing on psychometrics and the **Cattell-Horn-Carroll (CHC)** tradition, the paper argues that human intelligence is **multidimensional**. It includes many related abilities rather than one isolated faculty.
+
+The authors suggest that AI research could benefit from adopting a similarly structured view. Rather than asking only whether a model “learns” or “adapts,” researchers should evaluate a broad portfolio of abilities and how they relate to one another. They suggest that existing AI benchmark tasks could often be mapped onto human-intelligence-style ability frameworks.
+
+This is important because a multidimensional view allows for richer claims:
+
+- some systems may be strong in one cluster of abilities and weak in another;
+- apparent generality may actually reflect a bundle of narrower strengths;
+- a more human-like profile would require a broader and more integrated pattern of capabilities.
+
+## The proposal for “AI metrics”
+
+A particularly valuable contribution of the paper is the call for a dedicated discipline of **AI metrics**, modeled in part on **psychometrics**.
+
+The authors argue that evaluating AI systems should involve much more attention to:
+
+- **standardized testing procedures**,
+- **reliability** (consistency of scores),
+- **validity** (whether scores really indicate the construct claimed), and
+- comparable administration conditions across systems and versions.
+
+This is one of the paper’s strongest practical points. Benchmark culture in AI often assumes that a score is self-explanatory, but the authors argue that benchmark results can be distorted by differences in prompting, evaluation setup, parameter choices, and test leakage. Without standardized protocols, comparisons across systems may not be trustworthy.
+
+In that sense, the paper is partly a measurement manifesto: before making strong claims about intelligence or AGI, the field needs better measurement discipline.
+
+## How the paper defines AGI
+
+The authors also reinterpret **artificial general intelligence (AGI)** through an explicitly psychometric lens. Instead of defining AGI simply as broad competence across many tasks, they propose that AGI should be understood analogously to human **general intelligence (g)**.
+
+Under their view, AGI is:
+
+> the shared variance in AI systems’ performance, demonstrated through positively correlated capabilities across a diverse range of AI metric tasks and multiple modalities.
+
+This is a subtle but important move. It means AGI is not just “being good at many things.” Instead, AGI would be evidenced when performance across many tasks tends to **hang together statistically**, suggesting a deeper common factor underlying task success.
+
+So, on this view:
+
+- A generally capable AI system is not necessarily evidence of AGI by itself.
+- Evidence for AGI would require **systematic testing across many systems and tasks**.
+- Researchers would then look for a **positive manifold** and perhaps a strong latent factor, similar to how human psychometric g is inferred.
+
+## What kind of evidence the authors think would support AGI
+
+The paper suggests a concrete research program for testing AGI:
+
+1. Give a wide battery of tasks to many different AI systems.
+2. Record performance across those tasks under standardized conditions.
+3. Examine whether scores across tasks are positively correlated.
+4. Use factor analysis or similar methods to test whether a general factor emerges.
+
+The authors note some preliminary empirical hints in this direction, but they do **not** claim AGI has already been demonstrated. Their position is more cautious: some early findings are suggestive, but current evidence is still limited and methodologically immature.
+
+They also argue that, as with human intelligence, real construct validation would ultimately require **predictive validity**. In AI’s case, that might mean showing that measured AI or AGI scores predict socially valuable outcomes such as scientific discovery, productivity gains, or other meaningful real-world impacts.
+
+## Main conclusion of the paper
+
+The authors conclude that the strongest present evidence supports the existence of **artificial achievement** and **artificial expertise**, not yet **artificial intelligence** in the fuller sense they define. That is because many systems still appear dependent on specific programming, training distributions, or narrow evaluation settings, rather than clearly demonstrating broad novel problem-solving capacity.
+
+At the same time, the paper is not anti-AI. Its stance is better understood as **conceptually conservative and measurement-focused**. The authors think that better cross-disciplinary definitions and stronger measurement standards could help researchers make more meaningful progress toward understanding whether, and in what sense, artificial systems are becoming more intelligence-like.
+
+## Why this paper matters
+
+This article matters for three reasons.
+
+### 1. It sharpens terminology
+
+Public and academic discussions often slide too quickly between words like **intelligence**, **skill**, **performance**, **adaptation**, **expertise**, and **generality**. The paper argues that keeping these distinctions clear is necessary if claims about AI are to remain scientifically meaningful.
+
+### 2. It imports psychometric rigor into AI evaluation
+
+By urging the creation of **AI metrics** analogous to psychometrics, the paper offers a practical framework for making AI benchmarking more reliable and interpretable.
+
+### 3. It reframes AGI as a measurement question
+
+Rather than treating AGI purely as a speculative threshold or marketing label, the paper turns it into an empirical question about **latent structure in AI performance data**.
+
+## Critical assessment
+
+The paper is thoughtful and unusually careful, but its framework also raises some debatable points.
+
+### Strengths
+
+- It provides unusually clear, parallel definitions of human and artificial intelligence.
+- It makes a persuasive case that benchmark success should not automatically be equated with intelligence.
+- Its call for reliability, validity, and standardized evaluation is timely and important.
+- Its psychometric reframing of AGI is novel and gives researchers a concrete empirical agenda.
+
+### Potential limitations
+
+- The definition of intelligence leans heavily on the psychology of **novel problem solving**, which is defensible but contestable. Some researchers would give more weight to adaptation, learning efficiency, embodiment, or autonomous goal formation.
+- The proposed AI definition still depends on human-set goals and human-designed tests, which may leave open philosophical questions about agency and autonomy.
+- Mapping AI benchmarks onto human cognitive ability taxonomies is intriguing, but the analogy may be imperfect because artificial systems can have competencies that do not align neatly with human cognition.
+- A factor-analytic conception of AGI may be useful scientifically, but it may not capture all of what researchers or the public mean by “general intelligence.”
+
+## Bottom line
+
+The paper argues that discussions of AI need more conceptual discipline. Intelligence, in the authors’ framework, is not just high performance, adaptation, or scale. It is a **maximal capacity to solve novel goals successfully**, grounded in the relevant underlying processes and measured through standardized, valid tasks. From that standpoint, current AI systems are better described as systems of **artificial achievement** or **artificial expertise** than as clear instances of artificial intelligence or AGI.
+
+The paper’s most durable contribution is probably not any single definition, but its insistence that claims about AI must be tied to **careful measurement**, **construct validity**, and **clear distinctions among related concepts**.
+

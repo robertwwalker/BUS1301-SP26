@@ -10,7 +10,51 @@
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
 <generator>quarto-1.8.24</generator>
-<lastBuildDate>Thu, 19 Mar 2026 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 31 Mar 2026 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>AI and LLMs</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/03-31-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>What is artificial intelligence and what is an LLM?</p>
+<pre><code>What is **artificial intelligence**?  Doesn't that require defining the *non-artificial* variety?  What is that?</code></pre>
+<p>First, <a href="https://doi.org/10.1016/j.intell.2024.101832">intelligence</a>.</p>
+<section id="the-class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
+<ol type="1">
+<li>The Google Explainer on Large Language Models(https://developers.google.com/machine-learning/crash-course/llm)</li>
+</ol>
+<p>This should probably have been preceded by <a href="https://developers.google.com/machine-learning/crash-course/embeddings">embeddings</a>.</p>
+<p>Why the following matters. What is <strong>artificial intelligence</strong>? Doesn’t that require defining the <em>non-artificial</em> variety? What is that?</p>
+</section>
+<section id="on-causality" class="level1">
+<h1>On Causality</h1>
+<p>Causation is at the heart of the highest order human reasoning. Doing so with data is an objective if not an end result of modern fascination with machine learning. Yet, these are age old philosophical questions and modern work at the intersection of data and causation is perhaps best exemplified in the work of Judea Pearl. His most recent work, The Book of Why, details a lifetime of investigating causes and causal models at the intersection of computing, philosophy, and statistics. Though wide ranging, <a href="https://share.google/FqVPW7tanZqALa2NM">his podcast with Lex Fridman is worth listening to</a>. The excerpt on <a href="https://www.youtube.com/watch?v=oFy2927b8jQ">correlation and causation is very useful.</a></p>
+<p>He develops a ladder of causation. <a href="https://web.cs.ucla.edu/~kaoru/3-layer-causal-hierarchy.pdf">This is quite well explained in this two page primer</a>.</p>
+<ol type="1">
+<li><p>Associational</p></li>
+<li><p>Interventional</p></li>
+<li><p>Counterfactual</p></li>
+</ol>
+<p>We want to understand precisely how these various levels influence what we learn from data and deploy data to accomplish.</p>
+<p><a href="https://bayes.cs.ucla.edu/home.htm">Judea Pearl’s website</a></p>
+<p>The <a href="https://web.cs.ucla.edu/~kaoru/primer-complete-2019.pdf">book on statistics and causal inference</a></p>
+<p><a href="https://youtu.be/nWaM6XmQEmU?si=nAtQu51kIfjoboBi">A lecture on the Book of Why</a></p>
+<p>Sections 2.1 to 2.10 of the Causal Mixtape are a <a href="https://mixtape.scunning.com/02-probability_and_regression">very succinct read</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/03-31-2026/</guid>
+  <pubDate>Tue, 31 Mar 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/03-31-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
 <item>
   <title>Human Resource Management Analytics</title>
   <dc:creator>Robert W. Walker</dc:creator>
@@ -6067,39 +6111,6 @@ font-style: inherit;">"values"</span>)</span></code></pre></div></div>
   <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/</guid>
   <pubDate>Thu, 15 Jan 2026 08:00:00 GMT</pubDate>
   <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
-</item>
-<item>
-  <title>A Syllabus and Models</title>
-  <dc:creator>Robert W. Walker</dc:creator>
-  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>What is a model?</p>
-<p>Our reading for next time defines models in science. This is a hard read but it is the only reading for the week.</p>
-<p><a href="https://plato.stanford.edu/archives/fall2013/entries/models-science/">Models in Science from the Stanford Encyclopedia of Philosophy</a></p>
-<p>We will pay extra attention to sections 1, 3, and 5.2.</p>
-<p>The class plan:</p>
-<ol type="1">
-<li>Discuss the syllabus, deliverables, and requirements</li>
-<li>An overview of the course and mutual introductions.</li>
-<li>A brief discussion of models to set the foundations for Thursday.</li>
-</ol>
-<p>Your assignment for next time:</p>
-<ol type="1">
-<li>Do the reading.</li>
-<li>Collect at least three questions and the answers provided by Google Gemini about references in the reading that were unfamiliar. If you did not run across at least three unfamiliar references, you need a more advanced course.</li>
-</ol>
-
-
-
- ]]></description>
-  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/</guid>
-  <pubDate>Tue, 13 Jan 2026 08:00:00 GMT</pubDate>
-  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
