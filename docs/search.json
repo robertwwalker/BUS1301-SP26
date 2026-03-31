@@ -469,15 +469,368 @@
     "text": "Discussion\n\nSimpson’s Paradox\nThe aggregate data (Part 1a / 2a) suggest Males are admitted at a higher rate than Females overall. However, when we examine each department separately (Parts 1b / 2b / 2c), the Male − Female difference is small and often negative (females admitted at equal or higher rates within most departments).\nThis reversal is a classic demonstration of Simpson’s Paradox: females disproportionately applied to departments with low overall admission rates (C–F), dragging down the female aggregate even though they fared similarly or better within each department.\n\n\nExact vs. Normal approximation\nAt the large sample sizes present here the Wald and Clopper–Pearson intervals agree closely overall. Some department-level cells (especially small female counts in Dept A) show modest discrepancies, which is expected: the Wald approximation degrades when \\(n\\) is small or \\(\\hat p\\) is close to 0 or 1. The exact interval is preferred in those situations."
   },
   {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "BUS 1301 Slides",
+    "objectID": "writeups/ChatGPT-Intelligence/index.html",
+    "href": "writeups/ChatGPT-Intelligence/index.html",
+    "title": "ChatGPT on Intelligence",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\n \n\n\nManaging with Data, Analytics and AI\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nWhat is a Model? On Models\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nData Types\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nData Storage\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nData Visualization\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nData Visualization\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nFinishing Visualization and Sources of Data\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nSources of Data and Data Quality\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nOn Probability\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nOn Probability, II\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nProbability Distributions\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nProbability Distributions\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nProbability Distributions and Inference\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nInference\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nInference for Quantitative Data\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nComparing Quantitative Data and Sampling\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nAnalytics I: Relationships among Data\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nAnalytics III: Ops, Finance and Accounting\n\n\nRobert W. Walker\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "About",
-      "Slides"
-    ]
+    "text": "Citation\nGignac, G. E., & Szodorai, E. T. (2024). Defining intelligence: Bridging the gap between human and artificial perspectives. Intelligence, 104, 101832. https://doi.org/10.1016/j.intell.2024.101832"
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#overview",
+    "href": "writeups/ChatGPT-Intelligence/index.html#overview",
+    "title": "ChatGPT on Intelligence",
+    "section": "Overview",
+    "text": "Overview\nThis paper is a conceptual and interdisciplinary argument about how human intelligence and artificial intelligence should be defined in ways that are comparable across psychology and computer science. The authors argue that both fields suffer from inconsistent terminology, and that this weakens theory-building, measurement, and communication. Their central goal is to create a shared nomenclature that distinguishes intelligence from nearby but different ideas such as achievement, expertise, and adaptation.\nThe paper’s main claim is that many present-day AI systems are better described as systems of artificial achievement or artificial expertise than as systems exhibiting intelligence in the stronger sense used in human intelligence research."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#core-definitions-proposed-by-the-authors",
+    "href": "writeups/ChatGPT-Intelligence/index.html#core-definitions-proposed-by-the-authors",
+    "title": "ChatGPT on Intelligence",
+    "section": "Core definitions proposed by the authors",
+    "text": "Core definitions proposed by the authors\n\nHuman intelligence\nThe authors define human intelligence abstractly as a human’s:\n\nmaximal capacity to achieve a novel goal successfully using perceptual-cognitive processes.\n\nThis definition highlights three points:\n\nMaximal capacity, not typical day-to-day performance. A person may possess high intellectual capacity without always expressing it in ordinary behavior.\nNovelty. Intelligence matters most when an individual faces problems that are not already familiar or overlearned.\nPerceptual-cognitive processes. Human intelligence is grounded in underlying mental processes such as attention, perception, integration of sensory information, memory, and reasoning.\n\nThe authors also give an operational version of the definition: human intelligence should be assessed through performance on novel standardized tasks with veridical scoring. In other words, the task should be unfamiliar, administered in a standardized way, and scored against clear correct answers.\n\n\nArtificial intelligence\nThe authors propose a parallel definition for AI. Artificial intelligence is defined abstractly as an artificial system’s:\n\nmaximal capacity to successfully achieve a novel goal through computational algorithms.\n\nThe parallel with the human definition is deliberate. The key difference is the mechanism: humans rely on perceptual-cognitive processes, whereas artificial systems rely on computational algorithms.\nThey also propose an operational definition: AI should be understood as an artificial system’s:\n\nmaximal capacity to complete a novel standardized task with veridical scoring using computational algorithms.\n\nThis is meant to replace weaker or circular definitions such as “machines doing tasks that usually require human intelligence,” which the authors argue is more a description of AI’s aspiration than a precise definition."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#why-the-authors-think-novelty-matters-so-much",
+    "href": "writeups/ChatGPT-Intelligence/index.html#why-the-authors-think-novelty-matters-so-much",
+    "title": "ChatGPT on Intelligence",
+    "section": "Why the authors think novelty matters so much",
+    "text": "Why the authors think novelty matters so much\nA recurring theme in the paper is that intelligence is most meaningfully demonstrated on novel problems. If a system succeeds mainly because it has been trained extensively on similar tasks, memorized patterns, or been optimized narrowly for a known benchmark, then the success may indicate achievement or expertise, not intelligence.\nThe authors use a sharp formulation: intelligence is what one does when one does not know what to do. That captures the distinction between broad capacity and practiced performance.\nThis matters for current AI because many systems are trained on vast corpora, tuned on benchmark-like tasks, or heavily shaped by human engineering choices. On the authors’ view, such systems may be impressive and useful, but that does not automatically justify the stronger claim that they possess intelligence in the same conceptual sense as humans."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#intelligence-versus-achievement-and-expertise",
+    "href": "writeups/ChatGPT-Intelligence/index.html#intelligence-versus-achievement-and-expertise",
+    "title": "ChatGPT on Intelligence",
+    "section": "Intelligence versus achievement and expertise",
+    "text": "Intelligence versus achievement and expertise\nOne of the most important contributions of the paper is its insistence on separating these concepts.\n\nIntelligence is a broad capacity for successful performance on novel goals.\nAchievement is realized performance in a domain, often supported by prior instruction, exposure, or practice.\nExpertise is highly developed, domain-specific proficiency that typically depends on extensive training and specialization.\n\nThe authors argue that much of what is currently celebrated as AI capability is more accurately placed in the latter two categories. A model that excels at code generation, a narrow game, or a benchmark suite may demonstrate a remarkable form of engineered or trained performance without thereby showing the broader flexible novelty-handling capacity that the authors want the term intelligence to imply.\nThis is not meant as a dismissal of AI progress. The paper explicitly treats artificial achievement and artificial expertise as genuine scientific accomplishments. The point is conceptual precision: strong performance should not be mislabeled."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#intelligence-is-not-just-adaptation",
+    "href": "writeups/ChatGPT-Intelligence/index.html#intelligence-is-not-just-adaptation",
+    "title": "ChatGPT on Intelligence",
+    "section": "Intelligence is not just adaptation",
+    "text": "Intelligence is not just adaptation\nThe paper also pushes back against very broad definitions of intelligence as mere adaptation. The authors accept that adaptation is relevant, but they think it is too broad on its own. A system can adapt in many ways that do not amount to intelligence in the specific psychological sense. Their preferred framing keeps the emphasis on maximal capacity, novel goals, and the processes by which performance is generated."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#intelligence-as-multidimensional",
+    "href": "writeups/ChatGPT-Intelligence/index.html#intelligence-as-multidimensional",
+    "title": "ChatGPT on Intelligence",
+    "section": "Intelligence as multidimensional",
+    "text": "Intelligence as multidimensional\nA second major argument is that intelligence should not be reduced to a single narrow skill such as learning efficiency or adaptation. Drawing on psychometrics and the Cattell-Horn-Carroll (CHC) tradition, the paper argues that human intelligence is multidimensional. It includes many related abilities rather than one isolated faculty.\nThe authors suggest that AI research could benefit from adopting a similarly structured view. Rather than asking only whether a model “learns” or “adapts,” researchers should evaluate a broad portfolio of abilities and how they relate to one another. They suggest that existing AI benchmark tasks could often be mapped onto human-intelligence-style ability frameworks.\nThis is important because a multidimensional view allows for richer claims:\n\nsome systems may be strong in one cluster of abilities and weak in another;\napparent generality may actually reflect a bundle of narrower strengths;\na more human-like profile would require a broader and more integrated pattern of capabilities."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#the-proposal-for-ai-metrics",
+    "href": "writeups/ChatGPT-Intelligence/index.html#the-proposal-for-ai-metrics",
+    "title": "ChatGPT on Intelligence",
+    "section": "The proposal for “AI metrics”",
+    "text": "The proposal for “AI metrics”\nA particularly valuable contribution of the paper is the call for a dedicated discipline of AI metrics, modeled in part on psychometrics.\nThe authors argue that evaluating AI systems should involve much more attention to:\n\nstandardized testing procedures,\nreliability (consistency of scores),\nvalidity (whether scores really indicate the construct claimed), and\ncomparable administration conditions across systems and versions.\n\nThis is one of the paper’s strongest practical points. Benchmark culture in AI often assumes that a score is self-explanatory, but the authors argue that benchmark results can be distorted by differences in prompting, evaluation setup, parameter choices, and test leakage. Without standardized protocols, comparisons across systems may not be trustworthy.\nIn that sense, the paper is partly a measurement manifesto: before making strong claims about intelligence or AGI, the field needs better measurement discipline."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#how-the-paper-defines-agi",
+    "href": "writeups/ChatGPT-Intelligence/index.html#how-the-paper-defines-agi",
+    "title": "ChatGPT on Intelligence",
+    "section": "How the paper defines AGI",
+    "text": "How the paper defines AGI\nThe authors also reinterpret artificial general intelligence (AGI) through an explicitly psychometric lens. Instead of defining AGI simply as broad competence across many tasks, they propose that AGI should be understood analogously to human general intelligence (g).\nUnder their view, AGI is:\n\nthe shared variance in AI systems’ performance, demonstrated through positively correlated capabilities across a diverse range of AI metric tasks and multiple modalities.\n\nThis is a subtle but important move. It means AGI is not just “being good at many things.” Instead, AGI would be evidenced when performance across many tasks tends to hang together statistically, suggesting a deeper common factor underlying task success.\nSo, on this view:\n\nA generally capable AI system is not necessarily evidence of AGI by itself.\nEvidence for AGI would require systematic testing across many systems and tasks.\nResearchers would then look for a positive manifold and perhaps a strong latent factor, similar to how human psychometric g is inferred."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#what-kind-of-evidence-the-authors-think-would-support-agi",
+    "href": "writeups/ChatGPT-Intelligence/index.html#what-kind-of-evidence-the-authors-think-would-support-agi",
+    "title": "ChatGPT on Intelligence",
+    "section": "What kind of evidence the authors think would support AGI",
+    "text": "What kind of evidence the authors think would support AGI\nThe paper suggests a concrete research program for testing AGI:\n\nGive a wide battery of tasks to many different AI systems.\nRecord performance across those tasks under standardized conditions.\nExamine whether scores across tasks are positively correlated.\nUse factor analysis or similar methods to test whether a general factor emerges.\n\nThe authors note some preliminary empirical hints in this direction, but they do not claim AGI has already been demonstrated. Their position is more cautious: some early findings are suggestive, but current evidence is still limited and methodologically immature.\nThey also argue that, as with human intelligence, real construct validation would ultimately require predictive validity. In AI’s case, that might mean showing that measured AI or AGI scores predict socially valuable outcomes such as scientific discovery, productivity gains, or other meaningful real-world impacts."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#main-conclusion-of-the-paper",
+    "href": "writeups/ChatGPT-Intelligence/index.html#main-conclusion-of-the-paper",
+    "title": "ChatGPT on Intelligence",
+    "section": "Main conclusion of the paper",
+    "text": "Main conclusion of the paper\nThe authors conclude that the strongest present evidence supports the existence of artificial achievement and artificial expertise, not yet artificial intelligence in the fuller sense they define. That is because many systems still appear dependent on specific programming, training distributions, or narrow evaluation settings, rather than clearly demonstrating broad novel problem-solving capacity.\nAt the same time, the paper is not anti-AI. Its stance is better understood as conceptually conservative and measurement-focused. The authors think that better cross-disciplinary definitions and stronger measurement standards could help researchers make more meaningful progress toward understanding whether, and in what sense, artificial systems are becoming more intelligence-like."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#why-this-paper-matters",
+    "href": "writeups/ChatGPT-Intelligence/index.html#why-this-paper-matters",
+    "title": "ChatGPT on Intelligence",
+    "section": "Why this paper matters",
+    "text": "Why this paper matters\nThis article matters for three reasons.\n\n1. It sharpens terminology\nPublic and academic discussions often slide too quickly between words like intelligence, skill, performance, adaptation, expertise, and generality. The paper argues that keeping these distinctions clear is necessary if claims about AI are to remain scientifically meaningful.\n\n\n2. It imports psychometric rigor into AI evaluation\nBy urging the creation of AI metrics analogous to psychometrics, the paper offers a practical framework for making AI benchmarking more reliable and interpretable.\n\n\n3. It reframes AGI as a measurement question\nRather than treating AGI purely as a speculative threshold or marketing label, the paper turns it into an empirical question about latent structure in AI performance data."
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#critical-assessment",
+    "href": "writeups/ChatGPT-Intelligence/index.html#critical-assessment",
+    "title": "ChatGPT on Intelligence",
+    "section": "Critical assessment",
+    "text": "Critical assessment\nThe paper is thoughtful and unusually careful, but its framework also raises some debatable points.\n\nStrengths\n\nIt provides unusually clear, parallel definitions of human and artificial intelligence.\nIt makes a persuasive case that benchmark success should not automatically be equated with intelligence.\nIts call for reliability, validity, and standardized evaluation is timely and important.\nIts psychometric reframing of AGI is novel and gives researchers a concrete empirical agenda.\n\n\n\nPotential limitations\n\nThe definition of intelligence leans heavily on the psychology of novel problem solving, which is defensible but contestable. Some researchers would give more weight to adaptation, learning efficiency, embodiment, or autonomous goal formation.\nThe proposed AI definition still depends on human-set goals and human-designed tests, which may leave open philosophical questions about agency and autonomy.\nMapping AI benchmarks onto human cognitive ability taxonomies is intriguing, but the analogy may be imperfect because artificial systems can have competencies that do not align neatly with human cognition.\nA factor-analytic conception of AGI may be useful scientifically, but it may not capture all of what researchers or the public mean by “general intelligence.”"
+  },
+  {
+    "objectID": "writeups/ChatGPT-Intelligence/index.html#bottom-line",
+    "href": "writeups/ChatGPT-Intelligence/index.html#bottom-line",
+    "title": "ChatGPT on Intelligence",
+    "section": "Bottom line",
+    "text": "Bottom line\nThe paper argues that discussions of AI need more conceptual discipline. Intelligence, in the authors’ framework, is not just high performance, adaptation, or scale. It is a maximal capacity to solve novel goals successfully, grounded in the relevant underlying processes and measured through standardized, valid tasks. From that standpoint, current AI systems are better described as systems of artificial achievement or artificial expertise than as clear instances of artificial intelligence or AGI.\nThe paper’s most durable contribution is probably not any single definition, but its insistence that claims about AI must be tied to careful measurement, construct validity, and clear distinctions among related concepts."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#outline",
+    "href": "slides/03-31-2026/index.html#outline",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Outline",
+    "text": "Outline\n\nIntelligence.\n\nThe Basics of LLM’s.\n\nEmbeddings.\n\nAttention is all you need.\n\n\nThe Prediction.\n\nThe Context."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#summary-intelligence",
+    "href": "slides/03-31-2026/index.html#summary-intelligence",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Summary: Intelligence",
+    "text": "Summary: Intelligence\n\nDefinitions of human intelligence and artificial intelligence often differ across psychology and computer science.\nThe paper argues that this mismatch creates confusion about what current AI systems actually demonstrate.\nIt proposes a shared conceptual framework so both fields can discuss intelligence with more precision.\n\n\nSource: Gignac, G. E., & Szodorai, E. T. (2024). Intelligence, 104, 101832. https://doi.org/10.1016/j.intell.2024.101832"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#core-definitions-proposed",
+    "href": "slides/03-31-2026/index.html#core-definitions-proposed",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Core definitions proposed",
+    "text": "Core definitions proposed\n\nHuman intelligence: maximal capacity to complete novel goals successfully through perceptual-cognitive processes.\nArtificial intelligence: maximal capacity to complete novel goals successfully through computational processes.\nIn both cases, intelligence is framed as a capacity, not just a record of past performance.\nThe authors also argue intelligence is better understood as multidimensional, not a single narrow skill."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#intelligence-is-not-the-same-as-achievement",
+    "href": "slides/03-31-2026/index.html#intelligence-is-not-the-same-as-achievement",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Intelligence is not the same as achievement",
+    "text": "Intelligence is not the same as achievement\n\nThe paper draws a sharp line between:\n\nIntelligence = flexible capacity for success on novel goals\nAchievement / expertise = strong performance built through training on specific tasks or domains\n\nMany current AI systems may look impressive because they show artificial achievement rather than genuine artificial intelligence.\nThis distinction matters because benchmark success alone can overstate what systems actually generalize to."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#why-ai-metrics-is-needed",
+    "href": "slides/03-31-2026/index.html#why-ai-metrics-is-needed",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Why “AI metrics” is needed",
+    "text": "Why “AI metrics” is needed\n\nThe authors argue AI evaluation should learn from psychometrics.\nThey call for an AI metrics discipline focused on:\n\nreliability (consistent measurement)\nvalidity (measuring the intended construct)\nstandardized procedures for comparing systems fairly\n\nWithout stronger measurement practice, claims about intelligence or AGI remain difficult to justify."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#main-takeaway-for-agi-debates",
+    "href": "slides/03-31-2026/index.html#main-takeaway-for-agi-debates",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Main takeaway for AGI debates",
+    "text": "Main takeaway for AGI debates\n\nThe paper suggests AGI should be understood analogously to human general intelligence:\n\nnot merely broad competence,\nbut the shared variance across many system performances.\n\nBottom line: current evidence supports artificial achievement/expertise more strongly than artificial intelligence.\nThe path forward is interdisciplinary collaboration plus better definitions and measurement."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#origins-early-neural-ideas-and-the-birth-of-ai",
+    "href": "slides/03-31-2026/index.html#origins-early-neural-ideas-and-the-birth-of-ai",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "1. Origins: early neural ideas and the birth of AI",
+    "text": "1. Origins: early neural ideas and the birth of AI\n\n\n1940s–1950s - In 1943, Warren McCulloch and Walter Pitts published a simplified mathematical model of a neuron and showed how networks of such units could implement logical operations. - In 1956, the Dartmouth Summer Research Project helped define artificial intelligence as a field and popularized the term itself. - Early AI combined several ambitions: - symbolic reasoning - machine learning - search and planning - neural models inspired by brains\n\n\n\n  \n  \n  \n  1943\n  McCulloch–Pitts\n  1956\n  Dartmouth workshop\n\n\n\n\nSources: McCulloch & Pitts (1943); Dartmouth AI history pages."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#perceptrons-optimism-and-the-first-setbacks",
+    "href": "slides/03-31-2026/index.html#perceptrons-optimism-and-the-first-setbacks",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "2. Perceptrons, optimism, and the first setbacks",
+    "text": "2. Perceptrons, optimism, and the first setbacks\n\n\nLate 1950s–1970s - Frank Rosenblatt’s perceptron (1958) made neural learning seem highly promising. - Perceptrons could learn linear decision boundaries from examples. - But enthusiasm outpaced capability: - early systems were limited - compute was weak - data were scarce - Critiques of single-layer perceptrons, especially their inability to solve some nonlinearly separable problems, contributed to a slowdown in neural-network enthusiasm.\n\n\nWhy this mattered - AI did not progress in a straight line. - Periods of excitement were followed by disappointment. - This helps explain later AI winters and why symbolic AI often overshadowed neural approaches for a time.\n\n\n\nSources: Rosenblatt (1958); historical reviews of neural networks and AI."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#backpropagation-expert-systems-and-statistical-learning",
+    "href": "slides/03-31-2026/index.html#backpropagation-expert-systems-and-statistical-learning",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "3. Backpropagation, expert systems, and statistical learning",
+    "text": "3. Backpropagation, expert systems, and statistical learning\n\n\n1980s–1990s - In the 1980s, backpropagation became the key training method for multi-layer neural networks. - The famous 1986 Rumelhart, Hinton, and Williams paper showed how internal representations could be learned across layers. - At the same time, AI also advanced through: - expert systems - probabilistic models - statistical pattern recognition - In the 1990s, neural nets remained important, but other methods often dominated practical machine learning.\n\n\n\n  \n  \n  \n\n  \n  \n\n  \n\n  \n  \n  \n  \n  \n  \n  \n  \n\n\nBackpropagation made deeper, multi-layer learning much more practical.\n\n\n\n\nSources: Rumelhart, Hinton & Williams (1986); LeCun, Bengio & Hinton (2015)."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#deep-learnings-resurgence",
+    "href": "slides/03-31-2026/index.html#deep-learnings-resurgence",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "4. Deep learning’s resurgence",
+    "text": "4. Deep learning’s resurgence\n\n\n2000s–2010s - Three things changed the field: 1. much more digital data 2. far more compute, especially GPUs 3. better training methods and architectures - Neural networks began to dominate difficult perception tasks such as: - speech recognition - image classification - machine translation - By the mid-2010s, deep learning had become central to AI research and industry.\n\n\nKey idea Deep learning systems learn layered representations automatically rather than relying only on hand-crafted features.\nConsequence AI moved from brittle rule systems toward large-scale representation learning from data.\n\n\n\nSources: LeCun, Bengio & Hinton (2015); broad historical overviews of modern AI."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#transformers-foundation-models-and-the-llm-era",
+    "href": "slides/03-31-2026/index.html#transformers-foundation-models-and-the-llm-era",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "5. Transformers, foundation models, and the LLM era",
+    "text": "5. Transformers, foundation models, and the LLM era\n\n\nLate 2010s–2020s - In 2017, the transformer architecture showed that attention could replace recurrence for many sequence tasks. - This architecture scaled extremely well with data and compute. - Large pretrained models then became capable of: - text generation - summarization - translation - coding assistance - question answering - Today’s LLMs sit at the intersection of: - neural-network history - large-scale optimization - language modeling - post-training alignment\n\n\n\n  \n  Neurons\n\n  \n  Perceptrons\n\n  \n  Deep nets\n\n  \n  LLMs\n\n  \n  \n  \n\n\n\n\nBottom line: modern LLMs are not a sudden break from history; they are the latest stage in a long sequence of ideas about representation, learning, and computation.\n\n\nSources: Vaswani et al. (2017); Google ML Crash Course LLM materials; Ouyang et al. (2022)."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#this-specific-form-of-intelligence",
+    "href": "slides/03-31-2026/index.html#this-specific-form-of-intelligence",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "This Specific Form of Intelligence",
+    "text": "This Specific Form of Intelligence\n\n\n\nLLMs now power chat, search, summarization, coding help, and tutoring.\nThree ideas explain much of their behavior:\n\ntokens\nembeddings\ntransformers\n\nModern systems add a fourth idea too:\n\nalignment / post-training\n\n\n\n\n\n  \n  Tokens\n\n  \n  Embeddings\n\n  \n  Transformers\n\n  \n  LLM Assistant\n\n  \n  \n  \n  \n\n\nFrom text units to a deployed assistant."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#roadmap",
+    "href": "slides/03-31-2026/index.html#roadmap",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Roadmap",
+    "text": "Roadmap\n\nWhat language models do\n\nTokens and embeddings\n\nContext and attention\n\nTransformer architecture\n\nTraining and alignment\n\nStrengths, limits, and interpretation"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#what-is-a-language-model",
+    "href": "slides/03-31-2026/index.html#what-is-a-language-model",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "What is a language model?",
+    "text": "What is a language model?\nA language model estimates the probability of the next token from earlier tokens:\n\nP(t_k \\mid t_1, t_2, \\ldots, t_{k-1})\n\n\n\n\n\n\n\nflowchart LR\n    A[\"The\"] --&gt; B[\"cat\"] --&gt; C[\"sat\"] --&gt; D[\"on\"] --&gt; E[\"the\"] --&gt; F{\"next token?\"}\n    F --&gt; G[\"mat\"]\n    F --&gt; H[\"floor\"]\n    F --&gt; I[\"chair\"]\n\n\n\n\n\n\n\nCore idea: generation is repeated next-token prediction."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#tokens-the-models-working-units",
+    "href": "slides/03-31-2026/index.html#tokens-the-models-working-units",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Tokens: the model’s working units",
+    "text": "Tokens: the model’s working units\n\n\n\nLLMs usually do not read whole words directly.\nThey read tokens, such as:\n\nfull words\nsubwords\npunctuation\nnumber pieces\n\nTokenization helps with rare words and open vocabularies.\n\n\n\nExample tokenizations\n\n\n\nText\nPossible tokens\n\n\n\n\nunbelievable\nun, believ, able\n\n\n2026\n20, 26\n\n\ncan’t\ncan, 't\n\n\n\n\nDifferent tokenizers split differently. The point is to turn raw text into reusable units."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#from-text-to-vectors",
+    "href": "slides/03-31-2026/index.html#from-text-to-vectors",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "From text to vectors",
+    "text": "From text to vectors\n\n\n\n\n\n\nflowchart LR\n    A[\"Raw text\"] --&gt; B[\"Tokenizer\"]\n    B --&gt; C[\"Token IDs\"]\n    C --&gt; D[\"Embedding lookup\"]\n    D --&gt; E[\"Dense vectors\"]\n    E --&gt; F[\"Transformer layers\"]\n    F --&gt; G[\"Next-token probabilities\"]\n\n\n\n\n\n\n\nEmbedding: a learned vector representation for a token or other object."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#what-is-an-embedding",
+    "href": "slides/03-31-2026/index.html#what-is-an-embedding",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "What is an embedding?",
+    "text": "What is an embedding?\n\n\nAn embedding places items in a high-dimensional space so that related items often end up near one another.\nWhy useful:\n\nsimilarity becomes geometric\nclusters can emerge\nmodels can generalize beyond exact memorization\n\n\n\n\n  \n  \n  \n  dimension 1\n  dimension 2\n\n  cat\n  kitten\n  dog\n\n  Paris\n  London\n  Tokyo\n\n\nIllustrative only: actual embeddings live in many dimensions."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#geometric-intuitionand-caution",
+    "href": "slides/03-31-2026/index.html#geometric-intuitionand-caution",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Geometric intuition—and caution",
+    "text": "Geometric intuition—and caution\n\n\nGood intuition\nNearby points often mean similar usage or context.\n\n\nBut not perfect\nDistance is learned from data, not hand-written meaning.\n\n\nAlso important\nEmbeddings can encode bias, noise, and spurious correlations."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#static-vs-contextual-embeddings",
+    "href": "slides/03-31-2026/index.html#static-vs-contextual-embeddings",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Static vs contextual embeddings",
+    "text": "Static vs contextual embeddings\n\n\nStatic embedding - one vector per word type - same bank everywhere\n\n\nContextual embedding - vector depends on surrounding text - bank changes with sentence context\n\n\n\n\n\n\n\n\nflowchart TB\n    A[\"river bank was muddy\"] --&gt; B[\"bank\"]\n    C[\"bank approved the loan\"] --&gt; D[\"bank\"]\n    B --&gt; E[\"contextual vector A\"]\n    D --&gt; F[\"contextual vector B\"]\n\n\n\n\n\n\n\nThis shift toward context-sensitive representations is one reason transformer systems became so effective."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#why-earlier-sequence-models-struggled",
+    "href": "slides/03-31-2026/index.html#why-earlier-sequence-models-struggled",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Why earlier sequence models struggled",
+    "text": "Why earlier sequence models struggled\n\n\nEarlier approaches included:\n\nn-gram models\nRNNs\nLSTMs / GRUs\n\nCommon problems:\n\nweak long-range memory\nharder parallel training\nunstable signals over long sequences\n\n\n\n\n  \n  \n  \n  \n  h₁\n  h₂\n  h₃\n  h₄\n  \n  \n  \n  token 1\n  token 2\n  token 3\n  token 4\n\n\nSequential dependence made training harder to parallelize."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#the-transformer-breakthrough",
+    "href": "slides/03-31-2026/index.html#the-transformer-breakthrough",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "The transformer breakthrough",
+    "text": "The transformer breakthrough\nThe 2017 transformer paper replaced recurrence with attention-heavy computation.\n\n\n\n\n\n\nflowchart LR\n    A[\"Input sequence\"] --&gt; B[\"Attention\"]\n    B --&gt; C[\"Feed-forward\"]\n    C --&gt; D[\"Repeated layers\"]\n    D --&gt; E[\"Output probabilities\"]\n\n\n\n\n\n\n\nWhy this mattered:\n\nstronger long-range interactions\nbetter parallelization\nexcellent scaling with data and compute"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#a-simple-transformer-picture",
+    "href": "slides/03-31-2026/index.html#a-simple-transformer-picture",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "A simple transformer picture",
+    "text": "A simple transformer picture\n\n\n\n\n\n\nflowchart TB\n    A[\"Token embeddings + position\"] --&gt; B[\"Self-attention\"]\n    B --&gt; C[\"Add & normalize\"]\n    C --&gt; D[\"Feed-forward network\"]\n    D --&gt; E[\"Add & normalize\"]\n    E --&gt; F[\"Repeat many times\"]\n    F --&gt; G[\"Vocabulary scores\"]\n\n\n\n\n\n\n\nFor text generation, many modern LLMs use a decoder-style transformer."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#why-position-must-be-added",
+    "href": "slides/03-31-2026/index.html#why-position-must-be-added",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Why position must be added",
+    "text": "Why position must be added\nEmbeddings alone do not encode order.\n\n\nSentence A\nDog bites man.\n\n\nSentence B\nMan bites dog.\n\n\nSame words, different order, different meaning.\nSo transformers add positional information:\n\nlearned positional vectors\nsinusoidal encodings\nrelative position methods in newer variants"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#self-attention-the-core-mechanism",
+    "href": "slides/03-31-2026/index.html#self-attention-the-core-mechanism",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Self-attention: the core mechanism",
+    "text": "Self-attention: the core mechanism\nSelf-attention lets each token look at other tokens and weight their relevance.\n\n\n\n\n\n\ngraph LR\n    A[\"The\"] --- D[\"animal\"]\n    B[\"tired\"] --- D\n    C[\"dog\"] --- D\n    E[\"slept\"] --- D\n\n\n\n\n\n\n\nWhen building the representation for one token, the model can ask:\n\nWhich earlier words matter most here?\nWhich words resolve ambiguity?\nWhich words define topic or syntax?"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#query-key-and-value-intuition",
+    "href": "slides/03-31-2026/index.html#query-key-and-value-intuition",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Query, key, and value intuition",
+    "text": "Query, key, and value intuition\n\n\n\nQuery: what this token is looking for\n\nKey: what this token offers as a match\n\nValue: the information it can contribute\n\n\n\n\n  \n  Query\n  \n  Key\n  \n  Value\n\n  \n  \n\n  1. compare Q to K\n  2. turn scores into weights\n  3. mix V using those weights\n  → context-sensitive representation"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#attention-as-weighted-influence",
+    "href": "slides/03-31-2026/index.html#attention-as-weighted-influence",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Attention as weighted influence",
+    "text": "Attention as weighted influence\n\n\\text{Attention}(Q,K,V)=\\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V\n\nYou do not need every algebraic detail to get the idea:\n\ncompare token features\ncompute relevance weights\nblend information from multiple positions\n\nThe result is a new representation that depends on context."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#multi-head-attention",
+    "href": "slides/03-31-2026/index.html#multi-head-attention",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Multi-head attention",
+    "text": "Multi-head attention\n\n\n\n\n\n\nflowchart TB\n    A[\"Input representations\"] --&gt; B1[\"Head 1\"]\n    A --&gt; B2[\"Head 2\"]\n    A --&gt; B3[\"Head 3\"]\n    A --&gt; B4[\"Head 4\"]\n    B1 --&gt; C[\"Concatenate\"]\n    B2 --&gt; C\n    B3 --&gt; C\n    B4 --&gt; C\n    C --&gt; D[\"Project to new representation\"]\n\n\n\n\n\n\n\nDifferent heads can learn different relational patterns, though their roles are not always cleanly interpretable."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#from-hidden-states-to-next-token-prediction",
+    "href": "slides/03-31-2026/index.html#from-hidden-states-to-next-token-prediction",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "From hidden states to next-token prediction",
+    "text": "From hidden states to next-token prediction\n\n\n\n\n\n\nflowchart LR\n    A[\"Current hidden state\"] --&gt; B[\"Vocabulary scores (logits)\"]\n    B --&gt; C[\"Probabilities\"]\n    C --&gt; D[\"Select / sample next token\"]\n    D --&gt; E[\"Append token\"]\n    E --&gt; F[\"Repeat\"]\n\n\n\n\n\n\n\nThis loop is autoregressive generation."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#how-llms-are-trained",
+    "href": "slides/03-31-2026/index.html#how-llms-are-trained",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "How LLMs are trained",
+    "text": "How LLMs are trained\n\n\nPretraining usually involves:\n\ncollect massive text data\n\ntokenize it\n\npredict held-out next tokens\n\nupdate parameters to reduce error\n\nrepeat many times\n\n\n\nWhat is learned?\n\ngrammar\ndiscourse patterns\nstyle regularities\nbroad factual patterns in the data\nreusable internal features"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#scaling-helpsbut-it-is-not-magic",
+    "href": "slides/03-31-2026/index.html#scaling-helpsbut-it-is-not-magic",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Scaling helps—but it is not magic",
+    "text": "Scaling helps—but it is not magic\n\n\n  \n  \n  \n  \n  compute / data / parameters\n  capability\n\n\nConceptual only: more scale often improves performance, but not without cost.\n\n\nTrade-offs include compute cost, energy use, latency, and harder safety evaluation."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#fine-tuning-instruction-tuning-and-alignment",
+    "href": "slides/03-31-2026/index.html#fine-tuning-instruction-tuning-and-alignment",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Fine-tuning, instruction tuning, and alignment",
+    "text": "Fine-tuning, instruction tuning, and alignment\n\n\n\n\n\n\nflowchart LR\n    A[\"Pretrained base model\"] --&gt; B[\"Supervised fine-tuning\"]\n    B --&gt; C[\"Preference / feedback tuning\"]\n    C --&gt; D[\"Aligned assistant behavior\"]\n\n\n\n\n\n\n\nPost-training aims to make the system:\n\nfollow instructions\nbe more useful in conversation\nreduce unsafe or low-quality outputs\nbetter match human preferences"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#how-a-system-like-chatgpt-differs-from-a-raw-base-model",
+    "href": "slides/03-31-2026/index.html#how-a-system-like-chatgpt-differs-from-a-raw-base-model",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "How a system like ChatGPT differs from a raw base model",
+    "text": "How a system like ChatGPT differs from a raw base model\n\n\nBase model predicts next tokens\n\n\nPost-training instruction following, preference shaping, safety\n\n\nSystem layer prompting, tools, formatting, policies\n\n\nA deployed assistant is usually more than just the pretrained model."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#what-understanding-means-here",
+    "href": "slides/03-31-2026/index.html#what-understanding-means-here",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "What “understanding” means here",
+    "text": "What “understanding” means here\n\n\nStrong appearance of understanding - explanation - summarization - translation - coding help - question answering\n\n\nReasons for caution - no guaranteed grounding - confidence ≠ truth - behavior can be brittle - “understanding” remains debated"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#why-llms-hallucinate-and-fail",
+    "href": "slides/03-31-2026/index.html#why-llms-hallucinate-and-fail",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Why LLMs hallucinate and fail",
+    "text": "Why LLMs hallucinate and fail\n\n\nHallucination\nplausible but false output\n\n\nBias / distortion\ntraining data patterns reappear\n\n\nReasoning brittleness\nmulti-step tasks can break\n\n\n\n\nContext misses\nimportant prompt detail is ignored\n\n\nKnowledge limits\npost-training events may be unknown\n\n\nOverconfidence\nstyle can sound firmer than evidence"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#a-compact-mental-model",
+    "href": "slides/03-31-2026/index.html#a-compact-mental-model",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "A compact mental model",
+    "text": "A compact mental model\n\n\n\n\n\n\nflowchart LR\n    A[\"Text\"] --&gt; B[\"Tokens\"]\n    B --&gt; C[\"Embeddings\"]\n    C --&gt; D[\"Attention + transformer layers\"]\n    D --&gt; E[\"Predicted next token\"]\n    E --&gt; F[\"Repeat\"]\n    D --&gt; G[\"Post-training / alignment\"]\n    G --&gt; H[\"Assistant behavior\"]"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#discussion-questions",
+    "href": "slides/03-31-2026/index.html#discussion-questions",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Discussion questions",
+    "text": "Discussion questions\n\nIn what sense are embeddings a geometry of meaning?\n\nWhy did transformers scale better than RNNs?\n\nDoes next-token prediction produce reasoning, or simulate it?\n\nWhy can a model sound confident while being wrong?\n\nWhich matters more in practice: pretraining scale or post-training alignment?"
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#takeaways",
+    "href": "slides/03-31-2026/index.html#takeaways",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nTokenization breaks text into manageable units.\nEmbeddings map those units into vector space.\nAttention lets tokens influence one another contextually.\nTransformers scale this idea very effectively.\nTraining + post-training turn a predictor into a usable assistant.\nLimits remain fundamental, not incidental."
+  },
+  {
+    "objectID": "slides/03-31-2026/index.html#references",
+    "href": "slides/03-31-2026/index.html#references",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "References",
+    "text": "References\n\nGoogle. Machine Learning Crash Course: Embeddings module. https://developers.google.com/machine-learning/crash-course/embeddings\nGoogle. Machine Learning Crash Course: Introduction to Large Language Models. https://developers.google.com/machine-learning/crash-course/llm\nGoogle. LLMs: What’s a large language model? https://developers.google.com/machine-learning/crash-course/llm/transformers\nVaswani, Ashish, et al. 2017. “Attention Is All You Need.” Advances in Neural Information Processing Systems. https://arxiv.org/abs/1706.03762\nOuyang, Long, et al. 2022. “Training Language Models to Follow Instructions with Human Feedback.” NeurIPS. https://arxiv.org/abs/2203.02155"
   },
   {
     "objectID": "slides/03-10-2026/index.html#summary-statistics-are-insufficient",
@@ -2524,6 +2877,20 @@
     "text": "An Assignment for Next Time"
   },
   {
+    "objectID": "posts/03-31-2026/index.html",
+    "href": "posts/03-31-2026/index.html",
+    "title": "AI and LLMs",
+    "section": "",
+    "text": "What is artificial intelligence and what is an LLM?\nFirst, intelligence."
+  },
+  {
+    "objectID": "posts/03-31-2026/index.html#the-class-plan",
+    "href": "posts/03-31-2026/index.html#the-class-plan",
+    "title": "AI and LLMs",
+    "section": "The class plan:",
+    "text": "The class plan:\n\nThe Google Explainer on Large Language Models(https://developers.google.com/machine-learning/crash-course/llm)\n\nThis should probably have been preceded by embeddings.\nWhy the following matters. What is artificial intelligence? Doesn’t that require defining the non-artificial variety? What is that?"
+  },
+  {
     "objectID": "posts/03-17-2026/index.html",
     "href": "posts/03-17-2026/index.html",
     "title": "Operations, Finance and Accounting",
@@ -3299,6 +3666,34 @@
     "title": "Relationships",
     "section": "Key formula reference",
     "text": "Key formula reference\n\nParameter truth vs. estimation\n\n\nComponent\nTrue value\nOLS target\n\n\n\n\nIntercept \\(\\beta_0\\)\n$33,500\nVaries by sample\n\n\nSlope \\(\\beta_1\\)\n$150 / unit\nVaries by sample\n\n\nError std dev \\(\\sigma\\)\n$4,000\nRMSE \\(\\approx\\) $4,000\n\n\n\n\n\n\n\n\n\nWarningSampling variability\n\n\n\nResample repeatedly to observe how much \\(\\hat{\\beta}_0\\), \\(\\hat{\\beta}_1\\), and \\(R^2\\) fluctuate. Regression coefficients are themselves random variables.\n\n\n\nSimulated data — not real company figures."
+  },
+  {
+    "objectID": "posts/03-19-2026/index.html",
+    "href": "posts/03-19-2026/index.html",
+    "title": "Human Resource Management Analytics",
+    "section": "",
+    "text": "HR applications are in order for the day."
+  },
+  {
+    "objectID": "posts/03-19-2026/index.html#the-class-plan",
+    "href": "posts/03-19-2026/index.html#the-class-plan",
+    "title": "Human Resource Management Analytics",
+    "section": "The class plan:",
+    "text": "The class plan:\n\nSome Finance and Accounting topics\nHR Analytics"
+  },
+  {
+    "objectID": "posts/03-19-2026/index.html#illustrating-an-hypothesis-test-with-the-normal",
+    "href": "posts/03-19-2026/index.html#illustrating-an-hypothesis-test-with-the-normal",
+    "title": "Human Resource Management Analytics",
+    "section": "Illustrating an Hypothesis Test with the Normal",
+    "text": "Illustrating an Hypothesis Test with the Normal\nLet’s take the example of Berkeley. Let’s test the hypothesis that \\(\\pi=0.5\\) first and let’s examine it with 99% confidence.\nI will use the class tool to find that percentage.\n\n\n\nImage\n\n\nAnything within 2.576 standard deviations above or below the mean is possible with 99% confidence.\nThe standard error in this case is\n\\[\\sqrt{\\frac{\\pi(1-\\pi)}{n}}\\]\nThis gives us \\(0.5 \\pm z*\\) 0.0074321.\nOr \\(0.5 \\pm 0.019\\).\nAnything between 0.481 and 0.519 could be observed if 0.5 is true."
+  },
+  {
+    "objectID": "posts/03-19-2026/index.html#a-single-tail",
+    "href": "posts/03-19-2026/index.html#a-single-tail",
+    "title": "Human Resource Management Analytics",
+    "section": "A Single Tail",
+    "text": "A Single Tail\nLet’s take the example of Berkeley. Let’s test the hypothesis that \\(\\pi \\leq 0.5\\) against the alternative that it is bigger and let’s examine it with 99% confidence.\nI will use the class tool to find that percentage.\n\n\n\nImage\n\n\nAnything within 2.236 standard deviations above the mean is possible with 99% confidence.\nThe standard error in this case is\n\\[\\sqrt{\\frac{\\pi(1-\\pi)}{n}}\\]\nThis gives us \\(0.5 - z*\\) 0.0074321.\nOr \\(0.5 + 2.236*0.019\\).\nAnything below 0.5166 could be observed if 0.5 or less is true."
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -4568,6 +4963,17 @@
     "text": "Accounting and Finance Applications\nA Web Writeup"
   },
   {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "BUS 1301 Slides",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\n \n\n\nManaging with Data, Analytics and AI\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nWhat is a Model? On Models\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nData Types\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nData Storage\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nData Visualization\n\n\nRobert W. Walker\n\n\n\n\n\n\n \n\n\nData Visualization\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nFinishing Visualization and Sources of Data\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nSources of Data and Data Quality\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nOn Probability\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nOn Probability, II\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nProbability Distributions\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nProbability Distributions\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nProbability Distributions and Inference\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nInference\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nInference for Quantitative Data\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nComparing Quantitative Data and Sampling\n\n\nRobert W. Walker\n\n\n\n\n\n\nInvalid Date\n\n\nAnalytics I: Relationships among Data\n\n\nRobert W. Walker\n\n\n\n\n\n\nMar 17, 2026\n\n\nAnalytics III: Ops, Finance and Accounting\n\n\nRobert W. Walker\n\n\n\n\n\n\nMar 31, 2026\n\n\nIntelligence, AI, and LLM’s\n\n\nRobert W. Walker\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "About",
+      "Slides"
+    ]
+  },
+  {
     "objectID": "writeups/ChatGPT-Models/index.html",
     "href": "writeups/ChatGPT-Models/index.html",
     "title": "ChatGPT on Models",
@@ -4957,423 +5363,10 @@
     "href": "writeups/index.html",
     "title": "BUS 1301 Writeups",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\n \n\n\nA Dashboard\n\n\n \n\n\n\n\n\n\nMar 12, 2026\n\n\nClaude on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nMar 6, 2026\n\n\nBasic Computer Literacy\n\n\nRobert W. Walker\n\n\n\n\n\n\nMar 3, 2026\n\n\nGemini Multi-Agent Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 24, 2026\n\n\nClaude Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 24, 2026\n\n\nGemini Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 16, 2026\n\n\nMonte Carlo Simulation\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 11, 2026\n\n\nA Dashboard\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nThe CDC Program Eval Framework from Gemini\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nWho owns data?\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nOn Causality\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 15, 2026\n\n\nGemini on Business Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nChatGPT on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nClaude on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini Data Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nFormatting a Gemini Response\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGrokAI on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nLesson Learned on Gemini\n\n\nRobert W. Walker\n\n\n\n\n\n\nNo matching items",
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\n \n\n\nA Dashboard\n\n\n \n\n\n\n\n\n\nMar 31, 2026\n\n\nChatGPT on Intelligence\n\n\nRobert W. Walker\n\n\n\n\n\n\nMar 12, 2026\n\n\nClaude on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nMar 6, 2026\n\n\nBasic Computer Literacy\n\n\nRobert W. Walker\n\n\n\n\n\n\nMar 3, 2026\n\n\nGemini Multi-Agent Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 24, 2026\n\n\nClaude Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 24, 2026\n\n\nGemini Binomial Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 16, 2026\n\n\nMonte Carlo Simulation\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 11, 2026\n\n\nA Dashboard\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nThe CDC Program Eval Framework from Gemini\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nWho owns data?\n\n\nRobert W. Walker\n\n\n\n\n\n\nFeb 4, 2026\n\n\nOn Causality\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 15, 2026\n\n\nGemini on Business Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nChatGPT on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nClaude on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini Data Analysis\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nFormatting a Gemini Response\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGemini on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nGrokAI on Models\n\n\nRobert W. Walker\n\n\n\n\n\n\nJan 14, 2026\n\n\nLesson Learned on Gemini\n\n\nRobert W. Walker\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "About",
       "Write-ups"
     ]
-  },
-  {
-    "objectID": "posts/03-19-2026/index.html",
-    "href": "posts/03-19-2026/index.html",
-    "title": "Human Resource Management Analytics",
-    "section": "",
-    "text": "HR applications are in order for the day."
-  },
-  {
-    "objectID": "posts/03-19-2026/index.html#the-class-plan",
-    "href": "posts/03-19-2026/index.html#the-class-plan",
-    "title": "Human Resource Management Analytics",
-    "section": "The class plan:",
-    "text": "The class plan:\n\nSome Finance and Accounting topics\nHR Analytics"
-  },
-  {
-    "objectID": "posts/03-19-2026/index.html#illustrating-an-hypothesis-test-with-the-normal",
-    "href": "posts/03-19-2026/index.html#illustrating-an-hypothesis-test-with-the-normal",
-    "title": "Human Resource Management Analytics",
-    "section": "Illustrating an Hypothesis Test with the Normal",
-    "text": "Illustrating an Hypothesis Test with the Normal\nLet’s take the example of Berkeley. Let’s test the hypothesis that \\(\\pi=0.5\\) first and let’s examine it with 99% confidence.\nI will use the class tool to find that percentage.\n\n\n\nImage\n\n\nAnything within 2.576 standard deviations above or below the mean is possible with 99% confidence.\nThe standard error in this case is\n\\[\\sqrt{\\frac{\\pi(1-\\pi)}{n}}\\]\nThis gives us \\(0.5 \\pm z*\\) 0.0074321.\nOr \\(0.5 \\pm 0.019\\).\nAnything between 0.481 and 0.519 could be observed if 0.5 is true."
-  },
-  {
-    "objectID": "posts/03-19-2026/index.html#a-single-tail",
-    "href": "posts/03-19-2026/index.html#a-single-tail",
-    "title": "Human Resource Management Analytics",
-    "section": "A Single Tail",
-    "text": "A Single Tail\nLet’s take the example of Berkeley. Let’s test the hypothesis that \\(\\pi \\leq 0.5\\) against the alternative that it is bigger and let’s examine it with 99% confidence.\nI will use the class tool to find that percentage.\n\n\n\nImage\n\n\nAnything within 2.236 standard deviations above the mean is possible with 99% confidence.\nThe standard error in this case is\n\\[\\sqrt{\\frac{\\pi(1-\\pi)}{n}}\\]\nThis gives us \\(0.5 - z*\\) 0.0074321.\nOr \\(0.5 + 2.236*0.019\\).\nAnything below 0.5166 could be observed if 0.5 or less is true."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html",
-    "href": "writeups/ChatGPT-Intelligence/index.html",
-    "title": "ChatGPT on Intelligence",
-    "section": "",
-    "text": "Citation\nGignac, G. E., & Szodorai, E. T. (2024). Defining intelligence: Bridging the gap between human and artificial perspectives. Intelligence, 104, 101832. https://doi.org/10.1016/j.intell.2024.101832"
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#overview",
-    "href": "writeups/ChatGPT-Intelligence/index.html#overview",
-    "title": "ChatGPT on Intelligence",
-    "section": "Overview",
-    "text": "Overview\nThis paper is a conceptual and interdisciplinary argument about how human intelligence and artificial intelligence should be defined in ways that are comparable across psychology and computer science. The authors argue that both fields suffer from inconsistent terminology, and that this weakens theory-building, measurement, and communication. Their central goal is to create a shared nomenclature that distinguishes intelligence from nearby but different ideas such as achievement, expertise, and adaptation.\nThe paper’s main claim is that many present-day AI systems are better described as systems of artificial achievement or artificial expertise than as systems exhibiting intelligence in the stronger sense used in human intelligence research."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#core-definitions-proposed-by-the-authors",
-    "href": "writeups/ChatGPT-Intelligence/index.html#core-definitions-proposed-by-the-authors",
-    "title": "ChatGPT on Intelligence",
-    "section": "Core definitions proposed by the authors",
-    "text": "Core definitions proposed by the authors\n\nHuman intelligence\nThe authors define human intelligence abstractly as a human’s:\n\nmaximal capacity to achieve a novel goal successfully using perceptual-cognitive processes.\n\nThis definition highlights three points:\n\nMaximal capacity, not typical day-to-day performance. A person may possess high intellectual capacity without always expressing it in ordinary behavior.\nNovelty. Intelligence matters most when an individual faces problems that are not already familiar or overlearned.\nPerceptual-cognitive processes. Human intelligence is grounded in underlying mental processes such as attention, perception, integration of sensory information, memory, and reasoning.\n\nThe authors also give an operational version of the definition: human intelligence should be assessed through performance on novel standardized tasks with veridical scoring. In other words, the task should be unfamiliar, administered in a standardized way, and scored against clear correct answers.\n\n\nArtificial intelligence\nThe authors propose a parallel definition for AI. Artificial intelligence is defined abstractly as an artificial system’s:\n\nmaximal capacity to successfully achieve a novel goal through computational algorithms.\n\nThe parallel with the human definition is deliberate. The key difference is the mechanism: humans rely on perceptual-cognitive processes, whereas artificial systems rely on computational algorithms.\nThey also propose an operational definition: AI should be understood as an artificial system’s:\n\nmaximal capacity to complete a novel standardized task with veridical scoring using computational algorithms.\n\nThis is meant to replace weaker or circular definitions such as “machines doing tasks that usually require human intelligence,” which the authors argue is more a description of AI’s aspiration than a precise definition."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#why-the-authors-think-novelty-matters-so-much",
-    "href": "writeups/ChatGPT-Intelligence/index.html#why-the-authors-think-novelty-matters-so-much",
-    "title": "ChatGPT on Intelligence",
-    "section": "Why the authors think novelty matters so much",
-    "text": "Why the authors think novelty matters so much\nA recurring theme in the paper is that intelligence is most meaningfully demonstrated on novel problems. If a system succeeds mainly because it has been trained extensively on similar tasks, memorized patterns, or been optimized narrowly for a known benchmark, then the success may indicate achievement or expertise, not intelligence.\nThe authors use a sharp formulation: intelligence is what one does when one does not know what to do. That captures the distinction between broad capacity and practiced performance.\nThis matters for current AI because many systems are trained on vast corpora, tuned on benchmark-like tasks, or heavily shaped by human engineering choices. On the authors’ view, such systems may be impressive and useful, but that does not automatically justify the stronger claim that they possess intelligence in the same conceptual sense as humans."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#intelligence-versus-achievement-and-expertise",
-    "href": "writeups/ChatGPT-Intelligence/index.html#intelligence-versus-achievement-and-expertise",
-    "title": "ChatGPT on Intelligence",
-    "section": "Intelligence versus achievement and expertise",
-    "text": "Intelligence versus achievement and expertise\nOne of the most important contributions of the paper is its insistence on separating these concepts.\n\nIntelligence is a broad capacity for successful performance on novel goals.\nAchievement is realized performance in a domain, often supported by prior instruction, exposure, or practice.\nExpertise is highly developed, domain-specific proficiency that typically depends on extensive training and specialization.\n\nThe authors argue that much of what is currently celebrated as AI capability is more accurately placed in the latter two categories. A model that excels at code generation, a narrow game, or a benchmark suite may demonstrate a remarkable form of engineered or trained performance without thereby showing the broader flexible novelty-handling capacity that the authors want the term intelligence to imply.\nThis is not meant as a dismissal of AI progress. The paper explicitly treats artificial achievement and artificial expertise as genuine scientific accomplishments. The point is conceptual precision: strong performance should not be mislabeled."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#intelligence-is-not-just-adaptation",
-    "href": "writeups/ChatGPT-Intelligence/index.html#intelligence-is-not-just-adaptation",
-    "title": "ChatGPT on Intelligence",
-    "section": "Intelligence is not just adaptation",
-    "text": "Intelligence is not just adaptation\nThe paper also pushes back against very broad definitions of intelligence as mere adaptation. The authors accept that adaptation is relevant, but they think it is too broad on its own. A system can adapt in many ways that do not amount to intelligence in the specific psychological sense. Their preferred framing keeps the emphasis on maximal capacity, novel goals, and the processes by which performance is generated."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#intelligence-as-multidimensional",
-    "href": "writeups/ChatGPT-Intelligence/index.html#intelligence-as-multidimensional",
-    "title": "ChatGPT on Intelligence",
-    "section": "Intelligence as multidimensional",
-    "text": "Intelligence as multidimensional\nA second major argument is that intelligence should not be reduced to a single narrow skill such as learning efficiency or adaptation. Drawing on psychometrics and the Cattell-Horn-Carroll (CHC) tradition, the paper argues that human intelligence is multidimensional. It includes many related abilities rather than one isolated faculty.\nThe authors suggest that AI research could benefit from adopting a similarly structured view. Rather than asking only whether a model “learns” or “adapts,” researchers should evaluate a broad portfolio of abilities and how they relate to one another. They suggest that existing AI benchmark tasks could often be mapped onto human-intelligence-style ability frameworks.\nThis is important because a multidimensional view allows for richer claims:\n\nsome systems may be strong in one cluster of abilities and weak in another;\napparent generality may actually reflect a bundle of narrower strengths;\na more human-like profile would require a broader and more integrated pattern of capabilities."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#the-proposal-for-ai-metrics",
-    "href": "writeups/ChatGPT-Intelligence/index.html#the-proposal-for-ai-metrics",
-    "title": "ChatGPT on Intelligence",
-    "section": "The proposal for “AI metrics”",
-    "text": "The proposal for “AI metrics”\nA particularly valuable contribution of the paper is the call for a dedicated discipline of AI metrics, modeled in part on psychometrics.\nThe authors argue that evaluating AI systems should involve much more attention to:\n\nstandardized testing procedures,\nreliability (consistency of scores),\nvalidity (whether scores really indicate the construct claimed), and\ncomparable administration conditions across systems and versions.\n\nThis is one of the paper’s strongest practical points. Benchmark culture in AI often assumes that a score is self-explanatory, but the authors argue that benchmark results can be distorted by differences in prompting, evaluation setup, parameter choices, and test leakage. Without standardized protocols, comparisons across systems may not be trustworthy.\nIn that sense, the paper is partly a measurement manifesto: before making strong claims about intelligence or AGI, the field needs better measurement discipline."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#how-the-paper-defines-agi",
-    "href": "writeups/ChatGPT-Intelligence/index.html#how-the-paper-defines-agi",
-    "title": "ChatGPT on Intelligence",
-    "section": "How the paper defines AGI",
-    "text": "How the paper defines AGI\nThe authors also reinterpret artificial general intelligence (AGI) through an explicitly psychometric lens. Instead of defining AGI simply as broad competence across many tasks, they propose that AGI should be understood analogously to human general intelligence (g).\nUnder their view, AGI is:\n\nthe shared variance in AI systems’ performance, demonstrated through positively correlated capabilities across a diverse range of AI metric tasks and multiple modalities.\n\nThis is a subtle but important move. It means AGI is not just “being good at many things.” Instead, AGI would be evidenced when performance across many tasks tends to hang together statistically, suggesting a deeper common factor underlying task success.\nSo, on this view:\n\nA generally capable AI system is not necessarily evidence of AGI by itself.\nEvidence for AGI would require systematic testing across many systems and tasks.\nResearchers would then look for a positive manifold and perhaps a strong latent factor, similar to how human psychometric g is inferred."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#what-kind-of-evidence-the-authors-think-would-support-agi",
-    "href": "writeups/ChatGPT-Intelligence/index.html#what-kind-of-evidence-the-authors-think-would-support-agi",
-    "title": "ChatGPT on Intelligence",
-    "section": "What kind of evidence the authors think would support AGI",
-    "text": "What kind of evidence the authors think would support AGI\nThe paper suggests a concrete research program for testing AGI:\n\nGive a wide battery of tasks to many different AI systems.\nRecord performance across those tasks under standardized conditions.\nExamine whether scores across tasks are positively correlated.\nUse factor analysis or similar methods to test whether a general factor emerges.\n\nThe authors note some preliminary empirical hints in this direction, but they do not claim AGI has already been demonstrated. Their position is more cautious: some early findings are suggestive, but current evidence is still limited and methodologically immature.\nThey also argue that, as with human intelligence, real construct validation would ultimately require predictive validity. In AI’s case, that might mean showing that measured AI or AGI scores predict socially valuable outcomes such as scientific discovery, productivity gains, or other meaningful real-world impacts."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#main-conclusion-of-the-paper",
-    "href": "writeups/ChatGPT-Intelligence/index.html#main-conclusion-of-the-paper",
-    "title": "ChatGPT on Intelligence",
-    "section": "Main conclusion of the paper",
-    "text": "Main conclusion of the paper\nThe authors conclude that the strongest present evidence supports the existence of artificial achievement and artificial expertise, not yet artificial intelligence in the fuller sense they define. That is because many systems still appear dependent on specific programming, training distributions, or narrow evaluation settings, rather than clearly demonstrating broad novel problem-solving capacity.\nAt the same time, the paper is not anti-AI. Its stance is better understood as conceptually conservative and measurement-focused. The authors think that better cross-disciplinary definitions and stronger measurement standards could help researchers make more meaningful progress toward understanding whether, and in what sense, artificial systems are becoming more intelligence-like."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#why-this-paper-matters",
-    "href": "writeups/ChatGPT-Intelligence/index.html#why-this-paper-matters",
-    "title": "ChatGPT on Intelligence",
-    "section": "Why this paper matters",
-    "text": "Why this paper matters\nThis article matters for three reasons.\n\n1. It sharpens terminology\nPublic and academic discussions often slide too quickly between words like intelligence, skill, performance, adaptation, expertise, and generality. The paper argues that keeping these distinctions clear is necessary if claims about AI are to remain scientifically meaningful.\n\n\n2. It imports psychometric rigor into AI evaluation\nBy urging the creation of AI metrics analogous to psychometrics, the paper offers a practical framework for making AI benchmarking more reliable and interpretable.\n\n\n3. It reframes AGI as a measurement question\nRather than treating AGI purely as a speculative threshold or marketing label, the paper turns it into an empirical question about latent structure in AI performance data."
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#critical-assessment",
-    "href": "writeups/ChatGPT-Intelligence/index.html#critical-assessment",
-    "title": "ChatGPT on Intelligence",
-    "section": "Critical assessment",
-    "text": "Critical assessment\nThe paper is thoughtful and unusually careful, but its framework also raises some debatable points.\n\nStrengths\n\nIt provides unusually clear, parallel definitions of human and artificial intelligence.\nIt makes a persuasive case that benchmark success should not automatically be equated with intelligence.\nIts call for reliability, validity, and standardized evaluation is timely and important.\nIts psychometric reframing of AGI is novel and gives researchers a concrete empirical agenda.\n\n\n\nPotential limitations\n\nThe definition of intelligence leans heavily on the psychology of novel problem solving, which is defensible but contestable. Some researchers would give more weight to adaptation, learning efficiency, embodiment, or autonomous goal formation.\nThe proposed AI definition still depends on human-set goals and human-designed tests, which may leave open philosophical questions about agency and autonomy.\nMapping AI benchmarks onto human cognitive ability taxonomies is intriguing, but the analogy may be imperfect because artificial systems can have competencies that do not align neatly with human cognition.\nA factor-analytic conception of AGI may be useful scientifically, but it may not capture all of what researchers or the public mean by “general intelligence.”"
-  },
-  {
-    "objectID": "writeups/ChatGPT-Intelligence/index.html#bottom-line",
-    "href": "writeups/ChatGPT-Intelligence/index.html#bottom-line",
-    "title": "ChatGPT on Intelligence",
-    "section": "Bottom line",
-    "text": "Bottom line\nThe paper argues that discussions of AI need more conceptual discipline. Intelligence, in the authors’ framework, is not just high performance, adaptation, or scale. It is a maximal capacity to solve novel goals successfully, grounded in the relevant underlying processes and measured through standardized, valid tasks. From that standpoint, current AI systems are better described as systems of artificial achievement or artificial expertise than as clear instances of artificial intelligence or AGI.\nThe paper’s most durable contribution is probably not any single definition, but its insistence that claims about AI must be tied to careful measurement, construct validity, and clear distinctions among related concepts."
-  },
-  {
-    "objectID": "posts/03-31-2026/index.html",
-    "href": "posts/03-31-2026/index.html",
-    "title": "AI and LLMs",
-    "section": "",
-    "text": "What is artificial intelligence and what is an LLM?\nFirst, intelligence."
-  },
-  {
-    "objectID": "posts/03-31-2026/index.html#the-class-plan",
-    "href": "posts/03-31-2026/index.html#the-class-plan",
-    "title": "AI and LLMs",
-    "section": "The class plan:",
-    "text": "The class plan:\n\nThe Google Explainer on Large Language Models(https://developers.google.com/machine-learning/crash-course/llm)\n\nThis should probably have been preceded by embeddings.\nWhy the following matters. What is artificial intelligence? Doesn’t that require defining the non-artificial variety? What is that?"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#outline",
-    "href": "slides/03-31-2026/index.html#outline",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Outline",
-    "text": "Outline\n\nIntelligence.\n\nThe Basics of LLM’s.\n\nEmbeddings.\n\nAttention is all you need.\n\n\nThe Prediction.\n\nThe Context."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#summary-intelligence",
-    "href": "slides/03-31-2026/index.html#summary-intelligence",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Summary: Intelligence",
-    "text": "Summary: Intelligence\n\nDefinitions of human intelligence and artificial intelligence often differ across psychology and computer science.\nThe paper argues that this mismatch creates confusion about what current AI systems actually demonstrate.\nIt proposes a shared conceptual framework so both fields can discuss intelligence with more precision.\n\n\nSource: Gignac, G. E., & Szodorai, E. T. (2024). Intelligence, 104, 101832. https://doi.org/10.1016/j.intell.2024.101832"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#core-definitions-proposed",
-    "href": "slides/03-31-2026/index.html#core-definitions-proposed",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Core definitions proposed",
-    "text": "Core definitions proposed\n\nHuman intelligence: maximal capacity to complete novel goals successfully through perceptual-cognitive processes.\nArtificial intelligence: maximal capacity to complete novel goals successfully through computational processes.\nIn both cases, intelligence is framed as a capacity, not just a record of past performance.\nThe authors also argue intelligence is better understood as multidimensional, not a single narrow skill."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#intelligence-is-not-the-same-as-achievement",
-    "href": "slides/03-31-2026/index.html#intelligence-is-not-the-same-as-achievement",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Intelligence is not the same as achievement",
-    "text": "Intelligence is not the same as achievement\n\nThe paper draws a sharp line between:\n\nIntelligence = flexible capacity for success on novel goals\nAchievement / expertise = strong performance built through training on specific tasks or domains\n\nMany current AI systems may look impressive because they show artificial achievement rather than genuine artificial intelligence.\nThis distinction matters because benchmark success alone can overstate what systems actually generalize to."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#why-ai-metrics-is-needed",
-    "href": "slides/03-31-2026/index.html#why-ai-metrics-is-needed",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Why “AI metrics” is needed",
-    "text": "Why “AI metrics” is needed\n\nThe authors argue AI evaluation should learn from psychometrics.\nThey call for an AI metrics discipline focused on:\n\nreliability (consistent measurement)\nvalidity (measuring the intended construct)\nstandardized procedures for comparing systems fairly\n\nWithout stronger measurement practice, claims about intelligence or AGI remain difficult to justify."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#main-takeaway-for-agi-debates",
-    "href": "slides/03-31-2026/index.html#main-takeaway-for-agi-debates",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Main takeaway for AGI debates",
-    "text": "Main takeaway for AGI debates\n\nThe paper suggests AGI should be understood analogously to human general intelligence:\n\nnot merely broad competence,\nbut the shared variance across many system performances.\n\nBottom line: current evidence supports artificial achievement/expertise more strongly than artificial intelligence.\nThe path forward is interdisciplinary collaboration plus better definitions and measurement."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#why-this-topic-matters",
-    "href": "slides/03-31-2026/index.html#why-this-topic-matters",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Why this topic matters",
-    "text": "Why this topic matters\n\n\n\nLLMs now power chat, search, summarization, coding help, and tutoring.\nThree ideas explain much of their behavior:\n\ntokens\nembeddings\ntransformers\n\nModern systems add a fourth idea too:\n\nalignment / post-training\n\n\n\n\n\n  \n  Tokens\n\n  \n  Embeddings\n\n  \n  Transformers\n\n  \n  LLM Assistant\n\n  \n  \n  \n  \n\n\nFrom text units to a deployed assistant."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#roadmap",
-    "href": "slides/03-31-2026/index.html#roadmap",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Roadmap",
-    "text": "Roadmap\n\nWhat language models do\n\nTokens and embeddings\n\nContext and attention\n\nTransformer architecture\n\nTraining and alignment\n\nStrengths, limits, and interpretation"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#what-is-a-language-model",
-    "href": "slides/03-31-2026/index.html#what-is-a-language-model",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "What is a language model?",
-    "text": "What is a language model?\nA language model estimates the probability of the next token from earlier tokens:\n\nP(t_k \\mid t_1, t_2, \\ldots, t_{k-1})\n\n\n\n\n\n\n\nflowchart LR\n    A[\"The\"] --&gt; B[\"cat\"] --&gt; C[\"sat\"] --&gt; D[\"on\"] --&gt; E[\"the\"] --&gt; F{\"next token?\"}\n    F --&gt; G[\"mat\"]\n    F --&gt; H[\"floor\"]\n    F --&gt; I[\"chair\"]\n\n\n\n\n\n\n\nCore idea: generation is repeated next-token prediction."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#tokens-the-models-working-units",
-    "href": "slides/03-31-2026/index.html#tokens-the-models-working-units",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Tokens: the model’s working units",
-    "text": "Tokens: the model’s working units\n\n\n\nLLMs usually do not read whole words directly.\nThey read tokens, such as:\n\nfull words\nsubwords\npunctuation\nnumber pieces\n\nTokenization helps with rare words and open vocabularies.\n\n\n\nExample tokenizations\n\n\n\nText\nPossible tokens\n\n\n\n\nunbelievable\nun, believ, able\n\n\n2026\n20, 26\n\n\ncan’t\ncan, 't\n\n\n\n\nDifferent tokenizers split differently. The point is to turn raw text into reusable units."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#from-text-to-vectors",
-    "href": "slides/03-31-2026/index.html#from-text-to-vectors",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "From text to vectors",
-    "text": "From text to vectors\n\n\n\n\n\n\nflowchart LR\n    A[\"Raw text\"] --&gt; B[\"Tokenizer\"]\n    B --&gt; C[\"Token IDs\"]\n    C --&gt; D[\"Embedding lookup\"]\n    D --&gt; E[\"Dense vectors\"]\n    E --&gt; F[\"Transformer layers\"]\n    F --&gt; G[\"Next-token probabilities\"]\n\n\n\n\n\n\n\nEmbedding: a learned vector representation for a token or other object."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#what-is-an-embedding",
-    "href": "slides/03-31-2026/index.html#what-is-an-embedding",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "What is an embedding?",
-    "text": "What is an embedding?\n\n\nAn embedding places items in a high-dimensional space so that related items often end up near one another.\nWhy useful:\n\nsimilarity becomes geometric\nclusters can emerge\nmodels can generalize beyond exact memorization\n\n\n\n\n  \n  \n  \n  dimension 1\n  dimension 2\n\n  cat\n  kitten\n  dog\n\n  Paris\n  London\n  Tokyo\n\n\nIllustrative only: actual embeddings live in many dimensions."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#geometric-intuitionand-caution",
-    "href": "slides/03-31-2026/index.html#geometric-intuitionand-caution",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Geometric intuition—and caution",
-    "text": "Geometric intuition—and caution\n\n\nGood intuition\nNearby points often mean similar usage or context.\n\n\nBut not perfect\nDistance is learned from data, not hand-written meaning.\n\n\nAlso important\nEmbeddings can encode bias, noise, and spurious correlations."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#static-vs-contextual-embeddings",
-    "href": "slides/03-31-2026/index.html#static-vs-contextual-embeddings",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Static vs contextual embeddings",
-    "text": "Static vs contextual embeddings\n\n\nStatic embedding - one vector per word type - same bank everywhere\n\n\nContextual embedding - vector depends on surrounding text - bank changes with sentence context\n\n\n\n\n\n\n\n\nflowchart TB\n    A[\"river bank was muddy\"] --&gt; B[\"bank\"]\n    C[\"bank approved the loan\"] --&gt; D[\"bank\"]\n    B --&gt; E[\"contextual vector A\"]\n    D --&gt; F[\"contextual vector B\"]\n\n\n\n\n\n\n\nThis shift toward context-sensitive representations is one reason transformer systems became so effective."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#why-earlier-sequence-models-struggled",
-    "href": "slides/03-31-2026/index.html#why-earlier-sequence-models-struggled",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Why earlier sequence models struggled",
-    "text": "Why earlier sequence models struggled\n\n\nEarlier approaches included:\n\nn-gram models\nRNNs\nLSTMs / GRUs\n\nCommon problems:\n\nweak long-range memory\nharder parallel training\nunstable signals over long sequences\n\n\n\n\n  \n  \n  \n  \n  h₁\n  h₂\n  h₃\n  h₄\n  \n  \n  \n  token 1\n  token 2\n  token 3\n  token 4\n\n\nSequential dependence made training harder to parallelize."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#the-transformer-breakthrough",
-    "href": "slides/03-31-2026/index.html#the-transformer-breakthrough",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "The transformer breakthrough",
-    "text": "The transformer breakthrough\nThe 2017 transformer paper replaced recurrence with attention-heavy computation.\n\n\n\n\n\n\nflowchart LR\n    A[\"Input sequence\"] --&gt; B[\"Attention\"]\n    B --&gt; C[\"Feed-forward\"]\n    C --&gt; D[\"Repeated layers\"]\n    D --&gt; E[\"Output probabilities\"]\n\n\n\n\n\n\n\nWhy this mattered:\n\nstronger long-range interactions\nbetter parallelization\nexcellent scaling with data and compute"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#a-simple-transformer-picture",
-    "href": "slides/03-31-2026/index.html#a-simple-transformer-picture",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "A simple transformer picture",
-    "text": "A simple transformer picture\n\n\n\n\n\n\nflowchart TB\n    A[\"Token embeddings + position\"] --&gt; B[\"Self-attention\"]\n    B --&gt; C[\"Add & normalize\"]\n    C --&gt; D[\"Feed-forward network\"]\n    D --&gt; E[\"Add & normalize\"]\n    E --&gt; F[\"Repeat many times\"]\n    F --&gt; G[\"Vocabulary scores\"]\n\n\n\n\n\n\n\nFor text generation, many modern LLMs use a decoder-style transformer."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#why-position-must-be-added",
-    "href": "slides/03-31-2026/index.html#why-position-must-be-added",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Why position must be added",
-    "text": "Why position must be added\nEmbeddings alone do not encode order.\n\n\nSentence A\nDog bites man.\n\n\nSentence B\nMan bites dog.\n\n\nSame words, different order, different meaning.\nSo transformers add positional information:\n\nlearned positional vectors\nsinusoidal encodings\nrelative position methods in newer variants"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#self-attention-the-core-mechanism",
-    "href": "slides/03-31-2026/index.html#self-attention-the-core-mechanism",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Self-attention: the core mechanism",
-    "text": "Self-attention: the core mechanism\nSelf-attention lets each token look at other tokens and weight their relevance.\n\n\n\n\n\n\ngraph LR\n    A[\"The\"] --- D[\"animal\"]\n    B[\"tired\"] --- D\n    C[\"dog\"] --- D\n    E[\"slept\"] --- D\n\n\n\n\n\n\n\nWhen building the representation for one token, the model can ask:\n\nWhich earlier words matter most here?\nWhich words resolve ambiguity?\nWhich words define topic or syntax?"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#query-key-and-value-intuition",
-    "href": "slides/03-31-2026/index.html#query-key-and-value-intuition",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Query, key, and value intuition",
-    "text": "Query, key, and value intuition\n\n\n\nQuery: what this token is looking for\n\nKey: what this token offers as a match\n\nValue: the information it can contribute\n\n\n\n\n  \n  Query\n  \n  Key\n  \n  Value\n\n  \n  \n\n  1. compare Q to K\n  2. turn scores into weights\n  3. mix V using those weights\n  → context-sensitive representation"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#attention-as-weighted-influence",
-    "href": "slides/03-31-2026/index.html#attention-as-weighted-influence",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Attention as weighted influence",
-    "text": "Attention as weighted influence\n\n\\text{Attention}(Q,K,V)=\\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V\n\nYou do not need every algebraic detail to get the idea:\n\ncompare token features\ncompute relevance weights\nblend information from multiple positions\n\nThe result is a new representation that depends on context."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#multi-head-attention",
-    "href": "slides/03-31-2026/index.html#multi-head-attention",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Multi-head attention",
-    "text": "Multi-head attention\n\n\n\n\n\n\nflowchart TB\n    A[\"Input representations\"] --&gt; B1[\"Head 1\"]\n    A --&gt; B2[\"Head 2\"]\n    A --&gt; B3[\"Head 3\"]\n    A --&gt; B4[\"Head 4\"]\n    B1 --&gt; C[\"Concatenate\"]\n    B2 --&gt; C\n    B3 --&gt; C\n    B4 --&gt; C\n    C --&gt; D[\"Project to new representation\"]\n\n\n\n\n\n\n\nDifferent heads can learn different relational patterns, though their roles are not always cleanly interpretable."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#from-hidden-states-to-next-token-prediction",
-    "href": "slides/03-31-2026/index.html#from-hidden-states-to-next-token-prediction",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "From hidden states to next-token prediction",
-    "text": "From hidden states to next-token prediction\n\n\n\n\n\n\nflowchart LR\n    A[\"Current hidden state\"] --&gt; B[\"Vocabulary scores (logits)\"]\n    B --&gt; C[\"Probabilities\"]\n    C --&gt; D[\"Select / sample next token\"]\n    D --&gt; E[\"Append token\"]\n    E --&gt; F[\"Repeat\"]\n\n\n\n\n\n\n\nThis loop is autoregressive generation."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#how-llms-are-trained",
-    "href": "slides/03-31-2026/index.html#how-llms-are-trained",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "How LLMs are trained",
-    "text": "How LLMs are trained\n\n\nPretraining usually involves:\n\ncollect massive text data\n\ntokenize it\n\npredict held-out next tokens\n\nupdate parameters to reduce error\n\nrepeat many times\n\n\n\nWhat is learned?\n\ngrammar\ndiscourse patterns\nstyle regularities\nbroad factual patterns in the data\nreusable internal features"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#scaling-helpsbut-it-is-not-magic",
-    "href": "slides/03-31-2026/index.html#scaling-helpsbut-it-is-not-magic",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Scaling helps—but it is not magic",
-    "text": "Scaling helps—but it is not magic\n\n\n  \n  \n  \n  \n  compute / data / parameters\n  capability\n\n\nConceptual only: more scale often improves performance, but not without cost.\n\n\nTrade-offs include compute cost, energy use, latency, and harder safety evaluation."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#fine-tuning-instruction-tuning-and-alignment",
-    "href": "slides/03-31-2026/index.html#fine-tuning-instruction-tuning-and-alignment",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Fine-tuning, instruction tuning, and alignment",
-    "text": "Fine-tuning, instruction tuning, and alignment\n\n\n\n\n\n\nflowchart LR\n    A[\"Pretrained base model\"] --&gt; B[\"Supervised fine-tuning\"]\n    B --&gt; C[\"Preference / feedback tuning\"]\n    C --&gt; D[\"Aligned assistant behavior\"]\n\n\n\n\n\n\n\nPost-training aims to make the system:\n\nfollow instructions\nbe more useful in conversation\nreduce unsafe or low-quality outputs\nbetter match human preferences"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#how-a-system-like-chatgpt-differs-from-a-raw-base-model",
-    "href": "slides/03-31-2026/index.html#how-a-system-like-chatgpt-differs-from-a-raw-base-model",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "How a system like ChatGPT differs from a raw base model",
-    "text": "How a system like ChatGPT differs from a raw base model\n\n\nBase model predicts next tokens\n\n\nPost-training instruction following, preference shaping, safety\n\n\nSystem layer prompting, tools, formatting, policies\n\n\nA deployed assistant is usually more than just the pretrained model."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#what-understanding-means-here",
-    "href": "slides/03-31-2026/index.html#what-understanding-means-here",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "What “understanding” means here",
-    "text": "What “understanding” means here\n\n\nStrong appearance of understanding - explanation - summarization - translation - coding help - question answering\n\n\nReasons for caution - no guaranteed grounding - confidence ≠ truth - behavior can be brittle - “understanding” remains debated"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#why-llms-hallucinate-and-fail",
-    "href": "slides/03-31-2026/index.html#why-llms-hallucinate-and-fail",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Why LLMs hallucinate and fail",
-    "text": "Why LLMs hallucinate and fail\n\n\nHallucination\nplausible but false output\n\n\nBias / distortion\ntraining data patterns reappear\n\n\nReasoning brittleness\nmulti-step tasks can break\n\n\n\n\nContext misses\nimportant prompt detail is ignored\n\n\nKnowledge limits\npost-training events may be unknown\n\n\nOverconfidence\nstyle can sound firmer than evidence"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#a-compact-mental-model",
-    "href": "slides/03-31-2026/index.html#a-compact-mental-model",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "A compact mental model",
-    "text": "A compact mental model\n\n\n\n\n\n\nflowchart LR\n    A[\"Text\"] --&gt; B[\"Tokens\"]\n    B --&gt; C[\"Embeddings\"]\n    C --&gt; D[\"Attention + transformer layers\"]\n    D --&gt; E[\"Predicted next token\"]\n    E --&gt; F[\"Repeat\"]\n    D --&gt; G[\"Post-training / alignment\"]\n    G --&gt; H[\"Assistant behavior\"]"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#discussion-questions",
-    "href": "slides/03-31-2026/index.html#discussion-questions",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Discussion questions",
-    "text": "Discussion questions\n\nIn what sense are embeddings a geometry of meaning?\n\nWhy did transformers scale better than RNNs?\n\nDoes next-token prediction produce reasoning, or simulate it?\n\nWhy can a model sound confident while being wrong?\n\nWhich matters more in practice: pretraining scale or post-training alignment?"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#takeaways",
-    "href": "slides/03-31-2026/index.html#takeaways",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "Takeaways",
-    "text": "Takeaways\n\nTokenization breaks text into manageable units.\nEmbeddings map those units into vector space.\nAttention lets tokens influence one another contextually.\nTransformers scale this idea very effectively.\nTraining + post-training turn a predictor into a usable assistant.\nLimits remain fundamental, not incidental."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#references",
-    "href": "slides/03-31-2026/index.html#references",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "References",
-    "text": "References\n\nGoogle. Machine Learning Crash Course: Embeddings module. https://developers.google.com/machine-learning/crash-course/embeddings\nGoogle. Machine Learning Crash Course: Introduction to Large Language Models. https://developers.google.com/machine-learning/crash-course/llm\nGoogle. LLMs: What’s a large language model? https://developers.google.com/machine-learning/crash-course/llm/transformers\nVaswani, Ashish, et al. 2017. “Attention Is All You Need.” Advances in Neural Information Processing Systems. https://arxiv.org/abs/1706.03762\nOuyang, Long, et al. 2022. “Training Language Models to Follow Instructions with Human Feedback.” NeurIPS. https://arxiv.org/abs/2203.02155"
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#this-specific-form-of-intelligence",
-    "href": "slides/03-31-2026/index.html#this-specific-form-of-intelligence",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "This Specific Form of Intelligence",
-    "text": "This Specific Form of Intelligence\n\n\n\nLLMs now power chat, search, summarization, coding help, and tutoring.\nThree ideas explain much of their behavior:\n\ntokens\nembeddings\ntransformers\n\nModern systems add a fourth idea too:\n\nalignment / post-training\n\n\n\n\n\n  \n  Tokens\n\n  \n  Embeddings\n\n  \n  Transformers\n\n  \n  LLM Assistant\n\n  \n  \n  \n  \n\n\nFrom text units to a deployed assistant."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#origins-early-neural-ideas-and-the-birth-of-ai",
-    "href": "slides/03-31-2026/index.html#origins-early-neural-ideas-and-the-birth-of-ai",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "1. Origins: early neural ideas and the birth of AI",
-    "text": "1. Origins: early neural ideas and the birth of AI\n\n\n1940s–1950s - In 1943, Warren McCulloch and Walter Pitts published a simplified mathematical model of a neuron and showed how networks of such units could implement logical operations. - In 1956, the Dartmouth Summer Research Project helped define artificial intelligence as a field and popularized the term itself. - Early AI combined several ambitions: - symbolic reasoning - machine learning - search and planning - neural models inspired by brains\n\n\n\n  \n  \n  \n  1943\n  McCulloch–Pitts\n  1956\n  Dartmouth workshop\n\n\n\n\nSources: McCulloch & Pitts (1943); Dartmouth AI history pages."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#perceptrons-optimism-and-the-first-setbacks",
-    "href": "slides/03-31-2026/index.html#perceptrons-optimism-and-the-first-setbacks",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "2. Perceptrons, optimism, and the first setbacks",
-    "text": "2. Perceptrons, optimism, and the first setbacks\n\n\nLate 1950s–1970s - Frank Rosenblatt’s perceptron (1958) made neural learning seem highly promising. - Perceptrons could learn linear decision boundaries from examples. - But enthusiasm outpaced capability: - early systems were limited - compute was weak - data were scarce - Critiques of single-layer perceptrons, especially their inability to solve some nonlinearly separable problems, contributed to a slowdown in neural-network enthusiasm.\n\n\nWhy this mattered - AI did not progress in a straight line. - Periods of excitement were followed by disappointment. - This helps explain later AI winters and why symbolic AI often overshadowed neural approaches for a time.\n\n\n\nSources: Rosenblatt (1958); historical reviews of neural networks and AI."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#backpropagation-expert-systems-and-statistical-learning",
-    "href": "slides/03-31-2026/index.html#backpropagation-expert-systems-and-statistical-learning",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "3. Backpropagation, expert systems, and statistical learning",
-    "text": "3. Backpropagation, expert systems, and statistical learning\n\n\n1980s–1990s - In the 1980s, backpropagation became the key training method for multi-layer neural networks. - The famous 1986 Rumelhart, Hinton, and Williams paper showed how internal representations could be learned across layers. - At the same time, AI also advanced through: - expert systems - probabilistic models - statistical pattern recognition - In the 1990s, neural nets remained important, but other methods often dominated practical machine learning.\n\n\n\n  \n  \n  \n\n  \n  \n\n  \n\n  \n  \n  \n  \n  \n  \n  \n  \n\n\nBackpropagation made deeper, multi-layer learning much more practical.\n\n\n\n\nSources: Rumelhart, Hinton & Williams (1986); LeCun, Bengio & Hinton (2015)."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#deep-learnings-resurgence",
-    "href": "slides/03-31-2026/index.html#deep-learnings-resurgence",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "4. Deep learning’s resurgence",
-    "text": "4. Deep learning’s resurgence\n\n\n2000s–2010s - Three things changed the field: 1. much more digital data 2. far more compute, especially GPUs 3. better training methods and architectures - Neural networks began to dominate difficult perception tasks such as: - speech recognition - image classification - machine translation - By the mid-2010s, deep learning had become central to AI research and industry.\n\n\nKey idea Deep learning systems learn layered representations automatically rather than relying only on hand-crafted features.\nConsequence AI moved from brittle rule systems toward large-scale representation learning from data.\n\n\n\nSources: LeCun, Bengio & Hinton (2015); broad historical overviews of modern AI."
-  },
-  {
-    "objectID": "slides/03-31-2026/index.html#transformers-foundation-models-and-the-llm-era",
-    "href": "slides/03-31-2026/index.html#transformers-foundation-models-and-the-llm-era",
-    "title": "Intelligence, AI, and LLM’s",
-    "section": "5. Transformers, foundation models, and the LLM era",
-    "text": "5. Transformers, foundation models, and the LLM era\n\n\nLate 2010s–2020s - In 2017, the transformer architecture showed that attention could replace recurrence for many sequence tasks. - This architecture scaled extremely well with data and compute. - Large pretrained models then became capable of: - text generation - summarization - translation - coding assistance - question answering - Today’s LLMs sit at the intersection of: - neural-network history - large-scale optimization - language modeling - post-training alignment\n\n\n\n  \n  Neurons\n\n  \n  Perceptrons\n\n  \n  Deep nets\n\n  \n  LLMs\n\n  \n  \n  \n\n\n\n\nBottom line: modern LLMs are not a sudden break from history; they are the latest stage in a long sequence of ideas about representation, learning, and computation.\n\n\nSources: Vaswani et al. (2017); Google ML Crash Course LLM materials; Ouyang et al. (2022)."
   }
 ]

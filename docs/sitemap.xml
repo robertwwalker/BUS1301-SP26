@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/Syllabus/index.html</loc>
-    <lastmod>2026-03-17T19:43:08.657Z</lastmod>
+    <lastmod>2026-03-20T00:22:10.275Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/causality/index.html</loc>
@@ -45,8 +45,12 @@
     <lastmod>2026-03-17T19:43:08.674Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/index.html</loc>
-    <lastmod>2026-03-17T19:43:08.656Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/ChatGPT-Intelligence/index.html</loc>
+    <lastmod>2026-03-31T18:39:46.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-31-2026/index.html</loc>
+    <lastmod>2026-03-31T19:13:36.769Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-10-2026/index.html</loc>
@@ -83,6 +87,10 @@
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-13-2026/index.html</loc>
     <lastmod>2026-03-17T19:43:07.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-31-2026/index.html</loc>
+    <lastmod>2026-03-31T19:17:51.791Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-17-2026/index.html</loc>
@@ -169,6 +177,10 @@
     <lastmod>2026-03-17T19:43:07.726Z</lastmod>
   </url>
   <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-19-2026/index.html</loc>
+    <lastmod>2026-03-20T00:22:10.275Z</lastmod>
+  </url>
+  <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/index.html</loc>
     <lastmod>2026-03-17T19:43:07.727Z</lastmod>
   </url>
@@ -207,6 +219,10 @@
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-17-2026/index.html</loc>
     <lastmod>2026-03-20T08:10:46.899Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/index.html</loc>
+    <lastmod>2026-03-17T19:43:08.656Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/ChatGPT-Models/index.html</loc>
@@ -251,21 +267,5 @@
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/index.html</loc>
     <lastmod>2026-03-17T19:43:08.846Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-19-2026/index.html</loc>
-    <lastmod>2026-03-19T17:14:44.960Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/ChatGPT-Intelligence/index.html</loc>
-    <lastmod>2026-03-31T18:39:46.499Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-31-2026/index.html</loc>
-    <lastmod>2026-03-31T18:32:08.088Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-31-2026/index.html</loc>
-    <lastmod>2026-03-31T19:13:36.769Z</lastmod>
   </url>
 </urlset>
