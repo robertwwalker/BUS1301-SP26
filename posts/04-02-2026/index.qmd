@@ -1,0 +1,26 @@
+---
+title: "AI and LLMs: Parameters"
+author: "Robert W. Walker"
+date: "2026-04-02"
+image: "image.png"
+---
+
+```{r setup,include=FALSE}
+library(reticulate)
+```
+
+[Some Math Slides](https://robertwwalker.github.io/BUS1301-SP26/writeups/NN-History/)
+
+LLM's are models.  Models have **parameters**, in many cases.
+
+
+## Slides
+
+[Slides](https://robertwwalker.github.io/BUS1301-SP26/slides/04-02-2026/index.html)
+
+## The class plan:
+
+1. Models and parameters.
+2. LLM Parameters from IBM: Temperature and others.   
+3. Hyperparameters.    
+4. Local LLMs and details of implementation.   

@@ -2879,14 +2879,14 @@
   {
     "objectID": "posts/03-31-2026/index.html",
     "href": "posts/03-31-2026/index.html",
-    "title": "AI and LLMs",
+    "title": "AI and LLMs: Parameters",
     "section": "",
-    "text": "What is artificial intelligence and what is an LLM?\nFirst, intelligence."
+    "text": "Some Math Slides\nLLM’s are models. Models have parameters, in many cases.\nFirst, intelligence. A writeup"
   },
   {
     "objectID": "posts/03-31-2026/index.html#the-class-plan",
     "href": "posts/03-31-2026/index.html#the-class-plan",
-    "title": "AI and LLMs",
+    "title": "AI and LLMs: Parameters",
     "section": "The class plan:",
     "text": "The class plan:\n\nThe Google Explainer on Large Language Models(https://developers.google.com/machine-learning/crash-course/llm)\n\nThis should probably have been preceded by embeddings.\nWhy the following matters. What is artificial intelligence? Doesn’t that require defining the non-artificial variety? What is that?"
   },
@@ -3245,7 +3245,7 @@
     "href": "index.html",
     "title": "BUS1301-SP26",
     "section": "",
-    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAI and LLMs\n\n\n\n\n\n\n\n\nMar 31, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nHuman Resource Management Analytics\n\n\n\n\n\n\n\n\nMar 19, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nOperations, Finance and Accounting\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nRelationships\n\n\n\n\n\n\n\n\nMar 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nHypothesis Testing and Relationships\n\n\n\n\n\n\n\n\nMar 10, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nInference and Sampling\n\n\n\n\n\n\n\n\nMar 5, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nInference\n\n\n\n\n\n\n\n\nMar 3, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nInference\n\n\n\n\n\n\n\n\nFeb 26, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability and Inference\n\n\n\n\n\n\n\n\nFeb 24, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Distributions\n\n\n\n\n\n\n\n\nFeb 19, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Distributions\n\n\n\n\n\n\n\n\nFeb 17, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability and Tables, II\n\n\n\n\n\n\n\n\nFeb 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability and Tables, I\n\n\n\n\n\n\n\n\nFeb 10, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nData Quality\n\n\n\n\n\n\n\n\nFeb 5, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWhere do Data Come From?\n\n\n\n\n\n\n\n\nFeb 3, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\n\n\n\n\n\nJan 29, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\n\n\n\n\n\nJan 27, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nData Storage\n\n\n\n\n\n\n\n\nJan 22, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nTypes of Data\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
+    "text": "obertwwalker.github.io \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAI and LLMs: Parameters\n\n\n\n\n\n\n\n\nApr 2, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nAI and LLMs: Parameters\n\n\n\n\n\n\n\n\nMar 31, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nHuman Resource Management Analytics\n\n\n\n\n\n\n\n\nMar 19, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nOperations, Finance and Accounting\n\n\n\n\n\n\n\n\nMar 17, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nRelationships\n\n\n\n\n\n\n\n\nMar 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nHypothesis Testing and Relationships\n\n\n\n\n\n\n\n\nMar 10, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nInference and Sampling\n\n\n\n\n\n\n\n\nMar 5, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nInference\n\n\n\n\n\n\n\n\nMar 3, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nInference\n\n\n\n\n\n\n\n\nFeb 26, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability and Inference\n\n\n\n\n\n\n\n\nFeb 24, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Distributions\n\n\n\n\n\n\n\n\nFeb 19, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability Distributions\n\n\n\n\n\n\n\n\nFeb 17, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability and Tables, II\n\n\n\n\n\n\n\n\nFeb 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nProbability and Tables, I\n\n\n\n\n\n\n\n\nFeb 10, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nData Quality\n\n\n\n\n\n\n\n\nFeb 5, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWhere do Data Come From?\n\n\n\n\n\n\n\n\nFeb 3, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\n\n\n\n\n\nJan 29, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\n\n\n\n\n\nJan 27, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nData Storage\n\n\n\n\n\n\n\n\nJan 22, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nTypes of Data\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nOn Models\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nA Syllabus and Models\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nRobert W. Walker\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To BUS 1301: Managing with AI\n\n\n\n\n\n\n\n\nJan 12, 2026\n\n\nRobert W. Walker\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/01-15-2026/index.html",
@@ -5368,5 +5368,439 @@
       "About",
       "Write-ups"
     ]
+  },
+  {
+    "objectID": "writeups/AI-Models/index.html",
+    "href": "writeups/AI-Models/index.html",
+    "title": "The Building Blocks of AI: Models",
+    "section": "",
+    "text": "Overview\nI will survey the common models in use and development that generically characterize neural networks.\nA set of pdf notes.\n\n\n\n\nOn Causality\nCausation is at the heart of the highest order human reasoning. Doing so with data is an objective if not an end result of modern fascination with machine learning. Yet, these are age old philosophical questions and modern work at the intersection of data and causation is perhaps best exemplified in the work of Judea Pearl. His most recent work, The Book of Why, details a lifetime of investigating causes and causal models at the intersection of computing, philosophy, and statistics. Though wide ranging, his podcast with Lex Fridman is worth listening to. The excerpt on correlation and causation is very useful.\nHe develops a ladder of causation. This is quite well explained in this two page primer.\n\nAssociational\nInterventional\nCounterfactual\n\nWe want to understand precisely how these various levels influence what we learn from data and deploy data to accomplish.\nJudea Pearl’s website\nThe book on statistics and causal inference\nA lecture on the Book of Why\nSections 2.1 to 2.10 of the Causal Mixtape are a very succinct read."
+  },
+  {
+    "objectID": "writeups/NN-History/index.html",
+    "href": "writeups/NN-History/index.html",
+    "title": "Minds Made of Math",
+    "section": "",
+    "text": "Minds Made of Math\n\n\nA History of Neural Networks —\nfrom McCulloch & Pitts to the Transformer Era"
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#section",
+    "href": "writeups/NN-History/index.html#section",
+    "title": "Minds Made of Math",
+    "section": "",
+    "text": "Minds Made of Math\n\n\nA History of Neural Networks —\nfrom McCulloch & Pitts to the Transformer Era"
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#the-biological-spark",
+    "href": "writeups/NN-History/index.html#the-biological-spark",
+    "title": "Minds Made of Math",
+    "section": "The Biological Spark",
+    "text": "The Biological Spark\n\n1943 – 1956 · Dawn Era\n\n\n\nThe core question: Can biological intelligence be reduced to mathematical logic?\nIn 1943, McCulloch & Pitts proposed a formal neuron that fires based on a threshold of weighted inputs.\n\n\n\nLogic as Computation: By tuning weights (w) and a threshold (θ), this model can act as AND, OR, and NOT gates, suggesting that reasoning itself is a computational process.\n\n\n\nThis structure—inputs, weights, and sum—remains the mathematical skeleton of all modern AI.\n\n\n\nThe Formal Neuron\ny = 1 if Σ wᵢ xᵢ ≥ θ y = 0 otherwise\n\n\n\n1943 McCulloch & Pitts paper\n\n\n1949 Hebbian Learning: wᵢⱼ update"
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#the-perceptron-linear-geometry",
+    "href": "writeups/NN-History/index.html#the-perceptron-linear-geometry",
+    "title": "Minds Made of Math",
+    "section": "The Perceptron: Linear Geometry",
+    "text": "The Perceptron: Linear Geometry\n\n1957 – 1969 · The First Wave\n\n\n\nFrank Rosenblatt (1958) built on the formal neuron to create the Perceptron, adding a learning rule.\nThe Geometry of Decision: A single neuron defines a linear hyperplane in n-dimensional space. This flat boundary attempts to partition the data into two distinct regions.\n\n\n\nConvergence Theorem: If the data is linearly separable, the model is mathematically guaranteed to find a boundary that correctly classifies every point in finite time.\n\n\n\n\n\n\nBoundary Equation w · x + b = 0\nLearning Rule Δw = η(y - ŷ)x"
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#the-xor-wall-the-first-winter",
+    "href": "writeups/NN-History/index.html#the-xor-wall-the-first-winter",
+    "title": "Minds Made of Math",
+    "section": "The XOR Wall & the First Winter",
+    "text": "The XOR Wall & the First Winter\n\n1969 – 1980 · First AI Winter\n\n\n\nIn 1969, Minsky & Papert proved that single-layer perceptrons cannot solve problems that are not linearly separable.\nThe XOR Problem: XOR requires a non-linear boundary. In a 2D space, no single straight line can separate (0,0) and (1,1) from (0,1) and (1,0).\n\n\n\nMathematical Deadlock: The inability to mathematically train hidden layers (which could theoretically warp the space to make it separable) led to the first “AI Winter.”\n\n\n\n\n\nXOR Logic Truth Table\nx1  x2  | y\n--------|--\n 0   0  | 0\n 0   1  | 1\n 1   0  | 1\n 1   1  | 0\n(No single straight line can divide the 1s from the 0s)"
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#backpropagation-the-chain-rule",
+    "href": "writeups/NN-History/index.html#backpropagation-the-chain-rule",
+    "title": "Minds Made of Math",
+    "section": "Backpropagation & the Chain Rule",
+    "text": "Backpropagation & the Chain Rule\n\n1986 – 1998 · The Second Wave\n\n\n\nThe breakthrough came with the ability to calculate “credit” for errors in deep layers. Backpropagation (1986) treats the network as a computational graph and uses the multivariate chain rule to calculate the gradient of the loss.\n\nGradient Flow Calculation ∂L/∂w = (∂L/∂y) · (∂y/∂z) · (∂z/∂w)\n\nOptimization now becomes a formal calculus process: we update weights via Gradient Descent: w ← w - η∇L\n\n\n\n\n\nThe Geometric Insight: Every hidden layer transforms the geometry of the data. A deep network warps the input space so that complex problems (like XOR) become linearly separable at the final output layer."
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#the-activation-wall-sigmoid-vs.-relu",
+    "href": "writeups/NN-History/index.html#the-activation-wall-sigmoid-vs.-relu",
+    "title": "Minds Made of Math",
+    "section": "The Activation Wall: Sigmoid vs. ReLU",
+    "text": "The Activation Wall: Sigmoid vs. ReLU\n\n1990s – 2012 · Vanishing Gradients"
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#the-saturation-trap",
+    "href": "writeups/NN-History/index.html#the-saturation-trap",
+    "title": "Minds Made of Math",
+    "section": "The Saturation Trap",
+    "text": "The Saturation Trap\nEarly deep networks used Sigmoid functions. As inputs move away from zero, the derivative approaches 0 (peaking at only 0.25).\nWhen multiplying these small gradients across many layers via the chain rule, the mathematical signal vanishes. The bottom layers simply stop learning."
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#the-relu-solution",
+    "href": "writeups/NN-History/index.html#the-relu-solution",
+    "title": "Minds Made of Math",
+    "section": "The ReLU Solution",
+    "text": "The ReLU Solution\nReLU (max(0, x)) has a constant derivative of 1 for all positive values. This allows gradients to travel backward through hundreds of layers without shrinking.\n\nSigmoid’(z) ∈ (0, 0.25] ReLU’(z) = 1 for z &gt; 0\n\nThis constant slope is the specific mathematical engine that allowed networks to finally grow deep."
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#transformers-attention-as-alignment",
+    "href": "writeups/NN-History/index.html#transformers-attention-as-alignment",
+    "title": "Minds Made of Math",
+    "section": "Transformers: Attention as Alignment",
+    "text": "Transformers: Attention as Alignment\nTransformers (2017) discarded sequential processing for Self-Attention, allowing every word in a sequence to “look” at every other word simultaneously.\n\nAttention(Q, K, V) = softmax( (Q · Kᵀ) / √d ) · V"
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#matrix",
+    "href": "writeups/NN-History/index.html#matrix",
+    "title": "Minds Made of Math",
+    "section": "Matrix",
+    "text": "Matrix\n\n\n\n\nThe Similarity Matrix: Q·Kᵀ calculates a dot-product alignment score between Query and Key vectors. This dynamically determines how much mathematical “attention” one token should pay to another."
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#scaling",
+    "href": "writeups/NN-History/index.html#scaling",
+    "title": "Minds Made of Math",
+    "section": "Scaling",
+    "text": "Scaling\nThe scaling factor 1/√d prevents the dot products from growing too large, which would otherwise push the softmax function into saturated regions with extremely small gradients."
+  },
+  {
+    "objectID": "writeups/NN-History/index.html#the-through-line",
+    "href": "writeups/NN-History/index.html#the-through-line",
+    "title": "Minds Made of Math",
+    "section": "The Through-Line",
+    "text": "The Through-Line\n80 Years of One Equation\nEvery milestone shares the 1943 skeleton: weighted inputs, a non-linearity, and a learning signal.\n\nDepth: 1 layer → 1,000+ layers.\nData: Toy sets → The entire Web.\nLearning: Manual rules → Self-supervised Gradient Descent.\n\nScale is the new variable. While the math is refined (ReLU, Attention), the primary driver of the current era is the discovery that these simple geometric rules exhibit emergent capabilities at extreme scale."
+  },
+  {
+    "objectID": "posts/03-31-2026/index.html#slides",
+    "href": "posts/03-31-2026/index.html#slides",
+    "title": "AI and LLMs: Parameters",
+    "section": "Slides",
+    "text": "Slides\nSlides"
+  },
+  {
+    "objectID": "posts/04-02-2026/index.html",
+    "href": "posts/04-02-2026/index.html",
+    "title": "AI and LLMs: Parameters",
+    "section": "",
+    "text": "Some Math Slides\nLLM’s are models. Models have parameters, in many cases."
+  },
+  {
+    "objectID": "posts/04-02-2026/index.html#slides",
+    "href": "posts/04-02-2026/index.html#slides",
+    "title": "AI and LLMs: Parameters",
+    "section": "Slides",
+    "text": "Slides\nSlides"
+  },
+  {
+    "objectID": "posts/04-02-2026/index.html#the-class-plan",
+    "href": "posts/04-02-2026/index.html#the-class-plan",
+    "title": "AI and LLMs: Parameters",
+    "section": "The class plan:",
+    "text": "The class plan:\n\nModels and parameters.\nLLM Parameters from IBM: Temperature and others.\n\nHyperparameters.\n\nLocal LLMs and details of implementation."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#outline",
+    "href": "slides/04-02-2026/index.html#outline",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Outline",
+    "text": "Outline\n\nThe Basics of LLM’s.\n\nEmbeddings.\n\nAttention is all you need.\n\n\nThe Prediction.\n\nThe Context.\n\nThe Parameters."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#this-specific-form-of-intelligence",
+    "href": "slides/04-02-2026/index.html#this-specific-form-of-intelligence",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "This Specific Form of Intelligence",
+    "text": "This Specific Form of Intelligence\n\n\n\nLLMs now power chat, search, summarization, coding help, and tutoring.\nThree ideas explain much of their behavior:\n\ntokens\nembeddings\ntransformers\n\nModern systems add a fourth idea too:\n\nalignment / post-training\n\n\n\n\n\n  \n  Tokens\n\n  \n  Embeddings\n\n  \n  Transformers\n\n  \n  LLM Assistant\n\n  \n  \n  \n  \n\n\nFrom text units to a deployed assistant."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#roadmap",
+    "href": "slides/04-02-2026/index.html#roadmap",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Roadmap",
+    "text": "Roadmap\n\nWhat language models do\n\nTokens and embeddings\n\nContext and attention\n\nTransformer architecture\n\nTraining and alignment\n\nStrengths, limits, and interpretation"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#what-is-a-language-model",
+    "href": "slides/04-02-2026/index.html#what-is-a-language-model",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "What is a language model?",
+    "text": "What is a language model?\nA language model estimates the probability of the next token from earlier tokens:\n\nP(t_k \\mid t_1, t_2, \\ldots, t_{k-1})"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#tokens-the-models-working-units",
+    "href": "slides/04-02-2026/index.html#tokens-the-models-working-units",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Tokens: the model’s working units",
+    "text": "Tokens: the model’s working units\n\n\n\nLLMs usually do not read whole words directly.\nThey read tokens, such as:\n\nfull words\nsubwords\npunctuation\nnumber pieces\n\nTokenization helps with rare words and open vocabularies.\n\n\n\nExample tokenizations\n\n\n\nText\nPossible tokens\n\n\n\n\nunbelievable\nun, believ, able\n\n\n2026\n20, 26\n\n\ncan’t\ncan, 't\n\n\n\n\nDifferent tokenizers split differently. The point is to turn raw text into reusable units."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#from-text-to-vectors",
+    "href": "slides/04-02-2026/index.html#from-text-to-vectors",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "From text to vectors",
+    "text": "From text to vectors\n\n\n\n\n\n\nflowchart LR\n    A[\"Raw text\"] --&gt; B[\"Tokenizer\"]\n    B --&gt; C[\"Token IDs\"]\n    C --&gt; D[\"Embedding lookup\"]\n    D --&gt; E[\"Dense vectors\"]\n    E --&gt; F[\"Transformer layers\"]\n    F --&gt; G[\"Next-token probabilities\"]\n\n\n\n\n\n\n\nEmbedding: a learned vector representation for a token or other object."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#what-is-an-embedding",
+    "href": "slides/04-02-2026/index.html#what-is-an-embedding",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "What is an embedding?",
+    "text": "What is an embedding?\n\n\nAn embedding places items in a high-dimensional space so that related items often end up near one another.\nWhy useful:\n\nsimilarity becomes geometric\nclusters can emerge\nmodels can generalize beyond exact memorization\n\n\n\n\n  \n  \n  \n  dimension 1\n  dimension 2\n\n  cat\n  kitten\n  dog\n\n  Paris\n  London\n  Tokyo\n\n\nIllustrative only: actual embeddings live in many dimensions."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#geometric-intuitionand-caution",
+    "href": "slides/04-02-2026/index.html#geometric-intuitionand-caution",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Geometric intuition—and caution",
+    "text": "Geometric intuition—and caution\n\n\nGood intuition\nNearby points often mean similar usage or context.\n\n\nBut not perfect\nDistance is learned from data, not hand-written meaning.\n\n\nAlso important\nEmbeddings can encode bias, noise, and spurious correlations."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#static-vs-contextual-embeddings",
+    "href": "slides/04-02-2026/index.html#static-vs-contextual-embeddings",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Static vs contextual embeddings",
+    "text": "Static vs contextual embeddings\n\n\nStatic embedding - one vector per word type - same bank everywhere\n\n\nContextual embedding - vector depends on surrounding text - bank changes with sentence context\n\n\n\n\n\n\n\n\nflowchart TB\n    A[\"river bank was muddy\"] --&gt; B[\"bank\"]\n    C[\"bank approved the loan\"] --&gt; D[\"bank\"]\n    B --&gt; E[\"contextual vector A\"]\n    D --&gt; F[\"contextual vector B\"]\n\n\n\n\n\n\n\nThis shift toward context-sensitive representations is one reason transformer systems became so effective."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#why-earlier-sequence-models-struggled",
+    "href": "slides/04-02-2026/index.html#why-earlier-sequence-models-struggled",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Why earlier sequence models struggled",
+    "text": "Why earlier sequence models struggled\n\n\nEarlier approaches included:\n\nn-gram models\nRNNs\nLSTMs / GRUs\n\nCommon problems:\n\nweak long-range memory\nharder parallel training\nunstable signals over long sequences\n\n\n\n\n  \n  \n  \n  \n  h₁\n  h₂\n  h₃\n  h₄\n  \n  \n  \n  token 1\n  token 2\n  token 3\n  token 4\n\n\nSequential dependence made training harder to parallelize."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#the-transformer-breakthrough",
+    "href": "slides/04-02-2026/index.html#the-transformer-breakthrough",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "The transformer breakthrough",
+    "text": "The transformer breakthrough\nThe 2017 transformer paper replaced recurrence with attention-heavy computation.\n\n\n\n\n\n\nflowchart LR\n    A[\"Input sequence\"] --&gt; B[\"Attention\"]\n    B --&gt; C[\"Feed-forward\"]\n    C --&gt; D[\"Repeated layers\"]\n    D --&gt; E[\"Output probabilities\"]\n\n\n\n\n\n\n\nWhy this mattered:\n\nstronger long-range interactions\nbetter parallelization\nexcellent scaling with data and compute"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#a-simple-transformer-picture",
+    "href": "slides/04-02-2026/index.html#a-simple-transformer-picture",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "A simple transformer picture",
+    "text": "A simple transformer picture\n\n\n\n\n\n\nflowchart TB\n    A[\"Token embeddings + position\"] --&gt; B[\"Self-attention\"]\n    B --&gt; C[\"Add & normalize\"]\n    C --&gt; D[\"Feed-forward network\"]\n    D --&gt; E[\"Add & normalize\"]\n    E --&gt; F[\"Repeat many times\"]\n    F --&gt; G[\"Vocabulary scores\"]\n\n\n\n\n\n\n\nFor text generation, many modern LLMs use a decoder-style transformer."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#why-position-must-be-added",
+    "href": "slides/04-02-2026/index.html#why-position-must-be-added",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Why position must be added",
+    "text": "Why position must be added\nEmbeddings alone do not encode order.\n\n\nSentence A\nDog bites man.\n\n\nSentence B\nMan bites dog.\n\n\nSame words, different order, different meaning.\nSo transformers add positional information:\n\nlearned positional vectors\nsinusoidal encodings\nrelative position methods in newer variants"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#self-attention-the-core-mechanism",
+    "href": "slides/04-02-2026/index.html#self-attention-the-core-mechanism",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Self-attention: the core mechanism",
+    "text": "Self-attention: the core mechanism\nSelf-attention lets each token look at other tokens and weight their relevance.\n\n\n\n\n\n\ngraph LR\n    A[\"The\"] --- D[\"animal\"]\n    B[\"tired\"] --- D\n    C[\"dog\"] --- D\n    E[\"slept\"] --- D\n\n\n\n\n\n\n\nWhen building the representation for one token, the model can ask:\n\nWhich earlier words matter most here?\nWhich words resolve ambiguity?\nWhich words define topic or syntax?"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#query-key-and-value-intuition",
+    "href": "slides/04-02-2026/index.html#query-key-and-value-intuition",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Query, key, and value intuition",
+    "text": "Query, key, and value intuition\n\n\n\nQuery: what this token is looking for\n\nKey: what this token offers as a match\n\nValue: the information it can contribute\n\n\n\n\n  \n  Query\n  \n  Key\n  \n  Value\n\n  \n  \n\n  1. compare Q to K\n  2. turn scores into weights\n  3. mix V using those weights\n  → context-sensitive representation"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#attention-as-weighted-influence",
+    "href": "slides/04-02-2026/index.html#attention-as-weighted-influence",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Attention as weighted influence",
+    "text": "Attention as weighted influence\n\n\\text{Attention}(Q,K,V)=\\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V\n\nYou do not need every algebraic detail to get the idea:\n\ncompare token features\ncompute relevance weights\nblend information from multiple positions\n\nThe result is a new representation that depends on context."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#multi-head-attention",
+    "href": "slides/04-02-2026/index.html#multi-head-attention",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Multi-head attention",
+    "text": "Multi-head attention\n\n\n\n\n\n\nflowchart TB\n    A[\"Input representations\"] --&gt; B1[\"Head 1\"]\n    A --&gt; B2[\"Head 2\"]\n    A --&gt; B3[\"Head 3\"]\n    A --&gt; B4[\"Head 4\"]\n    B1 --&gt; C[\"Concatenate\"]\n    B2 --&gt; C\n    B3 --&gt; C\n    B4 --&gt; C\n    C --&gt; D[\"Project to new representation\"]\n\n\n\n\n\n\n\nDifferent heads can learn different relational patterns, though their roles are not always cleanly interpretable."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#from-hidden-states-to-next-token-prediction",
+    "href": "slides/04-02-2026/index.html#from-hidden-states-to-next-token-prediction",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "From hidden states to next-token prediction",
+    "text": "From hidden states to next-token prediction\n\n\n\n\n\n\nflowchart LR\n    A[\"Current hidden state\"] --&gt; B[\"Vocabulary scores (logits)\"]\n    B --&gt; C[\"Probabilities\"]\n    C --&gt; D[\"Select / sample next token\"]\n    D --&gt; E[\"Append token\"]\n    E --&gt; F[\"Repeat\"]\n\n\n\n\n\n\n\nThis loop is autoregressive generation."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#how-llms-are-trained",
+    "href": "slides/04-02-2026/index.html#how-llms-are-trained",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "How LLMs are trained",
+    "text": "How LLMs are trained\n\n\nPretraining usually involves:\n\ncollect massive text data\n\ntokenize it\n\npredict held-out next tokens\n\nupdate parameters to reduce error\n\nrepeat many times\n\n\n\nWhat is learned?\n\ngrammar\ndiscourse patterns\nstyle regularities\nbroad factual patterns in the data\nreusable internal features"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#scaling-helpsbut-it-is-not-magic",
+    "href": "slides/04-02-2026/index.html#scaling-helpsbut-it-is-not-magic",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Scaling helps—but it is not magic",
+    "text": "Scaling helps—but it is not magic\n\n\n  \n  \n  \n  \n  compute / data / parameters\n  capability\n\n\nConceptual only: more scale often improves performance, but not without cost.\n\n\nTrade-offs include compute cost, energy use, latency, and harder safety evaluation."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#fine-tuning-instruction-tuning-and-alignment",
+    "href": "slides/04-02-2026/index.html#fine-tuning-instruction-tuning-and-alignment",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Fine-tuning, instruction tuning, and alignment",
+    "text": "Fine-tuning, instruction tuning, and alignment\n\n\n\n\n\n\nflowchart LR\n    A[\"Pretrained base model\"] --&gt; B[\"Supervised fine-tuning\"]\n    B --&gt; C[\"Preference / feedback tuning\"]\n    C --&gt; D[\"Aligned assistant behavior\"]\n\n\n\n\n\n\n\nPost-training aims to make the system:\n\nfollow instructions\nbe more useful in conversation\nreduce unsafe or low-quality outputs\nbetter match human preferences"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#how-a-system-like-chatgpt-differs-from-a-raw-base-model",
+    "href": "slides/04-02-2026/index.html#how-a-system-like-chatgpt-differs-from-a-raw-base-model",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "How a system like ChatGPT differs from a raw base model",
+    "text": "How a system like ChatGPT differs from a raw base model\n\n\nBase model predicts next tokens\n\n\nPost-training instruction following, preference shaping, safety\n\n\nSystem layer prompting, tools, formatting, policies\n\n\nA deployed assistant is usually more than just the pretrained model."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#what-understanding-means-here",
+    "href": "slides/04-02-2026/index.html#what-understanding-means-here",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "What “understanding” means here",
+    "text": "What “understanding” means here\n\n\nStrong appearance of understanding - explanation - summarization - translation - coding help - question answering\n\n\nReasons for caution - no guaranteed grounding - confidence ≠ truth - behavior can be brittle - “understanding” remains debated"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#why-llms-hallucinate-and-fail",
+    "href": "slides/04-02-2026/index.html#why-llms-hallucinate-and-fail",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Why LLMs hallucinate and fail",
+    "text": "Why LLMs hallucinate and fail\n\n\nHallucination\nplausible but false output\n\n\nBias / distortion\ntraining data patterns reappear\n\n\nReasoning brittleness\nmulti-step tasks can break\n\n\n\n\nContext misses\nimportant prompt detail is ignored\n\n\nKnowledge limits\npost-training events may be unknown\n\n\nOverconfidence\nstyle can sound firmer than evidence"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#a-compact-mental-model",
+    "href": "slides/04-02-2026/index.html#a-compact-mental-model",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "A compact mental model",
+    "text": "A compact mental model\n\n\n\n\n\n\nflowchart LR\n    A[\"Text\"] --&gt; B[\"Tokens\"]\n    B --&gt; C[\"Embeddings\"]\n    C --&gt; D[\"Attention + transformer layers\"]\n    D --&gt; E[\"Predicted next token\"]\n    E --&gt; F[\"Repeat\"]\n    D --&gt; G[\"Post-training / alignment\"]\n    G --&gt; H[\"Assistant behavior\"]"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#discussion-questions",
+    "href": "slides/04-02-2026/index.html#discussion-questions",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Discussion questions",
+    "text": "Discussion questions\n\nIn what sense are embeddings a geometry of meaning?\n\nWhy did transformers scale better than RNNs?\n\nDoes next-token prediction produce reasoning, or simulate it?\n\nWhy can a model sound confident while being wrong?\n\nWhich matters more in practice: pretraining scale or post-training alignment?"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#takeaways",
+    "href": "slides/04-02-2026/index.html#takeaways",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Takeaways",
+    "text": "Takeaways\n\nTokenization breaks text into manageable units.\nEmbeddings map those units into vector space.\nAttention lets tokens influence one another contextually.\nTransformers scale this idea very effectively.\nTraining + post-training turn a predictor into a usable assistant.\nLimits remain fundamental, not incidental."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#references",
+    "href": "slides/04-02-2026/index.html#references",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "References",
+    "text": "References\n\nGoogle. Machine Learning Crash Course: Embeddings module. https://developers.google.com/machine-learning/crash-course/embeddings\nGoogle. Machine Learning Crash Course: Introduction to Large Language Models. https://developers.google.com/machine-learning/crash-course/llm\nGoogle. LLMs: What’s a large language model? https://developers.google.com/machine-learning/crash-course/llm/transformers\nVaswani, Ashish, et al. 2017. “Attention Is All You Need.” Advances in Neural Information Processing Systems. https://arxiv.org/abs/1706.03762\nOuyang, Long, et al. 2022. “Training Language Models to Follow Instructions with Human Feedback.” NeurIPS. https://arxiv.org/abs/2203.02155"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#summary",
+    "href": "slides/04-02-2026/index.html#summary",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Summary",
+    "text": "Summary\n\nTokenization breaks text into manageable units.\nEmbeddings map those units into vector space.\nAttention lets tokens influence one another contextually.\nTransformers scale this idea very effectively.\nTraining + post-training turn a predictor into a usable assistant.\nLimits remain fundamental, not incidental."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#the-core-concept-of-temperature",
+    "href": "slides/04-02-2026/index.html#the-core-concept-of-temperature",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "The Core Concept of Temperature",
+    "text": "The Core Concept of Temperature\nTemperature (\\theta) is a hyperparameter used to control the randomness and confidence of a language model’s output.\n\nThe Dial: Think of it as a “creativity” slider.\nLow Temperature: Makes the model more “confident” and deterministic, favoring the most likely tokens.\nHigh Temperature: Makes the model more “creative” or “excited,” allowing lower-probability tokens a higher chance of being selected."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#the-mathematical-engine",
+    "href": "slides/04-02-2026/index.html#the-mathematical-engine",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "The Mathematical Engine",
+    "text": "The Mathematical Engine\nTemperature modifies the standard Softmax function applied to the model’s raw output scores (logits).\n\nLogits (z): The raw, unnormalized scores for each possible next word.\nThe Modified Softmax: We divide each logit by the temperature \\theta before normalizing:\n\n\\sigma(z_i) = \\frac{e^{z_i/\\theta}}{\\sum_{j=0}^{N} e^{z_j/\\theta}}\n\nScaling Effect: * If \\theta \\to 0, the distribution becomes “pointy” (argmax).\n\nIf \\theta \\to \\infty, the distribution becomes uniform (pure noise)."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#practical-applications",
+    "href": "slides/04-02-2026/index.html#practical-applications",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Practical Applications",
+    "text": "Practical Applications\nChoosing the right temperature depends entirely on the specific task:\n\n\n\n\n\n\n\n\nTask Type\nTemp Setting\nBenefit\n\n\n\n\nFact-based Q&A\nLow (&lt; 0.3)\nIncreases accuracy and reduces hallucinations.\n\n\nCode Generation\nLow (0.0 - 0.2)\nEnsures syntactic correctness and stability.\n\n\nCreative Writing\nHigh (0.7 - 1.2)\nProduces diverse, varied, and interesting prose.\n\n\nBrainstorming\nHigh (&gt; 1.0)\nExplores unconventional or “edge-case” ideas."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#discussion-question",
+    "href": "slides/04-02-2026/index.html#discussion-question",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Discussion Question",
+    "text": "Discussion Question\nFor many things, isn’t temperature 0 ideal?\n* When?\n* When not?"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#key-components",
+    "href": "slides/04-02-2026/index.html#key-components",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Key Components",
+    "text": "Key Components\nFrom an LLM architecture perspective:\n\nLogit Scaling: In Transformer-based models, temperature is purely a post-processing step during the inference phase. It does not change the model’s weights, only how we interpret the output probabilities.\nInformation Theory: Mathematically, increasing temperature increases the entropy of the probability distribution. This aligns with the “creativity” intuition—higher entropy means less predictability.\nThe “Greedy” Limit: As \\theta approaches 0, the model performs “Greedy Search,” where it picks the single highest probability token every single time, which is why low temperature is best for technical tasks."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#architectural-hyperparameters",
+    "href": "slides/04-02-2026/index.html#architectural-hyperparameters",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Architectural Hyperparameters",
+    "text": "Architectural Hyperparameters\nThe Structural “Skeleton”\nBefore training, engineers define the model’s capacity and complexity. These values are fixed once training starts.\n\nNumber of Layers: The depth of the transformer model.\nHidden Dimension Size: The width of the vector representations.\nAttention Heads: The number of simultaneous “perspectives” used to process context.\nVocabulary Size: Total unique tokens (parts of words) the model can recognize."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#training-hyperparameters",
+    "href": "slides/04-02-2026/index.html#training-hyperparameters",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Training Hyperparameters",
+    "text": "Training Hyperparameters\nThe “Learning Recipe”\nThese settings control the optimization process as the model learns from massive datasets.\n\nLearning Rate: Controls the “step size” for weight updates. Too high leads to instability; too low leads to glacial progress.\nBatch Size: Number of examples processed before internal weights are updated.\nOptimizer Settings: Algorithms like Adam or Adafactor use specific constants (e.g., \\beta_1, \\beta_2) to manage momentum during learning."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#finding-the-sweet-spot",
+    "href": "slides/04-02-2026/index.html#finding-the-sweet-spot",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Finding the “Sweet Spot”",
+    "text": "Finding the “Sweet Spot”\nSelection Strategies\nResearchers use various methods to find the most efficient hyperparameter combinations.\n\n\n\n\n\n\n\nMethod\nDescription\n\n\n\n\nGrid Search\nTesting every possible combination (exhaustive but slow).\n\n\nRandom Search\nRandomly sampling combinations; surprisingly efficient.\n\n\nBayesian Optimization\nMathematical modeling to predict optimal settings based on past trials.\n\n\nScaling Laws\nUsing formulas (like Chinchilla) to predict performance before scaling up."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#inference-time-hyperparameters",
+    "href": "slides/04-02-2026/index.html#inference-time-hyperparameters",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Inference-Time Hyperparameters",
+    "text": "Inference-Time Hyperparameters\nThe “Personality” Settings\nThese values are adjustable after training to control how the model generates responses.\n\nTemperature: Controls randomness. Low = precise/safe; High = creative/unpredictable.\nTop-P (Nucleus Sampling): Limits word choice to the most likely tokens whose cumulative probability exceeds P.\nPresence/Frequency Penalties: Mathematical “nudges” that prevent the model from repeating the same words or phrases too often."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#the-prompt",
+    "href": "slides/04-02-2026/index.html#the-prompt",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "The Prompt",
+    "text": "The Prompt\n\n\n\nDetails"
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#the-core-engine-sparse-moe",
+    "href": "slides/04-02-2026/index.html#the-core-engine-sparse-moe",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "The Core Engine: Sparse MoE",
+    "text": "The Core Engine: Sparse MoE\nThe “Flash” Efficiency Factor\nInstead of a single “dense” block, I use a Sparse Mixture-of-Experts (MoE) architecture.\n\nExpert Sub-networks: My internal structure consists of multiple specialized sub-networks.\nActive Parameters: For every word I process, only a specific subset of “experts” is activated.\nResult: This allows me to maintain high reasoning capability while responding with the speed expected of a “Flash” model."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#vocabulary-multimodality",
+    "href": "slides/04-02-2026/index.html#vocabulary-multimodality",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Vocabulary & Multimodality",
+    "text": "Vocabulary & Multimodality\nBreadth of Understanding\nMy vocabulary isn’t just a list of words; it’s a bridge between different types of data.\n\nVocabulary Size: 256,000 unique tokens (SentencePiece unigram).\nMultimodal Native: I process text, image, audio, video, and code within the same architectural framework.\nEfficiency: A larger vocabulary allows for more efficient processing of diverse languages and technical code."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#the-hidden-dimensions",
+    "href": "slides/04-02-2026/index.html#the-hidden-dimensions",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "The “Hidden” Dimensions",
+    "text": "The “Hidden” Dimensions\nIndustry Estimates for Flash-Class Models\nWhile specific counts are proprietary, “Flash-class” architectures typically operate within these ranges:\n\nDepth (L): Generally between 24 and 48 layers.\nWidth (d_{model}): Often ranges from 2,048 to 4,096 dimensions.\nAttention Heads: Typically 32 to 64, utilizing Grouped Query Attention (GQA) to optimize memory and speed."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#architectural-summary",
+    "href": "slides/04-02-2026/index.html#architectural-summary",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Architectural Summary",
+    "text": "Architectural Summary\nSummary of Gemini 3 Flash Specs\n\n\n\nHyperparameter\nSpecification\n\n\n\n\nModel Type\nSparse Mixture-of-Experts (MoE)\n\n\nVocabulary Size\n256,000 tokens\n\n\nContext Window\nUp to 1,000,000 tokens\n\n\nDistillation\nOptimized from larger Gemini 3 variants\n\n\n\n\nKey Takeaway: My performance is the result of distillation, where I am trained to mimic the logic of larger models while maintaining a lean “active” parameter count."
+  },
+  {
+    "objectID": "slides/04-02-2026/index.html#some-disquieting-news",
+    "href": "slides/04-02-2026/index.html#some-disquieting-news",
+    "title": "Intelligence, AI, and LLM’s",
+    "section": "Some Disquieting News",
+    "text": "Some Disquieting News\nMythos"
   }
 ]

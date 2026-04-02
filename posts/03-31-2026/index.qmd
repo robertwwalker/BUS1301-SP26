@@ -1,5 +1,5 @@
 ---
-title: "AI and LLMs"
+title: "AI and LLMs: Parameters"
 author: "Robert W. Walker"
 date: "2026-03-31"
 image: "image.png"
@@ -9,8 +9,9 @@ image: "image.png"
 library(reticulate)
 ```
 
+[Some Math Slides](https://robertwwalker.github.io/BUS1301-SP26/writeups/NN-History/)
 
-What is artificial intelligence and what is an LLM?
+LLM's are models.  Models have **parameters**, in many cases.
 
 ```
 What is **artificial intelligence**?  Doesn't that require defining the *non-artificial* variety?  What is that?

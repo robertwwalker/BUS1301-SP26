@@ -1,0 +1,15 @@
+{
+  "hash": "624d8dd844f827f174d3bd451d561f7b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"AI and LLMs: Parameters\"\nauthor: \"Robert W. Walker\"\ndate: \"2026-04-02\"\nimage: \"image.png\"\n---\n\n\n\n[Some Math Slides](https://robertwwalker.github.io/BUS1301-SP26/writeups/NN-History/)\n\nLLM's are models.  Models have **parameters**, in many cases.\n\n\n## Slides\n\n[Slides](https://robertwwalker.github.io/BUS1301-SP26/slides/04-02-2026/index.html)\n\n## The class plan:\n\n1. Models and parameters.\n2. LLM Parameters from IBM: Temperature and others.   \n3. Hyperparameters.    \n4. Local LLMs and details of implementation.   ",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

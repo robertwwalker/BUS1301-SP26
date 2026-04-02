@@ -1,0 +1,264 @@
+---
+title: "Minds Made of Math"
+subtitle: "A History of Neural Networks — from McCulloch & Pitts to the Transformer Era"
+author: ""
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    transition: fade
+    transition-speed: slow
+    background-transition: fade
+    code-line-numbers: false
+    margin: 0.08
+    center: false
+---
+
+```{=html}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
+:root { --ink: #0d0d0d; --paper: #f5f0e8; --sepia: #c8a96e; --rust: #b84a2e; --steel: #2a4a6b; --mist: #e8e2d6; --dim: #6b6050; }
+.reveal .slides { background: var(--paper); }
+.reveal .slides section { background: transparent; text-align: left; }
+.reveal { font-family: 'DM Sans', sans-serif; font-size: 18px; }
+.reveal h1, .reveal h2, .reveal h3 { font-family: 'DM Serif Display', serif; font-weight: 400; color: var(--ink); }
+.reveal p, .reveal li { line-height: 1.65; font-weight: 300; }
+.reveal code { font-family: 'DM Mono', monospace; font-size: 0.85em; background: var(--mist); padding: 0.1em 0.35em; border-radius: 3px; }
+.title-slide { background: var(--ink) !important; color: var(--paper) !important; }
+.title-slide h1 { font-size: 3.4em; color: var(--paper); }
+.era-label { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.72em; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.25em 0.7em; border-radius: 2px; margin-bottom: 0.6em; }
+.era-dawn { background: #2a4a6b; color: #e8e2d6; }
+.era-perc { background: #6b3a2a; color: #f5f0e8; }
+.era-bp { background: #2a5a3a; color: #e8f0e8; }
+.era-trans { background: #0d0d0d; color: #c8a96e; }
+.cols { display: flex; gap: 2.5em; align-items: flex-start; }
+.col { flex: 1; }
+.col-wide { flex: 1.6; }
+.col-narrow { flex: 0.8; }
+.callout { border-left: 4px solid var(--sepia); padding: 0.6em 1em; background: var(--mist); margin: 0.8em 0; font-size: 0.92em; }
+.callout-rust { border-color: var(--rust); }
+.callout-steel { border-color: var(--steel); }
+.formula-box { background: var(--ink); color: var(--sepia); font-family: 'DM Mono', monospace; padding: 1em 1.4em; border-radius: 4px; font-size: 1em; margin: 0.8em 0; white-space: pre; }
+.timeline { display: flex; flex-direction: column; gap: 0.5em; font-size: 0.88em; }
+.timeline-item { display: flex; gap: 1.2em; align-items: baseline; }
+.timeline-year { font-family: 'DM Mono', monospace; font-size: 0.9em; color: var(--rust); min-width: 2.8em; font-weight: 500; }
+.timeline-text { color: var(--dim); }
+</style>
+```
+
+##  {.title-slide background-color="#0d0d0d"}
+
+<br><br>
+
+::: {style="font-family:'DM Serif Display',serif; font-size:3.2em; color:#f5f0e8; letter-spacing:-0.03em; line-height:1.1;"}
+Minds Made of Math
+:::
+
+::: {style="font-family:'DM Sans',sans-serif; font-weight:300; color:#c8a96e; font-size:1em; margin-top:0.6em; line-height:1.6;"}
+A History of Neural Networks —  
+from McCulloch & Pitts to the Transformer Era
+:::
+
+---
+
+## The Biological Spark {background-color="#f5f0e8"}
+
+::: {.era-label .era-dawn}
+1943 – 1956 · Dawn Era
+:::
+
+::: {.cols}
+::: {.col-wide}
+**The core question:** Can biological intelligence be reduced to mathematical logic?  
+In 1943, McCulloch & Pitts proposed a formal neuron that fires based on a threshold of weighted inputs.
+
+::: {.callout .callout-steel}
+**Logic as Computation:** By tuning weights (w) and a threshold (θ), this model can act as AND, OR, and NOT gates, suggesting that reasoning itself is a computational process.
+:::
+
+This structure—inputs, weights, and sum—remains the mathematical skeleton of all modern AI.
+:::
+
+::: {.col-narrow}
+::: {.formula-box}
+**The Formal Neuron**
+
+y = 1 if Σ wᵢ xᵢ ≥ θ
+y = 0 otherwise
+:::
+
+::: {.timeline}
+::: {.timeline-item}
+[1943]{.timeline-year} [McCulloch & Pitts paper]{.timeline-text}
+:::
+::: {.timeline-item}
+[1949]{.timeline-year} [Hebbian Learning: wᵢⱼ update]{.timeline-text}
+:::
+:::
+:::
+:::
+
+---
+
+## The Perceptron: Linear Geometry {background-color="#f5f0e8"}
+
+::: {.era-label .era-perc}
+1957 – 1969 · The First Wave
+:::
+
+::: {.cols}
+
+::: {.col-wide}
+Frank Rosenblatt (1958) built on the formal neuron to create the **Perceptron**, adding a **learning rule**.
+
+**The Geometry of Decision:** A single neuron defines a **linear hyperplane** in n-dimensional space. This flat boundary attempts to partition the data into two distinct regions.
+
+::: {.callout .callout-rust}
+**Convergence Theorem:** If the data is *linearly separable*, the model is mathematically guaranteed to find a boundary that correctly classifies every point in finite time.
+:::
+:::
+
+::: {.col-narrow}
+::: {.formula-box}
+**Boundary Equation**
+w · x + b = 0
+
+**Learning Rule**
+Δw = η(y - ŷ)x
+:::
+:::
+
+:::
+
+## The XOR Wall & the First Winter {background-color="#f5f0e8"}
+
+::: {.era-label .era-perc}
+1969 – 1980 · First AI Winter
+:::
+
+::: {.cols}
+
+::: {.col}
+In **1969**, Minsky & Papert proved that single-layer perceptrons cannot solve problems that are not linearly separable.
+
+**The XOR Problem:** XOR requires a non-linear boundary. In a 2D space, no single straight line can separate (0,0) and (1,1) from (0,1) and (1,0).
+
+::: {.callout .callout-rust}
+**Mathematical Deadlock:** The inability to mathematically train **hidden layers** (which could theoretically warp the space to make it separable) led to the first "AI Winter."
+:::
+:::
+
+::: {.col}
+```
+XOR Logic Truth Table
+x1  x2  | y
+--------|--
+ 0   0  | 0
+ 0   1  | 1
+ 1   0  | 1
+ 1   1  | 0
+```
+*(No single straight line can divide the 1s from the 0s)*
+:::
+
+:::
+
+---
+
+## Backpropagation & the Chain Rule {background-color="#f5f0e8"}
+
+::: {.era-label .era-bp}
+1986 – 1998 · The Second Wave
+:::
+
+::: {.cols}
+
+::: {.col-wide}
+The breakthrough came with the ability to calculate "credit" for errors in deep layers. **Backpropagation** (1986) treats the network as a computational graph and uses the **multivariate chain rule** to calculate the gradient of the loss.
+
+::: {.formula-box}
+**Gradient Flow Calculation**
+∂L/∂w = (∂L/∂y) · (∂y/∂z) · (∂z/∂w)
+:::
+
+Optimization now becomes a formal calculus process: we update weights via Gradient Descent: w ← w - η∇L
+:::
+
+::: {.col-narrow}
+
+::: {.callout .callout-steel}
+**The Geometric Insight:** Every hidden layer transforms the geometry of the data. A deep network warps the input space so that complex problems (like XOR) *become* linearly separable at the final output layer.
+:::
+
+:::
+
+:::
+
+---
+
+## The Activation Wall: Sigmoid vs. ReLU {background-color="#f5f0e8"}
+
+::: {.era-label .era-bp}
+1990s – 2012 · Vanishing Gradients
+:::
+
+---
+
+## The Saturation Trap
+Early deep networks used **Sigmoid** functions. As inputs move away from zero, the derivative approaches 0 (peaking at only 0.25).
+
+When multiplying these small gradients across many layers via the chain rule, the mathematical signal vanishes. The bottom layers simply stop learning.
+
+---
+
+
+## The ReLU Solution
+
+**ReLU** (max(0, x)) has a constant derivative of **1** for all positive values. This allows gradients to travel backward through hundreds of layers without shrinking.
+
+::: {.formula-box}
+Sigmoid'(z) ∈ (0, 0.25]
+ReLU'(z) = 1 for z > 0
+:::
+
+This constant slope is the specific mathematical engine that allowed networks to finally grow **deep**.
+
+---
+
+## Transformers: Attention as Alignment {background-color="#0d0d0d"}
+
+
+Transformers (2017) discarded sequential processing for **Self-Attention**, allowing every word in a sequence to "look" at every other word simultaneously.
+
+::: {.formula-box}
+Attention(Q, K, V) = softmax( (Q · Kᵀ) / √d ) · V
+:::
+
+---
+
+## Matrix 
+
+::: {.callout style="background:#1a1a1a; border-color:#c8a96e; color:#c8c0b0;"}
+**The Similarity Matrix:** Q·Kᵀ calculates a **dot-product alignment** score between Query and Key vectors. This dynamically determines how much mathematical "attention" one token should pay to another.
+:::
+
+---
+
+## Scaling
+
+The scaling factor 1/√d prevents the dot products from growing too large, which would otherwise push the softmax function into saturated regions with extremely small gradients.
+
+---
+
+## The Through-Line {background-color="#f5f0e8"}
+
+### 80 Years of One Equation
+
+Every milestone shares the 1943 skeleton: **weighted inputs, a non-linearity, and a learning signal**.
+
+- **Depth:** 1 layer → 1,000+ layers.
+- **Data:** Toy sets → The entire Web.
+- **Learning:** Manual rules → Self-supervised Gradient Descent.
+
+**Scale is the new variable.** While the math is refined (ReLU, Attention), the primary driver of the current era is the discovery that these simple geometric rules exhibit **emergent capabilities** at extreme scale.
+
