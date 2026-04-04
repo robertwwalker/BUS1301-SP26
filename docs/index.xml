@@ -47,7 +47,7 @@
   <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/04-02-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 <item>
-  <title>AI and LLMs: Parameters</title>
+  <title>AI and LLMs: Models</title>
   <dc:creator>Robert W. Walker</dc:creator>
   <link>https://robertwwalker.github.io/BUS1301-SP26/posts/03-31-2026/</link>
   <description><![CDATA[ 
@@ -56,10 +56,10 @@
 
 
 
-<p><a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/NN-History/">Some Math Slides</a></p>
 <p>LLM’s are models. Models have <strong>parameters</strong>, in many cases.</p>
 <pre><code>What is **artificial intelligence**?  Doesn't that require defining the *non-artificial* variety?  What is that?</code></pre>
 <p>First, <a href="https://doi.org/10.1016/j.intell.2024.101832">intelligence</a>. <a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/ChatGPT-Intelligence/index.html">A writeup</a></p>
+<p><a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/NN-History/">Some Math Slides</a></p>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
 <p><a href="https://robertwwalker.github.io/BUS1301-SP26/slides/03-31-2026/index.html">Slides</a></p>
