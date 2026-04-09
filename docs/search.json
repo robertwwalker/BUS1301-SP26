@@ -5675,7 +5675,7 @@
     "href": "posts/04-09-2026/index.html",
     "title": "AI and LLMs: Prompts",
     "section": "",
-    "text": "LLM’s are models."
+    "text": "Introducing Project Glasswing: an urgent initiative to help secure the world’s most critical software.It’s powered by our newest frontier model, Claude Mythos Preview, which can find software vulnerabilities better than all but the most skilled humans.https://t.co/NQ7IfEtYk7\n\n— Anthropic (@AnthropicAI) April 7, 2026\nLLM’s are models."
   },
   {
     "objectID": "posts/04-09-2026/index.html#a-discussion-item",
@@ -5696,7 +5696,7 @@
     "href": "posts/04-09-2026/index.html#the-class-plan",
     "title": "AI and LLMs: Prompts",
     "section": "The class plan:",
-    "text": "The class plan:\n\nModels and inputs: the prompt.\nPrompting techniques.\n\nLocal LLMs and details of implementation.\nLO: Refining inputs to an LLM to improve the quality of outputs\n\nEthics: Do organizations have a responsibility to train employees on AI usage?\nReadings: - Prompting Techniques"
+    "text": "The class plan:\n\nModels and inputs: the prompt.\nPrompting techniques.\n\nLocal LLMs and details of implementation.\n\nLO: Refining inputs to an LLM to improve the quality of outputs.\nEthics: Do organizations have a responsibility to train employees on AI usage? This is particularly relevant in the last point below.\nReadings:\n\nPrompting Techniques. You really should complete the course; it is a valuable skill to demonstrate and to have in resource conservation."
   },
   {
     "objectID": "writeups/NN-History/index.html",

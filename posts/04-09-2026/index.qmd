@@ -9,6 +9,8 @@ image: "image.png"
 library(reticulate)
 ```
 
+<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="en" dir="ltr">Introducing Project Glasswing: an urgent initiative to help secure the world’s most critical software.<br><br>It’s powered by our newest frontier model, Claude Mythos Preview, which can find software vulnerabilities better than all but the most skilled humans.<a href="https://t.co/NQ7IfEtYk7">https://t.co/NQ7IfEtYk7</a></p>&mdash; Anthropic (@AnthropicAI) <a href="https://twitter.com/AnthropicAI/status/2041578392852517128?ref_src=twsrc%5Etfw">April 7, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 LLM's are models.  
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">1/ today we&#39;re releasing muse spark, the first model from MSL. nine months ago we rebuilt our ai stack from scratch. new infrastructure, new architecture, new data pipelines. muse spark is the result of that work, and now it powers meta ai. 🧵 <a href="https://t.co/fThDXdsxwB">pic.twitter.com/fThDXdsxwB</a></p>&mdash; Alexandr Wang (@alexandr_wang) <a href="https://twitter.com/alexandr_wang/status/2041909376508985381?ref_src=twsrc%5Etfw">April 8, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -33,10 +35,12 @@ LLM's are models.
 1. Models and inputs: the prompt.
 2. Prompting techniques.       
 3. Local LLMs and details of implementation.    
-LO: Refining inputs to an LLM to improve the quality of outputs
 
-Ethics: Do organizations have a responsibility to train employees on AI usage?
+LO: Refining inputs to an LLM to improve the quality of outputs.
 
-Readings:
-- Prompting Techniques
+Ethics: Do organizations have a responsibility to train employees on AI usage?  **This is particularly relevant in the last point below.**
+
+Readings:   
+
+- [Prompting Techniques](https://academy.dair.ai/courses/introduction-prompt-engineering). You really should complete the course; it is a valuable skill to demonstrate and to have in resource conservation.
 

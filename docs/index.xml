@@ -21,6 +21,13 @@
 
 
 
+<blockquote class="twitter-tweet blockquote" data-media-max-width="560">
+<p lang="en" dir="ltr">
+Introducing Project Glasswing: an urgent initiative to help secure the world’s most critical software.<br><br>It’s powered by our newest frontier model, Claude Mythos Preview, which can find software vulnerabilities better than all but the most skilled humans.<a href="https://t.co/NQ7IfEtYk7">https://t.co/NQ7IfEtYk7</a>
+</p>
+— Anthropic (<span class="citation" data-cites="AnthropicAI">@AnthropicAI</span>) <a href="https://twitter.com/AnthropicAI/status/2041578392852517128?ref_src=twsrc%5Etfw">April 7, 2026</a>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>LLM’s are models.</p>
 <blockquote class="twitter-tweet blockquote">
 <p lang="en" dir="ltr">
@@ -64,11 +71,14 @@ Some brief thoughts on Mythos<br><br>We’ve known this was coming for a long ti
 <li>Models and inputs: the prompt.</li>
 <li>Prompting techniques.<br>
 </li>
-<li>Local LLMs and details of implementation.<br>
-LO: Refining inputs to an LLM to improve the quality of outputs</li>
+<li>Local LLMs and details of implementation.</li>
 </ol>
-<p>Ethics: Do organizations have a responsibility to train employees on AI usage?</p>
-<p>Readings: - Prompting Techniques</p>
+<p>LO: Refining inputs to an LLM to improve the quality of outputs.</p>
+<p>Ethics: Do organizations have a responsibility to train employees on AI usage? <strong>This is particularly relevant in the last point below.</strong></p>
+<p>Readings:</p>
+<ul>
+<li><a href="https://academy.dair.ai/courses/introduction-prompt-engineering">Prompting Techniques</a>. You really should complete the course; it is a valuable skill to demonstrate and to have in resource conservation.</li>
+</ul>
 
 
 </section>
