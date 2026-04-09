@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Robert W. Walker">
+<meta name="dcterms.date" content="2026-04-09">
+
+<title>qwen on Biodiversity – Managing with Data, Analytics, AI</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-eee1db520ccfdce0201f66ea68b099cf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo light-content">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">BUS 1301</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/robertwwalker/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/PieRatio"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">qwen on Biodiversity</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../writeups/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Write-ups</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">qwen on Biodiversity</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Robert W. Walker </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 9, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="asking-qwen3.5-35b-about-biodiversity" class="level1">
+<h1>Asking qwen3.5-35b about Biodiversity</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I want an extensive dive into spatiotemporal biodiversity monitoring, specifically on Whittaker’s concepts of alpha, beta, and gamma diversity. Please explain the methodologies used to calculate local species richness (alpha) and the total regional species pool (gamma) across multiple locations. Define how we measure compositional turnover (beta) between these sites on a year by year basis. Create a hypothetical longitudinal dataset, such as a five year study of fragmented forest patches, to illustrate how these three metrics interact mathematically, and explain what their temporal trends reveal about habitat stability and ecosystem resilience.</p>
+</div>
+</div>
+</section>
+<section id="spatiotemporal-biodiversity-monitoring-a-deep-dive-into-whittakers-hierarchy" class="level1">
+<h1>Spatiotemporal Biodiversity Monitoring: A Deep Dive into Whittaker’s Hierarchy</h1>
+<p>Biodiversity monitoring has evolved from simple species counts to complex spatiotemporal analyses that track how biological communities change across landscapes and through time. The foundational framework for this is <strong>Whittaker’s diversity hierarchy</strong>, which partitions biodiversity into three scales: Alpha (<span class="math inline">\(\alpha\)</span>), Beta (<span class="math inline">\(\beta\)</span>), and Gamma (<span class="math inline">\(\gamma\)</span>).</p>
+<p>In a monitoring context, these metrics allow us to distinguish between local species loss (Alpha decline), regional homogenization or differentiation (Beta change), and the total reservoir of biodiversity available to recolonize habitats (Gamma integrity).</p>
+<hr>
+<section id="methodologies-for-calculation" class="level2">
+<h2 class="anchored" data-anchor-id="methodologies-for-calculation">1. Methodologies for Calculation</h2>
+<p>To accurately measure these components in a longitudinal study, one must standardize sampling effort and define spatial scales rigorously.</p>
+<section id="a.-local-species-richness-alpha" class="level3">
+<h3 class="anchored" data-anchor-id="a.-local-species-richness-alpha">A. Local Species Richness (<span class="math inline">\(\alpha\)</span>)</h3>
+<p><strong>Definition:</strong> The average number of species found at a specific local site (e.g., a single forest patch). <strong>Methodology:</strong> 1. <strong>Sampling:</strong> Standardized plots (quadrats or transects) are established in each patch. 2. <strong>Raw Richness (<span class="math inline">\(S\)</span>):</strong> Count the unique species observed per plot/patch. 3. <strong>Rarefaction:</strong> Because sampling effort often varies between patches, raw richness is biased. We use <strong>rarefaction</strong> to standardize <span class="math inline">\(\alpha\)</span>. This calculates expected species richness for a fixed sample size (<span class="math inline">\(n\)</span>) smaller than the largest sample collected. * <em>Formula:</em> <span class="math inline">\(E[S_n] = \sum_{i=1}^{S} (1 - \frac{\binom{N-n}{k_i}}{\binom{N}{n}})\)</span> where <span class="math inline">\(N\)</span> is total individuals, and <span class="math inline">\(k_i\)</span> is abundance of species <span class="math inline">\(i\)</span>. 4. <strong>Mean Alpha (<span class="math inline">\(\bar{\alpha}\)</span>):</strong> The average <span class="math inline">\(\alpha\)</span> across all sites in the region at time <span class="math inline">\(t\)</span>.</p>
+</section>
+<section id="b.-total-regional-species-pool-gamma" class="level3">
+<h3 class="anchored" data-anchor-id="b.-total-regional-species-pool-gamma">B. Total Regional Species Pool (<span class="math inline">\(\gamma\)</span>)</h3>
+<p><strong>Definition:</strong> The total number of unique species found across all localities within a defined region (e.g., the entire fragmented forest reserve). <strong>Methodology:</strong> 1. <strong>Union Operation:</strong> Take the presence-absence matrix for all sites and sum the columns. If a species is present in <em>any</em> patch, it counts toward <span class="math inline">\(\gamma\)</span>. 2. <strong>Extrapolation:</strong> To estimate the true regional pool (including unobserved rare species), use estimators like <strong>Chao1</strong> or <strong>Jackknife</strong>, which account for singletons and doubletons.</p>
+</section>
+<section id="c.-compositional-turnover-beta-year-by-year" class="level3">
+<h3 class="anchored" data-anchor-id="c.-compositional-turnover-beta-year-by-year">C. Compositional Turnover (<span class="math inline">\(\beta\)</span>) Year-by-Year</h3>
+<p><strong>Definition:</strong> The degree of difference in species composition between sites. In Whittaker’s view, <span class="math inline">\(\beta\)</span> represents the <em>differentiation</em> of the landscape. <strong>Methodology (Spatial Beta at Time <span class="math inline">\(t\)</span>):</strong> To measure turnover between sites on a year-by-year basis, we calculate pairwise dissimilarity for all site pairs within that specific year. The most robust metric is <strong>Sørensen Dissimilarity (<span class="math inline">\(\beta_{sor}\)</span>)</strong>, which focuses on species replacement rather than nestedness (loss/gain).</p>
+<ul>
+<li><em>Formula:</em> <span class="math inline">\(\beta_{sor} = 1 - \frac{2a}{2a+b+c}\)</span>
+<ul>
+<li><span class="math inline">\(a\)</span>: Number of shared species between two sites.</li>
+<li><span class="math inline">\(b, c\)</span>: Number of unique species in each site respectively.</li>
+</ul></li>
+<li><strong>Temporal Aggregation:</strong> We calculate the mean <span class="math inline">\(\beta_{sor}\)</span> for all pairwise comparisons within Year 1 to get a landscape-level Beta diversity value (<span class="math inline">\(\beta_t\)</span>).</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="the-mathematical-interaction" class="level2">
+<h2 class="anchored" data-anchor-id="the-mathematical-interaction">2. The Mathematical Interaction</h2>
+<p>Whittaker defined the relationship between these components multiplicatively: <span class="math display">\[ \gamma = \bar{\alpha} \times \beta \]</span> <em>(Note: An additive model, <span class="math inline">\(\gamma = \bar{\alpha} + \beta\)</span>, is also used in modern partitioning of variance, but the multiplicative form preserves the ratio logic of turnover).</em></p>
+<p>Where: * <span class="math inline">\(\bar{\alpha}\)</span> = Mean local richness. * <span class="math inline">\(\beta\)</span> = Effective number of distinct communities (turnover). * <span class="math inline">\(\gamma\)</span> = Total regional diversity.</p>
+<hr>
+</section>
+<section id="hypothetical-longitudinal-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="hypothetical-longitudinal-dataset">3. Hypothetical Longitudinal Dataset</h2>
+<p><strong>Scenario:</strong> A “Fragmented Forest Reserve” study. <strong>Sites:</strong> 5 forest patches (<span class="math inline">\(P_1, P_2, P_3, P_4, P_5\)</span>). <strong>Duration:</strong> 5 Years (2019–2023). <strong>Disturbance Event:</strong> An extreme drought and fire event occurs in <strong>Year 3</strong>.</p>
+<section id="dataset-summary-species-presence-richness" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-summary-species-presence-richness">Dataset Summary: Species Presence &amp; Richness</h3>
+<p>We will track a subset of indicator species (Insects, Birds, Plants) to keep the math transparent. Let’s assume there are 15 potential regional species (<span class="math inline">\(S_{pool}\)</span>).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Year</th>
+<th style="text-align: left;">Site</th>
+<th style="text-align: left;">Observed Richness (<span class="math inline">\(\alpha_i\)</span>)</th>
+<th style="text-align: left;">Unique Species in Patch</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Y1</strong> (Baseline)</td>
+<td style="text-align: left;">P1</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">{A,B,C,D,E,F,G,H}</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">P2</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">{B,C,D,E,F,G,H,I,J}</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">P3</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">{C,D,E,F,G,H,K,L,M}</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">P4</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">{D,E,F,G,H,I,J,K,L,N}</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">P5</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">{E,F,G,H,I,J,K,L,O,P}</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Y2</strong> (Stress)</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;">~7.5</td>
+<td style="text-align: left;">Species begin dropping out of P3/P4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Y3</strong> (Disturbance)</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;">~6.0</td>
+<td style="text-align: left;">Fire eliminates sensitive species (A, B, N, O, P)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Y4</strong> (Recovery)</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;">~7.2</td>
+<td style="text-align: left;">Generalists return; specialists lagging</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Y5</strong> (Stabilization)</td>
+<td style="text-align: left;">All</td>
+<td style="text-align: left;">~8.1</td>
+<td style="text-align: left;">Richness returns to baseline</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: To perform the calculation below, we must derive Gamma and Beta from these trends.</em></p>
+</section>
+<section id="step-by-step-calculation-for-year-1-baseline" class="level3">
+<h3 class="anchored" data-anchor-id="step-by-step-calculation-for-year-1-baseline">Step-by-Step Calculation for Year 1 (Baseline)</h3>
+<p><strong>1. Calculate Mean Alpha (<span class="math inline">\(\bar{\alpha}\)</span>):</strong> <span class="math display">\[ \bar{\alpha}_{Y1} = \frac{8 + 9 + 7 + 10 + 8}{5} = \frac{42}{5} = 8.4 \]</span></p>
+<p><strong>2. Calculate Gamma (<span class="math inline">\(\gamma\)</span>):</strong> We take the union of species across all patches in Year 1. * Union: {A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P} * Total Count: <strong>15 Species</strong>. <span class="math display">\[ \gamma_{Y1} = 15 \]</span></p>
+<p><strong>3. Calculate Beta (<span class="math inline">\(\beta\)</span>):</strong> Using Whittaker’s multiplicative definition: <span class="math display">\[ \beta_{Y1} = \frac{\gamma}{\bar{\alpha}} = \frac{15}{8.4} \approx 1.79 \]</span> <em>Interpretation:</em> There are effectively <strong>1.79 distinct communities</strong> within the region. If <span class="math inline">\(\beta\)</span> were 1, all patches would be identical. Since it is &lt;2, there is significant overlap but some differentiation (e.g., P5 has species O/P that others lack).</p>
+<hr>
+</section>
+<section id="step-by-step-calculation-for-year-3-post-disturbance" class="level3">
+<h3 class="anchored" data-anchor-id="step-by-step-calculation-for-year-3-post-disturbance">Step-by-Step Calculation for Year 3 (Post-Disturbance)</h3>
+<p>In Year 3, the fire removes sensitive specialists. * <strong>Mean Alpha (<span class="math inline">\(\bar{\alpha}_{Y3}\)</span>):</strong> Drops to <strong>6.0</strong> due to local extinctions. * <strong>Gamma (<span class="math inline">\(\gamma_{Y3}\)</span>):</strong> Drops to <strong>12</strong>. (Species A, N, O are lost entirely from the region). * <strong>Beta (<span class="math inline">\(\beta_{Y3}\)</span>):</strong> <span class="math display">\[ \beta_{Y3} = \frac{12}{6.0} = 2.0 \]</span></p>
+</section>
+<section id="step-by-step-calculation-for-year-5-recovery" class="level3">
+<h3 class="anchored" data-anchor-id="step-by-step-calculation-for-year-5-recovery">Step-by-Step Calculation for Year 5 (Recovery)</h3>
+<p>In Year 5, generalist species return and some specialists recolonize from refugia. * <strong>Mean Alpha (<span class="math inline">\(\bar{\alpha}_{Y5}\)</span>):</strong> Returns to <strong>8.4</strong>. * <strong>Gamma (<span class="math inline">\(\gamma_{Y5}\)</span>):</strong> Remains at <strong>12</strong> (Species A has not returned). * <strong>Beta (<span class="math inline">\(\beta_{Y5}\)</span>):</strong> <span class="math display">\[ \beta_{Y5} = \frac{12}{8.4} \approx 1.43 \]</span></p>
+<hr>
+</section>
+</section>
+<section id="temporal-trends-and-ecological-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="temporal-trends-and-ecological-interpretation">4. Temporal Trends and Ecological Interpretation</h2>
+<p>By plotting these metrics over time, we can diagnose the <strong>Stability</strong> (resistance to change) and <strong>Resilience</strong> (recovery after disturbance) of the ecosystem.</p>
+<section id="a.-alpha-diversity-baralpha" class="level3">
+<h3 class="anchored" data-anchor-id="a.-alpha-diversity-baralpha">A. Alpha Diversity (<span class="math inline">\(\bar{\alpha}\)</span>)</h3>
+<ul>
+<li><strong>Trend:</strong> Decrease in Year 3 <span class="math inline">\(\rightarrow\)</span> Recovery by Year 5.</li>
+<li><strong>Interpretation:</strong> This indicates the system suffered a shock but possessed <strong>functional redundancy</strong>. The loss of species was reversible, suggesting that seeds or propagules survived nearby refugia and recolonized patches quickly.</li>
+</ul>
+</section>
+<section id="b.-gamma-diversity-gamma" class="level3">
+<h3 class="anchored" data-anchor-id="b.-gamma-diversity-gamma">B. Gamma Diversity (<span class="math inline">\(\gamma\)</span>)</h3>
+<ul>
+<li><strong>Trend:</strong> Permanent decline (15 <span class="math inline">\(\rightarrow\)</span> 12).</li>
+<li><strong>Interpretation:</strong> This is the most critical finding for conservation. While local richness recovered, <strong>regional diversity was not restored</strong>. Species A and N were lost from the entire region permanently. This indicates that fragmentation prevented recolonization; patches became isolated enough that no migration occurred to replenish the regional pool.</li>
+</ul>
+</section>
+<section id="c.-beta-diversity-beta" class="level3">
+<h3 class="anchored" data-anchor-id="c.-beta-diversity-beta">C. Beta Diversity (<span class="math inline">\(\beta\)</span>)</h3>
+<ul>
+<li><strong>Trend:</strong> Increased in Year 3 (2.0), Decreased in Year 5 (1.43).</li>
+<li><strong>Interpretation:</strong>
+<ul>
+<li><strong>Year 3 Spike:</strong> High beta immediately after disturbance often indicates <strong>biotic homogenization</strong> followed by divergence, or conversely, random stochastic loss making patches unique from one another but poor in content. In our math (<span class="math inline">\(\beta=2.0\)</span>), it suggests that while richness dropped, the remaining species were distributed differently across patches (perhaps due to micro-habitat survival).</li>
+<li><strong>Year 5 Drop:</strong> The drop to 1.43 suggests the community is becoming more uniform again as generalist species dominate all patches. This signals <strong>biotic homogenization</strong>. The ecosystem looks stable, but it has lost its unique differentiation.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="synthesis-habitat-stability-and-ecosystem-resilience" class="level2">
+<h2 class="anchored" data-anchor-id="synthesis-habitat-stability-and-ecosystem-resilience">5. Synthesis: Habitat Stability and Ecosystem Resilience</h2>
+<p>The interaction of these metrics tells a nuanced story that raw counts cannot provide.</p>
+<section id="stability-resistance" class="level3">
+<h3 class="anchored" data-anchor-id="stability-resistance">Stability (Resistance)</h3>
+<ul>
+<li><strong>Metric:</strong> <span class="math inline">\(\alpha\)</span> in Year 2/3.</li>
+<li><strong>Analysis:</strong> The drop in <span class="math inline">\(\bar{\alpha}\)</span> from 8.4 to 6.0 indicates the habitat is <strong>not fully resistant</strong> to fire/drought. However, the fact that it did not crash to near-zero suggests high structural stability (e.g., soil seed banks).</li>
+</ul>
+</section>
+<section id="resilience-recovery" class="level3">
+<h3 class="anchored" data-anchor-id="resilience-recovery">Resilience (Recovery)</h3>
+<ul>
+<li><strong>Metric:</strong> Recovery of <span class="math inline">\(\bar{\alpha}\)</span> and <span class="math inline">\(\gamma\)</span>.</li>
+<li><strong>Analysis:</strong> The system shows <strong>high local resilience</strong> (Alpha returns), but <strong>low regional resilience</strong> (Gamma does not return to 15). This implies that while the forest patches can support life again, they cannot fully restore their biodiversity without external immigration.</li>
+</ul>
+</section>
+<section id="the-beta-trap-of-resilience" class="level3">
+<h3 class="anchored" data-anchor-id="the-beta-trap-of-resilience">The “Beta Trap” of Resilience</h3>
+<p>The decline in Beta diversity from Year 3 (<span class="math inline">\(\beta=2.0\)</span>) to Year 5 (<span class="math inline">\(\beta=1.43\)</span>) is a warning sign often missed by managers who only look at Alpha. * <strong>High Alpha + Low Beta:</strong> Indicates a landscape dominated by widespread generalists (e.g., <em>Cattleya</em> orchids or urban-adapted birds). The ecosystem functions, but it has lost its unique evolutionary history and niche differentiation. * <strong>Conservation Implication:</strong> To maximize resilience in fragmented landscapes, conservationists must prioritize <strong>connectivity</strong> to maintain high Beta diversity. If patches remain isolated (low migration), <span class="math inline">\(\beta\)</span> will drop as the same few generalist species take over every patch, reducing the “insurance” value of the region against future novel threats.</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>In spatiotemporal monitoring: 1. <strong>Alpha</strong> tells you if local populations are crashing or recovering. 2. <strong>Gamma</strong> tells you if biodiversity is being permanently erased from the landscape. 3. <strong>Beta</strong> tells you if the landscape is becoming uniform (homogenized) or maintaining distinct ecological identities.</p>
+<p>A healthy, resilient fragmented forest system should aim to return <span class="math inline">\(\bar{\alpha}\)</span> and <span class="math inline">\(\gamma\)</span> to baseline levels while maintaining a moderate-to-high <span class="math inline">\(\beta\)</span>, ensuring that different patches retain unique community compositions, thereby maximizing the probability that at least some parts of the region are resistant to future specific threats.</p>
+<hr>
+</section>
+<section id="qwenqwen3.5-35b-a3b" class="level3">
+<h3 class="anchored" data-anchor-id="qwenqwen3.5-35b-a3b">qwen/qwen3.5-35b-a3b</h3>
+<p>Thought for 3 minutes 23 seconds</p>
+<p>Here’s a thinking process that leads to the suggested response:</p>
+<p>Deconstruct the Request:</p>
+<p>Topic: Spatiotemporal biodiversity monitoring. Core Concepts: Whittaker’s Alpha ( 𝛼 α), Beta ( 𝛽 β), and Gamma ( 𝛾 γ) diversity. Specific Requirements: Explain methodologies for calculating local species richness ( 𝛼 α). Explain how to calculate total regional species pool ( 𝛾 γ). Define how to measure compositional turnover ( 𝛽 β) year-by-year. Create a hypothetical longitudinal dataset (5-year study, fragmented forest patches). Illustrate mathematical interaction of the three metrics. Explain what temporal trends reveal about habitat stability and ecosystem resilience. Theoretical Framework &amp; Definitions:</p>
+<p>Whittaker’s Hierarchy: 𝛼 α = local diversity, 𝛾 γ = regional diversity, 𝛽 β = turnover/differentiation between sites. The fundamental relationship is multiplicative ( 𝛾 = 𝛼 × 𝛽 γ=α×β) or additive ( 𝛾 = 𝛼 + 𝛽 γ=α+β). I need to clarify which one I’m using (multiplicative is standard for Whittaker’s original formulation, but additive is often preferred in modern ecology for partitioning variance. I will present the multiplicative relationship as primary but acknowledge the additive distinction for clarity on turnover). Spatiotemporal Aspect: This implies tracking changes over time ( 𝑡 t) across space ( 𝑠 s). Methodologies:</p>
+<p>Alpha ( 𝛼 α): Species richness counts, rarefaction (to account for sampling effort), and diversity indices (Shannon/Simpson) if we move beyond just “richness.” The prompt asks specifically for “local species richness,” so I’ll focus on 𝑆 S but mention rarefaction. Gamma ( 𝛾 γ): Union of all species across all sites in the region. Beta ( 𝛽 β): This is tricky. There are many metrics (Whittaker’s original Sorensen-based, Jaccard-based, or Baselga’s turnover vs.&nbsp;nestedness components). For a longitudinal study, I need to focus on temporal beta diversity. The prompt asks for “compositional turnover… between these sites.” This usually means spatial 𝛽 β calculated at each time step, but the phrasing “year by year basis” could imply temporal turnover ( 𝛽 𝑡 𝑒 𝑚 𝑝 β temp ​ ) or spatial turnover tracked over time. Given the context of fragmented forest patches and stability/resilience, tracking spatial beta diversity over time is crucial (does the region become more homogenized?). However, to truly answer “turnover between these sites on a year by year basis,” I should define 𝛽 β as the dissimilarity between site 𝑖 i and site 𝑗 j, averaged across all pairs at each year. Hypothetical Dataset Construction:</p>
+<p>Scenario: Fragmented forest patches (e.g., 5 patches). Duration: 5 years. Species: A manageable number (e.g., 20 species total in the region). Dynamics: Need to simulate a disturbance event or gradual change to make trends meaningful. Let’s introduce a “disturbance” in Year 3 (e.g., a storm) followed by recovery, or perhaps chronic degradation leading to homogenization. Let’s go with chronic fragmentation stress + one acute disturbance to show resilience vs.&nbsp;collapse. Math: I need to show the calculation 𝛾 = 𝛼 × 𝛽 γ=α×β (multiplicative) clearly. Drafting the Content - Section by Section:</p>
+<p>Introduction: Define Whittaker’s framework and its importance in spatiotemporal ecology. Methodologies: Detail how to get 𝛼 α, 𝛾 γ, and 𝛽 β. Mention sampling effort (rarefaction). Define Beta diversity formulas (Jaccard/Sorensen dissimilarity is best for “turnover”). The Dataset: Create a table. It needs to be readable but complex enough to show math. Patches: A, B, C, D, E. Years: 1-5. Species list: Let’s use generic labels (S1-S20) or simple categories. To keep the table clean, I’ll summarize richness counts and presence/absence matrices abstractly, then calculate the derived metrics. Actually, showing a presence matrix for one year is good, but calculating 𝛾 γ requires the union across all patches. Decision: I will create a summary table of Richness per patch per year, then derive Regional Pool ( 𝛾 γ) and Beta based on those summaries to save space while maintaining rigor. Mathematical Interaction: Walk through Year 1 calculation explicitly. Show 𝛼 ˉ α ˉ (mean alpha), calculate 𝛽 β, verify 𝛾 γ. Temporal Trends &amp; Interpretation: Analyze the hypothetical data. Trend A: Alpha decreases (local extinction). Trend B: Beta increases or decreases? If homogenization occurs, Beta drops. If patches diverge due to stochasticity, Beta rises. Let’s aim for a “stabilizing resilience” narrative where Beta recovers after Year 3 disturbance. Stability &amp; Resilience: Connect metrics to ecological theory. High 𝛼 α = stability? Low 𝛽 β = homogenization (bad)? High 𝛾 γ = regional pool integrity. Refining the Math:</p>
+<p>Whittaker’s Multiplicative: 𝛽 𝑤 = 𝛾 / 𝛼 ˉ β w ​ =γ/ α ˉ . Whittaker’s Additive: 𝛽 𝑎 = 𝛾 − 𝛼 ˉ β a ​ =γ− α ˉ . Turnover (Temporal/Spatial): Sorensen Dissimilarity ( 1 − 2 𝑎 2 𝑎 + 𝑏 + 𝑐 1− 2a+b+c 2a ​ ). I will use the Multiplicative definition for the main hierarchy relationship as it’s most iconic to Whittaker, but explain Beta turnover via dissimilarity indices. Addressing “Year by Year”:</p>
+<p>The prompt asks: “Define how we measure compositional turnover (beta) between these sites on a year by year basis.” This means calculating spatial 𝛽 β diversity for each time point 𝑡 t. It does not necessarily mean temporal beta (change from Year 1 to Year 2), but rather the heterogeneity of the landscape at that specific snapshot in time. I will clarify this distinction. Review against Constraints:</p>
+<p>Extensive dive? Yes, need depth. Whitterk’s concepts? Yes. Methodologies for 𝛼 α and 𝛾 γ? Yes. Measure turnover year-by-year? Yes. Hypothetical dataset (5 years, fragmented forest)? Yes. Mathematical interaction? Yes. Stability/Resilience explanation? Yes. Self-Correction/Nuance Check:</p>
+<p>Nuance: Make sure to distinguish between “Beta diversity as a metric of spatial heterogeneity” (Whittaker) vs “Temporal Beta diversity” (change over time). The prompt asks for turnover between sites year by year, which implies spatial beta calculated at each time step. I will focus on that but mention temporal turnover as a derivative application. Nuance: Sampling bias is huge in 𝛼 α. Must mention rarefaction or coverage-based estimators (Chao1). Resilience: High resilience usually means returning to baseline after disturbance. The dataset should reflect this. Final Polish: Check formatting, clarity of formulas, and logical flow. Ensure the distinction between 𝛼 ˉ α ˉ (mean alpha) and 𝛾 γ is clear in the calculation example.</p>
+<p>(Self-Correction during drafting): I initially thought about doing a massive matrix for 5 years x 5 patches x 20 species. That’s too cluttered for text output. Better to summarize the presence/absence data into Richness counts and average dissimilarity values, then explain how they were derived. This keeps it readable while maintaining mathematical rigor in the explanation section. I will present a simplified matrix for Year 1 to show the derivation of Gamma, then use summary stats for Years 2-5.</p>
+<p>Let’s write it.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/robertwwalker\.github\.io\/BUS1301-SP26");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

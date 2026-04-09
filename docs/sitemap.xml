@@ -1,299 +1,323 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/Syllabus/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.215Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/qwen-parameters/index.html</loc>
+    <lastmod>2026-04-09T20:33:17.688Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/causality/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.366Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/claude-parameters/index.html</loc>
+    <lastmod>2026-04-09T20:34:00.224Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-Weibull/index.html</loc>
+    <lastmod>2026-04-09T21:12:48.062Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD1/index.html</loc>
+    <lastmod>2026-04-09T20:53:49.312Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-Biodiversity/index.html</loc>
+    <lastmod>2026-04-09T21:04:45.299Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/NN-History/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.364Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.833Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Lesson-Learned/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.364Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.833Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-MultiAgent/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.362Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.832Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Models/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.358Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.829Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Data-Ownership/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.355Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.827Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-CDC/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.353Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.826Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Binomial-Analysis/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.233Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.709Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Dashboards/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.226Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.705Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Claude-Regression/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.226Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.705Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Claude-Binomial-Analysis/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.223Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.703Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/ChatGPT-Intelligence/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.220Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.701Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-31-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.060Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-10-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.942Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-03-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.850Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-24-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.768Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-17-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.700Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-10-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.626Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-03-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.437Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-27-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.329Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-20-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.295Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-13-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.251Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/04-02-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-19-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.167Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-12-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.094Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-05-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.998Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-26-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.925Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-19-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.846Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-12-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.769Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-05-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.740Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.722Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.702Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.537Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/about.html</loc>
-    <lastmod>2026-03-17T19:43:05.876Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-20-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.617Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-27-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.719Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-03-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.724Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-10-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.742Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-17-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.804Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-24-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.887Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-03-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:31.961Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-10-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.041Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-17-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.131Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-31-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.203Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-15-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.270Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-22-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.317Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-29-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.344Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-05-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.552Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-12-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.668Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-19-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.732Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-26-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.813Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-05-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.903Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-17-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:32.983Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.693Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/04-02-2026/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.154Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.661Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/AI-Models/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.218Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-17-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.538Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/ChatGPT-Models/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.221Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-05-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.477Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Claude-Models/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.225Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-26-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.416Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Dashboards/img/Dashboard.html</loc>
-    <lastmod>2026-04-09T16:54:33.226Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-19-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.356Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Analysis/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.229Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-12-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.308Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Business-Models/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.328Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-05-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.218Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Chat/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.354Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-29-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.877Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Formatting/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.356Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-22-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.863Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Monte-Carlo/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.359Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-15-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.839Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/GrokAI-Models/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.363Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/welcome/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.822Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Literacy/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.364Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/04-02-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.819Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/OpenAI-Playground/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.366Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-19-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.758Z</lastmod>
   </url>
   <url>
-    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/index.html</loc>
-    <lastmod>2026-04-09T16:54:33.366Z</lastmod>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-12-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-05-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.637Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-26-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.580Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-19-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.524Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-12-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.469Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-05-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.443Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.432Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.417Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.268Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.198Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/about.html</loc>
+    <lastmod>2026-04-09T20:38:05.438Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-13-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.198Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-20-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.342Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-27-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.430Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-03-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.433Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-10-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.445Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-17-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.496Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/02-24-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.551Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-03-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.608Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-10-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-17-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.726Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/03-31-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.788Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/04-09-2026/index.html</loc>
-    <lastmod>2026-04-09T19:34:01.158Z</lastmod>
+    <lastmod>2026-04-09T20:38:06.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-13-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.829Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-20-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.850Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/01-27-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.869Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-03-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:06.974Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-10-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.275Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-17-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/02-24-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.385Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-03-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.447Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-10-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/03-31-2026/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.599Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/04-09-2026/index.html</loc>
-    <lastmod>2026-04-09T17:44:30.938Z</lastmod>
+    <lastmod>2026-04-09T20:38:07.693Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/AI-Models/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.701Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/ChatGPT-Models/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.702Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Claude-Models/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.704Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Dashboards/img/Dashboard.html</loc>
+    <lastmod>2026-04-09T20:38:07.705Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Analysis/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.707Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Business-Models/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.807Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Chat/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.827Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Formatting/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.827Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Monte-Carlo/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.830Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/GrokAI-Models/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.832Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Literacy/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.833Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/OpenAI-Playground/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.834Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD1-Minimum-System/index.html</loc>
+    <lastmod>2026-04-09T21:30:21.446Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD2/index.html</loc>
+    <lastmod>2026-04-09T21:19:28.646Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/causality/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.834Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/index.html</loc>
+    <lastmod>2026-04-09T20:38:07.835Z</lastmod>
   </url>
 </urlset>

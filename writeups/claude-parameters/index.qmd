@@ -1,0 +1,129 @@
+---
+title: "Claude on Model Parameters"
+author: "Robert W. Walker"
+date: "2026-04-02"
+image: "image.png"
+---
+
+# Asking Claude Sonnet about Model Parameters
+
+:::{.callout-warning}
+## Prompt
+
+I want you to tell me all about your parameters.  A style of model, layers, tokens and context length, hyperparameters, and the like so I can better understand you as a model
+:::
+
+
+Great questions! Here's what I can share, along with some honest transparency about what I simply don't know:
+
+## What I Can Tell You
+
+**Model Identity**
+I'm Claude Sonnet 4.6, made by Anthropic, part of the Claude 4.6 model family (which also includes Claude Opus 4.6). Sonnet is positioned as the smart, efficient everyday model in the lineup.
+
+**Context Window**
+My context window is **200,000 tokens** — meaning I can hold roughly 150,000+ words of conversation, documents, and code in my working memory at once.
+
+**Model Family & Architecture Style**
+I'm a large language model (LLM) based on the **transformer architecture** — the dominant paradigm for modern AI language models. This means I process text through layers of self-attention mechanisms that allow me to relate words and concepts across long distances in text.
+
+---
+
+## What Anthropic Hasn't Publicly Disclosed
+
+Anthropic keeps most of my technical internals private. I genuinely don't know (and can't introspect on):
+
+- **Parameter count** — the total number of weights in my network
+- **Number of layers** — how many transformer blocks I have
+- **Number of attention heads** — a key architectural detail
+- **Training data size** — how many tokens I was trained on
+- **Hyperparameters** — learning rate, batch size, optimizer settings, etc.
+- **Training compute** — how much processing power was used
+- **Fine-tuning details** — the specifics of my RLHF/Constitutional AI training
+
+This is common practice among frontier AI labs (OpenAI, Google DeepMind, and Meta are similarly opaque about many of these details).
+
+---
+
+## What I *Can* Tell You About How I Work Conceptually
+
+- **Training approach**: I was trained using a combination of **supervised learning**, **RLHF** (Reinforcement Learning from Human Feedback), and Anthropic's own **Constitutional AI** method, which helps align my behavior with human values.
+- **Knowledge cutoff**: My training data goes up to approximately **August 2025**.
+- **Inference**: I generate text **autoregressively** — one token at a time, each predicted based on everything before it.
+- **I have no persistent memory** between conversations unless explicitly given tools or context.
+
+---
+
+If Anthropic ever publishes a technical report with more details (as they have done in the past for earlier Claude versions), that would be the best source for deeper architectural specifics. Would you like me to search for any recently published information?
+
+Great news — there's a lot to work with here. There's no single public technical paper with deep architectural specifics (Anthropic keeps those private), but there's solid public information on specs, benchmarks, and how the three tiers compare. Here's a full breakdown:
+
+---
+
+## No Full Technical Paper (Yet)
+
+Claude 4's training dataset and model architecture have not been fully detailed publicly, reflecting the proprietary nature of the model. Anthropic doesn't disclose parameter counts, training data volumes, or exact architectural details. So a traditional "model card" paper with layer counts and hyperparameters simply doesn't exist publicly — which is unfortunately common among frontier AI labs right now.
+
+That said, here's everything that *is* known from official docs and benchmarks:
+
+---
+
+## The Three-Tier Model Comparison
+
+### 🔵 Claude Haiku 4.5 — Speed & Efficiency
+Claude Haiku 4.5 is Anthropic's fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. It scores over 73% on SWE-bench Verified, ranking it among the world's best coding models.
+
+- **Context window:** 200K tokens in, 64K tokens out
+- **Pricing:** $1 / $5 per million input/output tokens
+- **Special features:** It's Anthropic's first Haiku model to include extended thinking, computer use, and context awareness capabilities.
+- **Speed:** It generates output at 93.6 tokens per second, well above average for models in its price tier.
+- **Best for:** High-volume, latency-sensitive applications, sub-agents, real-time tasks
+
+---
+
+### 🟡 Claude Sonnet 4.6 — Balance & Efficiency *(That's me!)*
+Claude Sonnet 4.6 delivers Opus-level intelligence at a price point that makes it practical for far more tasks. In Claude Code testing, developers preferred it over Sonnet 4.5 approximately 70% of the time, and even preferred it to Opus 4.5 — the previous generation's flagship — 59% of the time.
+
+- **Context window:** 1 million tokens (standard pricing, no surcharge)
+- **Max output:** 64K tokens
+- **Pricing:** $3 / $15 per million input/output tokens
+- **Speed:** ~40–60 tokens per second
+- **SWE-bench score:** 79.6% on SWE-bench Verified — just 1.2 points behind Opus 4.6 — while costing $3/$15 per million tokens versus Opus's $15/$75. (Note: pricing has since dropped; see below)
+- **Best for:** Coding, content creation, automation, production applications
+
+---
+
+### 🔴 Claude Opus 4.6 — Maximum Capability
+Released in February 2026, Claude Opus 4.6 is the flagship in Anthropic's three-tier model family. It's the first production model where reasoning depth adapts automatically based on the complexity of your request, with effort levels — low, medium, high, and max.
+
+- **Context window:** 1 million tokens (standard pricing)
+- **Max output:** 128K tokens (2x Sonnet)
+- **Pricing:** $5 / $25 per million input/output tokens
+- **Speed:** ~20–30 tokens per second
+- **Exclusive features:** Agent Teams — which lets multiple Claude instances work in parallel on different parts of a project simultaneously — is exclusive to Opus 4.6.
+- **Best for:** Complex multi-step reasoning, massive codebases, long agentic workflows, research
+
+---
+
+## Side-by-Side Summary
+
+| Feature | Haiku 4.5 | Sonnet 4.6 (me) | Opus 4.6 |
+|---|---|---|---|
+| **Context Window** | 200K | 1M | 1M |
+| **Max Output** | 64K | 64K | 128K |
+| **Input Price/M** | $1 | $3 | $5 |
+| **Output Price/M** | $5 | $15 | $25 |
+| **Speed** | ~94 tok/s | ~40–60 tok/s | ~20–30 tok/s |
+| **Extended Thinking** | ✅ | ✅ | ✅ |
+| **Agent Teams** | ❌ | ❌ | ✅ |
+| **SWE-bench** | 73.3% | 79.6% | 80.8% |
+
+---
+
+## Key Architectural Notes (What's Known)
+
+The Claude 4 family's cornerstone advancement lies in its hybrid reasoning architecture, meaning the models can switch between fast, low-latency responses and slower, deliberative "extended thinking" mode. Adaptive thinking — where Claude dynamically decides when and how much to think — is the recommended mode for Opus 4.6 and Sonnet 4.6.
+
+One notable recent change: Anthropic removed the long-context pricing surcharge for Claude Opus 4.6 and Sonnet 4.6, making 1-million-token context windows available at standard per-token rates, with no long-context premium. That's a big deal for developers working with large documents or codebases.
+
+The bottom line is that Anthropic deliberately keeps deep architectural details private, so the comparison above represents essentially everything that's publicly known about how the three models differ.

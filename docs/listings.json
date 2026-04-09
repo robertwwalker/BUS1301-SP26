@@ -21,7 +21,8 @@
       "/slides/03-10-2026/index.html",
       "/slides/03-17-2026/index.html",
       "/slides/03-31-2026/index.html",
-      "/slides/04-02-2026/index.html"
+      "/slides/04-02-2026/index.html",
+      "/slides/04-09-2026/index.html"
     ]
   },
   {
@@ -58,7 +59,14 @@
     "items": [
       "/writeups/Dashboards/img/Dashboard.html",
       "/writeups/NN-History/index.html",
+      "/writeups/Prompt-Biodiversity/index.html",
+      "/writeups/Prompt-SandD1-Minimum-System/index.html",
+      "/writeups/Prompt-SandD1/index.html",
+      "/writeups/Prompt-SandD2/index.html",
+      "/writeups/Prompt-Weibull/index.html",
       "/writeups/OpenAI-Playground/index.html",
+      "/writeups/claude-parameters/index.html",
+      "/writeups/qwen-parameters/index.html",
       "/writeups/AI-Models/index.html",
       "/writeups/ChatGPT-Intelligence/index.html",
       "/writeups/Claude-Regression/index.html",
