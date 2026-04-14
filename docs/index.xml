@@ -9,8 +9,61 @@
 <link>https://robertwwalker.github.io/BUS1301-SP26/</link>
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
-<generator>quarto-1.8.27</generator>
-<lastBuildDate>Thu, 09 Apr 2026 07:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.36</generator>
+<lastBuildDate>Sun, 12 Apr 2026 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>AI and LLMs: Simulation</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/04-12-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>LLM’s are models.</p>
+<p>They have key roles and these roles play an important role in determining the outputs and the efficiency of use for large language models. There are real resource consequences to being cavalier about these things.</p>
+<p>An illustration.</p>
+<p><a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD1/">Compare this</a> to <a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD1-Minimum-System/">this</a></p>
+<p>qwen/qwen3.5-35b-a3b Thought for 3 minutes 59 seconds</p>
+<p>qwen/qwen3.5-35b-a3b Thought for 2 minutes 2 seconds</p>
+<ul>
+<li><p><a href="https://robertwwalker.github.io/conversations-with-qwen/">A local LLM</a>.</p></li>
+<li><p><a href="https://robertwwalker.github.io/conversations-with-qwen/posts/prompt-injection/">Prompt injection</a>.</p></li>
+<li><p>System roles from two perspectives:</p>
+<ul>
+<li><a href="https://robertwwalker.github.io/conversations-with-qwen/posts/system-role-gemini/">Gemini</a> and.<br>
+</li>
+<li><a href="https://robertwwalker.github.io/conversations-with-qwen/posts/system-role/">qwen</a></li>
+</ul></li>
+</ul>
+<section id="slides" class="level2">
+<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<p><a href="https://robertwwalker.github.io/BUS1301-SP26/slides/04-09-2026/index.html">Slides</a></p>
+</section>
+<section id="the-class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
+<ol type="1">
+<li>Models and inputs: the roles.</li>
+<li>The system role and personas.<br>
+</li>
+<li>Local LLMs and details of implementation; we do not really have access to these in commercial products.</li>
+</ol>
+<p>LO: Understand the role of system in providing context for an LLM</p>
+<p>Ethics: What are the risks of simulating living persons? <em>Deepfakes, etc.</em> but perhaps less excessive.</p>
+<p>Readings:</p>
+<p><a href="https://www.nature.com/articles/s41586-023-06647-8">Role playing with LLMs</a></p>
+<p><a href="https://aaru.com/">An example company</a></p>
+<p><a href="https://claude.ai/share/06aacedf-98ba-4539-94e7-f062ca3ec1ac">You can also learn things or be given new perspective.</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/04-12-2026/</guid>
+  <pubDate>Sun, 12 Apr 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/04-12-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
 <item>
   <title>AI and LLMs: Prompts</title>
   <dc:creator>Robert W. Walker</dc:creator>
@@ -5884,56 +5937,6 @@ font-style: inherit;">"values"</span>)</span></code></pre></div></div>
   <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-27-2026/</guid>
   <pubDate>Tue, 27 Jan 2026 08:00:00 GMT</pubDate>
   <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-27-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
-</item>
-<item>
-  <title>Data Storage</title>
-  <dc:creator>Robert W. Walker</dc:creator>
-  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Today, we expand on file based systems to consider database management systems (DBMS).</p>
-<p>Our reading for today includes Data Organization in Spreadsheets and an excellent primer from Tim Johnson exploring this topic.</p>
-<section id="the-class-plan" class="level2">
-<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
-<ol type="1">
-<li>Storage types.<br>
-</li>
-<li>Spreadsheets and the like are FBS.<br>
-</li>
-<li>Details on Spreadsheets<br>
-</li>
-<li>FBMS of two forms.</li>
-</ol>
-</section>
-<section id="supplementary-information" class="level2">
-<h2 class="anchored" data-anchor-id="supplementary-information">Supplementary Information</h2>
-<ol type="1">
-<li><a href="https://www.geeksforgeeks.org/dbms/dbms/">Geeks for Geeks on DBMS</a>.<br>
-</li>
-<li><a href="https://www.integrate.io/blog/the-sql-vs-nosql-difference/">SQL vs.&nbsp;NoSQL</a>.</li>
-</ol>
-<p><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/SQLnoSQL.png" class="img-fluid" alt="SQL and NoSQL graphic from Geeks for Geeks">.</p>
-<p>Your assignment for next time:</p>
-<ol type="1">
-<li>Readings on data visualization.</li>
-<li>Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. We will use this next time.</li>
-</ol>
-</section>
-<section id="in-class-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="in-class-assignment">In-Class Assignment</h2>
-<p><strong>Thinking about Willamette’s data storage.</strong></p>
-
-
-</section>
-
- ]]></description>
-  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/</guid>
-  <pubDate>Thu, 22 Jan 2026 08:00:00 GMT</pubDate>
-  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-22-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 </channel>
 </rss>

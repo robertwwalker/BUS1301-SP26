@@ -1,0 +1,143 @@
+---
+title: "LLM's: Roles"
+author: "Robert  W. Walker"
+date: "2026-04-12"
+format: 
+   revealjs:
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301-SP26"
+     multiplex:
+       url: 'https://multiplex-5adl.onrender.com'
+       secret: "7af99b9bf4796dd3e5d8f2ee555098f4"
+       id: "f3ecaf1fa854e20ca0b3e624bf2ee1210f73a24f392ca39e40484a800d4488c1"
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: zoom
+     preview-links: true
+     lightbox: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', dev.args = list(bg = "white"), eval=TRUE)
+library(tidyverse)
+library(magrittr)
+library(fontawesome)
+library(DT)
+library(magrittr)
+options(scipen=8)
+library(tidyverse)
+library(gganimate)
+library(hrbrthemes)
+theme_set(theme_ipsum_rc())
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', dev.args = list(bg = "white"))
+library(kableExtra); library(tidyverse); library(skimr)
+```
+
+## Outline
+
+1. A Basic Review of Our Tool.  
+2. The Input: a role.   
+   + Anatomy of both.  
+   + Thinking models and the like.   
+3. The reading on personas.  
+
+Aside: [RAGs](https://cloud.google.com/use-cases/retrieval-augmented-generation?hl=en) and tool availability for local models.  [Conversations with qwen details how far local models can go just with search.](https://robertwwalker.github.io/conversations-with-qwen/)
+
+## Architectural Summary
+
+`qwen` [what are you?](https://robertwwalker.github.io/conversations-with-qwen/what-are-you/)
+
+**Summary of Gemini 3 Flash Specs**
+
+| Hyperparameter | Specification |
+| :--- | :--- |
+| **Model Type** | Sparse Mixture-of-Experts (MoE) |
+| **Vocabulary Size** | 256,000 tokens |
+| **Context Window** | Up to 1,000,000 tokens |
+| **Distillation** | Optimized from larger Gemini 3 variants |
+
+> **Key Takeaway:** My performance is the result of **distillation**, where I am trained to mimic the logic of larger models while maintaining a lean "active" parameter count.
+
+## Some Disquieting News
+
+[Mythos](https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/)
+
+## The Big Picture
+
+LLMs are varyingly capable repositories of information that is rendered as output by **a model** with what that entails from before *the core input*: prompts.  How do we articulate our mental goal to the model?
+
+**BUT, those prompts come from a role context.**
+
+
+
+## Role Prompting & Persona Framing
+
+### Why Role Prompting Works
+
+Assigning a role activates domain-specific token patterns embedded during training.
+"You are a senior cardiologist" and "You are a creative writing professor" produce
+meaningfully different outputs — even for identical task instructions.
+
+## Prompting Best Practices
+
+- **Be specific**: `"You are a senior backend engineer specializing in distributed systems"`
+  outperforms `"You are a programmer"`
+- **Align role to audience**: pair a `CFO` role with an instruction to write
+  for `"a board of directors unfamiliar with technical debt"`
+- **Use role to set limits**: `"You are a helpful assistant that never speculates
+  beyond the provided data"`
+
+## System Prompt vs. User Prompt
+
+| Layer | Best for |
+|-------|---------|
+| **System prompt** | Persistent persona, behavioral constraints, output schema, safety rails |
+| **User prompt** | Task-specific instructions, dynamic context, examples |
+
+Separate concerns cleanly. Don't repeat system-level constraints in every user turn.
+
+# An Example in Two Parts
+
+[Compare this](https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD1/) to [this](https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD1-Minimum-System/)
+
+qwen/qwen3.5-35b-a3b
+Thought for 3 minutes 59 seconds
+
+qwen/qwen3.5-35b-a3b
+Thought for 2 minutes 2 seconds
+
+## Two Takes on the System
+
+* System roles from two perspectives:    
+   + [Gemini](https://robertwwalker.github.io/conversations-with-qwen/posts/system-role-gemini/) and.  
+   + [qwen](https://robertwwalker.github.io/conversations-with-qwen/posts/system-role/)
+
+## Personas [from Nature]
+
+We should view LLMs not as *entities* with their own beliefs or intentions, but as improvisational actors engaged in role-play.
+
+## Key Themes
+
+1. **Moving Beyond Anthropomorphism:** The authors argue that humans have a natural tendency to "anthropomorphize" AI—ascribing human-like qualities like consciousness, intent, or self-awareness to them. This often leads to a misunderstanding of how these models actually function.   
+2. **The "Role-Play" Framework:** Instead of viewing an LLM as a single persona, the article suggests we see it as a "multiverse generator." Based on the prompt provided, the model "casts" itself into a specific role and generates text that would be likely for that character in that specific context.   
+3. **Deception vs. Apparent Deception:** Under this framework, if an LLM provides false information, it isn't "lying" in the human sense (which requires a conscious intent to deceive). Rather, it is playing a role—such as a "helpful assistant" or a "hallucinating narrator"—where providing that specific text is the statistically likely next step in the script.   
+4. Self-Awareness: Similarly, when a model claims to be "frightened" or "alive," the authors argue it isn't experiencing those feelings. It is simply performing the role of a character that expresses those sentiments, often because its training data is full of human sci-fi tropes and philosophical discussions about AI consciousness.   
+5. **The "Superposition" of Personas:** The model exists in a state where it can take on any number of characters. The prompt and the ongoing conversation act as a "collapse" of these possibilities into a single, temporary role.
+
+## Why it matters?
+
+This perspective is important for both developers and the public. By treating LLM behavior as role-play rather than genuine agency, we can more accurately predict their failures (like hallucinations) and design better safety guardrails without being distracted by the "illusion" of a human-like mind behind the screen.
+
+## A Commercial Use of Personas
+
+[An example company](https://aaru.com/)
+
+[A chat](https://gemini.google.com/share/fed9f542c6a0)
+
+## A Use of Personas
+
+[A Conversation with Claude](https://claude.ai/share/06aacedf-98ba-4539-94e7-f062ca3ec1ac)

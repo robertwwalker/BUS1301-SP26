@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/syllabus/index.html</loc>
-    <lastmod>2026-04-09T20:38:07.699Z</lastmod>
+    <lastmod>2026-04-09T16:54:33.215Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/index.html</loc>
@@ -14,11 +14,11 @@
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD2/index.html</loc>
-    <lastmod>2026-04-09T21:19:28.646Z</lastmod>
+    <lastmod>2026-04-14T18:37:57.883Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD1-Minimum-System/index.html</loc>
-    <lastmod>2026-04-09T21:30:21.446Z</lastmod>
+    <lastmod>2026-04-14T18:37:57.881Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/OpenAI-Playground/index.html</loc>
@@ -166,7 +166,7 @@
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/index.html</loc>
-    <lastmod>2026-04-09T20:38:06.198Z</lastmod>
+    <lastmod>2026-04-09T16:54:31.473Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/01-15-2026/index.html</loc>
@@ -306,22 +306,30 @@
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-Biodiversity/index.html</loc>
-    <lastmod>2026-04-09T21:04:45.299Z</lastmod>
+    <lastmod>2026-04-14T18:37:57.880Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-SandD1/index.html</loc>
-    <lastmod>2026-04-09T20:53:49.312Z</lastmod>
+    <lastmod>2026-04-14T18:37:57.882Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/Prompt-Weibull/index.html</loc>
-    <lastmod>2026-04-09T21:12:48.062Z</lastmod>
+    <lastmod>2026-04-14T18:37:57.884Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/claude-parameters/index.html</loc>
-    <lastmod>2026-04-09T20:34:00.224Z</lastmod>
+    <lastmod>2026-04-14T18:37:57.885Z</lastmod>
   </url>
   <url>
     <loc>https://robertwwalker.github.io/BUS1301-SP26/writeups/qwen-parameters/index.html</loc>
-    <lastmod>2026-04-09T20:33:17.688Z</lastmod>
+    <lastmod>2026-04-14T18:37:57.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/posts/04-12-2026/index.html</loc>
+    <lastmod>2026-04-14T18:55:52.068Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertwwalker.github.io/BUS1301-SP26/slides/04-14-2026/index.html</loc>
+    <lastmod>2026-04-14T19:13:24.240Z</lastmod>
   </url>
 </urlset>
