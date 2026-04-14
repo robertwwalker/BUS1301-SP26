@@ -1544,6 +1544,25 @@ font-style: inherit;">12</span>))</span></code></pre></div></div>
 <p>The standard error in this case is</p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cfrac%7B%5Cpi(1-%5Cpi)%7D%7Bn%7D%7D"></p>
 <p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20%5Cpm%20z*"> 0.0074321.</p>
+<p>Or <img src="https://latex.codecogs.com/png.latex?0.5%20%5Cpm%200.019">.</p>
+<p>Anything between 0.481 and 0.519 could be observed if 0.5 is true.</p>
+</section>
+<section id="a-single-tail" class="level2">
+<h2 class="anchored" data-anchor-id="a-single-tail">A Single Tail</h2>
+<p>Let’s take the example of Berkeley. Let’s test the hypothesis that <img src="https://latex.codecogs.com/png.latex?%5Cpi%20%5Cleq%200.5"> against the alternative that it is bigger and let’s examine it with 99% confidence.</p>
+<p>I will use the class tool to find that percentage.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./img/Screenshot 2026-03-12 at 12.22.18 PM.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Image"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/03-10-2026/img/Screenshot 2026-03-12 at 12.22.18 PM.png" class="img-fluid figure-img" alt="Image"></a></p>
+<figcaption>Image</figcaption>
+</figure>
+</div>
+<p>Anything within 2.236 standard deviations above the mean is possible with 99% confidence.</p>
+<p>The standard error in this case is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5Cfrac%7B%5Cpi(1-%5Cpi)%7D%7Bn%7D%7D"></p>
+<p>This gives us <img src="https://latex.codecogs.com/png.latex?0.5%20-%20z*"> 0.0074321.</p>
+<p>Or <img src="https://latex.codecogs.com/png.latex?0.5%20+%202.236*0.019">.</p>
+<p>Anything below 0.5166 could be observed if 0.5 or less is true.</p>
 
 
 </section>
@@ -5363,16 +5382,16 @@ background-color: null;
 font-style: inherit;">print</span>(df.info())</span></code></pre></div></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+<pre><code>&lt;class 'pandas.DataFrame'&gt;
 RangeIndex: 4526 entries, 0 to 4525
 Data columns (total 3 columns):
- #   Column  Non-Null Count  Dtype 
----  ------  --------------  ----- 
- 0   M.F     4526 non-null   object
- 1   Admit   4526 non-null   object
- 2   Dept    4526 non-null   object
-dtypes: object(3)
-memory usage: 106.2+ KB
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   M.F     4526 non-null   str  
+ 1   Admit   4526 non-null   str  
+ 2   Dept    4526 non-null   str  
+dtypes: str(3)
+memory usage: 106.2 KB
 None</code></pre>
 </div>
 </div>
