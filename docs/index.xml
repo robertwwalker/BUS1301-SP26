@@ -10,11 +10,11 @@
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
 <generator>quarto-1.9.36</generator>
-<lastBuildDate>Sun, 12 Apr 2026 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 14 Apr 2026 07:00:00 GMT</lastBuildDate>
 <item>
   <title>AI and LLMs: Simulation</title>
   <dc:creator>Robert W. Walker</dc:creator>
-  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/04-12-2026/</link>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/04-14-2026/</link>
   <description><![CDATA[ 
 
 
@@ -60,9 +60,9 @@
 </section>
 
  ]]></description>
-  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/04-12-2026/</guid>
-  <pubDate>Sun, 12 Apr 2026 07:00:00 GMT</pubDate>
-  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/04-12-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/04-14-2026/</guid>
+  <pubDate>Tue, 14 Apr 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/04-14-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 <item>
   <title>AI and LLMs: Prompts</title>
