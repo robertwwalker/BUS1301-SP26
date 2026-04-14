@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Robert W. Walker">
+<meta name="dcterms.date" content="2026-04-14">
+
+<title>qwen on NPVIC – Managing with Data, Analytics, AI</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-eee1db520ccfdce0201f66ea68b099cf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo light-content">
+    <img src="../../AGSMlogo.jpeg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">BUS 1301</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/robertwwalker/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/PieRatio"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">qwen on NPVIC</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../slides/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../writeups/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Write-ups</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">qwen on NPVIC</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Robert W. Walker </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 14, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="asking-qwen3.5-35b-about-npvic" class="level1">
+<h1>Asking qwen3.5-35b about NPVIC</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>System Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Answer as best you can.</p>
+<section id="prompt" class="level2">
+<h2 class="anchored" data-anchor-id="prompt">Prompt</h2>
+<p>Act as a Constitutional Law Professor and Political Data Analyst. Provide a comprehensive examination of the electoral college system, specifically analyzing the tension between the Federalist No.&nbsp;68 justification for an intermediary body and the modern reality of the ‘Winner-Take-All’ allocation used by 48 states. Detail the legal implications of the Supreme Court’s ruling in Chiafalo v. Washington regarding faithless electors and discuss the mathematical phenomenon of voting power disparity, specifically how the small state advantage compares to the large state influence. Conclude with a neutral technical breakdown of the National Popular Vote Interstate Compact (NPVIC), explaining the specific legal hurdles it faces under the Compact Clause of the U.S. Constitution.</p>
+</section>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Comprehensive Examination of the Electoral College System
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
+<p>This analysis examines the Electoral College system through constitutional law and political data lenses, analyzing the tension between Federalist No.&nbsp;68’s original design rationale and modern electoral realities, evaluating the Supreme Court’s recent jurisprudence on faithless electors, quantifying voting power disparities across state populations, and providing a technical legal assessment of reform mechanisms like the National Popular Vote Interstate Compact.</p>
+<hr>
+</section>
+<section id="i.-federalist-no.-68-the-intermediary-body-justification" class="level2">
+<h2 class="anchored" data-anchor-id="i.-federalist-no.-68-the-intermediary-body-justification">I. Federalist No.&nbsp;68: The Intermediary Body Justification</h2>
+<section id="original-constitutional-design-rationale" class="level3">
+<h3 class="anchored" data-anchor-id="original-constitutional-design-rationale">Original Constitutional Design Rationale</h3>
+<p>In <strong>Federalist No.&nbsp;68</strong> (1788), Alexander Hamilton articulated the framers’ rationale for an intermediary electoral body, emphasizing several critical design features:</p>
+<blockquote class="blockquote">
+<p><em>“The most plausible of these [critics], who has appeared in print, has even deigned to admit that the election of the President is pretty well guarded. I venture somewhat further, and hesitate not to affirm, that if the manner of it be not perfect, it is at least excellent.”</em></p>
+</blockquote>
+<p>Hamilton’s justification centered on four key principles:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Design Principle</th>
+<th>Hamilton’s Rationale</th>
+<th>Constitutional Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deliberative Selection</strong></td>
+<td><em>“Immediate election should be made by men most capable of analyzing the qualities adapted to the station”</em></td>
+<td>Filter popular passion through informed judgment</td>
+</tr>
+<tr class="even">
+<td><strong>Independence from Corruption</strong></td>
+<td><em>“Executive should be independent for his continuance in office on all but the people themselves”</em></td>
+<td>Prevent executive dependency on Congress or foreign powers</td>
+</tr>
+<tr class="odd">
+<td><strong>Moral Certainty</strong></td>
+<td><em>“Process of election affords a moral certainty that there will be a constant probability of seeing the station filled by characters preeminent for ability and virtue”</em></td>
+<td>Ensure quality of leadership through structured selection</td>
+</tr>
+<tr class="even">
+<td><strong>Limited Scope</strong></td>
+<td><em>“Special body of representatives, deputed by the society for the single purpose of making the important choice”</em></td>
+<td>Prevent permanent political power accumulation in electors</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-intermediary-body-concept" class="level3">
+<h3 class="anchored" data-anchor-id="the-intermediary-body-concept">The Intermediary Body Concept</h3>
+<p>Hamilton envisioned electors as a <strong>temporary, ad-hoc deliberative assembly</strong> rather than a standing institution. His language emphasizes:</p>
+<ul>
+<li><strong>Temporal Limitation</strong>: Electors assemble <em>“for the single purpose of making the important choice”</em> and disperse</li>
+<li><strong>Information Superiority</strong>: A <em>“small number of persons… most likely to possess the information and discernment requisite to such complicated investigations”</em></li>
+<li><strong>Judicial Independence</strong>: Insulation from immediate popular pressures while remaining ultimately accountable to voters</li>
+</ul>
+</section>
+<section id="theoretical-tension-with-modern-reality" class="level3">
+<h3 class="anchored" data-anchor-id="theoretical-tension-with-modern-reality">Theoretical Tension with Modern Reality</h3>
+<p>The fundamental tension emerges between Hamilton’s vision of a deliberative intermediary body and the contemporary reality where electors function as:</p>
+<ol type="1">
+<li><strong>Rubber Stamp Mechanisms</strong> (not independent deliberators)</li>
+<li><strong>Partisan Agents</strong> (selected for loyalty rather than judgment)</li>
+<li><strong>Fixed-State Representatives</strong> (bound by state law rather than constitutional discretion)</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="ii.-modern-reality-winner-take-all-allocation-system" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-modern-reality-winner-take-all-allocation-system">II. Modern Reality: Winner-Take-All Allocation System</h2>
+<section id="current-state-of-the-electoral-college" class="level3">
+<h3 class="anchored" data-anchor-id="current-state-of-the-electoral-college">Current State of the Electoral College</h3>
+<p>As of 2024, <strong>48 states and the District of Columbia employ winner-take-all allocation</strong>, awarding all electoral votes to the statewide popular vote winner. Only Maine (since 1972) and Nebraska (since 1996) utilize district-based allocation:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Allocation Type</th>
+<th>States</th>
+<th>Electoral Vote Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Winner-Take-All</td>
+<td>48 states + DC</td>
+<td>533 electoral votes</td>
+</tr>
+<tr class="even">
+<td>District-Based</td>
+<td>Maine, Nebraska</td>
+<td>5 electoral votes combined</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mathematical-consequences-of-winner-take-all" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-consequences-of-winner-take-all">Mathematical Consequences of Winner-Take-All</h3>
+<p>The winner-take-all system creates disproportionate influence for:</p>
+<ol type="1">
+<li><strong>Swing States</strong>: Approximately 10-12 competitive states receive the majority of campaign attention and resources</li>
+<li><strong>Safe States</strong>: Both overwhelmingly Democratic and Republican states experience reduced voter engagement</li>
+<li><strong>Small States</strong>: Benefit from structural advantage in electoral vote allocation (discussed below)</li>
+</ol>
+</section>
+<section id="constitutional-basis-for-state-control" class="level3">
+<h3 class="anchored" data-anchor-id="constitutional-basis-for-state-control">Constitutional Basis for State Control</h3>
+<p>The Supreme Court has affirmed state authority over elector selection methodology:</p>
+<ul>
+<li><strong>McPherson v. Blake</strong>, 146 U.S. 1 (1892): <em>“The appointment of electors and the mode of appointing them are left to the states, except as it is provided by the Constitution”</em></li>
+<li><strong>Bush v. Gore</strong>, 531 U.S. 98 (2000): Reaffirmed state legislative primacy in electoral administration</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="iii.-chiafalo-v.-washington-2020-faithless-elector-jurisprudence" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-chiafalo-v.-washington-2020-faithless-elector-jurisprudence">III. Chiafalo v. Washington (2020): Faithless Elector Jurisprudence</h2>
+<section id="case-background-and-holding" class="level3">
+<h3 class="anchored" data-anchor-id="case-background-and-holding">Case Background and Holding</h3>
+<p>In <strong>Chiafalo v. Washington</strong>, 591 U.S. ___ (2020), the Supreme Court unanimously upheld state laws binding electors to their pledged presidential candidates:</p>
+<p><strong>Key Holdings:</strong> - States possess authority to enforce elector pledges through penalties and replacement mechanisms - The Electoral College system does not guarantee independent judgment by individual electors - State legislative power under Article II, Section 1 encompasses election administration rules</p>
+</section>
+<section id="legal-reasoning-framework" class="level3">
+<h3 class="anchored" data-anchor-id="legal-reasoning-framework">Legal Reasoning Framework</h3>
+<p>Justice Ginsburg’s opinion established three critical principles:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 44%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Principle</th>
+<th>Constitutional Basis</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Plenary Power Doctrine</strong></td>
+<td>Article II, Section 1 grants states authority over elector appointment</td>
+<td>States may regulate elector behavior</td>
+</tr>
+<tr class="even">
+<td><strong>Historical Practice</strong></td>
+<td>Electors have functioned as party loyalists since early republic</td>
+<td>Independence was never an operational reality</td>
+</tr>
+<tr class="odd">
+<td><strong>Federalism Protection</strong></td>
+<td>State election administration falls within traditional police powers</td>
+<td>Federal non-interference presumption applies</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="specific-legal-implications" class="level3">
+<h3 class="anchored" data-anchor-id="specific-legal-implications">Specific Legal Implications</h3>
+<section id="enforcement-authority" class="level4">
+<h4 class="anchored" data-anchor-id="enforcement-authority">1. <strong>Enforcement Authority</strong></h4>
+<ul>
+<li>States may impose monetary penalties on faithless electors</li>
+<li>States may replace faithless electors with alternate candidates</li>
+<li>Penalties do not violate the Constitution’s elector selection framework</li>
+</ul>
+</section>
+<section id="constitutional-boundaries" class="level4">
+<h4 class="anchored" data-anchor-id="constitutional-boundaries">2. <strong>Constitutional Boundaries</strong></h4>
+<p>The Court identified limits to state power: - Cannot prevent voters from expressing preferences in primaries - Cannot interfere with federal constitutional requirements (e.g., minimum electoral vote counts) - Must maintain due process protections for electors</p>
+</section>
+<section id="practical-consequences" class="level4">
+<h4 class="anchored" data-anchor-id="practical-consequences">3. <strong>Practical Consequences</strong></h4>
+<ul>
+<li>Faithless elector incidents have become legally insignificant in most jurisdictions</li>
+<li>The system now functions as a formalized party delegate mechanism rather than independent deliberative body</li>
+<li>Reduced risk of constitutional crisis from individual elector defiance</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="iv.-mathematical-voting-power-disparity-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="iv.-mathematical-voting-power-disparity-analysis">IV. Mathematical Voting Power Disparity Analysis</h2>
+<section id="small-state-advantage-quantitative-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="small-state-advantage-quantitative-assessment">Small State Advantage: Quantitative Assessment</h3>
+<p>The Electoral College’s structural design creates systematic voting power disparities through the <strong>fixed Senate allocation</strong> component:</p>
+<section id="electoral-vote-power-evp-formula" class="level4">
+<h4 class="anchored" data-anchor-id="electoral-vote-power-evp-formula">Electoral Vote Power (EVP) Formula</h4>
+<p><span class="math display">\[\text{EVP per Capita} = \frac{\text{Electors}}{\text{Population}}\]</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 25%">
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>State</th>
+<th>Population (2023 est.)</th>
+<th>Electors</th>
+<th>EVP × 10⁻⁶</th>
+<th>Relative Advantage vs.&nbsp;California</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Wyoming</td>
+<td>581,381</td>
+<td>3</td>
+<td>5.16</td>
+<td><strong>+274%</strong></td>
+</tr>
+<tr class="even">
+<td>Vermont</td>
+<td>647,064</td>
+<td>3</td>
+<td>4.64</td>
+<td>+236%</td>
+</tr>
+<tr class="odd">
+<td>North Dakota</td>
+<td>779,261</td>
+<td>3</td>
+<td>3.85</td>
+<td>+179%</td>
+</tr>
+<tr class="even">
+<td>Delaware</td>
+<td>1,030,364</td>
+<td>3</td>
+<td>2.91</td>
+<td>+111%</td>
+</tr>
+<tr class="odd">
+<td>California</td>
+<td>39,200,000</td>
+<td>54</td>
+<td>1.38</td>
+<td>Baseline (100%)</td>
+</tr>
+<tr class="even">
+<td>Texas</td>
+<td>30,029,572</td>
+<td>40</td>
+<td>1.33</td>
+<td>-3.6%</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="banzhaf-power-index-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="banzhaf-power-index-analysis">Banzhaf Power Index Analysis</h4>
+<p>The <strong>Banzhaf voting power index</strong> measures each state’s probability of being a pivotal voter in close elections:</p>
+<ul>
+<li><strong>Small States</strong>: Higher per-vote influence due to fixed electoral vote minimum (3 electors)</li>
+<li><strong>Large States</strong>: Diluted influence as population grows without proportional electoral increase</li>
+<li><strong>Swing States</strong>: Enhanced practical importance regardless of population size</li>
+</ul>
+</section>
+</section>
+<section id="game-theoretic-implications" class="level3">
+<h3 class="anchored" data-anchor-id="game-theoretic-implications">Game-Theoretic Implications</h3>
+<section id="candidate-resource-allocation-incentives" class="level4">
+<h4 class="anchored" data-anchor-id="candidate-resource-allocation-incentives">Candidate Resource Allocation Incentives</h4>
+<p>The Electoral College creates distinct strategic incentives compared to pure popular vote systems:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 40%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Strategy</th>
+<th>Popular Vote System</th>
+<th>Electoral College</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Geographic Focus</strong></td>
+<td>Dense urban centers maximize ROI</td>
+<td>Competitive states receive attention</td>
+</tr>
+<tr class="even">
+<td><strong>Issue Prioritization</strong></td>
+<td>National average concerns dominate</td>
+<td>Regional issues gain salience</td>
+</tr>
+<tr class="odd">
+<td><strong>Risk Management</strong></td>
+<td>Single-point failure in large states</td>
+<td>Diversified electoral portfolio required</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-portfolio-effect" class="level4">
+<h4 class="anchored" data-anchor-id="the-portfolio-effect">The “Portfolio Effect”</h4>
+<p>Candidates must construct an electoral map requiring: - Securing competitive state victories (swing states) - Maintaining base strength in safe states - Avoiding catastrophic losses in key regions</p>
+<p>This creates a <strong>risk-minimization strategy</strong> that differs fundamentally from vote-maximization under pure popular vote systems.</p>
+</section>
+</section>
+<section id="comparative-voting-power-ratios" class="level3">
+<h3 class="anchored" data-anchor-id="comparative-voting-power-ratios">Comparative Voting Power Ratios</h3>
+<p>Based on relative voting power analysis:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 23%">
+<col style="width: 46%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>State</th>
+<th>Electoral Vote Share</th>
+<th>CVAP Share (Citizen Voting Age Population)</th>
+<th>Relative Power Index</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maryland</td>
+<td>1.858%</td>
+<td>1.853%</td>
+<td><strong>1.00</strong> (Near ideal equity)</td>
+</tr>
+<tr class="even">
+<td>Ohio</td>
+<td>3.16%</td>
+<td>3.758%</td>
+<td><strong>0.84</strong> (Below average)</td>
+</tr>
+<tr class="odd">
+<td>Wyoming</td>
+<td>0.558%</td>
+<td>0.108%</td>
+<td><strong>5.16</strong> (Highest advantage)</td>
+</tr>
+</tbody>
+</table>
+<p>The data demonstrates systematic bias toward less populated states, with the most populous states experiencing relative power dilution proportional to their population size.</p>
+<hr>
+</section>
+</section>
+<section id="v.-national-popular-vote-interstate-compact-legal-hurdles-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="v.-national-popular-vote-interstate-compact-legal-hurdles-analysis">V. National Popular Vote Interstate Compact: Legal Hurdles Analysis</h2>
+<section id="current-status-and-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="current-status-and-mechanism">Current Status and Mechanism</h3>
+<p>As of 2024, <strong>19 jurisdictions</strong> have enacted the NPVIC legislation, possessing <strong>222 electoral votes</strong>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 35%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Jurisdictions</th>
+<th>Electoral Votes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Small States (6)</td>
+<td>Delaware, Hawaii, Maine, Rhode Island, Vermont, DC</td>
+<td>13</td>
+</tr>
+<tr class="even">
+<td>Medium States (10)</td>
+<td>Colorado, Connecticut, Maryland, Massachusetts, Minnesota, New Jersey, New Mexico, Oregon, Virginia, Washington</td>
+<td>129</td>
+</tr>
+<tr class="odd">
+<td>Large States (3)</td>
+<td>California, Illinois, New York</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Threshold Requirement</strong>: The Compact activates when member states possess <strong>270 electoral votes</strong> (majority of 538 total).</p>
+</section>
+<section id="compact-clause-constitutional-framework" class="level3">
+<h3 class="anchored" data-anchor-id="compact-clause-constitutional-framework">Compact Clause Constitutional Framework</h3>
+<section id="article-i-section-10-clause-3-text" class="level4">
+<h4 class="anchored" data-anchor-id="article-i-section-10-clause-3-text">Article I, Section 10, Clause 3 Text</h4>
+<blockquote class="blockquote">
+<p><em>“No State shall, without the Consent of Congress… enter into any Agreement or Compact with another State”</em></p>
+</blockquote>
+</section>
+<section id="supreme-court-precedent-on-interstate-compacts" class="level4">
+<h4 class="anchored" data-anchor-id="supreme-court-precedent-on-interstate-compacts">Supreme Court Precedent on Interstate Compacts</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Case</th>
+<th>Year</th>
+<th>Standard Established</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Virginia v. Tennessee</em></td>
+<td>1893</td>
+<td>“Agreement” and “compact” are synonyms; congressional consent required only for compacts increasing state political power at federal expense</td>
+</tr>
+<tr class="even">
+<td><em>U.S. Steel Corp.&nbsp;v. Multistate Tax Commission</em></td>
+<td>1978</td>
+<td>Functional interpretation: congressional consent required when compact undermines federal supremacy</td>
+</tr>
+<tr class="odd">
+<td><em>New Hampshire v. Maine</em></td>
+<td>1976</td>
+<td>Congressional approval necessary for compacts altering vertical power balance</td>
+</tr>
+<tr class="even">
+<td><em>Cuyler v. Adams</em></td>
+<td>1981</td>
+<td>Congress maintains supervisory authority over cooperative state action affecting national interests</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="primary-constitutional-challenges" class="level3">
+<h3 class="anchored" data-anchor-id="primary-constitutional-challenges">Primary Constitutional Challenges</h3>
+<section id="challenge-1-compact-clause-consent-requirement" class="level4">
+<h4 class="anchored" data-anchor-id="challenge-1-compact-clause-consent-requirement">Challenge 1: Compact Clause Consent Requirement</h4>
+<p><strong>CRS Report Analysis (2019)</strong> identifies three conditions for interstate compact status requiring congressional consent:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 36%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Condition</th>
+<th>NPVIC Compliance</th>
+<th>Legal Significance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Written Agreement</strong></td>
+<td>Yes (formal compact text)</td>
+<td>Satisfies basic definition of compact</td>
+</tr>
+<tr class="even">
+<td><strong>Reciprocal Obligations</strong></td>
+<td>Yes (mutual binding commitments)</td>
+<td>Meets functional test for compact status</td>
+</tr>
+<tr class="odd">
+<td><strong>No Unilateral Modification</strong></td>
+<td>Yes (requires unanimous state consent to exit)</td>
+<td>Confirms contractual nature under <em>Virginia v. Tennessee</em></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="challenge-2-vertical-power-balance-shift" class="level4">
+<h4 class="anchored" data-anchor-id="challenge-2-vertical-power-balance-shift">Challenge 2: Vertical Power Balance Shift</h4>
+<p>The most significant constitutional hurdle involves whether the NPVIC alters federal-state power dynamics:</p>
+<p><strong>Argument Against Congressional Consent Requirement:</strong></p>
+<ul>
+<li>Yale Law Professor Akhil Amar argues NPVIC does not create <em>“new interstate governmental apparatus”</em></li>
+<li>States exercise existing Article II powers individually, merely coordinating timing</li>
+<li>No new sovereign entity created; states retain individual sovereignty</li>
+</ul>
+<p><strong>Counter-Argument Requiring Congressional Consent:</strong></p>
+<ul>
+<li>CRS report cites <em>Northeast Bancorp</em> precedent: any agreement covering all stipulations affecting party conduct constitutes compact</li>
+<li>NPVIC removes contingent election possibility under 12th and 20th Amendments</li>
+<li>Potential shift in federal-state power balance regarding presidential selection</li>
+</ul>
+</section>
+<section id="challenge-3-plenary-power-vs.-compact-coordination" class="level4">
+<h4 class="anchored" data-anchor-id="challenge-3-plenary-power-vs.-compact-coordination">Challenge 3: Plenary Power vs.&nbsp;Compact Coordination</h4>
+<p><strong>Legal Question</strong>: Does coordinated state action constitute impermissible interstate compact or permissible parallel exercise of independent authority?</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 34%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Position</th>
+<th>Legal Basis</th>
+<th>Support Level</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Constitutional Without Consent</strong></td>
+<td>States exercising individual Article II powers in coordination</td>
+<td>Supported by Amar and NPVIC proponents</td>
+</tr>
+<tr class="even">
+<td><strong>Requires Congressional Consent</strong></td>
+<td>Coordinated action alters federal election framework; constitutes interstate compact</td>
+<td>Supported by CRS analysis and traditional Compact Clause interpretation</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="additional-legal-hurdles" class="level3">
+<h3 class="anchored" data-anchor-id="additional-legal-hurdles">Additional Legal Hurdles</h3>
+<section id="contingent-election-displacement" class="level4">
+<h4 class="anchored" data-anchor-id="contingent-election-displacement">1. Contingent Election Displacement</h4>
+<p>The NPVIC potentially eliminates the House of Representatives’ contingent election role under: - <strong>12th Amendment</strong>: Requires contingent election if no candidate receives majority electoral votes - <strong>20th Amendment</strong>: Specifies timing and procedures for presidential transitions</p>
+<p><strong>Legal Risk</strong>: Congressional consent may be required to alter established constitutional transition mechanisms.</p>
+</section>
+<section id="supremacy-clause-interaction" class="level4">
+<h4 class="anchored" data-anchor-id="supremacy-clause-interaction">2. Supremacy Clause Interaction</h4>
+<p>Once enacted, NPVIC states would operate under dual obligations: - State compact law (binding electors to national popular vote winner) - Potential federal election administration requirements</p>
+<p><strong>Supremacy Clause Concern</strong>: Conflicting state and federal authorities could trigger constitutional litigation.</p>
+</section>
+<section id="equal-protection-and-voting-rights-act-considerations" class="level4">
+<h4 class="anchored" data-anchor-id="equal-protection-and-voting-rights-act-considerations">3. Equal Protection and Voting Rights Act Considerations</h4>
+<p>While NPVIC proponents argue the Compact promotes equal protection through universal suffrage, opponents suggest: - State-specific implementation variations could create unequal voting conditions - Potential VRA challenges regarding minority vote dilution in district-based allocation states</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="vi.-synthesis-and-conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="vi.-synthesis-and-conclusions">VI. Synthesis and Conclusions</h2>
+<section id="constitutional-tension-summary" class="level3">
+<h3 class="anchored" data-anchor-id="constitutional-tension-summary">Constitutional Tension Summary</h3>
+<p>The Electoral College system embodies enduring tensions between:</p>
+<ol type="1">
+<li><strong>Federalist Design vs.&nbsp;Modern Reality</strong>: Hamilton’s deliberative intermediary body exists formally but functions as partisan delegate mechanism</li>
+<li><strong>State Sovereignty vs.&nbsp;National Uniformity</strong>: States retain constitutional authority over elector selection while national popular vote advocates seek uniform standards</li>
+<li><strong>Minority Protection vs.&nbsp;Majority Rule</strong>: Small state advantage protects regional interests at expense of proportional representation</li>
+</ol>
+</section>
+<section id="key-findings" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings">Key Findings</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 45%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Constitutional Status</th>
+<th>Practical Reality</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Electors as Intermediaries</strong></td>
+<td>Constitutionally independent deliberators</td>
+<td>Function as party loyalists bound by state law</td>
+</tr>
+<tr class="even">
+<td><strong>Winner-Take-All System</strong></td>
+<td>State legislative discretion (McPherson precedent)</td>
+<td>48 states + DC utilize this allocation method</td>
+</tr>
+<tr class="odd">
+<td><strong>Faithless Elector Penalties</strong></td>
+<td>Constitutional under Chiafalo ruling (2020)</td>
+<td>Enforcement mechanisms active in compact states</td>
+</tr>
+<tr class="even">
+<td><strong>Voting Power Disparity</strong></td>
+<td>Constitutionally embedded structural feature</td>
+<td>Systematic advantage for small state voters (~274% vs.&nbsp;California)</td>
+</tr>
+<tr class="odd">
+<td><strong>NPVIC Compact Status</strong></td>
+<td>Uncertain; CRS indicates congressional consent likely required</td>
+<td>19 jurisdictions enacted; awaiting additional state ratifications</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="technical-assessment-of-npvic-viability" class="level3">
+<h3 class="anchored" data-anchor-id="technical-assessment-of-npvic-viability">Technical Assessment of NPVIC Viability</h3>
+<p>The National Popular Vote Interstate Compact faces substantial but not insurmountable legal hurdles:</p>
+<p><strong>Most Likely Path to Activation:</strong></p>
+<ul>
+<li>Additional states enacting compact legislation (48 electoral votes needed)</li>
+<li>Congressional consent secured through formal resolution or implied approval</li>
+<li>Supreme Court validation if challenged on Compact Clause grounds</li>
+</ul>
+<p><strong>Alternative Constitutional Path:</strong></p>
+<ul>
+<li>Federal statutory reform eliminating winner-take-all provisions</li>
+<li>Constitutional amendment establishing national popular vote system</li>
+<li>State-by-state legislative adoption without compact mechanism</li>
+</ul>
+</section>
+<section id="final-observations" class="level3">
+<h3 class="anchored" data-anchor-id="final-observations">Final Observations</h3>
+<p>The Electoral College remains one of the most contested features of American constitutional design, reflecting fundamental disagreements about: - The proper role of state sovereignty in federal elections - The balance between regional representation and proportional democracy - The function of intermediary institutions in democratic governance</p>
+<p>While <em>Chiafalo v. Washington</em> resolved immediate questions regarding elector independence, broader structural questions about voting power equity and compact mechanism constitutionality remain unresolved, awaiting either additional judicial clarification or political resolution through legislative action.</p>
+</section>
+</section>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The Initial Thinking Steps
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a comprehensive request about the Electoral College system from multiple angles - historical, constitutional, mathematical, and contemporary reform efforts. Let me break down what I need to cover:</p>
+<p>Federalist No.&nbsp;68 justification for an intermediary body (electors) Modern reality of ‘Winner-Take-All’ allocation in 48 states Supreme Court ruling in Chiafalo v. Washington regarding faithless electors Mathematical voting power disparity analysis (small state advantage vs large state influence) National Popular Vote Interstate Compact (NPVIC) legal hurdles under the Compact Clause This is a complex constitutional law and political science question that requires careful analysis. I should provide substantive information based on my knowledge, but I could also search for some current information to ensure accuracy, particularly regarding recent developments or specific details about the NPVIC.</p>
+<p>Let me start by gathering some information through web searches to ensure I have accurate and up-to-date information, especially on:</p>
+<p>The exact language of Federalist No.&nbsp;68 Details about Chiafalo v. Washington ruling Current status of NPVIC (how many states have joined) Any recent developments regarding Compact Clause challenges I’ll search for these topics to provide the most accurate and comprehensive response possible.</p>
+<p>Web Search</p>
+<p>danielsig/duckduckgo</p>
+<p>Web Search</p>
+<p>danielsig/duckduckgo</p>
+<p>Web Search</p>
+<p>danielsig/duckduckgo</p>
+<p>Thought for 3.73 seconds</p>
+<p>Good, I have search results. Let me now visit some of these key sources to get more detailed information on each topic area - particularly Federalist No.&nbsp;68 text, the Chiafalo ruling details, and NPVIC legal analysis.</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Tool warnings:</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Tool warnings:</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Thought for 4.40 seconds</p>
+<p>The NPVIC website gave me good information about the current status - 19 jurisdictions with 222 electoral votes have enacted it. Now let me search for more specific constitutional law analysis on the Compact Clause and voting power calculations to provide a thorough technical breakdown.</p>
+<p>Web Search</p>
+<p>danielsig/duckduckgo</p>
+<p>Web Search</p>
+<p>danielsig/duckduckgo</p>
+<p>Thought for 2.20 seconds</p>
+<p>Good, I have sources on the Compact Clause and voting power indices. Let me get more detailed information from these sources to provide a comprehensive analysis.</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Thought for 3.71 seconds</p>
+<p>I’m getting good information on the Compact Clause analysis. Let me now get more details about the voting power disparity and Banzhaf index calculations to provide a complete mathematical analysis.</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Tool warnings:</p>
+<p>Thought for 3.59 seconds</p>
+<p>The PDF didn’t load properly. Let me search for more specific information about voting power indices and the small state advantage in the Electoral College to provide a thorough mathematical analysis.</p>
+<p>Web Search</p>
+<p>danielsig/duckduckgo</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Thought for 5.89 seconds</p>
+<p>Good, I’m getting more detailed information on the Compact Clause analysis from Cornell Law School’s LII. Now let me search for more specific information about voting power indices and the small state advantage to complete my mathematical analysis section.</p>
+<p>Web Search</p>
+<p>danielsig/duckduckgo</p>
+<p>Thought for 4.36 seconds</p>
+<p>The search didn’t return results. Let me try a different approach and search with slightly different terms to get information about voting power analysis in the Electoral College context.</p>
+<p>Web Search</p>
+<p>danielsig/duckduckgo</p>
+<p>Thought for 4.52 seconds</p>
+<p>Good, I found some relevant sources on voting power disparity. Let me visit these to get more detailed information about the mathematical analysis of small state advantage in the Electoral College.</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Thought for 7.05 seconds</p>
+<p>I now have excellent sources on the voting power disparity analysis. Let me search for more specific information about Federalist No.&nbsp;68 text and the Chiafalo ruling details to complete my comprehensive analysis.</p>
+<p>Visit Website</p>
+<p>danielsig/visit-website</p>
+<p>Thought for 24.44 seconds</p>
+<p>I now have substantial information from multiple authoritative sources. Let me compile this into a comprehensive analysis covering all the required topics:</p>
+<p>Federalist No.&nbsp;68 justification for intermediary body (electors) Modern reality of Winner-Take-All allocation in 48 states Chiafalo v. Washington ruling on faithless electors Mathematical voting power disparity (small state advantage vs large state influence) NPVIC legal hurdles under the Compact Clause I have enough information to provide a thorough, professionally written analysis as requested. Let me now produce the comprehensive examination.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/robertwwalker\.github\.io\/BUS1301-SP26");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

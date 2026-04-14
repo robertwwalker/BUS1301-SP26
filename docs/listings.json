@@ -4,6 +4,7 @@
     "items": [
       "/writeups/Dashboards/img/Dashboard.html",
       "/writeups/NN-History/index.html",
+      "/writeups/Prompt-NPVIC/index.html",
       "/writeups/Prompt-Biodiversity/index.html",
       "/writeups/Prompt-SandD1-Minimum-System/index.html",
       "/writeups/Prompt-SandD1/index.html",
@@ -36,6 +37,33 @@
     ]
   },
   {
+    "listing": "/slides/index.html",
+    "items": [
+      "/slides/01-13-2026/index.html",
+      "/slides/01-15-2026/index.html",
+      "/slides/01-20-2026/index.html",
+      "/slides/01-22-2026/index.html",
+      "/slides/01-27-2026/index.html",
+      "/slides/01-29-2026/index.html",
+      "/slides/02-03-2026/index.html",
+      "/slides/02-05-2026/index.html",
+      "/slides/02-10-2026/index.html",
+      "/slides/02-12-2026/index.html",
+      "/slides/02-17-2026/index.html",
+      "/slides/02-19-2026/index.html",
+      "/slides/02-24-2026/index.html",
+      "/slides/02-26-2026/index.html",
+      "/slides/03-03-2026/index.html",
+      "/slides/03-05-2026/index.html",
+      "/slides/03-10-2026/index.html",
+      "/slides/03-17-2026/index.html",
+      "/slides/03-31-2026/index.html",
+      "/slides/04-02-2026/index.html",
+      "/slides/04-09-2026/index.html",
+      "/slides/04-14-2026/index.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/posts/04-14-2026/index.html",
@@ -63,32 +91,6 @@
       "/posts/01-15-2026/index.html",
       "/posts/01-13-2026/index.html",
       "/posts/welcome/index.html"
-    ]
-  },
-  {
-    "listing": "/slides/index.html",
-    "items": [
-      "/slides/01-13-2026/index.html",
-      "/slides/01-15-2026/index.html",
-      "/slides/01-20-2026/index.html",
-      "/slides/01-22-2026/index.html",
-      "/slides/01-27-2026/index.html",
-      "/slides/01-29-2026/index.html",
-      "/slides/02-03-2026/index.html",
-      "/slides/02-05-2026/index.html",
-      "/slides/02-10-2026/index.html",
-      "/slides/02-12-2026/index.html",
-      "/slides/02-17-2026/index.html",
-      "/slides/02-19-2026/index.html",
-      "/slides/02-24-2026/index.html",
-      "/slides/02-26-2026/index.html",
-      "/slides/03-03-2026/index.html",
-      "/slides/03-05-2026/index.html",
-      "/slides/03-10-2026/index.html",
-      "/slides/03-17-2026/index.html",
-      "/slides/03-31-2026/index.html",
-      "/slides/04-02-2026/index.html",
-      "/slides/04-09-2026/index.html"
     ]
   }
 ]
