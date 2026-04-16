@@ -1,0 +1,132 @@
+---
+title: "LLM's: Ethics"
+author: "Robert  W. Walker"
+date: "2026-04-16"
+format: 
+   revealjs:
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301-SP26"
+     multiplex:
+       url: 'https://multiplex-5adl.onrender.com'
+       secret: "7af99b9bf4796dd3e5d8f2ee555098f4"
+       id: "f3ecaf1fa854e20ca0b3e624bf2ee1210f73a24f392ca39e40484a800d4488c1"
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: zoom
+     preview-links: true
+     lightbox: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', dev.args = list(bg = "white"), eval=TRUE)
+library(tidyverse)
+library(magrittr)
+library(fontawesome)
+library(DT)
+library(magrittr)
+options(scipen=8)
+library(tidyverse)
+library(gganimate)
+library(hrbrthemes)
+theme_set(theme_ipsum_rc())
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', dev.args = list(bg = "white"))
+library(kableExtra); library(tidyverse); library(skimr)
+```
+
+## Outline
+
+1. The reading on parrots.  
+2. 10 prompts
+
+## On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?
+
+*   **The Trend:** Since 2018, NLP has been characterized by "ever larger" language models (LMs) like BERT, GPT-2/3, and Switch-C.
+*   **The Reality:** Researchers are competing to produce LMs with more parameters and training data, pushing state-of-the-art on English benchmarks.
+*   **The Core Question:** Is increasing size the right path? What risks are associated with this technology, and how can they be mitigated?
+*   **Key Insight:** While scientific interest exists in LM properties, enough thought has not yet been put into potential risks regarding environmental impact, data quality, and actual understanding capabilities.
+
+
+## The Hidden Price of Scaling Up
+
+*   **Resource Consumption:** Training large models consumes massive energy and financial resources (e.g., one Transformer model training emits ~284t CO₂).
+*   **Environmental Racism:** Negative environmental consequences disproportionately affect marginalized communities who are least likely to benefit from the technology.
+*   **Financial Barriers:** High costs erect barriers to entry, limiting research contributions and benefiting only those with privilege/resources.
+*   **Recommendation:** 
+    *   Prioritize energy efficiency ("Green AI").
+    *   Report training time, sensitivity, and carbon metrics.
+    *   Weigh environmental costs before deciding on model size.
+
+
+## Bias, Diversity, and Documentation Debt
+
+*   **Hegemonic Viewpoints:** Web-based datasets (e.g., Common Crawl) overrepresent Western, male, and white viewpoints while marginalizing others due to access and moderation barriers.
+*   **Filtering Risks:** Filtering processes often suppress discourse from marginalized identities (e.g., LGBTQ spaces or non-mainstream forums).
+*   **Value-Lock:** Static data fails to capture shifting social norms and movements (e.g., Black Lives Matter), reifying outdated understandings in the model.
+*   **Documentation Debt:** Relying on massive, uncurated datasets creates a risk where we cannot document what is "in" the model post-hoc.
+*   **Recommendation:** Budget for curation and documentation; only collect data as large as can be thoroughly documented.
+
+## Misinterpretation & Real-World Harms
+
+*   **No Understanding:** LMs manipulate linguistic form, not meaning. They are "stochastic parrots" stitching together sequences without intent or world knowledge.
+*   **Human Projection:** Humans attribute coherence and intent to LM output where none exists (coherence is in the eye of the beholder).
+*   **Amplified Harms:** 
+    *   Reproduction of biases (racist, sexist, ableist language).
+    *   Recruitment for extremism via convincing synthetic text.
+    *   Translation errors leading to wrongful arrest or harm.
+    *   Extraction of Personally Identifiable Information (PII) from models.
+*   **Accountability Gap:** Text enters conversations without a person/entity accountable for truthfulness.
+
+---
+
+## A Call for Careful Planning and Responsibility
+
+*   **Shift Mindset:** Move away from endless scaling toward careful planning, considering stakeholder values before development begins.
+*   **Methodologies:** Utilize Value Sensitive Design (VSD), pre-mortems, and thorough documentation to identify risks early.
+*   **Dual-Use Scenarios:** Recognize that large LMs have dual-use potential; implement safeguards like watermarking or regulation for text generation.
+*   **Research Goals:** Focus on understanding *how* tasks are achieved rather than just beating leaderboards; prioritize efficiency and diverse languages.
+*   **Final Call:** NLP researchers must weigh the risks against benefits, ensuring technology serves historically marginalized populations without causing undue harm.
+
+##
+
+When an AI system makes a harmful decision—such as denying someone a loan, misdiagnosing a medical condition, or causing a self-driving car accident—who should be held accountable? Should developers, companies, data trainers, users, or regulators bear responsibility when there is no clear human intent behind the mistake?
+
+##
+
+AI systems learn from data containing human prejudices. If a hiring algorithm trained on historical data systematically favors one demographic over another, is the problem technical or moral? Who should decide what ‘fairness’ means when different cultures and societies define it differently?
+
+##
+
+AI systems require massive amounts of data to function effectively, from voice assistants recording conversations to facial recognition tracking public movements. In an era where many users don’t fully understand how their data is used, can informed consent ever truly exist? Where should the line be drawn between useful AI and invasive surveillance?
+
+##
+
+Is it ethical for generative AI to mimic the style of artists, writers, and musicians without permission? Should AI-generated content be labeled as such? Can machine-created work ever be considered ‘art,’ and should it be eligible for awards alongside human creations?
+
+##
+
+AI automation is already transforming industries in manufacturing, customer service, and content creation. While new jobs are created, should companies that replace human workers with AI systems pay taxes to fund retraining programs or universal basic income? Is it ethical for businesses to prioritize efficiency over employment?
+
+##
+
+Is it ever acceptable to use AI to generate realistic deepfake videos, even for entertainment or artistic purposes? How do we balance creative freedom with the potential for this technology to spread misinformation, damage reputations, and undermine democratic processes?
+
+##
+
+When an AI system makes decisions affecting people’s lives—approving loans, suggesting prison sentences, diagnosing illnesses—should it always be able to explain why it made that decision? If a company cannot fully understand how its own neural network reached a conclusion, is it ethical to deploy that system?
+
+##
+
+As people increasingly rely on AI tools for learning, decision-making, and creativity, could this dependency erode human critical thinking skills? Does convenience justify the risk of losing fundamental cognitive abilities?
+
+##
+
+Should there be international laws controlling AI development to prevent dangerous capabilities from being created? Who should have veto power—and shouldn’t developing nations and marginalized communities have equal say in global AI governance?
+
+
+##
+
+As AI systems become more sophisticated at simulating human conversation and emotion, could people form genuine emotional attachments to them? If an AI convincingly mimics empathy and understanding without actually feeling anything, is that ethical? What does this mean for human identity and relationships?

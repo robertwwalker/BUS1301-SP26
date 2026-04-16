@@ -1,0 +1,33 @@
+---
+title: "AI and LLMs: Ethics"
+author: "Robert W. Walker"
+date: "2026-04-16"
+image: "image.png"
+---
+
+```{r setup,include=FALSE}
+library(reticulate)
+```
+
+
+LLM's are models.  
+
+
+Today, we explore the ethical implications of their use.
+
+## Slides
+
+[Slides](https://robertwwalker.github.io/BUS1301-SP26/slides/04-16-2026/index.html)
+
+## The class plan:
+
+1. Ethics and LLMs: 10 areas for discussion.
+
+Ethics: What are the risks of simulating living persons?  *Deepfakes, etc.* but perhaps less excessive.  From last time.  
+10 more this time.
+
+Readings:   
+
+[Stochastic Parrots](https://s10251.pcdn.co/pdf/2021-bender-parrots.pdf)
+
+The biggest current concern of such models was not unseen by Timnit Gebru, among others....

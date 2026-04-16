@@ -1,0 +1,15 @@
+{
+  "hash": "6d4f2dd8ce64cacc1d0334d4d280f837",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"AI and LLMs: Ethics\"\nauthor: \"Robert W. Walker\"\ndate: \"2026-04-16\"\nimage: \"image.png\"\n---\n\n\n\n\nLLM's are models.  \n\n\nToday, we explore the ethical implications of their use.\n\n## Slides\n\n[Slides](https://robertwwalker.github.io/BUS1301-SP26/slides/04-16-2026/index.html)\n\n## The class plan:\n\n1. Ethics and LLMs: 10 areas for discussion.\n\nEthics: What are the risks of simulating living persons?  *Deepfakes, etc.* but perhaps less excessive.  From last time.  \n10 more this time.\n\nReadings:   \n\n[Stochastic Parrots](https://s10251.pcdn.co/pdf/2021-bender-parrots.pdf)\n\nThe biggest current concern of such models was not unseen by Timnit Gebru, among others....",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
