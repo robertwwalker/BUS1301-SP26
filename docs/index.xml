@@ -10,7 +10,73 @@
 <atom:link href="https://robertwwalker.github.io/BUS1301-SP26/index.xml" rel="self" type="application/rss+xml"/>
 <description>Managing with Data: Analytics and Artificial Intelligence</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Thu, 16 Apr 2026 07:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 21 Apr 2026 07:00:00 GMT</lastBuildDate>
+<item>
+  <title>AI sans LLM</title>
+  <dc:creator>Robert W. Walker</dc:creator>
+  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/04-21-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Today, we explore the AI of the non-LLM form.</p>
+<section id="examples-include" class="level2">
+<h2 class="anchored" data-anchor-id="examples-include">Examples include:</h2>
+</section>
+<section id="slides" class="level2">
+<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<p><a href="https://robertwwalker.github.io/BUS1301-SP26/slides/04-21-2026/index.html">Slides</a></p>
+</section>
+<section id="the-class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
+<ol type="1">
+<li>Ethics and LLMs: 2 remaining areas for discussion.</li>
+<li>What is the range of non-LLM AI?</li>
+</ol>
+<p>To understand “AI without Large Language Models (LLMs),” it is helpful to view LLMs as just one specific tool in a vast toolbox. While LLMs have recently dominated the headlines due to their ability to generate text and code, they represent only a fraction of the artificial intelligence ecosystem.</p>
+<p>AI without LLMs is primarily focused on <strong>predictive analytics, computer vision, robotics, and decision-making.</strong> It is the “invisible” engine that powers much of the modern world.</p>
+<p>Here is a breakdown of what AI looks like without the hype of LLMs:</p>
+</section>
+<section id="predictive-analytics-and-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="predictive-analytics-and-machine-learning">1. Predictive Analytics and Machine Learning</h2>
+<p>This is the workhorse of the industry. Instead of generating new text, these models analyze historical data to predict future outcomes or classify existing data. * <strong>Recommendation Engines:</strong> The algorithms driving Netflix, YouTube, Spotify, and Amazon are not LLMs. They use collaborative filtering and matrix factorization to predict what you will watch or buy next. * <strong>Fraud Detection:</strong> Banks use AI to analyze millions of transactions in real-time, flagging anomalous patterns (like a credit card being used in two different countries an hour apart) to prevent fraud. * <strong>Search Engines:</strong> Google’s core ranking algorithms rely on complex machine learning models to determine relevance and quality, long before they integrated conversational LLMs.</p>
+</section>
+<section id="computer-vision-the-eyes-of-ai" class="level2">
+<h2 class="anchored" data-anchor-id="computer-vision-the-eyes-of-ai">2. Computer Vision (The “Eyes” of AI)</h2>
+<p>Computer Vision is arguably the most mature and widely deployed form of AI. It allows machines to interpret visual information from the world. * <strong>Medical Imaging:</strong> AI algorithms analyze X-rays, MRIs, and CT scans to detect tumors or fractures with a speed and accuracy that often rivals human radiologists. * <strong>Autonomous Driving:</strong> While a car’s “brain” might use an LLM to navigate, its “eyes” use Convolutional Neural Networks (CNNs) to identify pedestrians, traffic lights, lane markings, and other cars in real-time. * <strong>Facial Recognition:</strong> Used for unlocking phones, airport security, and social media tagging.</p>
+</section>
+<section id="robotics-and-control-systems" class="level2">
+<h2 class="anchored" data-anchor-id="robotics-and-control-systems">3. Robotics and Control Systems</h2>
+<p>AI in the physical world is distinct from the digital world of text. This involves <strong>control theory</strong> and <strong>motion planning</strong>. * <strong>Industrial Automation:</strong> Robotic arms in car factories use AI to optimize their movements for speed and precision, welding and assembling parts. * <strong>Drones and Drones:</strong> Autonomous drones use AI to maintain stability, avoid obstacles, and map terrain without human input. * <strong>Warehouse Logistics:</strong> Amazon and other logistics companies use AI to optimize the paths of thousands of robots moving goods through a warehouse.</p>
+</section>
+<section id="reinforcement-learning" class="level2">
+<h2 class="anchored" data-anchor-id="reinforcement-learning">4. Reinforcement Learning</h2>
+<p>This is a type of AI where a machine learns by trial and error, receiving rewards for good actions and penalties for bad ones. * <strong>Gaming:</strong> Before LLMs took over the news cycle, AI like DeepMind’s AlphaGo and AlphaStar had already defeated world champions in complex games like Go and StarCraft II. * <strong>Resource Optimization:</strong> AI is used to optimize data center cooling systems (like Google’s), significantly reducing energy consumption by learning the thermal dynamics of the building.</p>
+</section>
+<section id="non-text-generative-ai" class="level2">
+<h2 class="anchored" data-anchor-id="non-text-generative-ai">5. Non-Text Generative AI</h2>
+<p>While LLMs generate text, other models generate different modalities of data: * <strong>Image Generation:</strong> Tools like DALL-E, Midjourney, and Stable Diffusion use “Diffusion models” to create images from noise. * <strong>Audio and Music:</strong> AI models (like Suno or specialized speech synthesis engines) generate music, sound effects, and realistic synthetic voices.</p>
+</section>
+<section id="symbolic-ai-and-expert-systems" class="level2">
+<h2 class="anchored" data-anchor-id="symbolic-ai-and-expert-systems">6. Symbolic AI and Expert Systems</h2>
+<p>Before the “Deep Learning” revolution (which spawned LLMs), the dominant form of AI was <strong>Symbolic AI</strong>. * <strong>Rule-Based Systems:</strong> These systems use a strict set of logical rules (If X happens, then do Y). They are still used today in complex financial trading systems, legal compliance software, and specialized medical diagnosis tools where accuracy and explainability are more important than creativity.</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>If LLMs are the new “front-end” interface for AI—providing a conversational, creative layer—the world of <strong>AI without LLMs</strong> is the “back-end” infrastructure. It is the mathematical engine used to see, predict, calculate, and physically manipulate the world.</p>
+<p>Readings:</p>
+<p><a href="https://marcushutchins.com/blog/tech/opinions/the-ai-intelligence-paradox.html">AI and Intelligence</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/04-21-2026/</guid>
+  <pubDate>Tue, 21 Apr 2026 07:00:00 GMT</pubDate>
+  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/04-21-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
 <item>
   <title>AI and LLMs: Ethics</title>
   <dc:creator>Robert W. Walker</dc:creator>
@@ -5130,691 +5196,6 @@ font-style: inherit;">'</span>.join(results))</span></code></pre></div></div>
   <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/02-03-2026/</guid>
   <pubDate>Tue, 03 Feb 2026 08:00:00 GMT</pubDate>
   <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/02-03-2026/image.png" medium="image" type="image/png" height="73" width="144"/>
-</item>
-<item>
-  <title>Data Visualization</title>
-  <dc:creator>Robert W. Walker</dc:creator>
-  <link>https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Today, we continue data visualization.</p>
-<p>Our reading for today includes a section of Open Intro Stats and Hadley Wickham’s <em>Grammar of Graphics</em>.</p>
-<section id="five-bits-of-data" class="level2">
-<h2 class="anchored" data-anchor-id="five-bits-of-data">Five bits of data</h2>
-<ul>
-<li><a href="./data/datasaurus.csv">datasaurus</a>.<br>
-</li>
-<li><a href="./data/BondFunds.csv">BondFunds</a>.<br>
-</li>
-<li><a href="./data/UCB-Admit.csv">UCB-Admissions</a>.<br>
-</li>
-<li><a href="./data/CADDS.csv">CADDS</a>.<br>
-</li>
-<li><a href="./data/FastFood.csv">Fast Food</a>.</li>
-</ul>
-</section>
-<section id="bond-funds" class="level2">
-<h2 class="anchored" data-anchor-id="bond-funds">Bond Funds</h2>
-<ul>
-<li>Fund Number: An ID.<br>
-</li>
-<li>Type: Intermediate Government or Short-term Corporate.<br>
-</li>
-<li>Assets: Assets held by the fund in reported dollars.<br>
-</li>
-<li>Fees: Are management fees assessed? [Yes/No].<br>
-</li>
-<li>Expense Ratio: Ratio of operating expenses to fund assets.<br>
-</li>
-<li>Returns [for the year 2009, trailing 3 year and 5 year (from 2009)].<br>
-</li>
-<li>The Morningstar risk classification [Below average, average, and above average].</li>
-</ul>
-<div class="cell">
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(jsonlite)</span>
-<span id="cb1-2">BondFunds <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">read.csv</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"./data/BondFunds.csv"</span>)</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(reticulate)</span></code></pre></div></div>
-</details>
-</div>
-</section>
-<section id="the-flipbook" class="level1">
-<h1><a href="https://robertwwalker.github.io/dadm-slides/flipbookSLE/">The flipbook</a></h1>
-</section>
-<section id="the-pages" class="level1">
-<h1><a href="https://robertwwalker.github.io/DADM-FAQ/">The pages</a></h1>
-</section>
-<section id="slides" class="level1">
-<h1>Slides</h1>
-<p><a href="https://robertwwalker.github.com/BUS1301-SP26/slides/01-29-2026/">Link is here</a></p>
-<section id="just-about-any-model-will-do" class="level2">
-<h2 class="anchored" data-anchor-id="just-about-any-model-will-do">Just about any model will do</h2>
-<p>I will use <code>Gemini</code>. <code>Claude</code> can also do this.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Prompt: Can you provide a histogram of assets and a boxplot of assets by type for the following spreadsheet?</p>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./reply.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="reply"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/reply.png" class="img-fluid figure-img" alt="reply"></a></p>
-<figcaption>reply</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./image.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="output"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/image.png" class="img-fluid figure-img" alt="output"></a></p>
-<figcaption>output</figcaption>
-</figure>
-</div>
-</section>
-<section id="chatgpt" class="level2">
-<h2 class="anchored" data-anchor-id="chatgpt"><code>ChatGPT</code></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./chatgpt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="ChatGPT"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/chatgpt.png" class="img-fluid figure-img" alt="ChatGPT"></a></p>
-<figcaption>ChatGPT</figcaption>
-</figure>
-</div>
-</section>
-<section id="plotnine" class="level2">
-<h2 class="anchored" data-anchor-id="plotnine"><code>plotnine</code></h2>
-<div class="cell">
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> pd</span>
-<span id="cb2-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">from</span> plotnine <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> (</span>
-<span id="cb2-3">    ggplot, aes, geom_histogram, geom_boxplot,</span>
-<span id="cb2-4">    labs, theme, element_text, coord_flip</span>
-<span id="cb2-5">)</span>
-<span id="cb2-6"></span>
-<span id="cb2-7">df <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'./data/BondFunds.csv'</span>)</span>
-<span id="cb2-8"></span>
-<span id="cb2-9"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Histogram of Assets</span></span>
-<span id="cb2-10">hist_plot <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> (</span>
-<span id="cb2-11">    ggplot(df, aes(x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Assets'</span>))</span>
-<span id="cb2-12">    <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> geom_histogram(bins<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>)</span>
-<span id="cb2-13">    <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> labs(title<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Histogram of Assets'</span>, x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Assets'</span>, y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Frequency'</span>)</span>
-<span id="cb2-14">)</span>
-<span id="cb2-15">hist_plot.show()</span></code></pre></div></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="614"></a></p>
-</figure>
-</div>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Boxplot of Assets by Type</span></span>
-<span id="cb3-2">box_plot <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> (</span>
-<span id="cb3-3">    ggplot(df, aes(x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Type'</span>, y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Assets'</span>))</span>
-<span id="cb3-4">    <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> geom_boxplot()</span>
-<span id="cb3-5">    <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> labs(title<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Assets by Fund Type'</span>, x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Type'</span>, y<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Assets'</span>)</span>
-<span id="cb3-6">    <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> theme(axis_text_x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>element_text(rotation<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">90</span>, hjust<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)) </span>
-<span id="cb3-7">    <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> coord_flip()</span>
-<span id="cb3-8">)</span>
-<span id="cb3-9">box_plot.show()</span></code></pre></div></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-2-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/index_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid figure-img" width="614"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="cadds" class="level2">
-<h2 class="anchored" data-anchor-id="cadds">CADDS</h2>
-<p>The data set presented is designed to represent a sample of 1,000 DDS consumers (which provides a 95% confidence interval with a margin of error of plus-or-minus 3.5% for this 250,000 consumer population). The data set includes six variables (i.e., fields) which are: ID, age cohort/age (binned/unbinned), gender, expenditures, and ethnicity. NB: The data set originated from DDS’s Client Master File. In order to remain in compliance with California State Legislation, the data have been altered to protect the rights and privacy of specific individual consumers. The provided data set is based on actual attributes of consumers.</p>
-<p><strong>ID</strong> is the unique identification code for each consumer. It is similar to a social security number and used for identification purposes.</p>
-<p><strong>Age cohort/age</strong> is a key variable in the case exercise. While age is a legal basis for discrimination in many situations, age is not an attribute that would be considered in a discrimination claim for this particular population. The purpose of providing funds to those with developmental disabilities is to help them live like those without disabilities. As consumers get older, their financial needs increase as they move out of their parent’s home, etc. Therefore, it is expected that expenditures for older consumers will be higher than for the younger consumers.</p>
-<p>We have included both binned (<strong>Age cohort</strong>) and unbinned (<strong>Age</strong>) variables to represent a consumer’s age. The binned age variable is represented in the data set as six age cohorts. Each consumer is assigned to an age cohort based on their years since birth. The six cohorts include: 0-5 years old, 6-12, 13-17, 18-21, 22-50, and 51+. The cohorts are established based on the amount of financial support typically required during a particular life phase.</p>
-<p>The 0-5 cohort (preschool age) has the fewest needs and requires the least amount of funding. For the 6-12 cohort (elementary school age) and 13-17 (high school age), a number of needed services are provided by schools. The 18-21 cohort is typically in a transition phase as the consumers begin moving out from their parents’ homes into community centers or living on their own. The majority of those in the 22-50 cohort no longer live with their parents but may still receive some support from their family. Those in the 51+ cohort have the most needs and require the most amount of funding because they are living on their own or in community centers and often have no living parents.</p>
-<p><strong>Gender</strong> is included in the data set as another variable to consider because it is an attribute on which many discrimination cases are based.</p>
-<p><strong>Expenditures</strong> variable represents the annual expenditures the State spends on each consumer in supporting these individuals and their families. It is important that students realize this is the amount each consumer receives from the State. Expenditures include services such as: respite for their families, psychological services, medical expenses, transportation, and costs related to housing such as rent (especially for adult consumers living outside their parent’s home).</p>
-<p><strong>Ethnicity</strong> is the key demographic variable in the data set as it pertains to the case. Eight ethnic groups are represented in the data set. These groups reflect the demographic profile of the State of California. Our key area of interest will become Hispanic and White, non-Hispanic comparisons.</p>
-</section>
-<section id="ucb-admissions" class="level2">
-<h2 class="anchored" data-anchor-id="ucb-admissions">UCB Admissions</h2>
-<p><strong>Is there evidence of sex bias in admission practices?</strong> Data on admissions to the University of California at Berkeley graduate programs in six departments are presented for the population of applicants. <strong>Admit</strong> measures whether or not the applicant was admitted; <strong>M.F</strong> measures the [self-reported, two options] gender of the applicant; <strong>Dept</strong> measures the department in a classification ranging from A to F.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> pd</span>
-<span id="cb4-2"></span>
-<span id="cb4-3">df <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pd.read_csv(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'./data/UCB-Admit.csv'</span>)</span>
-<span id="cb4-4"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(df.head())</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>    M.F Admit Dept
-0  Male   Yes    A
-1  Male   Yes    A
-2  Male   Yes    A
-3  Male   Yes    A
-4  Male   Yes    A</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(df.info())</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'pandas.DataFrame'&gt;
-RangeIndex: 4526 entries, 0 to 4525
-Data columns (total 3 columns):
- #   Column  Non-Null Count  Dtype
----  ------  --------------  -----
- 0   M.F     4526 non-null   str  
- 1   Admit   4526 non-null   str  
- 2   Dept    4526 non-null   str  
-dtypes: str(3)
-memory usage: 106.2 KB
-None</code></pre>
-</div>
-</div>
-<div class="cell">
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> plt</span>
-<span id="cb8-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> seaborn <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> sns</span>
-<span id="cb8-3"></span>
-<span id="cb8-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Aggregate data</span></span>
-<span id="cb8-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># We want to count occurrences of each (M.F, Admit) pair</span></span>
-<span id="cb8-6">counts <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> df.groupby([<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'M.F'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Admit'</span>]).size().unstack(fill_value<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb8-7"></span>
-<span id="cb8-8"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Inspect the aggregated data</span></span>
-<span id="cb8-9"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(counts)</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Admit     No   Yes
-M.F               
-Female  1278   557
-Male    1493  1198</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Plotting</span></span>
-<span id="cb10-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># X-axis: M.F (Index of counts)</span></span>
-<span id="cb10-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Stacks: Admit (Columns of counts)</span></span>
-<span id="cb10-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Using pandas plot kind='bar', stacked=True is easiest</span></span>
-<span id="cb10-5"></span>
-<span id="cb10-6">ax <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> counts.plot(kind<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'bar'</span>, stacked<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">True</span>, figsize<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">6</span>), color<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'#d65f5f'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'#5fba7d'</span>])</span>
-<span id="cb10-7">plt.title(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Admission Status by Gender'</span>)</span>
-<span id="cb10-8">plt.xlabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Gender'</span>)</span>
-<span id="cb10-9">plt.ylabel(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Count'</span>)</span>
-<span id="cb10-10">plt.xticks(rotation<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>(array([0, 1]), [Text(0, 0, 'Female'), Text(1, 0, 'Male')])</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1">plt.legend(title<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'Admit'</span>)</span>
-<span id="cb12-2">plt.tight_layout()</span></code></pre></div></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-4-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/index_files/figure-html/unnamed-chunk-4-5.png" class="img-fluid figure-img" width="960"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="fast-food" class="level2">
-<h2 class="anchored" data-anchor-id="fast-food">Fast Food</h2>
-<p>This data has missing values.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> pd</span>
-<span id="cb13-2"></span>
-<span id="cb13-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 1. Import the CSV file</span></span>
-<span id="cb13-4">url <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"./data/FastFood.csv"</span></span>
-<span id="cb13-5">df <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pd.read_csv(url)</span>
-<span id="cb13-6"></span>
-<span id="cb13-7"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 2. Count of Missing Values (for all columns)</span></span>
-<span id="cb13-8"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--- Count of Missing Values ---"</span>)</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>--- Count of Missing Values ---</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(df.isnull().<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">sum</span>())</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>restaurant       0
-item             0
-calories         0
-cal_fat          0
-total_fat        0
-sat_fat          0
-trans_fat        0
-cholesterol      0
-sodium           0
-total_carb       0
-fiber           12
-sugar            0
-protein          1
-vit_a          214
-vit_c          210
-calcium        210
-salad            0
-dtype: int64</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div></div>
-</details>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Filter for numeric columns only for the statistical calculations</span></span>
-<span id="cb18-2">numeric_df <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> df.select_dtypes(include<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'number'</span>)</span>
-<span id="cb18-3"></span>
-<span id="cb18-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 3. Mean</span></span>
-<span id="cb18-5"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--- Mean ---"</span>)</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>--- Mean ---</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(numeric_df.mean())</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>calories        530.912621
-cal_fat         238.813592
-total_fat        26.590291
-sat_fat           8.153398
-trans_fat         0.465049
-cholesterol      72.456311
-sodium         1246.737864
-total_carb       45.664078
-fiber             4.137177
-sugar             7.262136
-protein          27.891051
-vit_a            18.857143
-vit_c            20.170492
-calcium          24.852459
-dtype: float64</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div></div>
-</details>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 4. Standard Deviation</span></span>
-<span id="cb23-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--- Standard Deviation ---"</span>)</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>--- Standard Deviation ---</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(numeric_df.std())</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>calories       282.436147
-cal_fat        166.407510
-total_fat       18.411876
-sat_fat          6.418811
-trans_fat        0.839644
-cholesterol     63.160406
-sodium         689.954278
-total_carb      24.883342
-fiber            3.037460
-sugar            6.761301
-protein         17.683921
-vit_a           31.384330
-vit_c           30.592243
-calcium         25.522073
-dtype: float64</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div></div>
-</details>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 5. Five Number Summary (Min, Q1, Median, Q3, Max)</span></span>
-<span id="cb28-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># The describe() function includes count, mean, std, and the 5-number summary.</span></span>
-<span id="cb28-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># We will select specific rows to isolate the 5-number summary.</span></span>
-<span id="cb28-4"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"--- Five Number Summary ---"</span>)</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>--- Five Number Summary ---</code></pre>
-</div>
-<details class="code-fold">
-<summary>How’s that done?</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(numeric_df.describe().loc[[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'min'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'25%'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'50%'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'75%'</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'max'</span>]])</span></code></pre></div></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>     calories  cal_fat  total_fat  sat_fat  ...  protein  vit_a  vit_c  calcium
-min      20.0      0.0        0.0      0.0  ...      1.0    0.0    0.0      0.0
-25%     330.0    120.0       14.0      4.0  ...     16.0    4.0    4.0      8.0
-50%     490.0    210.0       23.0      7.0  ...     24.5   10.0   10.0     20.0
-75%     690.0    310.0       35.0     11.0  ...     36.0   20.0   30.0     30.0
-max    2430.0   1270.0      141.0     47.0  ...    186.0  180.0  400.0    290.0
-
-[5 rows x 14 columns]</code></pre>
-</div>
-</div>
-</section>
-<section id="the-class-plan" class="level2">
-<h2 class="anchored" data-anchor-id="the-class-plan">The class plan:</h2>
-<ol type="1">
-<li>Pivots and formulae.<br>
-</li>
-<li>Visualizations and types.<br>
-</li>
-<li>Gemini visualizing data. We will use FastFood. Two notes: uploads and missing data</li>
-</ol>
-<p>Your assignment for this time:</p>
-<ol type="1">
-<li>Do the reading.</li>
-<li><strong>From last time</strong>. Collect three data visualizations. Think about the approach to visualization presented and how your graphics manifest it. Post them and describe them. What type of data do they represent and how? What is the name of the type of visualization?<br>
-</li>
-<li>For this time, provide three uploaded visualizations. One should use FastFood. The others may use whatever data you wish.</li>
-</ol>
-</section>
-<section id="for-next-class" class="level2">
-<h2 class="anchored" data-anchor-id="for-next-class">For Next Class:</h2>
-<ol type="1">
-<li>Reading: Probability</li>
-<li>Deliverable: An In-class exercise [Assignment 6] if not completed before departing</li>
-</ol>
-
-
-</section>
-</section>
-
- ]]></description>
-  <guid>https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/</guid>
-  <pubDate>Thu, 29 Jan 2026 08:00:00 GMT</pubDate>
-  <media:content url="https://robertwwalker.github.io/BUS1301-SP26/posts/01-29-2026/image.png" medium="image" type="image/png" height="59" width="144"/>
 </item>
 </channel>
 </rss>

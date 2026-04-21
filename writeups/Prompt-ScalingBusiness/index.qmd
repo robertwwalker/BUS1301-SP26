@@ -1,0 +1,87 @@
+---
+title: "qwen on Scaling"
+author: "Robert W. Walker"
+date: "2026-04-21"
+image: "image.png"
+---
+
+# Asking qwen3.6-35b-a3b about Scaling Businesses
+
+:::{.callout-warning}
+## Prompt
+
+Imagine you are a business coach who helps people learn how to be better bosses. I want you to explain how leadership works when a small company starts getting really big and successful. Sometimes a boss wants to be everyone’s friend and let them do whatever they want, but other times they have to be strict and make all the big decisions. I want to know which style is better for keeping workers happy and making sure they don’t quit. I want you to also explain how a leader should change their attitude when the company goes from just a few people in a garage to a huge office with hundreds of employees. Give me a few simple tips at the end that a boss can use to check if they are doing a good job.
+:::
+
+
+Hello there. Welcome to the "big leagues."
+
+I’m your business coach today. First off, congratulations. You’ve done the hard part. You took a risk, you built something, and now you have a company that is growing. But let me tell you the hard truth right now: **The skills that got you to this point are the exact same skills that will kill your company if you don't change them.**
+
+You are asking the right question. The transition from a "garage startup" to a "huge office" is the most dangerous time for a business. It’s where good bosses become bad bosses.
+
+Here is the breakdown of how you need to shift your mindset, and the answer to your question about being a "friend" versus being "strict."
+
+### 1. The "Garage" Phase vs. The "Skyscraper" Phase
+
+**In the Garage (The "We're All in This Together" Phase)**
+When you have 5 to 10 people, you don't need a boss. You need a leader.
+*   **The Dynamic:** You are everyone’s friend. You know everyone’s dog’s name, you know who is going through a divorce, and you probably eat lunch together.
+*   **Why it works:** You can make decisions instantly. You don't need meetings. You don't need HR. You just need to yell across the room, "Hey, can you fix this?" and it gets done.
+*   **The Trap:** You think this is how business *always* works.
+
+**In the Huge Office (The "I Need a System" Phase)**
+When you have 100 or 500 people, you cannot be everyone's friend.
+*   **The Dynamic:** If you try to be friends with everyone, you become a tyrant to everyone because you have no time to listen to anyone.
+*   **The Shift:** You have to move from being a **Participant** to being an **Architect**. You aren't building the house anymore; you are drawing the blueprints and making sure the builders have the materials they need.
+
+### 2. Friend vs. Strict: Which keeps people from quitting?
+
+You asked which style is better: being the "cool boss" who lets everyone do whatever they want, or the "strict boss" who makes all the big decisions.
+
+**The Answer:** You need to be neither. You need to be **Fair.**
+
+Here is why your two options are dangerous:
+
+*   **The "Cool" Boss (Laissez-Faire):** If you let everyone do whatever they want in a big company, you get chaos. Departments stop talking to each other. People stop growing because no one is correcting their bad habits. Eventually, your best employees leave because they feel like they are flailing in the dark.
+*   **The "Strict" Boss (Micromanager):** If you try to control every single decision, your employees will stop thinking. They will wait for you to tell them what to do. You become the bottleneck. Your company will grow slower than it wants to, and your best people will leave because they feel like robots.
+
+**The Winning Style: "Respectful Professionalism"**
+People don't quit "strict" bosses; they quit **unfair** bosses.
+To keep people happy and retained, you must be strict about **standards**, but flexible about **methods**.
+*   *Bad Boss:* "You have to work from 9 to 5 and wear a tie." (Strict about methods)
+*   *Good Boss:* "I don't care if you work from home or the office, but the project must be done by Friday and the code must be bug-free." (Strict about the result, flexible on how they get there).
+
+### 3. How to Change Your Attitude
+
+As you grow from a garage to a skyscraper, your attitude must shift from **Personal** to **Systemic**.
+
+**From "I" to "We"**
+In the garage, you are the hero. You close the deals. You write the code.
+In the big office, you must be the coach. Your job is no longer to be the best player; your job is to make sure the team wins. You have to get comfortable *not* being the smartest person in the room.
+
+**From "Friendship" to "Mentorship"**
+This is the hardest pill to swallow. You can still like your employees. You can still care about them. But you cannot be their *friend*.
+*   **Friend:** "Hey, I know you're late again, don't worry about it."
+*   **Boss:** "I know you're having a hard time, but I need you to be here at 9 AM to do your best work. Let's figure out how to fix your schedule."
+
+If you try to be the friend, you can never hold them accountable. If you can't hold them accountable, you aren't doing your job.
+
+### 4. The Coach’s Checklist: 3 Simple Tips to Check Your Job
+
+Here are three simple questions you can ask yourself this week to see if you are handling the transition correctly.
+
+**1. The "Manager's Manager" Test**
+*   *The Check:* If you were on vacation for two weeks, would your direct reports know exactly what to do, or would they be calling you every hour?
+*   *The Fix:* If they are calling you, you are still acting like a garage boss. You need to create systems and clear goals so they don't need you.
+
+**2. The "Hard Conversation" Test**
+*   *The Check:* When was the last time you had to give someone bad news (a correction, a warning, or a firing)?
+*   *The Fix:* If it has been a long time, you are trying too hard to be their friend. A good boss is willing to have the hard conversation immediately. It actually respects the employee more in the long run.
+
+**3. The "Why" Test**
+*   *The Check:* When you give a new employee a task, do you explain *why* it matters to the company, or do you just say "do this"?
+*   *The Fix:* In a small company, you just say "do this." In a big company, you must explain the vision. People stay when they feel they are part of a mission, not just a paycheck.
+
+**Summary:**
+Be strict about the **goals**, but kind about the **people**. That is how you build a culture that lasts.
