@@ -4,6 +4,7 @@
     "items": [
       "/writeups/Dashboards/img/Dashboard.html",
       "/writeups/NN-History/index.html",
+      "/writeups/Prompt-ScalingBusiness/index.html",
       "/writeups/Prompt-NPVIC/index.html",
       "/writeups/Prompt-Biodiversity/index.html",
       "/writeups/Prompt-SandD1-Minimum-System/index.html",
@@ -60,12 +61,15 @@
       "/slides/03-31-2026/index.html",
       "/slides/04-02-2026/index.html",
       "/slides/04-09-2026/index.html",
-      "/slides/04-14-2026/index.html"
+      "/slides/04-14-2026/index.html",
+      "/slides/04-16-2026/index.html",
+      "/slides/04-21-2026/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/posts/04-23-2026/index.html",
       "/posts/04-21-2026/index.html",
       "/posts/04-16-2026/index.html",
       "/posts/04-14-2026/index.html",

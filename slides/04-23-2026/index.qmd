@@ -1,0 +1,133 @@
+---
+title: "non-LLM's and Overview"
+author: "Robert  W. Walker"
+date: "2026-04-23"
+format: 
+   revealjs:
+     theme: [custom.scss]
+     scrollable: true
+     logo: AGSMlogo.jpeg
+     footer: "BUS 1301-SP26"
+     multiplex:
+       url: 'https://multiplex-5adl.onrender.com'
+       secret: "7af99b9bf4796dd3e5d8f2ee555098f4"
+       id: "f3ecaf1fa854e20ca0b3e624bf2ee1210f73a24f392ca39e40484a800d4488c1"
+     html-math-method: katex
+     incremental: true
+     slide-number: c/t
+     transition: zoom
+     preview-links: true
+     lightbox: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, echo=TRUE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', dev.args = list(bg = "white"), eval=TRUE)
+library(tidyverse)
+library(magrittr)
+library(fontawesome)
+library(DT)
+library(magrittr)
+options(scipen=8)
+library(tidyverse)
+library(gganimate)
+library(hrbrthemes)
+theme_set(theme_ipsum_rc())
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, comment=NA, prompt=FALSE, fig.height=6, fig.width=6.5, fig.retina = 3, dev = 'svg', dev.args = list(bg = "white"))
+library(kableExtra); library(tidyverse); library(skimr)
+```
+
+## Outline
+
+1. non-LLM AI [complete]
+2. image generation experiment
+3. on consciousness with Amanda Askell.  
+
+# Stochastic Parrots are **Random**
+
+A discussion item: is creativity really just randomness?
+
+# The Examples of Firms
+
+## 1. **Palantir Foundry Analytics Platform**  
+
+   *Paradigm:* Knowledge graphs + traditional ML + deterministic rule engines  
+   *Why not an LLM:* Palantir explicitly designs Foundry to avoid LLM dependency for core data integration and predictive modeling. It uses symbolic AI, graph traversal, and gradient-boosted trees to ensure auditable, deterministic outcomes for defense, healthcare, and logistics.
+
+## 2. **DeepMind AlphaFold (Protein Structure Prediction)**  
+
+   *Paradigm:* Evoformer architecture (biological-sequence-specific transformer) + diffusion-based 3D folding  
+   *Why not an LLM:* Though it uses transformer-like attention, it processes amino acid sequences and physical constraints, not natural language. Its outputs are 3D protein coordinates, not text.
+
+## 3. **Spotify’s Recommendation Engine (Discover Weekly, Release Radar)**  
+
+   *Paradigm:* Collaborative filtering + matrix factorization + CNNs analyzing audio spectrograms  
+   *Why not an LLM:* Core ranking and content matching rely on user-item interaction graphs and acoustic feature extraction. No language modeling or text generation is involved.
+
+## 4. **Netflix Content Recommendation System**  
+
+   *Paradigm:* Deep learning for metadata tagging + reinforcement learning for ranking + collaborative filtering  
+   *Why not an LLM:* Optimizes for watch-time and engagement using behavioral signals and multimedia features. Its architecture is built for temporal sequence modeling and content-based filtering, not linguistic prediction.
+
+## 5. **Stripe Fraud Detection AI**  
+
+   *Paradigm:* Gradient boosting (XGBoost/LightGBM) + graph neural networks + anomaly detection  
+   *Why not an LLM:* Analyzes transactional metadata, device fingerprints, and network graphs in real-time. Operates on numerical/time-series data with strict latency and interpretability requirements unsuited to LLMs.
+
+## 6. **DeepMind AlphaGo & AlphaZero (Game AI)**  
+
+   *Paradigm:* Deep reinforcement learning + Monte Carlo Tree Search (MCTS) + CNNs for board/state evaluation  
+   *Why not an LLM:* Learns through self-play in rule-based environments. Uses value/policy networks for spatial-state evaluation, not textual token prediction.
+
+## 7. **Apple FaceID & Core ML (On-Device AI)**  
+
+   *Paradigm:* Specialized neural networks for 3D facial mapping, health metrics, and on-device sensor fusion  
+   *Why not an LLM:* Optimized for low-power, real-time vision and physiological signal processing. Runs on Apple’s Neural Engine with architectures designed for pixel/depth analysis, not language.
+
+## 8. **Waymo Autonomous Driving Perception & Control Stack**  
+
+   *Paradigm:* Computer vision (CNNs/Vision Transformers) + LiDAR/radar sensor fusion + control theory  
+   *Why not an LLM:* Core deployment focuses on real-time spatial reasoning, object tracking, and trajectory planning. While some competitors experiment with LLMs for high-level reasoning, Waymo’s commercial stack remains vision-control driven.
+
+## 9. **DeepMind AlphaStar (StarCraft II AI)**   
+
+   *Paradigm:* Deep reinforcement learning + CNNs for minimap and unit-state processing  
+   *Why not an LLM:* Operates in a discrete action space with raw game-state inputs. Uses hierarchical policy networks and attention over game entities, not linguistic corpora.
+
+## 10. **Amazon Rekognition (Enterprise Computer Vision)**  
+
+    *Paradigm:* CNNs + object detection models + facial embedding networks  
+    *Why not an LLM:* Processes images/video for face recognition, scene classification, and OCR. Its OCR component uses vision-based text detection (e.g., CRNN architectures), not language modeling.
+
+## 11. **Insilico Medicine / Generative Chemistry Platforms**  
+
+    *Paradigm:* Diffusion models + Graph Neural Networks (GNNs) for molecular design  
+    *Why not an LLM:* Works with chemical graphs, bond topology, and physicochemical properties. Generates novel drug candidates by optimizing molecular fitness functions, not linguistic tokens.
+
+## 12. **Boston Dynamics Spot & Advanced Robotics Control**  
+
+    *Paradigm:* Reinforcement learning + inverse kinematics + sensor fusion + control theory  
+    *Why not an LLM:* Core AI handles locomotion, balance, and manipulation through physics-based simulation and real-time feedback loops. Relies on deterministic control algorithms, not probabilistic text generation.
+
+## 13. **Google Photos Object/Scene Detection**  
+
+    *Paradigm:* Computer vision models (Inception variants, Vision Transformers) for image indexing  
+    *Why not an LLM:* Extracts pixel-level features to classify scenes, faces, and objects. Uses embedding spaces for similarity search, fundamentally different from semantic language modeling.
+
+## 14. **DeepMind AlphaGeometry (Mathematical Reasoning)**  
+
+    *Paradigm:* Hybrid symbolic AI + neural networks + automated theorem provers  
+    *Why not an LLM:* Explicitly designed to avoid LLMs to ensure formal, verifiable proofs. Combines neural pattern recognition with symbolic logic engines for geometry problem-solving.
+
+## 15. **Google Cloud Speech-to-Text / Microsoft Azure AI Speech**  
+
+    *Paradigm:* Acoustic models (Conformers, RNNs) + phonetic mapping + language-independent signal processing  
+    *Why not an LLM:* Core deployment converts audio waveforms to text using deep acoustic modeling and phoneme-level alignment. While newer versions may add post-processing LLMs, the foundational speech recognition stack relies on signal processing and acoustic neural networks, not language generation.
+
+## Key Takeaway
+
+The AI landscape is highly modular. While LLMs dominate text-centric applications, **prominent real-world AI systems** in enterprise analytics, biotech, robotics, finance, autonomous systems, and multimedia rely on computer vision, reinforcement learning, traditional ML, symbolic reasoning, acoustic modeling, or specialized generative architectures (e.g., diffusion/GNNs). These paradigms are chosen for determinism, latency, domain specificity, or hardware efficiency that LLMs do not natively provide.
+
+## On Consciousness
+
+[The conversation with Amanda Askell](https://www.youtube.com/watch?v=0GaKJ4Fp2x4)
