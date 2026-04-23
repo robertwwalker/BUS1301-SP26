@@ -24,6 +24,8 @@ Today, we expand the AI of the non-LLM form.
 
 3. Models: on consciousness
 
+<iframe width="429" height="762" src="https://www.youtube.com/embed/mi8S6a9MKks" title="AI Says It’s Conscious… But It Might Be Faking It" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 To understand "AI without Large Language Models (LLMs)," it is helpful to view LLMs as just one specific tool in a vast toolbox. While LLMs have recently dominated the headlines due to their ability to generate text and code, they represent only a fraction of the artificial intelligence ecosystem.
 
 AI without LLMs is primarily focused on **predictive analytics, computer vision, robotics, and decision-making.** It is the "invisible" engine that powers much of the modern world.

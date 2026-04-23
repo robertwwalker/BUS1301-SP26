@@ -130,4 +130,5 @@ The AI landscape is highly modular. While LLMs dominate text-centric application
 
 ## On Consciousness
 
-[The conversation with Amanda Askell](https://www.youtube.com/watch?v=0GaKJ4Fp2x4)
+[The full conversation with Amanda Askell](https://www.youtube.com/watch?v=0GaKJ4Fp2x4)
+
