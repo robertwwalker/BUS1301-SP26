@@ -7222,7 +7222,7 @@
     "href": "slides/04-23-2026/index.html#palantir-foundry-analytics-platform",
     "title": "non-LLM’s and Overview",
     "section": "1. Palantir Foundry Analytics Platform",
-    "text": "1. Palantir Foundry Analytics Platform\nParadigm: Knowledge graphs + traditional ML + deterministic rule engines\nWhy not an LLM: Palantir explicitly designs Foundry to avoid LLM dependency for core data integration and predictive modeling. It uses symbolic AI, graph traversal, and gradient-boosted trees to ensure auditable, deterministic outcomes for defense, healthcare, and logistics."
+    "text": "1. Palantir Foundry Analytics Platform\nParadigm: Knowledge graphs + traditional ML + deterministic rule engines\nWhy not an LLM: Palantir explicitly designs Foundry to avoid LLM dependency for core data integration and predictive modeling. It uses symbolic AI, graph traversal, and gradient-boosted trees to ensure auditable, deterministic outcomes for defense, healthcare, and logistics.\nMarket capitalization: 338 Billion dollars (2026-04-23)"
   },
   {
     "objectID": "slides/04-23-2026/index.html#deepmind-alphafold-protein-structure-prediction",
@@ -7235,22 +7235,22 @@
     "objectID": "slides/04-23-2026/index.html#spotifys-recommendation-engine-discover-weekly-release-radar",
     "href": "slides/04-23-2026/index.html#spotifys-recommendation-engine-discover-weekly-release-radar",
     "title": "non-LLM’s and Overview",
-    "section": "3. Spotify’s Recommendation Engine (Discover Weekly, Release Radar)",
-    "text": "3. Spotify’s Recommendation Engine (Discover Weekly, Release Radar)\nParadigm: Collaborative filtering + matrix factorization + CNNs analyzing audio spectrograms\nWhy not an LLM: Core ranking and content matching rely on user-item interaction graphs and acoustic feature extraction. No language modeling or text generation is involved."
+    "section": "3. Spotify´s Recommendation Engine (Discover Weekly, Release Radar)",
+    "text": "3. Spotify´s Recommendation Engine (Discover Weekly, Release Radar)\nParadigm: Collaborative filtering + matrix factorization + CNNs analyzing audio spectrograms\nWhy not an LLM: Core ranking and content matching rely on user-item interaction graphs and acoustic feature extraction. No language modeling or text generation is involved.\nMarket capitalization: 106 Billion dollars (2026-04-23)"
   },
   {
     "objectID": "slides/04-23-2026/index.html#netflix-content-recommendation-system",
     "href": "slides/04-23-2026/index.html#netflix-content-recommendation-system",
     "title": "non-LLM’s and Overview",
     "section": "4. Netflix Content Recommendation System",
-    "text": "4. Netflix Content Recommendation System\nParadigm: Deep learning for metadata tagging + reinforcement learning for ranking + collaborative filtering\nWhy not an LLM: Optimizes for watch-time and engagement using behavioral signals and multimedia features. Its architecture is built for temporal sequence modeling and content-based filtering, not linguistic prediction."
+    "text": "4. Netflix Content Recommendation System\nParadigm: Deep learning for metadata tagging + reinforcement learning for ranking + collaborative filtering\nWhy not an LLM: Optimizes for watch-time and engagement using behavioral signals and multimedia features. Its architecture is built for temporal sequence modeling and content-based filtering, not linguistic prediction.\nMarket capitalization: 390 Billion dollars (2026-04-23)"
   },
   {
     "objectID": "slides/04-23-2026/index.html#stripe-fraud-detection-ai",
     "href": "slides/04-23-2026/index.html#stripe-fraud-detection-ai",
     "title": "non-LLM’s and Overview",
     "section": "5. Stripe Fraud Detection AI",
-    "text": "5. Stripe Fraud Detection AI\nParadigm: Gradient boosting (XGBoost/LightGBM) + graph neural networks + anomaly detection\nWhy not an LLM: Analyzes transactional metadata, device fingerprints, and network graphs in real-time. Operates on numerical/time-series data with strict latency and interpretability requirements unsuited to LLMs."
+    "text": "5. Stripe Fraud Detection AI\nParadigm: Gradient boosting (XGBoost/LightGBM) + graph neural networks + anomaly detection\nWhy not an LLM: Analyzes transactional metadata, device fingerprints, and network graphs in real-time. Operates on numerical/time-series data with strict latency and interpretability requirements unsuited to LLMs.\nMarket capitalization: ca 150 Billion dollars (2026-04-23)"
   },
   {
     "objectID": "slides/04-23-2026/index.html#deepmind-alphago-alphazero-game-ai",
@@ -7264,14 +7264,14 @@
     "href": "slides/04-23-2026/index.html#apple-faceid-core-ml-on-device-ai",
     "title": "non-LLM’s and Overview",
     "section": "7. Apple FaceID & Core ML (On-Device AI)",
-    "text": "7. Apple FaceID & Core ML (On-Device AI)\nParadigm: Specialized neural networks for 3D facial mapping, health metrics, and on-device sensor fusion\nWhy not an LLM: Optimized for low-power, real-time vision and physiological signal processing. Runs on Apple’s Neural Engine with architectures designed for pixel/depth analysis, not language."
+    "text": "7. Apple FaceID & Core ML (On-Device AI)\nParadigm: Specialized neural networks for 3D facial mapping, health metrics, and on-device sensor fusion\nWhy not an LLM: Optimized for low-power, real-time vision and physiological signal processing. Runs on Apple´s Neural Engine with architectures designed for pixel/depth analysis, not language."
   },
   {
     "objectID": "slides/04-23-2026/index.html#waymo-autonomous-driving-perception-control-stack",
     "href": "slides/04-23-2026/index.html#waymo-autonomous-driving-perception-control-stack",
     "title": "non-LLM’s and Overview",
     "section": "8. Waymo Autonomous Driving Perception & Control Stack",
-    "text": "8. Waymo Autonomous Driving Perception & Control Stack\nParadigm: Computer vision (CNNs/Vision Transformers) + LiDAR/radar sensor fusion + control theory\nWhy not an LLM: Core deployment focuses on real-time spatial reasoning, object tracking, and trajectory planning. While some competitors experiment with LLMs for high-level reasoning, Waymo’s commercial stack remains vision-control driven."
+    "text": "8. Waymo Autonomous Driving Perception & Control Stack\nParadigm: Computer vision (CNNs/Vision Transformers) + LiDAR/radar sensor fusion + control theory\nWhy not an LLM: Core deployment focuses on real-time spatial reasoning, object tracking, and trajectory planning. While some competitors experiment with LLMs for high-level reasoning, Waymo´s commercial stack remains vision-control driven.\nMarket capitalization: ca 126 Billion dollars (2026-04-23)"
   },
   {
     "objectID": "slides/04-23-2026/index.html#deepmind-alphastar-starcraft-ii-ai",
@@ -7285,42 +7285,42 @@
     "href": "slides/04-23-2026/index.html#amazon-rekognition-enterprise-computer-vision",
     "title": "non-LLM’s and Overview",
     "section": "10. Amazon Rekognition (Enterprise Computer Vision)",
-    "text": "10. Amazon Rekognition (Enterprise Computer Vision)\n*Paradigm:* CNNs + object detection models + facial embedding networks  \n*Why not an LLM:* Processes images/video for face recognition, scene classification, and OCR. Its OCR component uses vision-based text detection (e.g., CRNN architectures), not language modeling."
+    "text": "10. Amazon Rekognition (Enterprise Computer Vision)\nParadigm: CNNs + object detection models + facial embedding networks\nWhy not an LLM: Processes images/video for face recognition, scene classification, and OCR. Its OCR component uses vision-based text detection (e.g., CRNN architectures), not language modeling."
   },
   {
     "objectID": "slides/04-23-2026/index.html#insilico-medicine-generative-chemistry-platforms",
     "href": "slides/04-23-2026/index.html#insilico-medicine-generative-chemistry-platforms",
     "title": "non-LLM’s and Overview",
     "section": "11. Insilico Medicine / Generative Chemistry Platforms",
-    "text": "11. Insilico Medicine / Generative Chemistry Platforms\n*Paradigm:* Diffusion models + Graph Neural Networks (GNNs) for molecular design  \n*Why not an LLM:* Works with chemical graphs, bond topology, and physicochemical properties. Generates novel drug candidates by optimizing molecular fitness functions, not linguistic tokens."
+    "text": "11. Insilico Medicine / Generative Chemistry Platforms\nParadigm: Diffusion models + Graph Neural Networks (GNNs) for molecular design\nWhy not an LLM: Works with chemical graphs, bond topology, and physicochemical properties. Generates novel drug candidates by optimizing molecular fitness functions, not linguistic tokens.\nMarket capitalization: 41 Billion dollars (2026-04-23)"
   },
   {
     "objectID": "slides/04-23-2026/index.html#boston-dynamics-spot-advanced-robotics-control",
     "href": "slides/04-23-2026/index.html#boston-dynamics-spot-advanced-robotics-control",
     "title": "non-LLM’s and Overview",
     "section": "12. Boston Dynamics Spot & Advanced Robotics Control",
-    "text": "12. Boston Dynamics Spot & Advanced Robotics Control\n*Paradigm:* Reinforcement learning + inverse kinematics + sensor fusion + control theory  \n*Why not an LLM:* Core AI handles locomotion, balance, and manipulation through physics-based simulation and real-time feedback loops. Relies on deterministic control algorithms, not probabilistic text generation."
+    "text": "12. Boston Dynamics Spot & Advanced Robotics Control\nParadigm: Reinforcement learning + inverse kinematics + sensor fusion + control theory\nWhy not an LLM: Core AI handles locomotion, balance, and manipulation through physics-based simulation and real-time feedback loops. Relies on deterministic control algorithms, not probabilistic text generation."
   },
   {
     "objectID": "slides/04-23-2026/index.html#google-photos-objectscene-detection",
     "href": "slides/04-23-2026/index.html#google-photos-objectscene-detection",
     "title": "non-LLM’s and Overview",
     "section": "13. Google Photos Object/Scene Detection",
-    "text": "13. Google Photos Object/Scene Detection\n*Paradigm:* Computer vision models (Inception variants, Vision Transformers) for image indexing  \n*Why not an LLM:* Extracts pixel-level features to classify scenes, faces, and objects. Uses embedding spaces for similarity search, fundamentally different from semantic language modeling."
+    "text": "13. Google Photos Object/Scene Detection\nParadigm: Computer vision models (Inception variants, Vision Transformers) for image indexing\nWhy not an LLM: Extracts pixel-level features to classify scenes, faces, and objects. Uses embedding spaces for similarity search, fundamentally different from semantic language modeling."
   },
   {
     "objectID": "slides/04-23-2026/index.html#deepmind-alphageometry-mathematical-reasoning",
     "href": "slides/04-23-2026/index.html#deepmind-alphageometry-mathematical-reasoning",
     "title": "non-LLM’s and Overview",
     "section": "14. DeepMind AlphaGeometry (Mathematical Reasoning)",
-    "text": "14. DeepMind AlphaGeometry (Mathematical Reasoning)\n*Paradigm:* Hybrid symbolic AI + neural networks + automated theorem provers  \n*Why not an LLM:* Explicitly designed to avoid LLMs to ensure formal, verifiable proofs. Combines neural pattern recognition with symbolic logic engines for geometry problem-solving."
+    "text": "14. DeepMind AlphaGeometry (Mathematical Reasoning)\nParadigm: Hybrid symbolic AI + neural networks + automated theorem provers\nWhy not an LLM: Explicitly designed to avoid LLMs to ensure formal, verifiable proofs. Combines neural pattern recognition with symbolic logic engines for geometry problem-solving."
   },
   {
     "objectID": "slides/04-23-2026/index.html#google-cloud-speech-to-text-microsoft-azure-ai-speech",
     "href": "slides/04-23-2026/index.html#google-cloud-speech-to-text-microsoft-azure-ai-speech",
     "title": "non-LLM’s and Overview",
     "section": "15. Google Cloud Speech-to-Text / Microsoft Azure AI Speech",
-    "text": "15. Google Cloud Speech-to-Text / Microsoft Azure AI Speech\n*Paradigm:* Acoustic models (Conformers, RNNs) + phonetic mapping + language-independent signal processing  \n*Why not an LLM:* Core deployment converts audio waveforms to text using deep acoustic modeling and phoneme-level alignment. While newer versions may add post-processing LLMs, the foundational speech recognition stack relies on signal processing and acoustic neural networks, not language generation."
+    "text": "15. Google Cloud Speech-to-Text / Microsoft Azure AI Speech\nParadigm: Acoustic models (Conformers, RNNs) + phonetic mapping + language-independent signal processing\nWhy not an LLM: Core deployment converts audio waveforms to text using deep acoustic modeling and phoneme-level alignment. While newer versions may add post-processing LLMs, the foundational speech recognition stack relies on signal processing and acoustic neural networks, not language generation."
   },
   {
     "objectID": "slides/04-23-2026/index.html#key-takeaway",
