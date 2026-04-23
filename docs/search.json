@@ -887,7 +887,7 @@
     "href": "slides/04-09-2026/index.html#role-prompting-persona-framing",
     "title": "LLM’s: Prompting",
     "section": "Role Prompting & Persona Framing",
-    "text": "Role Prompting & Persona Framing\n\nWhy Role Prompting Works\nAssigning a role activates domain-specific token patterns embedded during training. “You are a senior cardiologist” and “You are a creative writing professor” produce meaningfully different outputs — even for identical task instructions.\n\n\nBest Practices\n\nBe specific: \"You are a senior backend engineer specializing in distributed systems\" outperforms \"You are a programmer\"\nAlign role to audience: pair a CFO role with an instruction to write for \"a board of directors unfamiliar with technical debt\"\nUse role to set limits: \"You are a helpful assistant that never speculates beyond the provided data\"\n\n\n\nSystem Prompt vs. User Prompt\n\n\n\n\n\n\n\nLayer\nBest for\n\n\n\n\nSystem prompt\nPersistent persona, behavioral constraints, output schema, safety rails\n\n\nUser prompt\nTask-specific instructions, dynamic context, examples\n\n\n\nSeparate concerns cleanly. Don’t repeat system-level constraints in every user turn."
+    "text": "Role Prompting & Persona Framing\n\nWhy Role Prompting Works\nAssigning a role activates domain-specific token patterns embedded during training. “You are a senior cardiologist” and “You are a creative writing professor” produce meaningfully different outputs — even for identical task instructions.\n\n\nBest Practices\n\nBe specific: \"You are a senior backend engineer specializing in distributed systems\" outperforms \"You are a programmer\"\nAlign role to audience: pair a CFO role with an instruction to write for \"a board of directors unfamiliar with technical debt\"\nUse role to set limits: \"You are a helpful assistant that never speculates   beyond the provided data\"\n\n\n\nSystem Prompt vs. User Prompt\n\n\n\n\n\n\n\nLayer\nBest for\n\n\n\n\nSystem prompt\nPersistent persona, behavioral constraints, output schema, safety rails\n\n\nUser prompt\nTask-specific instructions, dynamic context, examples\n\n\n\nSeparate concerns cleanly. Don’t repeat system-level constraints in every user turn."
   },
   {
     "objectID": "slides/04-09-2026/index.html#thinking-models-what-changes-slide-7",
@@ -5857,7 +5857,7 @@
     "href": "slides/04-14-2026/index.html#prompting-best-practices",
     "title": "LLM’s: Roles",
     "section": "Prompting Best Practices",
-    "text": "Prompting Best Practices\n\nBe specific: \"You are a senior backend engineer specializing in distributed systems\" outperforms \"You are a programmer\"\nAlign role to audience: pair a CFO role with an instruction to write for \"a board of directors unfamiliar with technical debt\"\nUse role to set limits: \"You are a helpful assistant that never speculates beyond the provided data\""
+    "text": "Prompting Best Practices\n\nBe specific: \"You are a senior backend engineer specializing in distributed systems\" outperforms \"You are a programmer\"\nAlign role to audience: pair a CFO role with an instruction to write for \"a board of directors unfamiliar with technical debt\"\nUse role to set limits: \"You are a helpful assistant that never speculates   beyond the provided data\""
   },
   {
     "objectID": "slides/04-14-2026/index.html#system-prompt-vs.-user-prompt",
@@ -6935,7 +6935,7 @@
     "href": "posts/04-23-2026/index.html",
     "title": "Summary Remarks and AI Consciousness",
     "section": "",
-    "text": "Today, we expand the AI of the non-LLM form."
+    "text": "A recap.\nA new entry"
   },
   {
     "objectID": "posts/04-23-2026/index.html#slides",
@@ -6949,7 +6949,7 @@
     "href": "posts/04-23-2026/index.html#the-class-plan",
     "title": "Summary Remarks and AI Consciousness",
     "section": "The class plan:",
-    "text": "The class plan:\n\nWhat is the range of non-LLM AI? Your assignment from last time on enterprises.\nModels: a mini image generation experiment\nModels: on consciousness\n\nTo understand “AI without Large Language Models (LLMs),” it is helpful to view LLMs as just one specific tool in a vast toolbox. While LLMs have recently dominated the headlines due to their ability to generate text and code, they represent only a fraction of the artificial intelligence ecosystem.\nAI without LLMs is primarily focused on predictive analytics, computer vision, robotics, and decision-making. It is the “invisible” engine that powers much of the modern world.\nHere is a breakdown of what AI looks like without the hype of LLMs:"
+    "text": "The class plan:\n\nWhat is the range of non-LLM AI? Your assignment from last time on enterprises.\nModels: a mini image generation experiment\n\nSame prompt.\n\n\n\n\n\n\nNote\n\n\n\nEmbed this image as an onlooker as da vinci renders the mona lisa.\n\n\n\n\n\nChatGPT\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe inset individual looks a bit out of place, can we put the face on a more period appropriate garment maintaining the general setup otherwise\n\n\n\n\n\nChatGPT 2\n\n\n\n\n\nGemini\n\n\n\nModels: on consciousness\n\n\n\nTo understand “AI without Large Language Models (LLMs),” it is helpful to view LLMs as just one specific tool in a vast toolbox. While LLMs have recently dominated the headlines due to their ability to generate text and code, they represent only a fraction of the artificial intelligence ecosystem.\nAI without LLMs is primarily focused on predictive analytics, computer vision, robotics, and decision-making. It is the “invisible” engine that powers much of the modern world.\nHere is a breakdown of what AI looks like without the hype of LLMs:"
   },
   {
     "objectID": "posts/04-23-2026/index.html#predictive-analytics-and-machine-learning",

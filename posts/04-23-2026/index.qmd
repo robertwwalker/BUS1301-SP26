@@ -9,7 +9,11 @@ image: "image.png"
 library(reticulate)
 ```
 
-Today, we expand the AI of the non-LLM form.
+A recap.
+
+[A new entry](https://x.com/ShangbangLong/status/2047124573699940596?s=20)
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚀 Excited to announce Vision Banana 🍌 and our new paper: “Image Generators are Generalist Vision Learners”. We turn Nano Banana Pro into a state-of-the-art visual generation and understanding model.<br><br>🖼️ Check out our gallery at <a href="https://t.co/CEQJXroPaE">https://t.co/CEQJXroPaE</a><br><br>🧵 (1/N) continue ⬇️</p>&mdash; Shangbang Long (@ShangbangLong) <a href="https://twitter.com/ShangbangLong/status/2047124573699940596?ref_src=twsrc%5Etfw">April 23, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 ## Slides
@@ -21,6 +25,23 @@ Today, we expand the AI of the non-LLM form.
 1. What is the range of non-LLM AI?  Your assignment from last time on enterprises.   
 
 2. Models: a mini image generation experiment
+
+Same prompt.
+
+::: {.callout-note}
+Embed this [image](https://robertwwalker.github.io/about.html) as an onlooker as da vinci renders the mona lisa.
+:::
+
+![ChatGPT](./img/ChatGPT.png)
+
+::: {.callout-note}
+The inset individual looks a bit out of place, can we put the face on a more period appropriate garment maintaining the general setup otherwise
+:::
+
+![ChatGPT 2](./img/ChatGPT2.png)
+
+![Gemini](./img/Gemini.jpeg)
+
 
 3. Models: on consciousness
 
